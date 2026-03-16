@@ -36,7 +36,9 @@ public:
   void receive(const Message& message) override;
 
 private:
+  bool m_busOn = true;
   bool m_trackOn = false;
+  bool m_eStop = true;
   std::map<uint8_t, EngineReport> m_sessions;
 
   EngineReport* newEngineSession(const EngineReport& init);

@@ -32,6 +32,11 @@
 
 namespace {
 
+using namespace std::chrono_literals;
+
+static constexpr auto queryNodeNumberTimeout = 100ms;
+static constexpr auto requestCommandStationStatusTimeout = 100ms;
+
 constexpr uint16_t makeAddressKey(uint16_t address, bool longAddress)
 {
   return longAddress ? (0xC000 | (address & 0x3FFF)) : (address & 0x7F);
@@ -61,6 +66,7 @@ namespace CBUS {
 Kernel::Kernel(std::string logId_, const Config& config, bool simulation)
   : KernelBase(std::move(logId_))
   , m_simulation{simulation}
+  , m_initializationTimer{ioContext()}
   , m_config{config}
   , m_engineKeepAliveTimer{ioContext()}
 {
@@ -130,10 +136,7 @@ void Kernel::started()
 {
   assert(isKernelThread());
 
-  send(RequestCommandStationStatus());
-  send(QueryNodeNumber());
-
-  ::KernelBase::started();
+  nextState();
 }
 
 void Kernel::receive(uint8_t /*canId*/, const Message& message)
@@ -278,6 +281,13 @@ void Kernel::receive(uint8_t /*canId*/, const Message& message)
         });
       break;
     }
+    case OpCode::PNN:
+      if(m_state == State::QueryNodes)
+      {
+        restartInitializationTimer(queryNodeNumberTimeout);
+      }
+      break;
+
     case OpCode::PLOC:
     {
       const auto& ploc = static_cast<const EngineReport&>(message);
@@ -313,6 +323,14 @@ void Kernel::receive(uint8_t /*canId*/, const Message& message)
       }
       break;
     }
+    case OpCode::STAT:
+      if(m_state == State::GetCommandStationStatus)
+      {
+        m_initializationTimer.cancel();
+        nextState();
+      }
+      break;
+
     default:
       break;
   }
@@ -580,8 +598,71 @@ void Kernel::sendSetEngineFunction(uint8_t session, uint8_t number, bool value)
   }
 }
 
+void Kernel::changeState(State value)
+{
+  assert(isKernelThread());
+  assert(m_state != value);
+
+  m_state = value;
+
+  switch(m_state)
+  {
+    case State::Initial:
+      break;
+
+    case State::QueryNodes:
+      send(QueryNodeNumber());
+      restartInitializationTimer(queryNodeNumberTimeout);
+      break;
+
+    case State::GetCommandStationStatus:
+      send(RequestCommandStationStatus());
+      restartInitializationTimer(requestCommandStationStatusTimeout);
+      break;
+
+    case State::Started:
+      KernelBase::started();
+      break;
+  }
+}
+
+void Kernel::restartInitializationTimer(std::chrono::milliseconds timeout)
+{
+  assert(isKernelThread());
+
+  m_initializationTimer.cancel();
+
+  m_initializationTimer.expires_after(timeout);
+  m_initializationTimer.async_wait(
+    [this](std::error_code ec)
+    {
+      if(ec)
+      {
+        return;
+      }
+
+      switch(m_state)
+      {
+        case State::QueryNodes:
+          nextState();
+          break;
+
+        case State::GetCommandStationStatus:
+          nextState();
+          break;
+
+        case State::Initial:
+        case State::Started:
+          assert(false);
+          break;
+      }
+    });
+}
+
 void Kernel::restartEngineKeepAliveTimer()
 {
+  assert(isKernelThread());
+
   m_engineKeepAliveTimer.cancel();
 
   // find first expiring engine:

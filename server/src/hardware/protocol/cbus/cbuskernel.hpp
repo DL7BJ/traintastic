@@ -106,6 +106,15 @@ public:
   bool sendDCC(std::vector<uint8_t> dccPacket, uint8_t repeat);
 
 private:
+  //! Startup states, executed in order.
+  enum class State
+  {
+    Initial, // must be first
+    QueryNodes,
+    GetCommandStationStatus,
+    Started // must be last
+  };
+
   struct Engine
   {
     std::optional<uint8_t> session;
@@ -118,6 +127,8 @@ private:
 
   std::unique_ptr<IOHandler> m_ioHandler;
   const bool m_simulation;
+  State m_state = State::Initial;
+  boost::asio::steady_timer m_initializationTimer;
   Config m_config;
   bool m_trackOn = false;
   uint8_t m_engineKeepAliveSession;
@@ -139,6 +150,15 @@ private:
   void sendSetEngineSpeedDirection(uint8_t session, uint8_t speed, bool directionForward);
   void sendSetEngineFunction(uint8_t session, uint8_t number, bool value);
 
+  inline void nextState()
+  {
+    assert(m_state != State::Started);
+    changeState(static_cast<State>(static_cast<std::underlying_type_t<State>>(m_state) + 1));
+  }
+
+  void changeState(State value);
+
+  void restartInitializationTimer(std::chrono::milliseconds timeout);
   void restartEngineKeepAliveTimer();
 };
 

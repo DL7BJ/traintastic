@@ -47,7 +47,16 @@ void CANCMD::receive(const Message& message)
       break;
 
     case RESTP:
+      m_eStop = true;
       send(EmergencyStop());
+      break;
+
+    case RSTAT:
+      send(CommandStationStatusReport(nodeNumber, false, false, m_trackOn, m_busOn, m_eStop, false, false, 0x04, 0x66, 0x0C));
+      break;
+
+    case QNN:
+      send(PresenceOfNode(nodeNumber, 0xA5, 0x53, false, true, true, true, false, false, false));
       break;
 
     case RLOC:
