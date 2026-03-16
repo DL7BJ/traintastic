@@ -23,30 +23,20 @@
 #define TRAINTASTIC_SERVER_HARDWARE_PROTOCOL_CBUS_MESSAGES_CBUSACCESSORYMESSAGES_HPP
 
 #include "cbusmessage.hpp"
-#include "../../../../utils/byte.hpp"
 
 namespace CBUS {
 
 template<OpCode opc>
-struct AccessoryMessage : Message
+struct AccessoryMessage : NodeMessage
 {
-  uint8_t nodeNumberHigh;
-  uint8_t nodeNumberLow;
   uint8_t eventNumberHigh;
   uint8_t eventNumberLow;
 
   AccessoryMessage(uint16_t nodeNumber_, uint16_t eventNumber_)
-    : Message(opc)
-    , nodeNumberHigh{high8(nodeNumber_)}
-    , nodeNumberLow{low8(nodeNumber_)}
+    : NodeMessage(opc, nodeNumber_)
     , eventNumberHigh{high8(eventNumber_)}
     , eventNumberLow{low8(eventNumber_)}
   {
-  }
-
-  uint16_t nodeNumber() const
-  {
-    return to16(nodeNumberLow, nodeNumberHigh);
   }
 
   uint16_t eventNumber() const

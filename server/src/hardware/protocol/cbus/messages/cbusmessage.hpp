@@ -23,6 +23,7 @@
 #define TRAINTASTIC_SERVER_HARDWARE_PROTOCOL_CBUS_MESSAGES_CBUSMESSAGE_HPP
 
 #include "../cbusopcode.hpp"
+#include "../../../../utils/byte.hpp"
 
 namespace CBUS {
 
@@ -38,6 +39,25 @@ struct Message
 protected:
   Message(OpCode opc)
     : opCode{opc}
+  {
+  }
+};
+
+struct NodeMessage : Message
+{
+  uint8_t nodeNumberHigh;
+  uint8_t nodeNumberLow;
+
+  uint16_t nodeNumber() const
+  {
+    return to16(nodeNumberLow, nodeNumberHigh);
+  }
+
+protected:
+  NodeMessage(OpCode opc, uint16_t nodeNumber_)
+    : Message(opc)
+    , nodeNumberHigh{high8(nodeNumber_)}
+    , nodeNumberLow{low8(nodeNumber_)}
   {
   }
 };
