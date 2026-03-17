@@ -3,7 +3,7 @@
 CBUS is a Layout Control Bus developed by members of the Model Electronic Railway Group (MERG).
 CBUS uses the Controller Area Network (CAN) for communication between the CBUS modules.
 
-VLCB is an CBUS extension developed by MERG members to it adds additional commands and introduced a a stricter priority system for commands.
+VLCB is an CBUS extension developed by MERG members to add additional commands and introduced a stricter priority system for commands.
 
 This appendix does **not** explain the CBUS/VLCB protocol.
 Instead, it **how Traintastic implements and uses CBUS/VLCB** and which protocol messages are recognized.
@@ -15,11 +15,28 @@ It is intended for advanced users who are already familiar with the basics of th
 
 ## Message support
 
-### General control
+### General
+- Node discovery: `QNN`, `PNN` - Partly supported
 - Track on/off: `TOF`, `TON`, `RTOF`, `RTON` - Supported
 - Emergency stop: `ESTOP`, `RESTP` - Supported
+- Command station status: `RSTAT`, `STAT` - Partly supported
 
-*TODO: under development, will be expanded when implemented*
+### Locomotive control
+- Session management: `GLOC`, `KLOC`, `DKEEP`, `PLOC`, `ERR` - Partly supported
+- Speed/direction control: `DSPD`, `STMOD` - Supported
+- Function control: `DFNON`, `DFNOF` - Supported
+- Consisting - Not supported
+
+### Turnouts, signals, and outputs
+- Short events: `ASON`, `ASOF` - Supported
+- Long events: `ACON`, `ACOF` - Supported
+
+### Feedback sensors
+- Short events: `ASON`, `ASOF` - Supported
+- Long events: `ACON`, `ACOF` - Supported
+
+### Other
+- Sending raw DCC packets: `RDCC3`, `RDCC4`, `RDCC5`, `RDCC6` - Supported
 
 ## Debugging and monitoring
 
