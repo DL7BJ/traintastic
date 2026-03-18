@@ -29,6 +29,7 @@ namespace CBUS {
 struct Config
 {
   static constexpr uint16_t nodeId = 0xFFFC; //!< CANUSB fixed node id
+  static constexpr uint8_t dccExtRepeat = 2;
 
   std::chrono::seconds engineKeepAlive;
   bool debugLogRXTX;

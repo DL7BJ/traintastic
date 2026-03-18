@@ -102,6 +102,8 @@ public:
   void setAccessoryShort(uint16_t deviceNumber, bool on);
   void setAccessory(uint16_t nodeNumber, uint16_t eventNumber, bool on);
 
+  void setDccAdvancedAccessoryValue(uint16_t address, uint8_t aspect);
+
   bool send(std::vector<uint8_t> message);
   bool sendDCC(std::vector<uint8_t> dccPacket, uint8_t repeat);
 

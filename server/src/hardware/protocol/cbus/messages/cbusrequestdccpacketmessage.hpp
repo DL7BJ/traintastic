@@ -26,6 +26,7 @@
 #include <cassert>
 #include <cstring>
 #include <span>
+#include "../../dcc/dcc.hpp"
 
 namespace CBUS {
 
@@ -42,6 +43,19 @@ struct RequestDCCPacket : Message
   {
     assert(N == bytes.size());
     std::memcpy(data, bytes.data(), N);
+  }
+
+  template<typename T>
+  requires(std::is_trivially_copyable_v<T> && (sizeof(T) == N || sizeof(T) == N - 1))
+  RequestDCCPacket(const T& packet, uint8_t repeat_)
+    : Message(RDCCn())
+    , repeat{repeat_}
+  {
+    std::memcpy(data, &packet, sizeof(T));
+    if constexpr(sizeof(T) == N - 1)
+    {
+      data[N - 1] = DCC::calcChecksum({data, N - 1});
+    }
   }
 
 private:

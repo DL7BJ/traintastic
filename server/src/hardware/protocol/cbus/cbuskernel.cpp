@@ -24,6 +24,7 @@
 #include "cbustostring.hpp"
 #include "simulator/cbussimulator.hpp"
 #include "../dcc/dcc.hpp"
+#include "../dcc/messages.hpp"
 #include "../../../core/eventloop.hpp"
 #include "../../../log/log.hpp"
 #include "../../../log/logmessageexception.hpp"
@@ -472,6 +473,17 @@ void Kernel::setAccessory(uint16_t nodeNumber, uint16_t eventNumber, bool on)
       {
         send(AccessoryOff(nodeNumber, eventNumber));
       }
+    });
+}
+
+void Kernel::setDccAdvancedAccessoryValue(uint16_t address, uint8_t aspect)
+{
+  assert(isEventLoopThread());
+
+  m_ioContext.post(
+    [this, address, aspect]()
+    {
+      send(RequestDCCPacket<sizeof(DCC::SetAdvancedAccessoryValue) + 1>(DCC::SetAdvancedAccessoryValue(address, aspect), Config::dccExtRepeat));
     });
 }
 
