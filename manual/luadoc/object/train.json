@@ -1,4 +1,6 @@
 {
+  "acceleration_rate": {},
+  "braking_rate": {},
   "name": {},
   "is_stopped": {},
   "stop": {},
