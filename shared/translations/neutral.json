@@ -1,5 +1,9 @@
 [
     {
+        "term": "cbus_node_list:can_id",
+        "definition": "CAN ID"
+    },
+    {
         "term": "cbus_interface_type:canusb",
         "definition": "CANUSB"
     },

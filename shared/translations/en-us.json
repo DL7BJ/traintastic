@@ -288,6 +288,18 @@
         "definition": "Trains"
     },
     {
+        "term": "cbus_node_list:manufacturer",
+        "definition": "Manufacturer"
+    },
+    {
+        "term": "cbus_node_list:module",
+        "definition": "Module"
+    },
+    {
+        "term": "cbus_node_list:node_number",
+        "definition": "Node number"
+    },
+    {
         "term": "cbus_settings:dcc_accessory_switch_time",
         "definition": "DCC accessory switch time"
     },
@@ -870,6 +882,10 @@
     {
         "term": "input_map_item.block:type",
         "definition": "Type"
+    },
+    {
+        "term": "interface.cbus:cbus_node_list",
+        "definition": "CBUS/VLCB: Node list"
     },
     {
         "term": "interface.ecos:ecos_detector",

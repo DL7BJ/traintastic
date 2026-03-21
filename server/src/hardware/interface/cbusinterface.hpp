@@ -30,6 +30,7 @@
 #include <traintastic/enum/cbusinterfacetype.hpp>
 
 class CBUSSettings;
+class CBUSNodeList;
 
 namespace CBUS {
 class Kernel;
@@ -55,6 +56,7 @@ public:
   Property<std::string> hostname;
   Property<uint16_t> port;
   ObjectProperty<CBUSSettings> cbus;
+  ObjectProperty<CBUSNodeList> cbusNodeList;
 
   CBUSInterface(World& world, std::string_view _id);
   ~CBUSInterface() final;

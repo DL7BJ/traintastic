@@ -20,6 +20,7 @@
  */
 
 #include "cbusinterface.hpp"
+#include "cbus/cbusnodelist.hpp"
 #include "cbus/cbussettings.hpp"
 #include "../decoder/decoderchangeflags.hpp"
 #include "../decoder/list/decoderlist.hpp"
@@ -66,9 +67,11 @@ CBUSInterface::CBUSInterface(World& world, std::string_view _id)
   , hostname{this, "hostname", "", PropertyFlags::ReadWrite | PropertyFlags::Store}
   , port{this, "port", 0, PropertyFlags::ReadWrite | PropertyFlags::Store}
   , cbus{this, "cbus", nullptr, PropertyFlags::ReadOnly | PropertyFlags::Store | PropertyFlags::SubObject}
+  , cbusNodeList{this, "cbus_node_list", nullptr, PropertyFlags::ReadOnly | PropertyFlags::NoStore | PropertyFlags::SubObject}
 {
   name = "CBUS/VLCB";
   cbus.setValueInternal(std::make_shared<CBUSSettings>(*this, cbus.name()));
+  cbusNodeList.setValueInternal(std::make_shared<CBUSNodeList>(*this, cbusNodeList.name()));
 
   Attributes::addDisplayName(type, DisplayName::Interface::type);
   Attributes::addEnabled(type, !online);
@@ -90,6 +93,8 @@ CBUSInterface::CBUSInterface(World& world, std::string_view _id)
   m_interfaceItems.insertBefore(port, notes);
 
   m_interfaceItems.insertBefore(cbus, notes);
+
+  m_interfaceItems.insertBefore(cbusNodeList, notes);
 
   m_interfaceItems.insertBefore(decoders, notes);
 
@@ -402,6 +407,16 @@ bool CBUSInterface::setOnline(bool& value, bool simulation)
           setState(InterfaceState::Error);
           online = false; // communication no longer possible
         });
+      m_kernel->onPresenceOfNode =
+        [this](uint8_t canId, uint16_t nodeNumber, uint8_t manufacturerId, uint8_t moduleId)
+        {
+          cbusNodeList->add(CBUSNodeList::Node{
+            .nodeNumber = nodeNumber,
+            .canId = canId,
+            .manufacturerId = manufacturerId,
+            .moduleId = moduleId,
+          });
+        };
       m_kernel->onTrackOff =
         [this]()
         {
@@ -453,6 +468,8 @@ bool CBUSInterface::setOnline(bool& value, bool simulation)
     m_kernel->stop();
     EventLoop::deleteLater(m_kernel.release());
     EventLoop::deleteLater(m_simulator.release());
+
+    cbusNodeList->clear();
 
     if(status->state != InterfaceState::Error)
     {

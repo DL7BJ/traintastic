@@ -140,7 +140,7 @@ void Kernel::started()
   nextState();
 }
 
-void Kernel::receive(uint8_t /*canId*/, const Message& message)
+void Kernel::receive(uint8_t canId, const Message& message)
 {
   assert(isKernelThread());
 
@@ -286,6 +286,14 @@ void Kernel::receive(uint8_t /*canId*/, const Message& message)
       if(m_state == State::QueryNodes)
       {
         restartInitializationTimer(queryNodeNumberTimeout);
+        EventLoop::call(
+          [this, canId, pnn=static_cast<const PresenceOfNode&>(message)]()
+          {
+            if(onPresenceOfNode) [[likely]]
+            {
+              onPresenceOfNode(canId, pnn.nodeNumber(), pnn.manufacturerId, pnn.moduleId);
+            }
+          });
       }
       break;
 

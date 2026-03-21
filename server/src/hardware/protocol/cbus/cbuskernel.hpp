@@ -39,6 +39,7 @@ namespace CBUS {
 class Kernel : public ::KernelBase
 {
 public:
+  std::function<void(uint8_t canId, uint16_t nodeNumber, uint8_t manufacturerId, uint8_t moduleId)> onPresenceOfNode;
   std::function<void()> onTrackOff;
   std::function<void()> onTrackOn;
   std::function<void()> onEmergencyStop;

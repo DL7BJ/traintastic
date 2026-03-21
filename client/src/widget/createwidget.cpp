@@ -1,9 +1,8 @@
 /**
- * client/src/widget/createwidget.cpp
+ * This file is part of Traintastic,
+ * see <https://github.com/traintastic/traintastic>.
  *
- * This file is part of the traintastic source code.
- *
- * Copyright (C) 2020-2025 Reinder Feenstra
+ * Copyright (C) 2020-2026 Reinder Feenstra
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -87,7 +86,7 @@ QWidget* createWidgetIfCustom(const ObjectPtr& object, QWidget* parent)
     return new OutputMapWidget(object, parent);
   else if(classId == "input_map.block" || classId == "decoder_functions")
     return new ItemsEditWidget(object, parent);
-  else if(classId == "marklin_can_node_list")
+  else if(classId == "marklin_can_node_list" || classId == "cbus_node_list")
     return new ListWidget(object, parent);
   else if(classId == "marklin_can_locomotive_list")
     return new MarklinCANLocomotiveListWidget(object, parent);
