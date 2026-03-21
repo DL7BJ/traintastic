@@ -32,6 +32,7 @@ class CBUSSettings final : public SubObject
 
 public:
   Property<uint8_t> engineKeepAlive;
+  Property<uint16_t> dccAccessorySwitchTime;
   Property<bool> debugLogRXTX;
 
   CBUSSettings(Object& _parent, std::string_view parentPropertyName);
@@ -42,6 +43,10 @@ private:
   static constexpr uint8_t engineKeepAliveMin = 1;
   static constexpr uint8_t engineKeepAliveDefault = 4;
   static constexpr uint8_t engineKeepAliveMax = 30;
+  static constexpr uint16_t dccAccessorySwitchTimeMin = 50;
+  static constexpr uint16_t dccAccessorySwitchTimeDefault = 200;
+  static constexpr uint16_t dccAccessorySwitchTimeMax = 2000;
+  static constexpr uint16_t dccAccessorySwitchTimeStep = 50;
 };
 
 #endif

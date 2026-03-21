@@ -214,10 +214,10 @@ void CBUSInterface::inputSimulateChange(InputChannel channel, const InputLocatio
 
 std::span<const OutputChannel> CBUSInterface::outputChannels() const
 {
-  static const std::array<OutputChannel, 3> channels{
+  static const std::array<OutputChannel, 4> channels{
     OutputChannel::ShortEvent,
     OutputChannel::LongEvent,
-    //OutputChannel::AccessoryDCC,
+    OutputChannel::AccessoryDCC,
     OutputChannel::DCCext,
   };
   return channels;
@@ -251,6 +251,7 @@ bool CBUSInterface::setOutputValue(OutputChannel channel, const OutputLocation& 
         assert(std::holds_alternative<TriState>(value));
         if(auto v = std::get<TriState>(value); v != TriState::Undefined)
         {
+          assert(std::holds_alternative<OutputAddress>(location));
           const auto address = static_cast<uint16_t>(std::get<OutputAddress>(location).address);
           m_kernel->setAccessoryShort(address, v == TriState::True);
           return true;
@@ -261,9 +262,21 @@ bool CBUSInterface::setOutputValue(OutputChannel channel, const OutputLocation& 
         assert(std::holds_alternative<TriState>(value));
         if(auto v = std::get<TriState>(value); v != TriState::Undefined)
         {
+          assert(std::holds_alternative<OutputNodeAddress>(location));
           const auto node = static_cast<uint16_t>(std::get<OutputNodeAddress>(location).node);
           const auto address = static_cast<uint16_t>(std::get<OutputNodeAddress>(location).address);
           m_kernel->setAccessory(node, address, v == TriState::True);
+          return true;
+        }
+        break;
+
+      case OutputChannel::AccessoryDCC:
+        assert(std::holds_alternative<OutputPairValue>(value));
+        if(const auto v = std::get<OutputPairValue>(value); v == OutputPairValue::First || v == OutputPairValue::Second)
+        {
+          assert(std::holds_alternative<OutputAddress>(location));
+          const auto address = static_cast<uint16_t>(std::get<OutputAddress>(location).address);
+          m_kernel->setDccAccessory(address, v == OutputPairValue::Second);
           return true;
         }
         break;
@@ -272,6 +285,7 @@ bool CBUSInterface::setOutputValue(OutputChannel channel, const OutputLocation& 
         assert(std::holds_alternative<int16_t>(value));
         if(const auto v = std::get<int16_t>(value); inRange<int16_t>(v, std::numeric_limits<uint8_t>::min(), std::numeric_limits<uint8_t>::max()))
         {
+          assert(std::holds_alternative<OutputAddress>(location));
           const auto address = static_cast<uint16_t>(std::get<OutputAddress>(location).address);
           m_kernel->setDccAdvancedAccessoryValue(address, static_cast<uint8_t>(v));
           return true;

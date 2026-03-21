@@ -24,7 +24,6 @@
 #include "cbustostring.hpp"
 #include "simulator/cbussimulator.hpp"
 #include "../dcc/dcc.hpp"
-#include "../dcc/messages.hpp"
 #include "../../../core/eventloop.hpp"
 #include "../../../log/log.hpp"
 #include "../../../log/logmessageexception.hpp"
@@ -70,6 +69,7 @@ Kernel::Kernel(std::string logId_, const Config& config, bool simulation)
   , m_initializationTimer{ioContext()}
   , m_config{config}
   , m_engineKeepAliveTimer{ioContext()}
+  , m_dccAccessoryTimer{ioContext()}
 {
   assert(isEventLoopThread());
 }
@@ -476,6 +476,26 @@ void Kernel::setAccessory(uint16_t nodeNumber, uint16_t eventNumber, bool on)
     });
 }
 
+void Kernel::setDccAccessory(uint16_t address, bool secondOutput)
+{
+  assert(isEventLoopThread());
+
+  m_ioContext.post(
+    [this, address, secondOutput]()
+    {
+      send(RequestDCCPacket<sizeof(DCC::SetSimpleAccessory) + 1>(DCC::SetSimpleAccessory(address, secondOutput, true), Config::dccAccessoryRepeat));
+      const bool wasEmpty = m_dccAccessoryQueue.empty();
+      m_dccAccessoryQueue.emplace(std::make_pair(
+        std::chrono::steady_clock::now() + m_config.dccAccessorySwitchTime,
+        DCC::SetSimpleAccessory(address, secondOutput, false)
+      ));
+      if(wasEmpty)
+      {
+        startDccAccessoryTimer();
+      }
+    });
+}
+
 void Kernel::setDccAdvancedAccessoryValue(uint16_t address, uint8_t aspect)
 {
   assert(isEventLoopThread());
@@ -715,6 +735,35 @@ void Kernel::restartEngineKeepAliveTimer()
         restartEngineKeepAliveTimer();
       });
   }
+}
+
+void Kernel::startDccAccessoryTimer()
+{
+  assert(isKernelThread());
+
+  if(m_dccAccessoryQueue.empty()) [[unlikely]]
+  {
+    return;
+  }
+
+  m_dccAccessoryTimer.expires_at(m_dccAccessoryQueue.front().first);
+  m_dccAccessoryTimer.async_wait(
+    [this](std::error_code ec)
+    {
+      if(ec)
+      {
+        return;
+      }
+
+      send(RequestDCCPacket<sizeof(DCC::SetSimpleAccessory) + 1>(m_dccAccessoryQueue.front().second, Config::dccAccessoryRepeat));
+
+      m_dccAccessoryQueue.pop();
+
+      if(!m_dccAccessoryQueue.empty())
+      {
+        startDccAccessoryTimer();
+      }
+    });
 }
 
 }

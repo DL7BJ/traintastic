@@ -26,11 +26,13 @@
 #include <map>
 #include <span>
 #include <set>
+#include <queue>
 #include <optional>
 #include <boost/asio/steady_timer.hpp>
 #include <traintastic/enum/direction.hpp>
 #include "cbusconfig.hpp"
 #include "iohandler/cbusiohandler.hpp"
+#include "../dcc/messages.hpp"
 
 namespace CBUS {
 
@@ -102,6 +104,7 @@ public:
   void setAccessoryShort(uint16_t deviceNumber, bool on);
   void setAccessory(uint16_t nodeNumber, uint16_t eventNumber, bool on);
 
+  void setDccAccessory(uint16_t address, bool secondOutput);
   void setDccAdvancedAccessoryValue(uint16_t address, uint8_t aspect);
 
   bool send(std::vector<uint8_t> message);
@@ -138,6 +141,8 @@ private:
   boost::asio::steady_timer m_engineKeepAliveTimer;
   std::map<uint16_t, Engine> m_engines;
   std::set<uint16_t> m_engineGLOCs;
+  std::queue<std::pair<std::chrono::steady_clock::time_point, DCC::SetSimpleAccessory>> m_dccAccessoryQueue;
+  boost::asio::steady_timer m_dccAccessoryTimer;
 
   Kernel(std::string logId_, const Config& config, bool simulation);
 
@@ -162,6 +167,7 @@ private:
 
   void restartInitializationTimer(std::chrono::milliseconds timeout);
   void restartEngineKeepAliveTimer();
+  void startDccAccessoryTimer();
 };
 
 }

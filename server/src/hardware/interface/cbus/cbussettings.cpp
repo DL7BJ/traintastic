@@ -27,11 +27,17 @@
 CBUSSettings::CBUSSettings(Object& _parent, std::string_view parentPropertyName)
   : SubObject(_parent, parentPropertyName)
   , engineKeepAlive{this, "engine_keep_alive", engineKeepAliveDefault, PropertyFlags::ReadWrite | PropertyFlags::Store}
+  , dccAccessorySwitchTime{this, "dcc_accessory_switch_time", dccAccessorySwitchTimeDefault, PropertyFlags::ReadWrite | PropertyFlags::Store}
   , debugLogRXTX{this, "debug_log_rx_tx", false, PropertyFlags::ReadWrite | PropertyFlags::Store}
 {
   Attributes::addMinMax(engineKeepAlive, engineKeepAliveMin, engineKeepAliveMax);
   Attributes::addUnit(engineKeepAlive, Unit::seconds);
   m_interfaceItems.add(engineKeepAlive);
+
+  Attributes::addMinMax(dccAccessorySwitchTime, dccAccessorySwitchTimeMin, dccAccessorySwitchTimeMax);
+  Attributes::addStep(dccAccessorySwitchTime, dccAccessorySwitchTimeStep);
+  Attributes::addUnit(dccAccessorySwitchTime, Unit::milliSeconds);
+  m_interfaceItems.add(dccAccessorySwitchTime);
 
   Attributes::addDisplayName(debugLogRXTX, DisplayName::Hardware::debugLogRXTX);
   //Attributes::addGroup(debugLogRXTX, Group::debug);
@@ -42,6 +48,7 @@ CBUS::Config CBUSSettings::config() const
 {
   return CBUS::Config{
     .engineKeepAlive = std::chrono::seconds(engineKeepAlive),
+    .dccAccessorySwitchTime = std::chrono::milliseconds(dccAccessorySwitchTime),
     .debugLogRXTX = debugLogRXTX,
   };
 }
