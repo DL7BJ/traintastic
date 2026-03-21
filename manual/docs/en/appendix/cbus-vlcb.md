@@ -1,9 +1,9 @@
 # CBUS/VLCB reference
 
-CBUS is a Layout Control Bus developed by members of the Model Electronic Railway Group (MERG).
+CBUS is a Layout Control Bus developed by Mike Bolton and Gil Fuchs, members of the Model Electronic Railway Group (MERG).
 CBUS uses the Controller Area Network (CAN) for communication between the CBUS modules.
 
-VLCB is an CBUS extension developed by MERG members to add additional commands and introduced a stricter priority system for commands.
+VLCB is a CBUS backwards compatible extension developed by MERG members to add additional commands and introduced a stricter priority system for commands.
 
 This appendix does **not** explain the CBUS/VLCB protocol.
 Instead, it **how Traintastic implements and uses CBUS/VLCB** and which protocol messages are recognized.
@@ -59,3 +59,10 @@ Through [**Lua scripting**](../advanced/scripting-basics.md), it is also possibl
     - These messages bypass Traintastic’s normal handling.
     - You need a solid understanding of CBUS/VLCB and DCC to avoid conflicts.
     - Side effects may occur that Traintastic is not aware of or cannot manage.
+
+---
+
+<small>
+CBUS® is a registered trademark of Dr Mike Bolton. \
+CBUS® protocol documents are a copyright of Mike Bolton and Gil Fuchs.
+</small>
