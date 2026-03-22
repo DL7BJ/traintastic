@@ -29,6 +29,7 @@
 #include "messages/cbusenginemessages.hpp"
 #include "messages/cbusgeneralmessages.hpp"
 #include "messages/cbusnodemanagementmessages.hpp"
+#include "messages/cbusnodeparametermessages.hpp"
 #include "messages/cbusrequestdccpacketmessage.hpp"
 
 #endif

@@ -286,8 +286,14 @@ void Kernel::receive(uint8_t canId, const Message& message)
       if(m_state == State::QueryNodes)
       {
         restartInitializationTimer(queryNodeNumberTimeout);
+
+        const auto& pnn = static_cast<const PresenceOfNode&>(message);
+
+        send(ReadNodeParameter(pnn.nodeNumber(), NodeParameter::VersionMajor));
+        send(ReadNodeParameter(pnn.nodeNumber(), NodeParameter::VersionMinor));
+
         EventLoop::call(
-          [this, canId, pnn=static_cast<const PresenceOfNode&>(message)]()
+          [this, canId, pnn]()
           {
             if(onPresenceOfNode) [[likely]]
             {
