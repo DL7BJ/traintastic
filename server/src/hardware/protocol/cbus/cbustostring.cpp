@@ -274,8 +274,11 @@ std::string toString(const Message& message)
       break;
 
     case RQNPN:
+    {
+      const auto& m = static_cast<const ReadNodeParameter&>(message);
+      s.append(std::format(" node={} param={}", m.nodeNumber(), static_cast<uint8_t>(m.parameter)));
       break;
-
+    }
     case NUMEV:
       break;
 
@@ -331,8 +334,11 @@ std::string toString(const Message& message)
       break;
     }
     case PARAN:
+    {
+      const auto& m = static_cast<const NodeParameterResponse&>(message);
+      s.append(std::format(" node={} param={} value={}", m.nodeNumber(), static_cast<uint8_t>(m.parameter), m.value));
       break;
-
+    }
     case REVAL:
       break;
 
@@ -365,8 +371,11 @@ std::string toString(const Message& message)
       break;
 
     case PNN:
+    {
+      const auto& m = static_cast<const PresenceOfNode&>(message);
+      s.append(std::format(" node={} manufacturer_id={} module_id={} flags=0x{:02X}", m.nodeNumber(), m.manufacturerId, m.moduleId, m.flags));
       break;
-
+    }
     case ASON1:
       break;
 
@@ -416,8 +425,11 @@ std::string toString(const Message& message)
       break;
 
     case STAT:
+    {
+      const auto& m = static_cast<const CommandStationStatusReport&>(message);
+      s.append(std::format(" node={} cs_num={} flags=0x{:02X} major={} minor={} build={}", m.nodeNumber(), m.csNum, m.flags, m.majorRev, m.minorRev, m.build));
       break;
-
+    }
     case PARAMS:
       break;
 
