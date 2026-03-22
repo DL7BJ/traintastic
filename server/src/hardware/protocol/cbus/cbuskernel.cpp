@@ -653,7 +653,8 @@ void Kernel::changeState(State value)
 
   switch(m_state)
   {
-    case State::Initial:
+    case State::Initial: [[unlikely]]
+      assert(false);
       break;
 
     case State::QueryNodes:
@@ -697,8 +698,8 @@ void Kernel::restartInitializationTimer(std::chrono::milliseconds timeout)
           nextState();
           break;
 
-        case State::Initial:
-        case State::Started:
+        case State::Initial: [[unlikely]]
+        case State::Started: [[unlikely]]
           assert(false);
           break;
       }
