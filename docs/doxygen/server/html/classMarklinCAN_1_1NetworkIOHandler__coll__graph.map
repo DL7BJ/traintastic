@@ -1,0 +1,7 @@
+<map id="MarklinCAN::NetworkIOHandler" name="MarklinCAN::NetworkIOHandler">
+<area shape="rect" id="node1" title=" " alt="" coords="85,275,294,301"/>
+<area shape="rect" id="node2" href="$classMarklinCAN_1_1IOHandler.html" title=" " alt="" coords="5,178,165,205"/>
+<area shape="rect" id="node3" href="$classMarklinCAN_1_1Kernel.html" title=" " alt="" coords="16,81,155,108"/>
+<area shape="rect" id="node4" href="$classKernelBase.html" title=" " alt="" coords="41,5,130,32"/>
+<area shape="rect" id="node5" href="$structMarklinCAN_1_1NetworkIOHandler_1_1NetworkMessage.html" title=" " alt="" coords="190,171,399,212"/>
+</map>

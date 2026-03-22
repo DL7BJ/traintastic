@@ -1,0 +1,7 @@
+<map id="TraintasticDIY::ThrottleMessage" name="TraintasticDIY::ThrottleMessage">
+<area shape="rect" id="node1" title=" " alt="" coords="220,71,377,112"/>
+<area shape="rect" id="node3" href="$structTraintasticDIY_1_1ThrottleSetFunction.html" title=" " alt="" coords="425,5,583,47"/>
+<area shape="rect" id="node4" href="$structTraintasticDIY_1_1ThrottleSetSpeedDirection.html" title=" " alt="" coords="425,71,583,112"/>
+<area shape="rect" id="node5" href="$structTraintasticDIY_1_1ThrottleSubUnsub.html" title=" " alt="" coords="425,136,583,177"/>
+<area shape="rect" id="node2" href="$structTraintasticDIY_1_1Message.html" title=" " alt="" coords="5,78,172,105"/>
+</map>

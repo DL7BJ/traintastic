@@ -1,0 +1,17 @@
+<map id="LocoNet::Settings" name="LocoNet::Settings">
+<area shape="rect" id="node1" title=" " alt="" coords="1404,202,1531,229"/>
+<area shape="rect" id="node2" href="$classSubObject.html" title=" " alt="" coords="592,14,675,41"/>
+<area shape="rect" id="node3" href="$classObject.html" title=" " alt="" coords="304,42,364,69"/>
+<area shape="rect" id="node9" href="$classInterfaceItem.html" title=" " alt="" coords="469,69,568,95"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,5,151,47"/>
+<area shape="rect" id="node5" href="$classInterfaceItems.html" title=" " alt="" coords="25,71,131,98"/>
+<area shape="rect" id="node6" href="$classProperty.html" title=" " alt="" coords="1025,60,1217,101"/>
+<area shape="rect" id="node7" href="$classAbstractProperty.html" title=" " alt="" coords="849,217,969,243"/>
+<area shape="rect" id="node10" href="$classProperty.html" title=" " alt="" coords="1050,126,1191,153"/>
+<area shape="rect" id="node11" href="$classProperty.html" title=" " alt="" coords="1053,177,1188,203"/>
+<area shape="rect" id="node12" href="$classProperty.html" title=" " alt="" coords="1030,227,1211,254"/>
+<area shape="rect" id="node13" href="$classProperty.html" title=" " alt="" coords="1019,278,1223,305"/>
+<area shape="rect" id="node14" href="$classProperty.html" title=" " alt="" coords="1061,338,1180,365"/>
+<area shape="rect" id="node15" href="$classProperty.html" title=" " alt="" coords="1035,407,1206,434"/>
+<area shape="rect" id="node8" href="$classBaseProperty.html" title=" " alt="" coords="699,194,800,221"/>
+</map>

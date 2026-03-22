@@ -1,0 +1,9 @@
+<map id="PropertyObjectEdit" name="PropertyObjectEdit">
+<area shape="rect" id="node1" title=" " alt="" coords="5,399,137,425"/>
+<area shape="rect" id="node2" title=" " alt="" coords="13,309,87,336"/>
+<area shape="rect" id="node3" href="$classObjectProperty.html" title=" " alt="" coords="111,309,221,336"/>
+<area shape="rect" id="node4" href="$classAbstractProperty.html" title=" " alt="" coords="106,233,226,260"/>
+<area shape="rect" id="node5" href="$classBaseProperty.html" title=" " alt="" coords="115,157,217,184"/>
+<area shape="rect" id="node6" href="$classInterfaceItem.html" title=" " alt="" coords="117,81,215,108"/>
+<area shape="rect" id="node7" title=" " alt="" coords="131,5,201,32"/>
+</map>

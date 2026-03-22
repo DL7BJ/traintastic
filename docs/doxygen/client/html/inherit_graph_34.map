@@ -1,0 +1,41 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,689,79,716"/>
+<area shape="rect" id="node2" href="$classAbstractEditWidget.html" title=" " alt="" coords="161,56,295,83"/>
+<area shape="rect" id="node7" href="$classAlertWidget.html" title=" " alt="" coords="183,107,273,133"/>
+<area shape="rect" id="node8" href="$classAnalogClock.html" title=" " alt="" coords="180,157,276,184"/>
+<area shape="rect" id="node9" href="$classBoardAreaWidget.html" title=" " alt="" coords="166,208,290,235"/>
+<area shape="rect" id="node10" href="$classBoardWidget.html" title=" " alt="" coords="179,259,277,285"/>
+<area shape="rect" id="node11" href="$classClock.html" title=" " alt="" coords="200,309,256,336"/>
+<area shape="rect" id="node12" href="$classInputMonitorWidget.html" title=" " alt="" coords="161,360,295,387"/>
+<area shape="rect" id="node13" href="$classInterfaceItemNameLabel.html" title=" " alt="" coords="145,411,311,437"/>
+<area shape="rect" id="node14" href="$classLEDWidget.html" title=" " alt="" coords="183,461,273,488"/>
+<area shape="rect" id="node15" href="$classLNCVProgrammer.html" title=" " alt="" coords="163,512,293,539"/>
+<area shape="rect" id="node16" href="$classListWidget.html" title=" " alt="" coords="186,563,270,589"/>
+<area shape="rect" id="node23" href="$classLuaStatusWidget.html" title=" " alt="" coords="167,613,289,640"/>
+<area shape="rect" id="node24" href="$classOutputKeyboardWidget.html" title=" " alt="" coords="149,664,307,691"/>
+<area shape="rect" id="node25" href="$classOutputMapOutputActionWidget.html" title=" " alt="" coords="127,715,329,741"/>
+<area shape="rect" id="node26" href="$classOutputMapWidget.html" title=" " alt="" coords="165,765,291,792"/>
+<area shape="rect" id="node27" href="$classPropertyAddresses.html" title=" " alt="" coords="161,816,295,843"/>
+<area shape="rect" id="node28" href="$classPropertyDirectionControl.html" title=" " alt="" coords="145,867,311,893"/>
+<area shape="rect" id="node29" href="$classPropertyObjectEdit.html" title=" " alt="" coords="162,917,294,944"/>
+<area shape="rect" id="node30" href="$classPropertyPairOutputAction.html" title=" " alt="" coords="143,968,313,995"/>
+<area shape="rect" id="node31" href="$classSliderWidget.html" title=" " alt="" coords="180,1019,276,1045"/>
+<area shape="rect" id="node32" href="$classSpeedoMeterWidget.html" title=" " alt="" coords="158,1069,298,1096"/>
+<area shape="rect" id="node33" href="$classStackedObjectListWidget.html" title=" " alt="" coords="143,1120,313,1147"/>
+<area shape="rect" id="node35" href="$classThrottleButton.html" title=" " alt="" coords="176,1171,280,1197"/>
+<area shape="rect" id="node37" href="$classThrottleWidget.html" title=" " alt="" coords="175,1221,281,1248"/>
+<area shape="rect" id="node38" href="$classUnitPropertyComboBox.html" title=" " alt="" coords="148,1272,308,1299"/>
+<area shape="rect" id="node39" href="$classUnitPropertyEdit.html" title=" " alt="" coords="169,1323,287,1349"/>
+<area shape="rect" id="node3" href="$classItemsEditWidget.html" title=" " alt="" coords="409,5,527,32"/>
+<area shape="rect" id="node4" href="$classLuaScriptEditWidget.html" title=" " alt="" coords="397,56,539,83"/>
+<area shape="rect" id="node5" href="$classObjectEditWidget.html" title=" " alt="" coords="406,107,530,133"/>
+<area shape="rect" id="node6" href="$classServerSettingsWidget.html" title=" " alt="" coords="615,107,765,133"/>
+<area shape="rect" id="node17" href="$classMarklinCANLocomotiveListWidget.html" title=" " alt="" coords="377,526,559,567"/>
+<area shape="rect" id="node18" href="$classObjectListWidget.html" title=" " alt="" coords="407,592,529,619"/>
+<area shape="rect" id="node19" href="$classBoardListWidget.html" title=" " alt="" coords="631,541,749,568"/>
+<area shape="rect" id="node20" href="$classThrottleObjectListWidget.html" title=" " alt="" coords="607,592,773,619"/>
+<area shape="rect" id="node22" href="$classZoneBlockListWidget.html" title=" " alt="" coords="617,643,763,669"/>
+<area shape="rect" id="node21" href="$classTrainListWidget.html" title=" " alt="" coords="821,592,935,619"/>
+<area shape="rect" id="node34" href="$classInterfaceListWidget.html" title=" " alt="" coords="401,1120,535,1147"/>
+<area shape="rect" id="node36" href="$classThrottleFunctionButton.html" title=" " alt="" coords="391,1171,545,1197"/>
+</map>

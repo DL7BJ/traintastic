@@ -1,0 +1,10 @@
+<map id="TurnoutRightCurvedRailTile" name="TurnoutRightCurvedRailTile">
+<area shape="rect" id="node1" title=" " alt="" coords="5,543,188,569"/>
+<area shape="rect" id="node2" href="$classTurnoutRightRailTile.html" title=" " alt="" coords="26,468,167,495"/>
+<area shape="rect" id="node3" href="$classTurnoutRailTile.html" title=" " alt="" coords="41,393,152,420"/>
+<area shape="rect" id="node4" href="$classRailTile.html" title=" " alt="" coords="63,319,130,345"/>
+<area shape="rect" id="node5" href="$classTile.html" title=" " alt="" coords="75,244,118,271"/>
+<area shape="rect" id="node6" href="$classIdObject.html" title=" " alt="" coords="61,169,132,196"/>
+<area shape="rect" id="node7" href="$classObject.html" title=" " alt="" coords="67,95,127,121"/>
+<area shape="rect" id="node8" title=" " alt="" coords="24,5,169,47"/>
+</map>

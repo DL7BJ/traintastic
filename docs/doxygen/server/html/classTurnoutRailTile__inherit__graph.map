@@ -1,0 +1,21 @@
+<map id="TurnoutRailTile" name="TurnoutRailTile">
+<area shape="rect" id="node1" title=" " alt="" coords="631,208,741,235"/>
+<area shape="rect" id="node7" href="$classTurnout3WayRailTile.html" title=" " alt="" coords="789,56,932,83"/>
+<area shape="rect" id="node8" href="$classTurnoutLeftRailTile.html" title=" " alt="" coords="795,107,927,133"/>
+<area shape="rect" id="node12" href="$classTurnoutRightRailTile.html" title=" " alt="" coords="790,208,931,235"/>
+<area shape="rect" id="node16" href="$classTurnoutSlipRailTile.html" title=" " alt="" coords="795,284,927,311"/>
+<area shape="rect" id="node19" href="$classTurnoutWyeRailTile.html" title=" " alt="" coords="792,335,929,361"/>
+<area shape="rect" id="node2" href="$classRailTile.html" title=" " alt="" coords="516,208,583,235"/>
+<area shape="rect" id="node3" href="$classTile.html" title=" " alt="" coords="425,208,468,235"/>
+<area shape="rect" id="node4" href="$classIdObject.html" title=" " alt="" coords="307,208,377,235"/>
+<area shape="rect" id="node5" href="$classObject.html" title=" " alt="" coords="199,208,259,235"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,201,151,242"/>
+<area shape="rect" id="node9" href="$classTurnoutLeft45RailTile.html" title=" " alt="" coords="998,5,1145,32"/>
+<area shape="rect" id="node10" href="$classTurnoutLeft90RailTile.html" title=" " alt="" coords="998,56,1145,83"/>
+<area shape="rect" id="node11" href="$classTurnoutLeftCurvedRailTile.html" title=" " alt="" coords="984,107,1159,133"/>
+<area shape="rect" id="node13" href="$classTurnoutRight45RailTile.html" title=" " alt="" coords="994,157,1149,184"/>
+<area shape="rect" id="node14" href="$classTurnoutRight90RailTile.html" title=" " alt="" coords="994,208,1149,235"/>
+<area shape="rect" id="node15" href="$classTurnoutRightCurvedRailTile.html" title=" " alt="" coords="980,259,1163,285"/>
+<area shape="rect" id="node17" href="$classTurnoutDoubleSlipRailTile.html" title=" " alt="" coords="985,309,1158,336"/>
+<area shape="rect" id="node18" href="$classTurnoutSingleSlipRailTile.html" title=" " alt="" coords="987,360,1155,387"/>
+</map>

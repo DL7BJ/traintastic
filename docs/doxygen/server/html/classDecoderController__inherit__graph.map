@@ -1,0 +1,9 @@
+<map id="DecoderController" name="DecoderController">
+<area shape="rect" id="node1" title=" " alt="" coords="5,132,132,159"/>
+<area shape="rect" id="node2" href="$classDCCEXInterface.html" title="DCC&#45;EX hardware interface." alt="" coords="191,5,313,32"/>
+<area shape="rect" id="node3" href="$classECoSInterface.html" title="ECoS hardware interface." alt="" coords="198,56,306,83"/>
+<area shape="rect" id="node4" href="$classLocoNetInterface.html" title="LocoNet hardware interface." alt="" coords="191,107,313,133"/>
+<area shape="rect" id="node5" href="$classMarklinCANInterface.html" title="Märklin CAN hardware interface." alt="" coords="180,157,324,184"/>
+<area shape="rect" id="node6" href="$classXpressNetInterface.html" title="XpressNet hardware interface." alt="" coords="185,208,319,235"/>
+<area shape="rect" id="node7" href="$classZ21Interface.html" title="Z21 hardware interface." alt="" coords="205,259,299,285"/>
+</map>

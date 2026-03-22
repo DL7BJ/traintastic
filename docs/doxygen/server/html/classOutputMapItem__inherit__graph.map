@@ -1,0 +1,14 @@
+<map id="OutputMapItem" name="OutputMapItem">
+<area shape="rect" id="node1" title=" " alt="" coords="307,143,419,170"/>
+<area shape="rect" id="node4" href="$classOutputMapItemBase.html" title=" " alt="" coords="467,5,617,47"/>
+<area shape="rect" id="node6" href="$classOutputMapItemBase.html" title=" " alt="" coords="467,71,617,112"/>
+<area shape="rect" id="node8" href="$classOutputMapItemBase.html" title=" " alt="" coords="467,136,617,177"/>
+<area shape="rect" id="node10" href="$classOutputMapItemBase.html" title=" " alt="" coords="467,201,617,243"/>
+<area shape="rect" id="node12" href="$classOutputMapItemBase.html" title=" " alt="" coords="467,267,617,308"/>
+<area shape="rect" id="node2" href="$classObject.html" title=" " alt="" coords="199,143,259,170"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,136,151,177"/>
+<area shape="rect" id="node5" href="$classDecouplerOutputMapItem.html" title=" " alt="" coords="665,13,836,39"/>
+<area shape="rect" id="node7" href="$classSignalOutputMapItem.html" title=" " alt="" coords="677,78,825,105"/>
+<area shape="rect" id="node9" href="$classSwitchOutputMapItem.html" title=" " alt="" coords="675,143,827,170"/>
+<area shape="rect" id="node11" href="$classTurnoutOutputMapItem.html" title=" " alt="" coords="673,209,829,235"/>
+</map>

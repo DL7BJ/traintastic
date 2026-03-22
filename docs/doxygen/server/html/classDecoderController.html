@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>traintastic-server: DecoderController Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+   DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="appicon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">traintastic-server
+   &#160;<span id="projectnumber">0.4.0</span>
+   </div>
+   <div id="projectbrief">Traintastic server</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="classDecoderController-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">DecoderController Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Inheritance diagram for DecoderController:</div>
+<div class="dyncontent">
+<div class="center"><img src="classDecoderController__inherit__graph.png" border="0" usemap="#aDecoderController_inherit__map" alt="Inheritance graph"/></div>
+<map name="aDecoderController_inherit__map" id="aDecoderController_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,132,132,159"/>
+<area shape="rect" href="classDCCEXInterface.html" title="DCC&#45;EX hardware interface." alt="" coords="191,5,313,32"/>
+<area shape="rect" href="classECoSInterface.html" title="ECoS hardware interface." alt="" coords="198,56,306,83"/>
+<area shape="rect" href="classLocoNetInterface.html" title="LocoNet hardware interface." alt="" coords="191,107,313,133"/>
+<area shape="rect" href="classMarklinCANInterface.html" title="Märklin CAN hardware interface." alt="" coords="180,157,324,184"/>
+<area shape="rect" href="classXpressNetInterface.html" title="XpressNet hardware interface." alt="" coords="185,208,319,235"/>
+<area shape="rect" href="classZ21Interface.html" title="Z21 hardware interface." alt="" coords="205,259,299,285"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for DecoderController:</div>
+<div class="dyncontent">
+<div class="center"><img src="classDecoderController__coll__graph.png" border="0" usemap="#aDecoderController_coll__map" alt="Collaboration graph"/></div>
+<map name="aDecoderController_coll__map" id="aDecoderController_coll__map">
+<area shape="rect" title=" " alt="" coords="89,592,216,619"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="51,503,254,529"/>
+<area shape="rect" href="classAbstractObjectProperty.html" title=" " alt="" coords="73,427,232,453"/>
+<area shape="rect" href="classAbstractProperty.html" title=" " alt="" coords="93,351,213,377"/>
+<area shape="rect" href="classBaseProperty.html" title=" " alt="" coords="102,275,203,301"/>
+<area shape="rect" href="classInterfaceItem.html" title=" " alt="" coords="103,199,202,225"/>
+<area shape="rect" href="classObject.html" title=" " alt="" coords="123,109,183,136"/>
+<area shape="rect" title=" " alt="" coords="5,5,151,47"/>
+<area shape="rect" href="classInterfaceItems.html" title=" " alt="" coords="175,13,282,39"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a2ff6f85efe323c61ea2759cea9452168"><td class="memItemLeft" align="right" valign="top"><a id="a2ff6f85efe323c61ea2759cea9452168" name="a2ff6f85efe323c61ea2759cea9452168"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>DecoderVector</b> = std::vector&lt; std::shared_ptr&lt; <a class="el" href="classDecoder.html">Decoder</a> &gt; &gt;</td></tr>
+<tr class="separator:a2ff6f85efe323c61ea2759cea9452168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a49bc22a303322e3b3a63be35105e8887"><td class="memItemLeft" align="right" valign="top">virtual std::span&lt; const DecoderProtocol &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDecoderController.html#a49bc22a303322e3b3a63be35105e8887">decoderProtocols</a> () const =0</td></tr>
+<tr class="memdesc:a49bc22a303322e3b3a63be35105e8887"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get supported protocols.  <a href="classDecoderController.html#a49bc22a303322e3b3a63be35105e8887">More...</a><br /></td></tr>
+<tr class="separator:a49bc22a303322e3b3a63be35105e8887"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1a6319b8d660fe5695613e1b7dc8615"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; uint16_t, uint16_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDecoderController.html#ab1a6319b8d660fe5695613e1b7dc8615">decoderAddressMinMax</a> (DecoderProtocol protocol) const</td></tr>
+<tr class="memdesc:ab1a6319b8d660fe5695613e1b7dc8615"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get address range for given protocol.  <a href="classDecoderController.html#ab1a6319b8d660fe5695613e1b7dc8615">More...</a><br /></td></tr>
+<tr class="separator:ab1a6319b8d660fe5695613e1b7dc8615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b654b7ef6bd68a166a24348d2df6012"><td class="memItemLeft" align="right" valign="top">virtual std::span&lt; const uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDecoderController.html#a7b654b7ef6bd68a166a24348d2df6012">decoderSpeedSteps</a> (DecoderProtocol protocol) const</td></tr>
+<tr class="memdesc:a7b654b7ef6bd68a166a24348d2df6012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get speed step options for given protocol.  <a href="classDecoderController.html#a7b654b7ef6bd68a166a24348d2df6012">More...</a><br /></td></tr>
+<tr class="separator:a7b654b7ef6bd68a166a24348d2df6012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad29a6f475658fead9a00d7dcf84937eb"><td class="memItemLeft" align="right" valign="top"><a id="ad29a6f475658fead9a00d7dcf84937eb" name="ad29a6f475658fead9a00d7dcf84937eb"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>addDecoder</b> (<a class="el" href="classDecoder.html">Decoder</a> &amp;decoder)</td></tr>
+<tr class="separator:ad29a6f475658fead9a00d7dcf84937eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad32559d899e2f6e426e220354d891ad0"><td class="memItemLeft" align="right" valign="top"><a id="ad32559d899e2f6e426e220354d891ad0" name="ad32559d899e2f6e426e220354d891ad0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>removeDecoder</b> (<a class="el" href="classDecoder.html">Decoder</a> &amp;decoder)</td></tr>
+<tr class="separator:ad32559d899e2f6e426e220354d891ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a295546789ad64a0f9ca5e16d156cb3d1"><td class="memItemLeft" align="right" valign="top"><a id="a295546789ad64a0f9ca5e16d156cb3d1" name="a295546789ad64a0f9ca5e16d156cb3d1"></a>
+const std::shared_ptr&lt; <a class="el" href="classDecoder.html">Decoder</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getDecoder</b> (DecoderProtocol protocol, uint16_t address)</td></tr>
+<tr class="separator:a295546789ad64a0f9ca5e16d156cb3d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a380ca8782471515c682487fb59bd9cf1"><td class="memItemLeft" align="right" valign="top"><a id="a380ca8782471515c682487fb59bd9cf1" name="a380ca8782471515c682487fb59bd9cf1"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>decoderChanged</b> (const <a class="el" href="classDecoder.html">Decoder</a> &amp;decoder, DecoderChangeFlags changes, uint32_t functionNumber)=0</td></tr>
+<tr class="separator:a380ca8782471515c682487fb59bd9cf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a4219713f8ab9088aca845521ffcbb46e"><td class="memItemLeft" align="right" valign="top"><a id="a4219713f8ab9088aca845521ffcbb46e" name="a4219713f8ab9088aca845521ffcbb46e"></a>
+<a class="el" href="classObjectProperty.html">ObjectProperty</a>&lt; <a class="el" href="classDecoderList.html">DecoderList</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>decoders</b></td></tr>
+<tr class="separator:a4219713f8ab9088aca845521ffcbb46e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:ab01183f33214ac72bec8035786584072"><td class="memItemLeft" align="right" valign="top"><a id="ab01183f33214ac72bec8035786584072" name="ab01183f33214ac72bec8035786584072"></a>
+static constexpr std::pair&lt; uint16_t, uint16_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>noAddressMinMax</b> {std::numeric_limits&lt;uint16_t&gt;::max(), std::numeric_limits&lt;uint16_t&gt;::min()}</td></tr>
+<tr class="separator:ab01183f33214ac72bec8035786584072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:aff920da428a46b0141f65d62852d93dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDecoderController.html#aff920da428a46b0141f65d62852d93dd">DecoderController</a> (<a class="el" href="classIdObject.html">IdObject</a> &amp;interface, DecoderListColumn columns)</td></tr>
+<tr class="separator:aff920da428a46b0141f65d62852d93dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64962645a8a149d09d5756808bd54b3c"><td class="memItemLeft" align="right" valign="top"><a id="a64962645a8a149d09d5756808bd54b3c" name="a64962645a8a149d09d5756808bd54b3c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addToWorld</b> ()</td></tr>
+<tr class="separator:a64962645a8a149d09d5756808bd54b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30500d42745c9399201f6919ecf5b43a"><td class="memItemLeft" align="right" valign="top"><a id="a30500d42745c9399201f6919ecf5b43a" name="a30500d42745c9399201f6919ecf5b43a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>destroying</b> ()</td></tr>
+<tr class="separator:a30500d42745c9399201f6919ecf5b43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c8660ea361f6a1cb8086d3afb4140c6"><td class="memItemLeft" align="right" valign="top"><a id="a6c8660ea361f6a1cb8086d3afb4140c6" name="a6c8660ea361f6a1cb8086d3afb4140c6"></a>
+DecoderVector::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>findDecoder</b> (const <a class="el" href="classDecoder.html">Decoder</a> &amp;decoder)</td></tr>
+<tr class="separator:a6c8660ea361f6a1cb8086d3afb4140c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0880248722ca655887bc820cbaad3a2"><td class="memItemLeft" align="right" valign="top"><a id="ae0880248722ca655887bc820cbaad3a2" name="ae0880248722ca655887bc820cbaad3a2"></a>
+DecoderVector::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>findDecoder</b> (DecoderProtocol protocol, uint16_t address)</td></tr>
+<tr class="separator:ae0880248722ca655887bc820cbaad3a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f4c85fe059ab719546c8f0c0eba055f"><td class="memItemLeft" align="right" valign="top"><a id="a1f4c85fe059ab719546c8f0c0eba055f" name="a1f4c85fe059ab719546c8f0c0eba055f"></a>
+DecoderVector::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>findDecoderMFX</b> (uint32_t mfxUID)</td></tr>
+<tr class="separator:a1f4c85fe059ab719546c8f0c0eba055f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17d37ac4629c4b08b38a8e434a710ffc"><td class="memItemLeft" align="right" valign="top"><a id="a17d37ac4629c4b08b38a8e434a710ffc" name="a17d37ac4629c4b08b38a8e434a710ffc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>restoreDecoderSpeed</b> ()</td></tr>
+<tr class="memdesc:a17d37ac4629c4b08b38a8e434a710ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">restore speed of all decoders that are not (emergency) stopped <br /></td></tr>
+<tr class="separator:a17d37ac4629c4b08b38a8e434a710ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aff920da428a46b0141f65d62852d93dd" name="aff920da428a46b0141f65d62852d93dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff920da428a46b0141f65d62852d93dd">&#9670;&nbsp;</a></span>DecoderController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DecoderController::DecoderController </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classIdObject.html">IdObject</a> &amp;&#160;</td>
+          <td class="paramname"><em>interface</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DecoderListColumn&#160;</td>
+          <td class="paramname"><em>columns</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >This file is part of <a class="el" href="classTraintastic.html">Traintastic</a>, see <a href="https://github.com/traintastic/traintastic">https://github.com/traintastic/traintastic</a>.</p>
+<p >Copyright (C) 2021-2026 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab1a6319b8d660fe5695613e1b7dc8615" name="ab1a6319b8d660fe5695613e1b7dc8615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1a6319b8d660fe5695613e1b7dc8615">&#9670;&nbsp;</a></span>decoderAddressMinMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; uint16_t, uint16_t &gt; DecoderController::decoderAddressMinMax </td>
+          <td>(</td>
+          <td class="paramtype">DecoderProtocol&#160;</td>
+          <td class="paramname"><em>protocol</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get address range for given protocol. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">protocol</td><td>The decoder protocol </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Address range or <code>noAddressMinMax</code> if address isn't supported for the given protocol </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classDCCEXInterface.html#aaf62264c6dbb6fff40d027fa2e05080b">DCCEXInterface</a>, <a class="el" href="classLocoNetInterface.html#a125afaa4d941fbbeddfb26e9e9336fec">LocoNetInterface</a>, <a class="el" href="classXpressNetInterface.html#af84aed232e0f9e726db8e883fbaa13b3">XpressNetInterface</a>, and <a class="el" href="classZ21Interface.html#a6589206fb7504b7f86741f7c7ea42bce">Z21Interface</a>.</p>
+
+</div>
+</div>
+<a id="a49bc22a303322e3b3a63be35105e8887" name="a49bc22a303322e3b3a63be35105e8887"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49bc22a303322e3b3a63be35105e8887">&#9670;&nbsp;</a></span>decoderProtocols()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::span&lt; const DecoderProtocol &gt; DecoderController::decoderProtocols </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get supported protocols. </p>
+<dl class="section return"><dt>Returns</dt><dd>Supported protocols, may not be empty and must be constant for the instance! </dd></dl>
+
+<p>Implemented in <a class="el" href="classDCCEXInterface.html#aecffcff451c6c8af932ca79d4ee55077">DCCEXInterface</a>, <a class="el" href="classECoSInterface.html#afae9b38fb266501e50a2f5303fe44d57">ECoSInterface</a>, <a class="el" href="classLocoNetInterface.html#a9180c4dfc314a8dcebd0fde12c5b03f9">LocoNetInterface</a>, <a class="el" href="classMarklinCANInterface.html#a18e4fe4b6527693fa94c3da2eb0d01ee">MarklinCANInterface</a>, <a class="el" href="classXpressNetInterface.html#a351a2602d2870887946d34d0457abb71">XpressNetInterface</a>, and <a class="el" href="classZ21Interface.html#a25835ac41baf14f26186fb266b70cc34">Z21Interface</a>.</p>
+
+</div>
+</div>
+<a id="a7b654b7ef6bd68a166a24348d2df6012" name="a7b654b7ef6bd68a166a24348d2df6012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b654b7ef6bd68a166a24348d2df6012">&#9670;&nbsp;</a></span>decoderSpeedSteps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::span&lt; const uint8_t &gt; DecoderController::decoderSpeedSteps </td>
+          <td>(</td>
+          <td class="paramtype">DecoderProtocol&#160;</td>
+          <td class="paramname"><em>protocol</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get speed step options for given protocol. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">protocol</td><td>The decoder protocol </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Speed step options for the given protocol </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classDCCEXInterface.html#acf50b488b36e1fe6cc4ae63f4186d57c">DCCEXInterface</a>, <a class="el" href="classMarklinCANInterface.html#afe604804dff391b7bf3e732672783537">MarklinCANInterface</a>, and <a class="el" href="classXpressNetInterface.html#af9e855cc89b9ba15b9a63f84328bda08">XpressNetInterface</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/tom/projects/linux/traintastic/server/src/hardware/decoder/<a class="el" href="decodercontroller_8hpp_source.html">decodercontroller.hpp</a></li>
+<li>/home/tom/projects/linux/traintastic/server/src/hardware/decoder/decodercontroller.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

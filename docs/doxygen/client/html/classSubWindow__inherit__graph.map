@@ -1,0 +1,7 @@
+<map id="SubWindow" name="SubWindow">
+<area shape="rect" id="node1" title=" " alt="" coords="176,80,268,107"/>
+<area shape="rect" id="node3" href="$classBoardSubWindow.html" title=" " alt="" coords="5,155,132,181"/>
+<area shape="rect" id="node4" href="$classObjectSubWindow.html" title=" " alt="" coords="157,155,287,181"/>
+<area shape="rect" id="node5" href="$classThrottleSubWindow.html" title=" " alt="" coords="311,155,447,181"/>
+<area shape="rect" id="node2" title=" " alt="" coords="161,5,283,32"/>
+</map>

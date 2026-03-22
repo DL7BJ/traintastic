@@ -1,0 +1,12 @@
+<map id="BaseProperty" name="BaseProperty">
+<area shape="rect" id="node1" title=" " alt="" coords="197,155,299,181"/>
+<area shape="rect" id="node4" href="$classAbstractProperty.html" title=" " alt="" coords="107,229,227,256"/>
+<area shape="rect" id="node8" href="$classAbstractVectorProperty.html" title=" " alt="" coords="251,229,410,256"/>
+<area shape="rect" id="node2" href="$classInterfaceItem.html" title=" " alt="" coords="199,80,297,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="213,5,283,32"/>
+<area shape="rect" id="node5" href="$classObjectProperty.html" title=" " alt="" coords="5,304,115,331"/>
+<area shape="rect" id="node6" href="$classProperty.html" title=" " alt="" coords="139,304,210,331"/>
+<area shape="rect" id="node7" href="$classUnitProperty.html" title=" " alt="" coords="127,379,222,405"/>
+<area shape="rect" id="node9" href="$classObjectVectorProperty.html" title=" " alt="" coords="249,304,396,331"/>
+<area shape="rect" id="node10" href="$classVectorProperty.html" title=" " alt="" coords="420,304,529,331"/>
+</map>

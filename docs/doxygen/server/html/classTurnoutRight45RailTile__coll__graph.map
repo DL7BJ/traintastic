@@ -1,0 +1,52 @@
+<map id="TurnoutRight45RailTile" name="TurnoutRight45RailTile">
+<area shape="rect" id="node1" title=" " alt="" coords="3373,1955,3528,1981"/>
+<area shape="rect" id="node2" href="$classTurnoutRightRailTile.html" title=" " alt="" coords="3183,1955,3324,1981"/>
+<area shape="rect" id="node3" href="$classTurnoutRailTile.html" title=" " alt="" coords="3023,1955,3133,1981"/>
+<area shape="rect" id="node4" href="$classRailTile.html" title=" " alt="" coords="2768,51,2835,77"/>
+<area shape="rect" id="node5" href="$classTile.html" title=" " alt="" coords="2403,2005,2445,2032"/>
+<area shape="rect" id="node6" href="$classIdObject.html" title=" " alt="" coords="2097,51,2168,77"/>
+<area shape="rect" id="node7" href="$classObject.html" title=" " alt="" coords="304,43,364,69"/>
+<area shape="rect" id="node10" href="$classWorld.html" title=" " alt="" coords="1820,1063,1875,1089"/>
+<area shape="rect" id="node14" href="$classInterfaceItem.html" title=" " alt="" coords="469,149,568,176"/>
+<area shape="rect" id="node8" title=" " alt="" coords="5,6,151,47"/>
+<area shape="rect" id="node9" href="$classInterfaceItems.html" title=" " alt="" coords="25,72,131,99"/>
+<area shape="rect" id="node11" href="$classProperty.html" title=" " alt="" coords="1362,93,1515,120"/>
+<area shape="rect" id="node12" href="$classAbstractProperty.html" title=" " alt="" coords="768,543,888,569"/>
+<area shape="rect" id="node15" href="$classProperty.html" title=" " alt="" coords="1125,151,1286,177"/>
+<area shape="rect" id="node16" href="$classProperty.html" title=" " alt="" coords="1139,252,1272,279"/>
+<area shape="rect" id="node17" href="$classProperty.html" title=" " alt="" coords="1146,429,1265,456"/>
+<area shape="rect" id="node18" href="$classProperty.html" title=" " alt="" coords="1120,477,1291,518"/>
+<area shape="rect" id="node19" href="$classProperty.html" title=" " alt="" coords="1135,543,1276,569"/>
+<area shape="rect" id="node21" href="$classAbstractObjectProperty.html" title=" " alt="" coords="937,1281,1096,1308"/>
+<area shape="rect" id="node44" href="$classProperty.html" title=" " alt="" coords="1608,2020,1735,2047"/>
+<area shape="rect" id="node45" href="$classProperty.html" title=" " alt="" coords="1939,2077,2073,2104"/>
+<area shape="rect" id="node46" href="$classProperty.html" title=" " alt="" coords="1594,2133,1749,2160"/>
+<area shape="rect" id="node47" href="$classProperty.html" title=" " alt="" coords="1780,2192,1915,2219"/>
+<area shape="rect" id="node48" href="$classProperty.html" title=" " alt="" coords="2192,2247,2379,2273"/>
+<area shape="rect" id="node13" href="$classBaseProperty.html" title=" " alt="" coords="617,205,719,232"/>
+<area shape="rect" id="node20" href="$classObjectProperty.html" title=" " alt="" coords="1347,605,1531,646"/>
+<area shape="rect" id="node22" href="$classObjectProperty.html" title=" " alt="" coords="1350,670,1527,711"/>
+<area shape="rect" id="node23" href="$classObjectProperty.html" title=" " alt="" coords="1350,735,1527,777"/>
+<area shape="rect" id="node24" href="$classObjectProperty.html" title=" " alt="" coords="1334,801,1543,842"/>
+<area shape="rect" id="node25" href="$classObjectProperty.html" title=" " alt="" coords="1315,866,1563,907"/>
+<area shape="rect" id="node26" href="$classObjectProperty.html" title=" " alt="" coords="1349,931,1528,973"/>
+<area shape="rect" id="node27" href="$classObjectProperty.html" title=" " alt="" coords="1353,997,1525,1038"/>
+<area shape="rect" id="node28" href="$classObjectProperty.html" title=" " alt="" coords="1337,1063,1540,1089"/>
+<area shape="rect" id="node29" href="$classObjectProperty.html" title=" " alt="" coords="1347,1113,1530,1140"/>
+<area shape="rect" id="node30" href="$classObjectProperty.html" title=" " alt="" coords="1342,1164,1535,1191"/>
+<area shape="rect" id="node31" href="$classObjectProperty.html" title=" " alt="" coords="1341,1215,1536,1257"/>
+<area shape="rect" id="node32" href="$classObjectProperty.html" title=" " alt="" coords="1339,1281,1538,1308"/>
+<area shape="rect" id="node33" href="$classObjectProperty.html" title=" " alt="" coords="1345,1332,1533,1359"/>
+<area shape="rect" id="node34" href="$classObjectProperty.html" title=" " alt="" coords="1347,1383,1530,1409"/>
+<area shape="rect" id="node35" href="$classObjectProperty.html" title=" " alt="" coords="1355,1433,1522,1460"/>
+<area shape="rect" id="node36" href="$classObjectProperty.html" title=" " alt="" coords="1356,1485,1521,1526"/>
+<area shape="rect" id="node37" href="$classObjectProperty.html" title=" " alt="" coords="1347,1551,1530,1577"/>
+<area shape="rect" id="node38" href="$classObjectProperty.html" title=" " alt="" coords="1345,1602,1532,1643"/>
+<area shape="rect" id="node39" href="$classObjectProperty.html" title=" " alt="" coords="1367,1667,1510,1709"/>
+<area shape="rect" id="node40" href="$classObjectProperty.html" title=" " alt="" coords="1350,1733,1527,1774"/>
+<area shape="rect" id="node41" href="$classObjectProperty.html" title=" " alt="" coords="1355,1798,1523,1839"/>
+<area shape="rect" id="node42" href="$classObjectProperty.html" title=" " alt="" coords="1337,1864,1540,1891"/>
+<area shape="rect" id="node43" href="$classObjectProperty.html" title=" " alt="" coords="1350,1915,1527,1957"/>
+<area shape="rect" id="node49" href="$classObjectProperty.html" title=" " alt="" coords="2469,1947,2673,1989"/>
+<area shape="rect" id="node50" href="$classMethod.html" title=" " alt="" coords="2697,2107,2905,2133"/>
+</map>

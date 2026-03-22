@@ -1,0 +1,8 @@
+<map id="MarklinCAN::FeedbackMessage" name="MarklinCAN::FeedbackMessage">
+<area shape="rect" id="node1" title=" " alt="" coords="431,64,641,91"/>
+<area shape="rect" id="node4" href="$structMarklinCAN_1_1FeedbackState.html" title=" " alt="" coords="689,5,879,32"/>
+<area shape="rect" id="node5" href="$structMarklinCAN_1_1FeedbackStateParameter.html" title=" " alt="" coords="689,57,879,98"/>
+<area shape="rect" id="node6" href="$structMarklinCAN_1_1FeedbackStateRequest.html" title=" " alt="" coords="689,122,879,163"/>
+<area shape="rect" id="node2" href="$structMarklinCAN_1_1UidMessage.html" title=" " alt="" coords="208,64,383,91"/>
+<area shape="rect" id="node3" href="$structMarklinCAN_1_1Message.html" title=" " alt="" coords="5,64,160,91"/>
+</map>

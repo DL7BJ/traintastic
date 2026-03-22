@@ -1,0 +1,443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>traintastic-client: MainWindow Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+   DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="appicon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">traintastic-client
+   &#160;<span id="projectnumber">0.4.0</span>
+   </div>
+   <div id="projectbrief">Traintastic client</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-slots">Public Slots</a> &#124;
+<a href="#signals">Signals</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pro-slots">Protected Slots</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
+<a href="classMainWindow-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">MainWindow Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Inheritance diagram for MainWindow:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMainWindow__inherit__graph.png" border="0" usemap="#aMainWindow_inherit__map" alt="Inheritance graph"/></div>
+<map name="aMainWindow_inherit__map" id="aMainWindow_inherit__map">
+<area shape="rect" title=" " alt="" coords="10,80,107,107"/>
+<area shape="rect" title=" " alt="" coords="5,5,112,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for MainWindow:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMainWindow__coll__graph.png" border="0" usemap="#aMainWindow_coll__map" alt="Collaboration graph"/></div>
+<map name="aMainWindow_coll__map" id="aMainWindow_coll__map">
+<area shape="rect" title=" " alt="" coords="261,184,358,211"/>
+<area shape="rect" title=" " alt="" coords="5,95,112,121"/>
+<area shape="rect" href="classMdiArea.html" title=" " alt="" coords="137,95,207,121"/>
+<area shape="rect" title=" " alt="" coords="132,5,212,32"/>
+<area shape="rect" href="classMainWindowStatusBar.html" title=" " alt="" coords="232,95,387,121"/>
+<area shape="rect" title=" " alt="" coords="264,5,355,32"/>
+<area shape="rect" href="classServerLogWidget.html" title=" " alt="" coords="411,95,533,121"/>
+<area shape="rect" title=" " alt="" coords="426,5,518,32"/>
+<area shape="rect" href="classBlockHighlight.html" title=" " alt="" coords="557,95,664,121"/>
+<area shape="rect" title=" " alt="" coords="558,5,629,32"/>
+<area shape="rect" href="classColorPool.html" title=" " alt="" coords="653,5,731,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-slots" name="pub-slots"></a>
+Public Slots</h2></td></tr>
+<tr class="memitem:a51dfc74bea07700bf0fa24fd0cf15f81"><td class="memItemLeft" align="right" valign="top"><a id="a51dfc74bea07700bf0fa24fd0cf15f81" name="a51dfc74bea07700bf0fa24fd0cf15f81"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>connectToServer</b> (const QString &amp;url=QString())</td></tr>
+<tr class="separator:a51dfc74bea07700bf0fa24fd0cf15f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a714ce516e32cce03da2e7cd6c58d6724"><td class="memItemLeft" align="right" valign="top"><a id="a714ce516e32cce03da2e7cd6c58d6724" name="a714ce516e32cce03da2e7cd6c58d6724"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>showObject</b> (const ObjectPtr &amp;object, SubWindowType flags=SubWindowType::Object)</td></tr>
+<tr class="separator:a714ce516e32cce03da2e7cd6c58d6724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad039e0e6563ab8d703519f47d3e3eeba"><td class="memItemLeft" align="right" valign="top"><a id="ad039e0e6563ab8d703519f47d3e3eeba" name="ad039e0e6563ab8d703519f47d3e3eeba"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>showObject</b> (const QString &amp;id, const QString &amp;title=&quot;&quot;, SubWindowType flags=SubWindowType::Object)</td></tr>
+<tr class="separator:ad039e0e6563ab8d703519f47d3e3eeba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
+Signals</h2></td></tr>
+<tr class="memitem:a399ac84308c0816b06a59183e665ca93"><td class="memItemLeft" align="right" valign="top"><a id="a399ac84308c0816b06a59183e665ca93" name="a399ac84308c0816b06a59183e665ca93"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>worldClockChanged</b> ()</td></tr>
+<tr class="separator:a399ac84308c0816b06a59183e665ca93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a996c5a2b6f77944776856f08ec30858d"><td class="memItemLeft" align="right" valign="top"><a id="a996c5a2b6f77944776856f08ec30858d" name="a996c5a2b6f77944776856f08ec30858d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MainWindow</b> (QWidget *parent=nullptr)</td></tr>
+<tr class="separator:a996c5a2b6f77944776856f08ec30858d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ae6be76ba9396e0c73e83e98931a3c1"><td class="memItemLeft" align="right" valign="top"><a id="a6ae6be76ba9396e0c73e83e98931a3c1" name="a6ae6be76ba9396e0c73e83e98931a3c1"></a>
+<a class="el" href="classBlockHighlight.html">BlockHighlight</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>blockHighlight</b> ()</td></tr>
+<tr class="separator:a6ae6be76ba9396e0c73e83e98931a3c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64b9cc471812317cd543bc40073efe84"><td class="memItemLeft" align="right" valign="top"><a id="a64b9cc471812317cd543bc40073efe84" name="a64b9cc471812317cd543bc40073efe84"></a>
+const std::shared_ptr&lt; <a class="el" href="classConnection.html">Connection</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>connection</b> ()</td></tr>
+<tr class="separator:a64b9cc471812317cd543bc40073efe84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6f8db47a664b6d7c19fca8fa3fab7c3"><td class="memItemLeft" align="right" valign="top"><a id="af6f8db47a664b6d7c19fca8fa3fab7c3" name="af6f8db47a664b6d7c19fca8fa3fab7c3"></a>
+const ObjectPtr &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>world</b> () const</td></tr>
+<tr class="separator:af6f8db47a664b6d7c19fca8fa3fab7c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f5df55d398c0c58e324d68a27929f5a"><td class="memItemLeft" align="right" valign="top"><a id="a6f5df55d398c0c58e324d68a27929f5a" name="a6f5df55d398c0c58e324d68a27929f5a"></a>
+const ObjectPtr &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>worldClock</b> () const</td></tr>
+<tr class="separator:a6f5df55d398c0c58e324d68a27929f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6592d3356b2471b7a6eeb7aaa1db83f8"><td class="memItemLeft" align="right" valign="top"><a id="a6592d3356b2471b7a6eeb7aaa1db83f8" name="a6592d3356b2471b7a6eeb7aaa1db83f8"></a>
+<a class="el" href="classIntroductionWizard.html">IntroductionWizard</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>showIntroductionWizard</b> ()</td></tr>
+<tr class="separator:a6592d3356b2471b7a6eeb7aaa1db83f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7772bc29cc59ad1230b0b14b57ca3e8"><td class="memItemLeft" align="right" valign="top"><a id="ad7772bc29cc59ad1230b0b14b57ca3e8" name="ad7772bc29cc59ad1230b0b14b57ca3e8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>showAddInterfaceWizard</b> ()</td></tr>
+<tr class="separator:ad7772bc29cc59ad1230b0b14b57ca3e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6697f1508c46cce232ebec36449432be"><td class="memItemLeft" align="right" valign="top"><a id="a6697f1508c46cce232ebec36449432be" name="a6697f1508c46cce232ebec36449432be"></a>
+<a class="el" href="classNewBoardWizard.html">NewBoardWizard</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>showNewBoardWizard</b> (const ObjectPtr &amp;board)</td></tr>
+<tr class="separator:a6697f1508c46cce232ebec36449432be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5f48bd4f26633be947f39cde0cbb3b0"><td class="memItemLeft" align="right" valign="top"><a id="af5f48bd4f26633be947f39cde0cbb3b0" name="af5f48bd4f26633be947f39cde0cbb3b0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>showLuaScriptsList</b> ()</td></tr>
+<tr class="separator:af5f48bd4f26633be947f39cde0cbb3b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a5105bde707c3b0eb6d84f4570ec54f17"><td class="memItemLeft" align="right" valign="top"><a id="a5105bde707c3b0eb6d84f4570ec54f17" name="a5105bde707c3b0eb6d84f4570ec54f17"></a>
+static <a class="el" href="classMainWindow.html">MainWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>instance</b> = nullptr</td></tr>
+<tr class="separator:a5105bde707c3b0eb6d84f4570ec54f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-slots" name="pro-slots"></a>
+Protected Slots</h2></td></tr>
+<tr class="memitem:a4b746e2c91a1e3ad20abcff0efec544c"><td class="memItemLeft" align="right" valign="top"><a id="a4b746e2c91a1e3ad20abcff0efec544c" name="a4b746e2c91a1e3ad20abcff0efec544c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>disconnectFromServer</b> ()</td></tr>
+<tr class="separator:a4b746e2c91a1e3ad20abcff0efec544c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1b15548430eee5aba157fed2cb861ab"><td class="memItemLeft" align="right" valign="top"><a id="ab1b15548430eee5aba157fed2cb861ab" name="ab1b15548430eee5aba157fed2cb861ab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>loadWorld</b> ()</td></tr>
+<tr class="separator:ab1b15548430eee5aba157fed2cb861ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91ab3e535f63203f54cc33ca52ec729b"><td class="memItemLeft" align="right" valign="top"><a id="a91ab3e535f63203f54cc33ca52ec729b" name="a91ab3e535f63203f54cc33ca52ec729b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>toggleFullScreen</b> ()</td></tr>
+<tr class="separator:a91ab3e535f63203f54cc33ca52ec729b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad691e62c9cbe1350ab8caa4cbe66cb6c"><td class="memItemLeft" align="right" valign="top"><a id="ad691e62c9cbe1350ab8caa4cbe66cb6c" name="ad691e62c9cbe1350ab8caa4cbe66cb6c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>viewClockWindow</b> (bool value)</td></tr>
+<tr class="separator:ad691e62c9cbe1350ab8caa4cbe66cb6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e4ac4602d187f864225e20fdcee72a3"><td class="memItemLeft" align="right" valign="top"><a id="a5e4ac4602d187f864225e20fdcee72a3" name="a5e4ac4602d187f864225e20fdcee72a3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>toggleServerLog</b> ()</td></tr>
+<tr class="separator:a5e4ac4602d187f864225e20fdcee72a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3aa0f3ce42e748b931d6211921ea197"><td class="memItemLeft" align="right" valign="top"><a id="aa3aa0f3ce42e748b931d6211921ea197" name="aa3aa0f3ce42e748b931d6211921ea197"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>showAbout</b> ()</td></tr>
+<tr class="separator:aa3aa0f3ce42e748b931d6211921ea197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af184d9eb8a4dbfcc53f9ad28734d2335"><td class="memItemLeft" align="right" valign="top"><a id="af184d9eb8a4dbfcc53f9ad28734d2335" name="af184d9eb8a4dbfcc53f9ad28734d2335"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>connectionStateChanged</b> ()</td></tr>
+<tr class="separator:af184d9eb8a4dbfcc53f9ad28734d2335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2ffe303230bdcd17f4ddeafd222ccad"><td class="memItemLeft" align="right" valign="top"><a id="aa2ffe303230bdcd17f4ddeafd222ccad" name="aa2ffe303230bdcd17f4ddeafd222ccad"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateActions</b> ()</td></tr>
+<tr class="separator:aa2ffe303230bdcd17f4ddeafd222ccad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a917a8d4fb79cd23ec75bdb6058a07232"><td class="memItemLeft" align="right" valign="top"><a id="a917a8d4fb79cd23ec75bdb6058a07232" name="a917a8d4fb79cd23ec75bdb6058a07232"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>worldStateChanged</b> (int64_t value)</td></tr>
+<tr class="separator:a917a8d4fb79cd23ec75bdb6058a07232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a731660e7f008cb662ec4846ff5a8a08e"><td class="memItemLeft" align="right" valign="top"><a id="a731660e7f008cb662ec4846ff5a8a08e" name="a731660e7f008cb662ec4846ff5a8a08e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>closeEvent</b> (QCloseEvent *event) final</td></tr>
+<tr class="separator:a731660e7f008cb662ec4846ff5a8a08e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8e18431ac7f7ab038855e18ecc0a016"><td class="memItemLeft" align="right" valign="top"><a id="ac8e18431ac7f7ab038855e18ecc0a016" name="ac8e18431ac7f7ab038855e18ecc0a016"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>changeEvent</b> (QEvent *event) final</td></tr>
+<tr class="separator:ac8e18431ac7f7ab038855e18ecc0a016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32bca1d274abacdd4fa58a6adb5004a7"><td class="memItemLeft" align="right" valign="top"><a id="a32bca1d274abacdd4fa58a6adb5004a7" name="a32bca1d274abacdd4fa58a6adb5004a7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>worldChanged</b> ()</td></tr>
+<tr class="separator:a32bca1d274abacdd4fa58a6adb5004a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90cfbcf2e0f2549760a60f184ee0acbf"><td class="memItemLeft" align="right" valign="top"><a id="a90cfbcf2e0f2549760a60f184ee0acbf" name="a90cfbcf2e0f2549760a60f184ee0acbf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateWindowTitle</b> ()</td></tr>
+<tr class="separator:a90cfbcf2e0f2549760a60f184ee0acbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd5aa396451a36abd127edc85b78f0e9"><td class="memItemLeft" align="right" valign="top"><a id="afd5aa396451a36abd127edc85b78f0e9" name="afd5aa396451a36abd127edc85b78f0e9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addSubWindow</b> (const QString &amp;windowId, <a class="el" href="classSubWindow.html">SubWindow</a> *window)</td></tr>
+<tr class="separator:afd5aa396451a36abd127edc85b78f0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a749fbcf7227625c6d22d080e524ce0fc"><td class="memItemLeft" align="right" valign="top"><a id="a749fbcf7227625c6d22d080e524ce0fc" name="a749fbcf7227625c6d22d080e524ce0fc"></a>
+std::shared_ptr&lt; <a class="el" href="classConnection.html">Connection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_connection</b></td></tr>
+<tr class="separator:a749fbcf7227625c6d22d080e524ce0fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcad7bafe525fdaa4c1ab5841791b362"><td class="memItemLeft" align="right" valign="top"><a id="adcad7bafe525fdaa4c1ab5841791b362" name="adcad7bafe525fdaa4c1ab5841791b362"></a>
+ObjectPtr&#160;</td><td class="memItemRight" valign="bottom"><b>m_world</b></td></tr>
+<tr class="separator:adcad7bafe525fdaa4c1ab5841791b362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43d004ae90abd956cb5824823dae854a"><td class="memItemLeft" align="right" valign="top"><a id="a43d004ae90abd956cb5824823dae854a" name="a43d004ae90abd956cb5824823dae854a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_newWorldRequested</b> = false</td></tr>
+<tr class="separator:a43d004ae90abd956cb5824823dae854a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03fc2fcd3ade13b796842d28839bf361"><td class="memItemLeft" align="right" valign="top"><a id="a03fc2fcd3ade13b796842d28839bf361" name="a03fc2fcd3ade13b796842d28839bf361"></a>
+std::unique_ptr&lt; <a class="el" href="classWorldListDialog.html">WorldListDialog</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_loadWorldDialog</b></td></tr>
+<tr class="separator:a03fc2fcd3ade13b796842d28839bf361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21cad05c21860aa62df7ce64b7cbf6d4"><td class="memItemLeft" ><a id="a21cad05c21860aa62df7ce64b7cbf6d4" name="a21cad05c21860aa62df7ce64b7cbf6d4"></a>
+struct {</td></tr>
+<tr class="memitem:aa51f94b90b02b8f8b5fdafd89210e692"><td class="memItemLeft" >
+&#160;&#160;&#160;std::unique_ptr&lt; <a class="el" href="classAddInterfaceWizard.html">AddInterfaceWizard</a> &gt;&#160;&#160;&#160;<b>addInterface</b></td></tr>
+<tr class="separator:aa51f94b90b02b8f8b5fdafd89210e692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafe097d299f05e88533e250b017634ed"><td class="memItemLeft" >
+&#160;&#160;&#160;std::unique_ptr&lt; <a class="el" href="classNewWorldWizard.html">NewWorldWizard</a> &gt;&#160;&#160;&#160;<b>newWorld</b></td></tr>
+<tr class="separator:aafe097d299f05e88533e250b017634ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af53a2fcb2c0ecae39432dd0f47e6b505"><td class="memItemLeft" >
+&#160;&#160;&#160;std::vector&lt; <a class="el" href="classNewBoardWizard.html">NewBoardWizard</a> * &gt;&#160;&#160;&#160;<b>newBoardWizards</b></td></tr>
+<tr class="separator:af53a2fcb2c0ecae39432dd0f47e6b505"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21cad05c21860aa62df7ce64b7cbf6d4"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><b>m_wizard</b></td></tr>
+<tr class="separator:a21cad05c21860aa62df7ce64b7cbf6d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a175325c49a20a4dea9f4068b0c5392c4"><td class="memItemLeft" align="right" valign="top"><a id="a175325c49a20a4dea9f4068b0c5392c4" name="a175325c49a20a4dea9f4068b0c5392c4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_clockRequest</b></td></tr>
+<tr class="separator:a175325c49a20a4dea9f4068b0c5392c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab35eeb02655b7b3d4404803ab836e216"><td class="memItemLeft" align="right" valign="top"><a id="ab35eeb02655b7b3d4404803ab836e216" name="ab35eeb02655b7b3d4404803ab836e216"></a>
+ObjectPtr&#160;</td><td class="memItemRight" valign="bottom"><b>m_clock</b></td></tr>
+<tr class="separator:ab35eeb02655b7b3d4404803ab836e216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a168d7f9265f5d581e5f09e08c614859b"><td class="memItemLeft" align="right" valign="top"><a id="a168d7f9265f5d581e5f09e08c614859b" name="a168d7f9265f5d581e5f09e08c614859b"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>m_windowTitle</b></td></tr>
+<tr class="separator:a168d7f9265f5d581e5f09e08c614859b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4df262633ca9e12fdb724914e1df924"><td class="memItemLeft" align="right" valign="top"><a id="ac4df262633ca9e12fdb724914e1df924" name="ac4df262633ca9e12fdb724914e1df924"></a>
+QSplitter *&#160;</td><td class="memItemRight" valign="bottom"><b>m_splitter</b></td></tr>
+<tr class="separator:ac4df262633ca9e12fdb724914e1df924"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad068c2e7b1dccb1015e04a9903063b0e"><td class="memItemLeft" align="right" valign="top"><a id="ad068c2e7b1dccb1015e04a9903063b0e" name="ad068c2e7b1dccb1015e04a9903063b0e"></a>
+<a class="el" href="classMdiArea.html">MdiArea</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_mdiArea</b></td></tr>
+<tr class="separator:ad068c2e7b1dccb1015e04a9903063b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa85dd6b48991377ae2f2bdf9eb2de644"><td class="memItemLeft" align="right" valign="top"><a id="aa85dd6b48991377ae2f2bdf9eb2de644" name="aa85dd6b48991377ae2f2bdf9eb2de644"></a>
+<a class="el" href="classMainWindowStatusBar.html">MainWindowStatusBar</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_statusBar</b></td></tr>
+<tr class="separator:aa85dd6b48991377ae2f2bdf9eb2de644"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e6a4da03099b15718b1fe0a3928e58e"><td class="memItemLeft" align="right" valign="top"><a id="a2e6a4da03099b15718b1fe0a3928e58e" name="a2e6a4da03099b15718b1fe0a3928e58e"></a>
+<a class="el" href="classServerLogWidget.html">ServerLogWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_serverLog</b></td></tr>
+<tr class="separator:a2e6a4da03099b15718b1fe0a3928e58e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a679993f033052ed0b9f9a7f8eeaa2509"><td class="memItemLeft" align="right" valign="top"><a id="a679993f033052ed0b9f9a7f8eeaa2509" name="a679993f033052ed0b9f9a7f8eeaa2509"></a>
+QMdiSubWindow *&#160;</td><td class="memItemRight" valign="bottom"><b>m_clockWindow</b> = nullptr</td></tr>
+<tr class="separator:a679993f033052ed0b9f9a7f8eeaa2509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff97f4941cdc025cab463ae39d1382ad"><td class="memItemLeft" align="right" valign="top"><a id="aff97f4941cdc025cab463ae39d1382ad" name="aff97f4941cdc025cab463ae39d1382ad"></a>
+QMap&lt; QString, <a class="el" href="classSubWindow.html">SubWindow</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_subWindows</b></td></tr>
+<tr class="separator:aff97f4941cdc025cab463ae39d1382ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca39d0978a9c39aad42f1b37b9200188"><td class="memItemLeft" align="right" valign="top"><a id="aca39d0978a9c39aad42f1b37b9200188" name="aca39d0978a9c39aad42f1b37b9200188"></a>
+QMdiSubWindow *&#160;</td><td class="memItemRight" valign="bottom"><b>m_trainAndRailVehiclesSubWindow</b> = nullptr</td></tr>
+<tr class="separator:aca39d0978a9c39aad42f1b37b9200188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af182bd5d739cda5c186c670731cabe9b"><td class="memItemLeft" align="right" valign="top"><a id="af182bd5d739cda5c186c670731cabe9b" name="af182bd5d739cda5c186c670731cabe9b"></a>
+<a class="el" href="classBlockHighlight.html">BlockHighlight</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_blockHighlight</b></td></tr>
+<tr class="separator:af182bd5d739cda5c186c670731cabe9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29e3ff9b9f165dd746af654910f8887e"><td class="memItemLeft" align="right" valign="top"><a id="a29e3ff9b9f165dd746af654910f8887e" name="a29e3ff9b9f165dd746af654910f8887e"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_actionConnectToServer</b></td></tr>
+<tr class="separator:a29e3ff9b9f165dd746af654910f8887e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9d8fe7049f1d2b8267a62c59aff4c20"><td class="memItemLeft" align="right" valign="top"><a id="ae9d8fe7049f1d2b8267a62c59aff4c20" name="ae9d8fe7049f1d2b8267a62c59aff4c20"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_actionDisconnectFromServer</b></td></tr>
+<tr class="separator:ae9d8fe7049f1d2b8267a62c59aff4c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80e1ee3685a95ae55dac3d5c40ab4a11"><td class="memItemLeft" align="right" valign="top"><a id="a80e1ee3685a95ae55dac3d5c40ab4a11" name="a80e1ee3685a95ae55dac3d5c40ab4a11"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_actionNewWorld</b></td></tr>
+<tr class="separator:a80e1ee3685a95ae55dac3d5c40ab4a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40b3b5e8edbd77539527e723c4b2f37c"><td class="memItemLeft" align="right" valign="top"><a id="a40b3b5e8edbd77539527e723c4b2f37c" name="a40b3b5e8edbd77539527e723c4b2f37c"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_actionLoadWorld</b></td></tr>
+<tr class="separator:a40b3b5e8edbd77539527e723c4b2f37c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7215b45959ef10eeb7f8d020af6df07"><td class="memItemLeft" align="right" valign="top"><a id="af7215b45959ef10eeb7f8d020af6df07" name="af7215b45959ef10eeb7f8d020af6df07"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_actionSaveWorld</b></td></tr>
+<tr class="separator:af7215b45959ef10eeb7f8d020af6df07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf886fb1237c2523df5b2d5a1b976199"><td class="memItemLeft" align="right" valign="top"><a id="adf886fb1237c2523df5b2d5a1b976199" name="adf886fb1237c2523df5b2d5a1b976199"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_actionCloseWorld</b></td></tr>
+<tr class="separator:adf886fb1237c2523df5b2d5a1b976199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dc78a4d63786afb85e6f80ffb99c3cd"><td class="memItemLeft" align="right" valign="top"><a id="a2dc78a4d63786afb85e6f80ffb99c3cd" name="a2dc78a4d63786afb85e6f80ffb99c3cd"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_actionImportWorld</b></td></tr>
+<tr class="separator:a2dc78a4d63786afb85e6f80ffb99c3cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af50ce5669817d381b4e4dfaf11ea95fa"><td class="memItemLeft" align="right" valign="top"><a id="af50ce5669817d381b4e4dfaf11ea95fa" name="af50ce5669817d381b4e4dfaf11ea95fa"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_actionExportWorld</b></td></tr>
+<tr class="separator:af50ce5669817d381b4e4dfaf11ea95fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0523c5e0f65fd8f8742dc567b1ba1b91"><td class="memItemLeft" align="right" valign="top"><a id="a0523c5e0f65fd8f8742dc567b1ba1b91" name="a0523c5e0f65fd8f8742dc567b1ba1b91"></a>
+QMenu *&#160;</td><td class="memItemRight" valign="bottom"><b>m_menuWorld</b></td></tr>
+<tr class="separator:a0523c5e0f65fd8f8742dc567b1ba1b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3960005feb73b6ef651106c56be821e"><td class="memItemLeft" align="right" valign="top"><a id="ab3960005feb73b6ef651106c56be821e" name="ab3960005feb73b6ef651106c56be821e"></a>
+QMenu *&#160;</td><td class="memItemRight" valign="bottom"><b>m_menuConnection</b></td></tr>
+<tr class="separator:ab3960005feb73b6ef651106c56be821e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9436dc2ec0e5e8cac3039827aed73dcc"><td class="memItemLeft" align="right" valign="top"><a id="a9436dc2ec0e5e8cac3039827aed73dcc" name="a9436dc2ec0e5e8cac3039827aed73dcc"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_worldOnlineAction</b></td></tr>
+<tr class="separator:a9436dc2ec0e5e8cac3039827aed73dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a341fdead80c9f312b7ba35a64166d698"><td class="memItemLeft" align="right" valign="top"><a id="a341fdead80c9f312b7ba35a64166d698" name="a341fdead80c9f312b7ba35a64166d698"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_worldOfflineAction</b></td></tr>
+<tr class="separator:a341fdead80c9f312b7ba35a64166d698"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1fd84f4aad727422d5884e19484ff66"><td class="memItemLeft" align="right" valign="top"><a id="ac1fd84f4aad727422d5884e19484ff66" name="ac1fd84f4aad727422d5884e19484ff66"></a>
+QMenu *&#160;</td><td class="memItemRight" valign="bottom"><b>m_menuPower</b></td></tr>
+<tr class="separator:ac1fd84f4aad727422d5884e19484ff66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a033293b8b96e7e5ed2669a30d7031db7"><td class="memItemLeft" align="right" valign="top"><a id="a033293b8b96e7e5ed2669a30d7031db7" name="a033293b8b96e7e5ed2669a30d7031db7"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_worldPowerOnAction</b></td></tr>
+<tr class="separator:a033293b8b96e7e5ed2669a30d7031db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62b6493ec794953300b2d027fc58da78"><td class="memItemLeft" align="right" valign="top"><a id="a62b6493ec794953300b2d027fc58da78" name="a62b6493ec794953300b2d027fc58da78"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_worldPowerOffAction</b></td></tr>
+<tr class="separator:a62b6493ec794953300b2d027fc58da78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f420769a87578ccb745c59ba381585d"><td class="memItemLeft" align="right" valign="top"><a id="a6f420769a87578ccb745c59ba381585d" name="a6f420769a87578ccb745c59ba381585d"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_worldStopAction</b></td></tr>
+<tr class="separator:a6f420769a87578ccb745c59ba381585d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1a21e77bc7dd5b3dd6908191449ef46"><td class="memItemLeft" align="right" valign="top"><a id="af1a21e77bc7dd5b3dd6908191449ef46" name="af1a21e77bc7dd5b3dd6908191449ef46"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_worldRunAction</b></td></tr>
+<tr class="separator:af1a21e77bc7dd5b3dd6908191449ef46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa02109ea048fec6870643b9b106b4e56"><td class="memItemLeft" align="right" valign="top"><a id="aa02109ea048fec6870643b9b106b4e56" name="aa02109ea048fec6870643b9b106b4e56"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_clockAction</b></td></tr>
+<tr class="separator:aa02109ea048fec6870643b9b106b4e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07a150db6216ec068b7aa8aa83afb5ab"><td class="memItemLeft" align="right" valign="top"><a id="a07a150db6216ec068b7aa8aa83afb5ab" name="a07a150db6216ec068b7aa8aa83afb5ab"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_worldMuteMenuAction</b></td></tr>
+<tr class="separator:a07a150db6216ec068b7aa8aa83afb5ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0785a0609c8d195a5cdde6d52f792d39"><td class="memItemLeft" align="right" valign="top"><a id="a0785a0609c8d195a5cdde6d52f792d39" name="a0785a0609c8d195a5cdde6d52f792d39"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_worldNoSmokeMenuAction</b></td></tr>
+<tr class="separator:a0785a0609c8d195a5cdde6d52f792d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96efc1894e7593a422013e3ec2dbbcb6"><td class="memItemLeft" align="right" valign="top"><a id="a96efc1894e7593a422013e3ec2dbbcb6" name="a96efc1894e7593a422013e3ec2dbbcb6"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_worldEditAction</b></td></tr>
+<tr class="separator:a96efc1894e7593a422013e3ec2dbbcb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82689e65b76b8dd86a993634328c68d5"><td class="memItemLeft" align="right" valign="top"><a id="a82689e65b76b8dd86a993634328c68d5" name="a82689e65b76b8dd86a993634328c68d5"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_worldSimulationAction</b></td></tr>
+<tr class="separator:a82689e65b76b8dd86a993634328c68d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a266515b9fa1aff600da715f7e4a08cbd"><td class="memItemLeft" align="right" valign="top"><a id="a266515b9fa1aff600da715f7e4a08cbd" name="a266515b9fa1aff600da715f7e4a08cbd"></a>
+QMenu *&#160;</td><td class="memItemRight" valign="bottom"><b>m_menuObjects</b></td></tr>
+<tr class="separator:a266515b9fa1aff600da715f7e4a08cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a5405ac4a788ca3abcf819884d45051"><td class="memItemLeft" align="right" valign="top"><a id="a8a5405ac4a788ca3abcf819884d45051" name="a8a5405ac4a788ca3abcf819884d45051"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_actionLuaScript</b></td></tr>
+<tr class="separator:a8a5405ac4a788ca3abcf819884d45051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac89c710f90268ca839e55de40a3b416e"><td class="memItemLeft" align="right" valign="top"><a id="ac89c710f90268ca839e55de40a3b416e" name="ac89c710f90268ca839e55de40a3b416e"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_actionFullScreen</b></td></tr>
+<tr class="separator:ac89c710f90268ca839e55de40a3b416e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a115d18da0b07f87ab15f3a0d523c97ff"><td class="memItemLeft" align="right" valign="top"><a id="a115d18da0b07f87ab15f3a0d523c97ff" name="a115d18da0b07f87ab15f3a0d523c97ff"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_actionViewToolbar</b></td></tr>
+<tr class="separator:a115d18da0b07f87ab15f3a0d523c97ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3e6365779040514c7f5cca432ce5c5c"><td class="memItemLeft" align="right" valign="top"><a id="ae3e6365779040514c7f5cca432ce5c5c" name="ae3e6365779040514c7f5cca432ce5c5c"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_actionClock</b></td></tr>
+<tr class="separator:ae3e6365779040514c7f5cca432ce5c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94a9acb9ebe083f6790b717be4e6c4ce"><td class="memItemLeft" align="right" valign="top"><a id="a94a9acb9ebe083f6790b717be4e6c4ce" name="a94a9acb9ebe083f6790b717be4e6c4ce"></a>
+QMenu *&#160;</td><td class="memItemRight" valign="bottom"><b>m_menuServer</b></td></tr>
+<tr class="separator:a94a9acb9ebe083f6790b717be4e6c4ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58419f2e32af89b26a9767c240ee965e"><td class="memItemLeft" align="right" valign="top"><a id="a58419f2e32af89b26a9767c240ee965e" name="a58419f2e32af89b26a9767c240ee965e"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_actionServerSettings</b></td></tr>
+<tr class="separator:a58419f2e32af89b26a9767c240ee965e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb198222c2df3cfbae13d9f140c1e10e"><td class="memItemLeft" align="right" valign="top"><a id="acb198222c2df3cfbae13d9f140c1e10e" name="acb198222c2df3cfbae13d9f140c1e10e"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_actionServerRestart</b></td></tr>
+<tr class="separator:acb198222c2df3cfbae13d9f140c1e10e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cb280ebed86fefcd401b2310a1b6163"><td class="memItemLeft" align="right" valign="top"><a id="a1cb280ebed86fefcd401b2310a1b6163" name="a1cb280ebed86fefcd401b2310a1b6163"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_actionServerShutdown</b></td></tr>
+<tr class="separator:a1cb280ebed86fefcd401b2310a1b6163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33196a0b76825ef6d4de9099a734598d"><td class="memItemLeft" align="right" valign="top"><a id="a33196a0b76825ef6d4de9099a734598d" name="a33196a0b76825ef6d4de9099a734598d"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_actionServerLog</b></td></tr>
+<tr class="separator:a33196a0b76825ef6d4de9099a734598d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca80e3d9316e7d92c90f6963412e20b"><td class="memItemLeft" align="right" valign="top"><a id="a7ca80e3d9316e7d92c90f6963412e20b" name="a7ca80e3d9316e7d92c90f6963412e20b"></a>
+QMenu *&#160;</td><td class="memItemRight" valign="bottom"><b>m_menuProgramming</b></td></tr>
+<tr class="separator:a7ca80e3d9316e7d92c90f6963412e20b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13139c7fefd448fdf2cf5bee4397e5db"><td class="memItemLeft" align="right" valign="top"><a id="a13139c7fefd448fdf2cf5bee4397e5db" name="a13139c7fefd448fdf2cf5bee4397e5db"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_actionAddInterfaceWizard</b></td></tr>
+<tr class="separator:a13139c7fefd448fdf2cf5bee4397e5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46aaedd4325cce49363a6ac537c0b97b"><td class="memItemLeft" align="right" valign="top"><a id="a46aaedd4325cce49363a6ac537c0b97b" name="a46aaedd4325cce49363a6ac537c0b97b"></a>
+QToolBar *&#160;</td><td class="memItemRight" valign="bottom"><b>m_toolbar</b></td></tr>
+<tr class="separator:a46aaedd4325cce49363a6ac537c0b97b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a693f6baf122c9df9e48085a3e7a4edf4"><td class="memItemLeft" align="right" valign="top"><a id="a693f6baf122c9df9e48085a3e7a4edf4" name="a693f6baf122c9df9e48085a3e7a4edf4"></a>
+QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>m_worldOnlineOfflineToolButton</b></td></tr>
+<tr class="separator:a693f6baf122c9df9e48085a3e7a4edf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7eaa0d1c8c1965d7e9a4086d17fc2bb"><td class="memItemLeft" align="right" valign="top"><a id="ad7eaa0d1c8c1965d7e9a4086d17fc2bb" name="ad7eaa0d1c8c1965d7e9a4086d17fc2bb"></a>
+QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>m_worldPowerOnOffToolButton</b></td></tr>
+<tr class="separator:ad7eaa0d1c8c1965d7e9a4086d17fc2bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c946ced525bffe056c9cc513333564b"><td class="memItemLeft" align="right" valign="top"><a id="a0c946ced525bffe056c9cc513333564b" name="a0c946ced525bffe056c9cc513333564b"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_worldMuteToolbarAction</b></td></tr>
+<tr class="separator:a0c946ced525bffe056c9cc513333564b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeac2748f82a9a0ef5e44fe7e7409dce7"><td class="memItemLeft" align="right" valign="top"><a id="aeac2748f82a9a0ef5e44fe7e7409dce7" name="aeac2748f82a9a0ef5e44fe7e7409dce7"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_worldNoSmokeToolbarAction</b></td></tr>
+<tr class="separator:aeac2748f82a9a0ef5e44fe7e7409dce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16831dd8d680261341fbaae2c7bdfad8"><td class="memItemLeft" align="right" valign="top"><a id="a16831dd8d680261341fbaae2c7bdfad8" name="a16831dd8d680261341fbaae2c7bdfad8"></a>
+QByteArray&#160;</td><td class="memItemRight" valign="bottom"><b>m_beforeFullScreenGeometry</b></td></tr>
+<tr class="separator:a16831dd8d680261341fbaae2c7bdfad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a4baca12d6f652831fdc37a02026e2227"><td class="memItemLeft" align="right" valign="top"><a id="a4baca12d6f652831fdc37a02026e2227" name="a4baca12d6f652831fdc37a02026e2227"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>ScreenShotDialog</b></td></tr>
+<tr class="separator:a4baca12d6f652831fdc37a02026e2227"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/tom/projects/linux/traintastic/client/src/<a class="el" href="mainwindow_8hpp_source.html">mainwindow.hpp</a></li>
+<li>/home/tom/projects/linux/traintastic/client/src/mainwindow.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<map id="Settings" name="Settings">
+<area shape="rect" id="node1" title=" " alt="" coords="1300,195,1371,222"/>
+<area shape="rect" id="node2" href="$classObject.html" title=" " alt="" coords="304,42,364,69"/>
+<area shape="rect" id="node8" href="$classInterfaceItem.html" title=" " alt="" coords="469,71,568,98"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,151,47"/>
+<area shape="rect" id="node4" href="$classInterfaceItems.html" title=" " alt="" coords="25,71,131,98"/>
+<area shape="rect" id="node5" href="$classProperty.html" title=" " alt="" coords="955,149,1073,175"/>
+<area shape="rect" id="node6" href="$classAbstractProperty.html" title=" " alt="" coords="768,199,888,226"/>
+<area shape="rect" id="node9" href="$classProperty.html" title=" " alt="" coords="943,199,1085,226"/>
+<area shape="rect" id="node10" href="$classProperty.html" title=" " alt="" coords="937,250,1091,277"/>
+<area shape="rect" id="node11" href="$classProperty.html" title=" " alt="" coords="943,301,1085,327"/>
+<area shape="rect" id="node7" href="$classBaseProperty.html" title=" " alt="" coords="617,149,719,175"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classLogger.html" title=" " alt="" coords="5,56,67,83"/>
+<area shape="rect" id="node2" href="$classConsoleLogger.html" title=" " alt="" coords="115,5,224,32"/>
+<area shape="rect" id="node3" href="$classFileLogger.html" title=" " alt="" coords="128,56,211,83"/>
+<area shape="rect" id="node4" href="$classMemoryLogger.html" title=" " alt="" coords="115,107,223,133"/>
+</map>

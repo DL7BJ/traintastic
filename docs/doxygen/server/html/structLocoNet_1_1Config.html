@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>traintastic-server: LocoNet::Config Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+   DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="appicon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">traintastic-server
+   &#160;<span id="projectnumber">0.4.0</span>
+   </div>
+   <div id="projectbrief">Traintastic server</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceLocoNet.html">LocoNet</a></li><li class="navelem"><a class="el" href="structLocoNet_1_1Config.html">Config</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="structLocoNet_1_1Config-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">LocoNet::Config Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ad56632dc5b6b32ed3c90a6c86a6b5c4e"><td class="memItemLeft" align="right" valign="top"><a id="ad56632dc5b6b32ed3c90a6c86a6b5c4e" name="ad56632dc5b6b32ed3c90a6c86a6b5c4e"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>echoTimeout</b></td></tr>
+<tr class="memdesc:ad56632dc5b6b32ed3c90a6c86a6b5c4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for echo timeout in milliseconds. <br /></td></tr>
+<tr class="separator:ad56632dc5b6b32ed3c90a6c86a6b5c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa020c25a77dd2e2e0c08c5600e8f3937"><td class="memItemLeft" align="right" valign="top"><a id="aa020c25a77dd2e2e0c08c5600e8f3937" name="aa020c25a77dd2e2e0c08c5600e8f3937"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>responseTimeout</b></td></tr>
+<tr class="memdesc:aa020c25a77dd2e2e0c08c5600e8f3937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for response timeout in milliseconds. <br /></td></tr>
+<tr class="separator:aa020c25a77dd2e2e0c08c5600e8f3937"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f6884e5425d3977ebce38a8f66232a2"><td class="memItemLeft" align="right" valign="top"><a id="a5f6884e5425d3977ebce38a8f66232a2" name="a5f6884e5425d3977ebce38a8f66232a2"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>locomotiveSlots</b></td></tr>
+<tr class="memdesc:a5f6884e5425d3977ebce38a8f66232a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of available locomotive slots, defaults to #SLOT_LOCO_MAX. <br /></td></tr>
+<tr class="separator:a5f6884e5425d3977ebce38a8f66232a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dfc790b207f69d3a9da683139599624"><td class="memItemLeft" align="right" valign="top"><a id="a2dfc790b207f69d3a9da683139599624" name="a2dfc790b207f69d3a9da683139599624"></a>
+LocoNetF9F28&#160;</td><td class="memItemRight" valign="bottom"><b>f9f28</b></td></tr>
+<tr class="separator:a2dfc790b207f69d3a9da683139599624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb94e7532f589c24fb91e7edf95234a6"><td class="memItemLeft" align="right" valign="top"><a id="adb94e7532f589c24fb91e7edf95234a6" name="adb94e7532f589c24fb91e7edf95234a6"></a>
+LocoNetFastClock&#160;</td><td class="memItemRight" valign="bottom"><b>fastClock</b></td></tr>
+<tr class="separator:adb94e7532f589c24fb91e7edf95234a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d51f899227475963c5d201e42bc76f0"><td class="memItemLeft" align="right" valign="top"><a id="a3d51f899227475963c5d201e42bc76f0" name="a3d51f899227475963c5d201e42bc76f0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>fastClockSyncEnabled</b></td></tr>
+<tr class="separator:a3d51f899227475963c5d201e42bc76f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1d04f4074186b82c305caadfbcf306a"><td class="memItemLeft" align="right" valign="top"><a id="ad1d04f4074186b82c305caadfbcf306a" name="ad1d04f4074186b82c305caadfbcf306a"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>fastClockSyncInterval</b></td></tr>
+<tr class="memdesc:ad1d04f4074186b82c305caadfbcf306a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast clock sync interval in seconds. <br /></td></tr>
+<tr class="separator:ad1d04f4074186b82c305caadfbcf306a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a2cbc9ccd2291561e00f2b053b782d9"><td class="memItemLeft" align="right" valign="top"><a id="a6a2cbc9ccd2291561e00f2b053b782d9" name="a6a2cbc9ccd2291561e00f2b053b782d9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>debugLogInput</b></td></tr>
+<tr class="separator:a6a2cbc9ccd2291561e00f2b053b782d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92ecc92d31a29ea71ff0e7ef76507690"><td class="memItemLeft" align="right" valign="top"><a id="a92ecc92d31a29ea71ff0e7ef76507690" name="a92ecc92d31a29ea71ff0e7ef76507690"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>debugLogRXTX</b></td></tr>
+<tr class="separator:a92ecc92d31a29ea71ff0e7ef76507690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a342968cf850d7a870be9a500950db1f5"><td class="memItemLeft" align="right" valign="top"><a id="a342968cf850d7a870be9a500950db1f5" name="a342968cf850d7a870be9a500950db1f5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>pcap</b></td></tr>
+<tr class="separator:a342968cf850d7a870be9a500950db1f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9158d258f14f1d4bb9729f27cecb592d"><td class="memItemLeft" align="right" valign="top"><a id="a9158d258f14f1d4bb9729f27cecb592d" name="a9158d258f14f1d4bb9729f27cecb592d"></a>
+PCAPOutput&#160;</td><td class="memItemRight" valign="bottom"><b>pcapOutput</b></td></tr>
+<tr class="separator:a9158d258f14f1d4bb9729f27cecb592d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad1f8a090bc6d7785de64363bb74820e"><td class="memItemLeft" align="right" valign="top"><a id="aad1f8a090bc6d7785de64363bb74820e" name="aad1f8a090bc6d7785de64363bb74820e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>listenOnly</b></td></tr>
+<tr class="memdesc:aad1f8a090bc6d7785de64363bb74820e"><td class="mdescLeft">&#160;</td><td class="mdescRight">If enabled <a class="el" href="classTraintastic.html">Traintastic</a> will not send any message to the <a class="el" href="namespaceLocoNet.html">LocoNet</a>, just for using <a class="el" href="classTraintastic.html">Traintastic</a> as <a class="el" href="namespaceLocoNet.html">LocoNet</a> monitor. <br /></td></tr>
+<tr class="separator:aad1f8a090bc6d7785de64363bb74820e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:aac0f0a1eea8bbbd31bfb473e35b02030"><td class="memItemLeft" align="right" valign="top"><a id="aac0f0a1eea8bbbd31bfb473e35b02030" name="aac0f0a1eea8bbbd31bfb473e35b02030"></a>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>timeoutMin</b> = 100</td></tr>
+<tr class="memdesc:aac0f0a1eea8bbbd31bfb473e35b02030"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum timeout in milliseconds. <br /></td></tr>
+<tr class="separator:aac0f0a1eea8bbbd31bfb473e35b02030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accfdb626e22ff139111958bb7b2999d1"><td class="memItemLeft" align="right" valign="top"><a id="accfdb626e22ff139111958bb7b2999d1" name="accfdb626e22ff139111958bb7b2999d1"></a>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>timeoutMax</b> = 10000</td></tr>
+<tr class="memdesc:accfdb626e22ff139111958bb7b2999d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum timeout in milliseconds. <br /></td></tr>
+<tr class="separator:accfdb626e22ff139111958bb7b2999d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaf0bb651dd9f9406e3f247c2572a5b3"><td class="memItemLeft" align="right" valign="top"><a id="adaf0bb651dd9f9406e3f247c2572a5b3" name="adaf0bb651dd9f9406e3f247c2572a5b3"></a>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>lncvReadResponseTimeout</b> = 100</td></tr>
+<tr class="separator:adaf0bb651dd9f9406e3f247c2572a5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/home/tom/projects/linux/traintastic/server/src/hardware/protocol/loconet/<a class="el" href="loconet_2config_8hpp_source.html">config.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

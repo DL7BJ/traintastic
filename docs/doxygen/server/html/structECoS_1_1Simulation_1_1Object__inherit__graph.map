@@ -1,0 +1,6 @@
+<map id="ECoS::Simulation::Object" name="ECoS::Simulation::Object">
+<area shape="rect" id="node1" title=" " alt="" coords="224,5,396,32"/>
+<area shape="rect" id="node2" href="$structECoS_1_1Simulation_1_1Locomotive.html" title=" " alt="" coords="5,80,207,107"/>
+<area shape="rect" id="node3" href="$structECoS_1_1Simulation_1_1S88.html" title=" " alt="" coords="231,80,389,107"/>
+<area shape="rect" id="node4" href="$structECoS_1_1Simulation_1_1Switch.html" title=" " alt="" coords="413,80,588,107"/>
+</map>

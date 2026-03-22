@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>traintastic-server: BlockPath Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+   DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="appicon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">traintastic-server
+   &#160;<span id="projectnumber">0.4.0</span>
+   </div>
+   <div id="projectbrief">Traintastic server</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="classBlockPath-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">BlockPath Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>A path between two blocks.  
+ <a href="classBlockPath.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="blockpath_8hpp_source.html">blockpath.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for BlockPath:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBlockPath__inherit__graph.png" border="0" usemap="#aBlockPath_inherit__map" alt="Inheritance graph"/></div>
+<map name="aBlockPath_inherit__map" id="aBlockPath_inherit__map">
+<area shape="rect" title="A path between two blocks." alt="" coords="54,95,137,121"/>
+<area shape="rect" href="classPath.html" title=" " alt="" coords="5,13,55,39"/>
+<area shape="rect" title=" " alt="" coords="79,5,245,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for BlockPath:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBlockPath__coll__graph.png" border="0" usemap="#aBlockPath_coll__map" alt="Collaboration graph"/></div>
+<map name="aBlockPath_coll__map" id="aBlockPath_coll__map">
+<area shape="rect" title="A path between two blocks." alt="" coords="54,95,137,121"/>
+<area shape="rect" href="classPath.html" title=" " alt="" coords="5,13,55,39"/>
+<area shape="rect" title=" " alt="" coords="79,5,245,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:af1fa74e957c88e76feacba47457269f3"><td class="memItemLeft" align="right" valign="top"><a id="af1fa74e957c88e76feacba47457269f3" name="af1fa74e957c88e76feacba47457269f3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BlockPath</b> (<a class="el" href="classBlockRailTile.html">BlockRailTile</a> &amp;block, BlockSide side)</td></tr>
+<tr class="separator:af1fa74e957c88e76feacba47457269f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a966b5bf83261a39d2125945dfbb5690b"><td class="memItemLeft" align="right" valign="top"><a id="a966b5bf83261a39d2125945dfbb5690b" name="a966b5bf83261a39d2125945dfbb5690b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BlockPath</b> (const <a class="el" href="classBlockPath.html">BlockPath</a> &amp;other)</td></tr>
+<tr class="separator:a966b5bf83261a39d2125945dfbb5690b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88484f6c6b660ec573824f6a0b5b869f"><td class="memItemLeft" align="right" valign="top"><a id="a88484f6c6b660ec573824f6a0b5b869f" name="a88484f6c6b660ec573824f6a0b5b869f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classBlockPath.html">BlockPath</a> &amp;other) const noexcept</td></tr>
+<tr class="separator:a88484f6c6b660ec573824f6a0b5b869f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbe033c22d78f8faec2dec60d1482e59"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBlockPath.html#adbe033c22d78f8faec2dec60d1482e59">isReady</a> () const</td></tr>
+<tr class="separator:adbe033c22d78f8faec2dec60d1482e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88cf72ce3019c91b3d948659f180e5d0"><td class="memItemLeft" align="right" valign="top"><a id="a88cf72ce3019c91b3d948659f180e5d0" name="a88cf72ce3019c91b3d948659f180e5d0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasNXButtons</b> () const</td></tr>
+<tr class="separator:a88cf72ce3019c91b3d948659f180e5d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab46abbc3579901d59d4b2683488b22a1"><td class="memItemLeft" align="right" valign="top"><a id="ab46abbc3579901d59d4b2683488b22a1" name="ab46abbc3579901d59d4b2683488b22a1"></a>
+const <a class="el" href="classBlockRailTile.html">BlockRailTile</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>fromBlock</b> () const</td></tr>
+<tr class="separator:ab46abbc3579901d59d4b2683488b22a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a593223b7c01286e32d6cd8bacd34eb3f"><td class="memItemLeft" align="right" valign="top"><a id="a593223b7c01286e32d6cd8bacd34eb3f" name="a593223b7c01286e32d6cd8bacd34eb3f"></a>
+BlockSide&#160;</td><td class="memItemRight" valign="bottom"><b>fromSide</b> () const</td></tr>
+<tr class="separator:a593223b7c01286e32d6cd8bacd34eb3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9adc5320e08d9ff8a84d6d8e56684e83"><td class="memItemLeft" align="right" valign="top"><a id="a9adc5320e08d9ff8a84d6d8e56684e83" name="a9adc5320e08d9ff8a84d6d8e56684e83"></a>
+std::shared_ptr&lt; <a class="el" href="classBlockRailTile.html">BlockRailTile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>toBlock</b> () const</td></tr>
+<tr class="separator:a9adc5320e08d9ff8a84d6d8e56684e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6ad6742703960c2afe74c87aefb46df"><td class="memItemLeft" align="right" valign="top"><a id="ab6ad6742703960c2afe74c87aefb46df" name="ab6ad6742703960c2afe74c87aefb46df"></a>
+BlockSide&#160;</td><td class="memItemRight" valign="bottom"><b>toSide</b> () const</td></tr>
+<tr class="separator:ab6ad6742703960c2afe74c87aefb46df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab75349279c651c4a11fa72a7d75140f3"><td class="memItemLeft" align="right" valign="top"><a id="ab75349279c651c4a11fa72a7d75140f3" name="ab75349279c651c4a11fa72a7d75140f3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isReserved</b> () const</td></tr>
+<tr class="separator:ab75349279c651c4a11fa72a7d75140f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad0597de9cd4e1d88293c6f4d6248e8f"><td class="memItemLeft" align="right" valign="top"><a id="aad0597de9cd4e1d88293c6f4d6248e8f" name="aad0597de9cd4e1d88293c6f4d6248e8f"></a>
+std::shared_ptr&lt; <a class="el" href="classNXButtonRailTile.html">NXButtonRailTile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>nxButtonFrom</b> () const</td></tr>
+<tr class="separator:aad0597de9cd4e1d88293c6f4d6248e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40bcd6fb54dff7fdb2e4bc2cd161d36a"><td class="memItemLeft" align="right" valign="top"><a id="a40bcd6fb54dff7fdb2e4bc2cd161d36a" name="a40bcd6fb54dff7fdb2e4bc2cd161d36a"></a>
+std::shared_ptr&lt; <a class="el" href="classNXButtonRailTile.html">NXButtonRailTile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>nxButtonTo</b> () const</td></tr>
+<tr class="separator:a40bcd6fb54dff7fdb2e4bc2cd161d36a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e6fcf2212a93bd07f0906ab073bdd2e"><td class="memItemLeft" align="right" valign="top"><a id="a1e6fcf2212a93bd07f0906ab073bdd2e" name="a1e6fcf2212a93bd07f0906ab073bdd2e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>reserve</b> (const std::shared_ptr&lt; <a class="el" href="classTrain.html">Train</a> &gt; &amp;train, bool dryRun=false)</td></tr>
+<tr class="separator:a1e6fcf2212a93bd07f0906ab073bdd2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9967e4e30185fac7ffcd805a91d6e54e"><td class="memItemLeft" align="right" valign="top"><a id="a9967e4e30185fac7ffcd805a91d6e54e" name="a9967e4e30185fac7ffcd805a91d6e54e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>release</b> (bool dryRun=false)</td></tr>
+<tr class="separator:a9967e4e30185fac7ffcd805a91d6e54e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a927d1ae7a8e3d25b1c67f7a51b50a4"><td class="memItemLeft" align="right" valign="top"><a id="a2a927d1ae7a8e3d25b1c67f7a51b50a4" name="a2a927d1ae7a8e3d25b1c67f7a51b50a4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>delayedRelease</b> (uint16_t timeoutMillis)</td></tr>
+<tr class="separator:a2a927d1ae7a8e3d25b1c67f7a51b50a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a4114a88342eae0faef1de2dbd871d522"><td class="memItemLeft" align="right" valign="top"><a id="a4114a88342eae0faef1de2dbd871d522" name="a4114a88342eae0faef1de2dbd871d522"></a>
+static std::vector&lt; std::shared_ptr&lt; <a class="el" href="classBlockPath.html">BlockPath</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>find</b> (<a class="el" href="classBlockRailTile.html">BlockRailTile</a> &amp;block)</td></tr>
+<tr class="separator:a4114a88342eae0faef1de2dbd871d522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_static_methods_classPath"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classPath')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classPath.html">Path</a></td></tr>
+<tr class="memitem:adafabe3ae662f0762759c48673bf9b00 inherit pro_static_methods_classPath"><td class="memItemLeft" align="right" valign="top">static const std::shared_ptr&lt; <a class="el" href="classLink.html">Link</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPath.html#adafabe3ae662f0762759c48673bf9b00">otherLink</a> (const <a class="el" href="classNode.html">Node</a> &amp;node, const <a class="el" href="classLink.html">Link</a> &amp;link)</td></tr>
+<tr class="separator:adafabe3ae662f0762759c48673bf9b00 inherit pro_static_methods_classPath"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f4dfc826a9ea7187d0f3f4c443e1983 inherit pro_static_methods_classPath"><td class="memItemLeft" align="right" valign="top"><a id="a9f4dfc826a9ea7187d0f3f4c443e1983" name="a9f4dfc826a9ea7187d0f3f4c443e1983"></a>
+static std::span&lt; const <a class="el" href="structPath_1_1TurnoutPositionLink.html">TurnoutPositionLink</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getTurnoutLinks</b> (<a class="el" href="classTurnoutRailTile.html">TurnoutRailTile</a> &amp;turnout, const <a class="el" href="classLink.html">Link</a> &amp;link)</td></tr>
+<tr class="separator:a9f4dfc826a9ea7187d0f3f4c443e1983 inherit pro_static_methods_classPath"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >A path between two blocks. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="adbe033c22d78f8faec2dec60d1482e59" name="adbe033c22d78f8faec2dec60d1482e59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbe033c22d78f8faec2dec60d1482e59">&#9670;&nbsp;</a></span>isReady()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BlockPath::isReady </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if all turnouts are in position and direction controls are allowed to pass. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/tom/projects/linux/traintastic/server/src/board/map/<a class="el" href="blockpath_8hpp_source.html">blockpath.hpp</a></li>
+<li>/home/tom/projects/linux/traintastic/server/src/board/map/blockpath.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

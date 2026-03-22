@@ -1,0 +1,13 @@
+<map id="RailVehicle" name="RailVehicle">
+<area shape="rect" id="node1" title=" " alt="" coords="193,319,281,345"/>
+<area shape="rect" id="node6" href="$classPoweredRailVehicle.html" title=" " alt="" coords="82,393,221,420"/>
+<area shape="rect" id="node9" href="$classUnpoweredRailVehicle.html" title=" " alt="" coords="245,393,399,420"/>
+<area shape="rect" id="node2" href="$classVehicle.html" title=" " alt="" coords="204,244,269,271"/>
+<area shape="rect" id="node3" href="$classIdObject.html" title=" " alt="" coords="201,169,272,196"/>
+<area shape="rect" id="node4" href="$classObject.html" title=" " alt="" coords="207,95,267,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="164,5,309,47"/>
+<area shape="rect" id="node7" href="$classLocomotive.html" title=" " alt="" coords="5,468,95,495"/>
+<area shape="rect" id="node8" href="$classMultipleUnit.html" title=" " alt="" coords="119,468,210,495"/>
+<area shape="rect" id="node10" href="$classFreightWagon.html" title=" " alt="" coords="259,468,361,495"/>
+<area shape="rect" id="node11" href="$classTankWagon.html" title=" " alt="" coords="386,468,477,495"/>
+</map>

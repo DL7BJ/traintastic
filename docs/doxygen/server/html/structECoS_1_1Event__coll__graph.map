@@ -1,0 +1,12 @@
+<map id="ECoS::Event" name="ECoS::Event">
+<area shape="rect" id="node1" title=" " alt="" coords="103,631,202,657"/>
+<area shape="rect" id="node2" href="$classStatus.html" title=" " alt="" coords="123,541,183,568"/>
+<area shape="rect" id="node3" href="$classSubObject.html" title=" " alt="" coords="90,249,173,276"/>
+<area shape="rect" id="node4" href="$classObject.html" title=" " alt="" coords="123,109,183,136"/>
+<area shape="rect" id="node10" href="$classInterfaceItem.html" title=" " alt="" coords="173,199,271,225"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,5,151,47"/>
+<area shape="rect" id="node6" href="$classInterfaceItems.html" title=" " alt="" coords="175,13,282,39"/>
+<area shape="rect" id="node7" href="$classProperty.html" title=" " alt="" coords="169,452,323,479"/>
+<area shape="rect" id="node8" href="$classAbstractProperty.html" title=" " alt="" coords="177,376,297,403"/>
+<area shape="rect" id="node9" href="$classBaseProperty.html" title=" " alt="" coords="177,300,278,327"/>
+</map>

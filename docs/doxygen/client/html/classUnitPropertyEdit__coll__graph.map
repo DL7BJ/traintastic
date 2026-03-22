@@ -1,0 +1,12 @@
+<map id="UnitPropertyEdit" name="UnitPropertyEdit">
+<area shape="rect" id="node1" title=" " alt="" coords="91,475,209,501"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,385,79,412"/>
+<area shape="rect" id="node3" href="$classUnitProperty.html" title=" " alt="" coords="103,385,197,412"/>
+<area shape="rect" id="node4" href="$classProperty.html" title=" " alt="" coords="115,309,185,336"/>
+<area shape="rect" id="node5" href="$classAbstractProperty.html" title=" " alt="" coords="90,233,210,260"/>
+<area shape="rect" id="node6" href="$classBaseProperty.html" title=" " alt="" coords="99,157,201,184"/>
+<area shape="rect" id="node7" href="$classInterfaceItem.html" title=" " alt="" coords="101,81,199,108"/>
+<area shape="rect" id="node8" title=" " alt="" coords="115,5,185,32"/>
+<area shape="rect" id="node9" href="$classLineEditWithFocusOutSignal.html" title=" " alt="" coords="222,385,411,412"/>
+<area shape="rect" id="node10" title=" " alt="" coords="277,309,356,336"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="Connection" name="Connection">
+<area shape="rect" id="node1" title=" " alt="" coords="987,72,1075,99"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,17,76,44"/>
+<area shape="rect" id="node7" href="$classInterfaceItem.html" title=" " alt="" coords="125,43,224,69"/>
+<area shape="rect" id="node3" title=" " alt="" coords="620,94,793,135"/>
+<area shape="rect" id="node4" href="$classObjectProperty.html" title=" " alt="" coords="652,43,761,69"/>
+<area shape="rect" id="node5" href="$classAbstractProperty.html" title=" " alt="" coords="437,43,557,69"/>
+<area shape="rect" id="node6" href="$classBaseProperty.html" title=" " alt="" coords="273,43,375,69"/>
+<area shape="rect" id="node8" href="$classServerLogTableModel.html" title=" " alt="" coords="633,160,780,187"/>
+<area shape="rect" id="node9" title=" " alt="" coords="424,160,571,187"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Path" name="Path">
+<area shape="rect" id="node1" title=" " alt="" coords="115,5,164,32"/>
+<area shape="rect" id="node2" href="$classAbstractSignalPath.html" title=" " alt="" coords="5,80,140,107"/>
+<area shape="rect" id="node3" href="$classBlockPath.html" title="A path between two blocks." alt="" coords="165,80,247,107"/>
+</map>

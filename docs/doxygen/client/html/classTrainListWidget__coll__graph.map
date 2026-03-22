@@ -1,0 +1,9 @@
+<map id="TrainListWidget" name="TrainListWidget">
+<area shape="rect" id="node1" title=" " alt="" coords="32,399,145,425"/>
+<area shape="rect" id="node2" href="$classThrottleObjectListWidget.html" title=" " alt="" coords="5,323,172,349"/>
+<area shape="rect" id="node3" href="$classObjectListWidget.html" title=" " alt="" coords="27,247,150,273"/>
+<area shape="rect" id="node4" href="$classListWidget.html" title=" " alt="" coords="47,171,131,197"/>
+<area shape="rect" id="node5" title=" " alt="" coords="15,81,88,108"/>
+<area shape="rect" id="node6" href="$classTableWidget.html" title=" " alt="" coords="112,81,207,108"/>
+<area shape="rect" id="node7" title=" " alt="" coords="113,5,205,32"/>
+</map>

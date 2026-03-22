@@ -1,0 +1,9 @@
+<map id="AbstractAttribute" name="AbstractAttribute">
+<area shape="rect" id="node1" title=" " alt="" coords="155,5,275,32"/>
+<area shape="rect" id="node2" href="$classAbstractValueAttribute.html" title=" " alt="" coords="50,80,202,107"/>
+<area shape="rect" id="node4" href="$classAbstractValuesAttribute.html" title=" " alt="" coords="261,80,420,107"/>
+<area shape="rect" id="node3" href="$classAttribute.html" title=" " alt="" coords="5,155,108,181"/>
+<area shape="rect" id="node5" href="$classSpanAttribute.html" title=" " alt="" coords="133,155,282,181"/>
+<area shape="rect" id="node6" href="$classVectorAttribute.html" title=" " alt="" coords="306,155,447,181"/>
+<area shape="rect" id="node7" href="$classVectorRefAttribute.html" title=" " alt="" coords="471,155,634,181"/>
+</map>

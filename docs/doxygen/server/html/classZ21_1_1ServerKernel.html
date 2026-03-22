@@ -1,0 +1,509 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>traintastic-server: Z21::ServerKernel Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+   DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="appicon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">traintastic-server
+   &#160;<span id="projectnumber">0.4.0</span>
+   </div>
+   <div id="projectbrief">Traintastic server</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceZ21.html">Z21</a></li><li class="navelem"><a class="el" href="classZ21_1_1ServerKernel.html">ServerKernel</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="classZ21_1_1ServerKernel-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">Z21::ServerKernel Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Inheritance diagram for Z21::ServerKernel:</div>
+<div class="dyncontent">
+<div class="center"><img src="classZ21_1_1ServerKernel__inherit__graph.png" border="0" usemap="#aZ21_1_1ServerKernel_inherit__map" alt="Inheritance graph"/></div>
+<map name="aZ21_1_1ServerKernel_inherit__map" id="aZ21_1_1ServerKernel_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,155,132,181"/>
+<area shape="rect" href="classZ21_1_1Kernel.html" title=" " alt="" coords="24,80,113,107"/>
+<area shape="rect" href="classKernelBase.html" title=" " alt="" coords="24,5,113,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Z21::ServerKernel:</div>
+<div class="dyncontent">
+<div class="center"><img src="classZ21_1_1ServerKernel__coll__graph.png" border="0" usemap="#aZ21_1_1ServerKernel_coll__map" alt="Collaboration graph"/></div>
+<map name="aZ21_1_1ServerKernel_coll__map" id="aZ21_1_1ServerKernel_coll__map">
+<area shape="rect" title=" " alt="" coords="5,155,132,181"/>
+<area shape="rect" href="classZ21_1_1Kernel.html" title=" " alt="" coords="24,80,113,107"/>
+<area shape="rect" href="classKernelBase.html" title=" " alt="" coords="24,5,113,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a19cac2f57c36346fab45a95062e3dd47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZ21_1_1ServerKernel.html#a19cac2f57c36346fab45a95062e3dd47">setOnTrackPowerOff</a> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memdesc:a19cac2f57c36346fab45a95062e3dd47"><td class="mdescLeft">&#160;</td><td class="mdescRight">...  <a href="classZ21_1_1ServerKernel.html#a19cac2f57c36346fab45a95062e3dd47">More...</a><br /></td></tr>
+<tr class="separator:a19cac2f57c36346fab45a95062e3dd47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72337da7b870c8b4b7fc867b9f5403d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZ21_1_1ServerKernel.html#a72337da7b870c8b4b7fc867b9f5403d1">setOnTrackPowerOn</a> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memdesc:a72337da7b870c8b4b7fc867b9f5403d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">...  <a href="classZ21_1_1ServerKernel.html#a72337da7b870c8b4b7fc867b9f5403d1">More...</a><br /></td></tr>
+<tr class="separator:a72337da7b870c8b4b7fc867b9f5403d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37dfe6291a87c20e3aa40f37130ad583"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZ21_1_1ServerKernel.html#a37dfe6291a87c20e3aa40f37130ad583">setOnEmergencyStop</a> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memdesc:a37dfe6291a87c20e3aa40f37130ad583"><td class="mdescLeft">&#160;</td><td class="mdescRight">...  <a href="classZ21_1_1ServerKernel.html#a37dfe6291a87c20e3aa40f37130ad583">More...</a><br /></td></tr>
+<tr class="separator:a37dfe6291a87c20e3aa40f37130ad583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac22cb3b05f96673dcb58331263c05bd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZ21_1_1ServerKernel.html#ac22cb3b05f96673dcb58331263c05bd5">setConfig</a> (const <a class="el" href="structZ21_1_1ServerConfig.html">ServerConfig</a> &amp;config)</td></tr>
+<tr class="memdesc:ac22cb3b05f96673dcb58331263c05bd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set <a class="el" href="namespaceZ21.html">Z21</a> server configuration.  <a href="classZ21_1_1ServerKernel.html#ac22cb3b05f96673dcb58331263c05bd5">More...</a><br /></td></tr>
+<tr class="separator:ac22cb3b05f96673dcb58331263c05bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61bd8690f7cfe256a72b6e940e4161d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZ21_1_1ServerKernel.html#a61bd8690f7cfe256a72b6e940e4161d8">setState</a> (bool trackPowerOn, bool emergencyStop)</td></tr>
+<tr class="memdesc:a61bd8690f7cfe256a72b6e940e4161d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set <a class="el" href="namespaceZ21.html">Z21</a> state.  <a href="classZ21_1_1ServerKernel.html#a61bd8690f7cfe256a72b6e940e4161d8">More...</a><br /></td></tr>
+<tr class="separator:a61bd8690f7cfe256a72b6e940e4161d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab16ff40b0704c1c7ab3813a155f69040"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZ21_1_1ServerKernel.html#ab16ff40b0704c1c7ab3813a155f69040">receiveFrom</a> (const <a class="el" href="structZ21_1_1Message.html">Message</a> &amp;message, IOHandler::ClientId clientId)</td></tr>
+<tr class="memdesc:ab16ff40b0704c1c7ab3813a155f69040"><td class="mdescLeft">&#160;</td><td class="mdescRight">Incoming message handler This method must be called by the IO handler whenever a <a class="el" href="namespaceZ21.html">Z21</a> message is received.  <a href="classZ21_1_1ServerKernel.html#ab16ff40b0704c1c7ab3813a155f69040">More...</a><br /></td></tr>
+<tr class="separator:ab16ff40b0704c1c7ab3813a155f69040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classZ21_1_1Kernel"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classZ21_1_1Kernel')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classZ21_1_1Kernel.html">Z21::Kernel</a></td></tr>
+<tr class="memitem:a38897df52f3e389a2ba5ac41e417945e inherit pub_methods_classZ21_1_1Kernel"><td class="memItemLeft" align="right" valign="top"><a id="a38897df52f3e389a2ba5ac41e417945e" name="a38897df52f3e389a2ba5ac41e417945e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Kernel</b> (const <a class="el" href="classZ21_1_1Kernel.html">Kernel</a> &amp;)=delete</td></tr>
+<tr class="separator:a38897df52f3e389a2ba5ac41e417945e inherit pub_methods_classZ21_1_1Kernel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0593b5bdb543d1b7e80fbac8aedae88 inherit pub_methods_classZ21_1_1Kernel"><td class="memItemLeft" align="right" valign="top"><a id="ab0593b5bdb543d1b7e80fbac8aedae88" name="ab0593b5bdb543d1b7e80fbac8aedae88"></a>
+<a class="el" href="classZ21_1_1Kernel.html">Kernel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classZ21_1_1Kernel.html">Kernel</a> &amp;)=delete</td></tr>
+<tr class="separator:ab0593b5bdb543d1b7e80fbac8aedae88 inherit pub_methods_classZ21_1_1Kernel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a608c640935194392948976d72d23b8da inherit pub_methods_classZ21_1_1Kernel"><td class="memItemLeft" align="right" valign="top"><a id="a608c640935194392948976d72d23b8da" name="a608c640935194392948976d72d23b8da"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> ()</td></tr>
+<tr class="memdesc:a608c640935194392948976d72d23b8da inherit pub_methods_classZ21_1_1Kernel"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the kernel and IO handler. <br /></td></tr>
+<tr class="separator:a608c640935194392948976d72d23b8da inherit pub_methods_classZ21_1_1Kernel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab09d5fd1d139bed60ceed8440653967a inherit pub_methods_classZ21_1_1Kernel"><td class="memItemLeft" align="right" valign="top"><a id="ab09d5fd1d139bed60ceed8440653967a" name="ab09d5fd1d139bed60ceed8440653967a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>stop</b> ()</td></tr>
+<tr class="memdesc:ab09d5fd1d139bed60ceed8440653967a inherit pub_methods_classZ21_1_1Kernel"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the kernel and IO handler. <br /></td></tr>
+<tr class="separator:ab09d5fd1d139bed60ceed8440653967a inherit pub_methods_classZ21_1_1Kernel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classKernelBase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classKernelBase')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classKernelBase.html">KernelBase</a></td></tr>
+<tr class="memitem:a25dcbf42c357ad857c9f1f57db7fb289 inherit pub_methods_classKernelBase"><td class="memItemLeft" align="right" valign="top">boost::asio::io_context &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKernelBase.html#a25dcbf42c357ad857c9f1f57db7fb289">ioContext</a> ()</td></tr>
+<tr class="memdesc:a25dcbf42c357ad857c9f1f57db7fb289 inherit pub_methods_classKernelBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">IO context for <a class="el" href="namespaceLocoNet.html">LocoNet</a> kernel and IO handler.  <a href="classKernelBase.html#a25dcbf42c357ad857c9f1f57db7fb289">More...</a><br /></td></tr>
+<tr class="separator:a25dcbf42c357ad857c9f1f57db7fb289 inherit pub_methods_classKernelBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60c47417b4553b64843a422d9bc21c91 inherit pub_methods_classKernelBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKernelBase.html#a60c47417b4553b64843a422d9bc21c91">setOnStarted</a> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memdesc:a60c47417b4553b64843a422d9bc21c91 inherit pub_methods_classKernelBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">...  <a href="classKernelBase.html#a60c47417b4553b64843a422d9bc21c91">More...</a><br /></td></tr>
+<tr class="separator:a60c47417b4553b64843a422d9bc21c91 inherit pub_methods_classKernelBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cf67c5ff9db456b069b31664974eec4 inherit pub_methods_classKernelBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKernelBase.html#a8cf67c5ff9db456b069b31664974eec4">setOnError</a> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memdesc:a8cf67c5ff9db456b069b31664974eec4 inherit pub_methods_classKernelBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register error handler.  <a href="classKernelBase.html#a8cf67c5ff9db456b069b31664974eec4">More...</a><br /></td></tr>
+<tr class="separator:a8cf67c5ff9db456b069b31664974eec4 inherit pub_methods_classKernelBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2458ac76c65c970286dd7757244800d inherit pub_methods_classKernelBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKernelBase.html#ab2458ac76c65c970286dd7757244800d">error</a> ()</td></tr>
+<tr class="memdesc:ab2458ac76c65c970286dd7757244800d inherit pub_methods_classKernelBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report fatal error Must be called by the IO handler in case of a fatal error. This will put the interface in error state.  <a href="classKernelBase.html#ab2458ac76c65c970286dd7757244800d">More...</a><br /></td></tr>
+<tr class="separator:ab2458ac76c65c970286dd7757244800d inherit pub_methods_classKernelBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:aaade8661848a9490adf2f41bd74542eb"><td class="memTemplParams" colspan="2">template&lt;class IOHandlerType , class... Args&gt; </td></tr>
+<tr class="memitem:aaade8661848a9490adf2f41bd74542eb"><td class="memTemplItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="classZ21_1_1ServerKernel.html">ServerKernel</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classZ21_1_1ServerKernel.html#aaade8661848a9490adf2f41bd74542eb">create</a> (std::string logId_, const <a class="el" href="structZ21_1_1ServerConfig.html">ServerConfig</a> &amp;config, std::shared_ptr&lt; <a class="el" href="classDecoderList.html">DecoderList</a> &gt; decoderList, Args... args)</td></tr>
+<tr class="memdesc:aaade8661848a9490adf2f41bd74542eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create kernel and IO handler.  <a href="classZ21_1_1ServerKernel.html#aaade8661848a9490adf2f41bd74542eb">More...</a><br /></td></tr>
+<tr class="separator:aaade8661848a9490adf2f41bd74542eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_attribs_classKernelBase"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classKernelBase')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classKernelBase.html">KernelBase</a></td></tr>
+<tr class="memitem:a5d2ba05a54be2c34ad7eaf87973dac4f inherit pub_attribs_classKernelBase"><td class="memItemLeft" align="right" valign="top"><a id="a5d2ba05a54be2c34ad7eaf87973dac4f" name="a5d2ba05a54be2c34ad7eaf87973dac4f"></a>
+const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>logId</b></td></tr>
+<tr class="memdesc:a5d2ba05a54be2c34ad7eaf87973dac4f inherit pub_attribs_classKernelBase"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classObject.html">Object</a> id for log messages. <br /></td></tr>
+<tr class="separator:a5d2ba05a54be2c34ad7eaf87973dac4f inherit pub_attribs_classKernelBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classZ21_1_1Kernel"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classZ21_1_1Kernel')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classZ21_1_1Kernel.html">Z21::Kernel</a></td></tr>
+<tr class="memitem:a09960e6a5d89a331c68bf244a55987bb inherit pro_methods_classZ21_1_1Kernel"><td class="memItemLeft" align="right" valign="top"><a id="a09960e6a5d89a331c68bf244a55987bb" name="a09960e6a5d89a331c68bf244a55987bb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Kernel</b> (std::string logId_)</td></tr>
+<tr class="separator:a09960e6a5d89a331c68bf244a55987bb inherit pro_methods_classZ21_1_1Kernel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adce8a7838cf6bc7b8beaecbd3255f037 inherit pro_methods_classZ21_1_1Kernel"><td class="memItemLeft" align="right" valign="top"><a id="adce8a7838cf6bc7b8beaecbd3255f037" name="adce8a7838cf6bc7b8beaecbd3255f037"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setIOHandler</b> (std::unique_ptr&lt; <a class="el" href="classZ21_1_1IOHandler.html">IOHandler</a> &gt; handler)</td></tr>
+<tr class="separator:adce8a7838cf6bc7b8beaecbd3255f037 inherit pro_methods_classZ21_1_1Kernel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c221ec63441b4b3e713a5202a5d2631 inherit pro_methods_classZ21_1_1Kernel"><td class="memItemLeft" align="right" valign="top"><a id="a7c221ec63441b4b3e713a5202a5d2631" name="a7c221ec63441b4b3e713a5202a5d2631"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onStart</b> ()</td></tr>
+<tr class="separator:a7c221ec63441b4b3e713a5202a5d2631 inherit pro_methods_classZ21_1_1Kernel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64f277397543aabf86c832ab6d69dbed inherit pro_methods_classZ21_1_1Kernel"><td class="memItemLeft" align="right" valign="top"><a id="a64f277397543aabf86c832ab6d69dbed" name="a64f277397543aabf86c832ab6d69dbed"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onStop</b> ()</td></tr>
+<tr class="separator:a64f277397543aabf86c832ab6d69dbed inherit pro_methods_classZ21_1_1Kernel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classKernelBase"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classKernelBase')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classKernelBase.html">KernelBase</a></td></tr>
+<tr class="memitem:ab0382088c2345c1e55a3b4f0394f2d69 inherit pro_methods_classKernelBase"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKernelBase.html#ab0382088c2345c1e55a3b4f0394f2d69">KernelBase</a> (std::string logId_)</td></tr>
+<tr class="separator:ab0382088c2345c1e55a3b4f0394f2d69 inherit pro_methods_classKernelBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ffe7f527b63680b270fd9fd4cf0672d inherit pro_methods_classKernelBase"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKernelBase.html#a5ffe7f527b63680b270fd9fd4cf0672d">started</a> ()</td></tr>
+<tr class="separator:a5ffe7f527b63680b270fd9fd4cf0672d inherit pro_methods_classKernelBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classZ21_1_1Kernel"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classZ21_1_1Kernel')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classZ21_1_1Kernel.html">Z21::Kernel</a></td></tr>
+<tr class="memitem:a87c8c8398375fe868077351008690e48 inherit pro_attribs_classZ21_1_1Kernel"><td class="memItemLeft" align="right" valign="top"><a id="a87c8c8398375fe868077351008690e48" name="a87c8c8398375fe868077351008690e48"></a>
+std::unique_ptr&lt; <a class="el" href="classZ21_1_1IOHandler.html">IOHandler</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_ioHandler</b></td></tr>
+<tr class="separator:a87c8c8398375fe868077351008690e48 inherit pro_attribs_classZ21_1_1Kernel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classKernelBase"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classKernelBase')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classKernelBase.html">KernelBase</a></td></tr>
+<tr class="memitem:a159b4696f36bcf29ebd25ede7366676d inherit pro_attribs_classKernelBase"><td class="memItemLeft" align="right" valign="top"><a id="a159b4696f36bcf29ebd25ede7366676d" name="a159b4696f36bcf29ebd25ede7366676d"></a>
+boost::asio::io_context&#160;</td><td class="memItemRight" valign="bottom"><b>m_ioContext</b></td></tr>
+<tr class="separator:a159b4696f36bcf29ebd25ede7366676d inherit pro_attribs_classKernelBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6765c629c79539393af1f908db093948 inherit pro_attribs_classKernelBase"><td class="memItemLeft" align="right" valign="top"><a id="a6765c629c79539393af1f908db093948" name="a6765c629c79539393af1f908db093948"></a>
+std::thread&#160;</td><td class="memItemRight" valign="bottom"><b>m_thread</b></td></tr>
+<tr class="separator:a6765c629c79539393af1f908db093948 inherit pro_attribs_classKernelBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28fbff30534b909a486f0b4ff5b1aa80 inherit pro_attribs_classKernelBase"><td class="memItemLeft" align="right" valign="top"><a id="a28fbff30534b909a486f0b4ff5b1aa80" name="a28fbff30534b909a486f0b4ff5b1aa80"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_started</b> = false</td></tr>
+<tr class="separator:a28fbff30534b909a486f0b4ff5b1aa80 inherit pro_attribs_classKernelBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aaade8661848a9490adf2f41bd74542eb" name="aaade8661848a9490adf2f41bd74542eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaade8661848a9490adf2f41bd74542eb">&#9670;&nbsp;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class IOHandlerType , class... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::unique_ptr&lt; <a class="el" href="classZ21_1_1ServerKernel.html">ServerKernel</a> &gt; Z21::ServerKernel::create </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>logId_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structZ21_1_1ServerConfig.html">ServerConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classDecoderList.html">DecoderList</a> &gt;&#160;</td>
+          <td class="paramname"><em>decoderList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create kernel and IO handler. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td><a class="el" href="namespaceZ21.html">Z21</a> server configuration </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>IO handler arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The kernel instance </dd></dl>
+
+</div>
+</div>
+<a id="ab16ff40b0704c1c7ab3813a155f69040" name="ab16ff40b0704c1c7ab3813a155f69040"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab16ff40b0704c1c7ab3813a155f69040">&#9670;&nbsp;</a></span>receiveFrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Z21::ServerKernel::receiveFrom </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structZ21_1_1Message.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IOHandler::ClientId&#160;</td>
+          <td class="paramname"><em>clientId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Incoming message handler This method must be called by the IO handler whenever a <a class="el" href="namespaceZ21.html">Z21</a> message is received. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>The received <a class="el" href="namespaceZ21.html">Z21</a> message </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cliendId</td><td>The client who sent the message </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This function must run in the kernel's IO context </dd></dl>
+
+</div>
+</div>
+<a id="ac22cb3b05f96673dcb58331263c05bd5" name="ac22cb3b05f96673dcb58331263c05bd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac22cb3b05f96673dcb58331263c05bd5">&#9670;&nbsp;</a></span>setConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Z21::ServerKernel::setConfig </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structZ21_1_1ServerConfig.html">ServerConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set <a class="el" href="namespaceZ21.html">Z21</a> server configuration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>The <a class="el" href="namespaceZ21.html">Z21</a> server configuration </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a37dfe6291a87c20e3aa40f37130ad583" name="a37dfe6291a87c20e3aa40f37130ad583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37dfe6291a87c20e3aa40f37130ad583">&#9670;&nbsp;</a></span>setOnEmergencyStop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Z21::ServerKernel::setOnEmergencyStop </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>... </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>... </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This function may not be called when the kernel is running. </dd></dl>
+
+</div>
+</div>
+<a id="a19cac2f57c36346fab45a95062e3dd47" name="a19cac2f57c36346fab45a95062e3dd47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19cac2f57c36346fab45a95062e3dd47">&#9670;&nbsp;</a></span>setOnTrackPowerOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Z21::ServerKernel::setOnTrackPowerOff </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>... </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>... </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This function may not be called when the kernel is running. </dd></dl>
+
+</div>
+</div>
+<a id="a72337da7b870c8b4b7fc867b9f5403d1" name="a72337da7b870c8b4b7fc867b9f5403d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72337da7b870c8b4b7fc867b9f5403d1">&#9670;&nbsp;</a></span>setOnTrackPowerOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Z21::ServerKernel::setOnTrackPowerOn </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>... </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>... </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This function may not be called when the kernel is running. </dd></dl>
+
+</div>
+</div>
+<a id="a61bd8690f7cfe256a72b6e940e4161d8" name="a61bd8690f7cfe256a72b6e940e4161d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61bd8690f7cfe256a72b6e940e4161d8">&#9670;&nbsp;</a></span>setState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Z21::ServerKernel::setState </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>trackPowerOn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>emergencyStop</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set <a class="el" href="namespaceZ21.html">Z21</a> state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">trackPowerOn</td><td><code>true</code> if track power is on, <code>false</code> if track power is off </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">emergencyStop</td><td><code>true</code> if emergency stop is active, <code>false</code> if emergency stop isn't active </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/tom/projects/linux/traintastic/server/src/hardware/protocol/z21/<a class="el" href="serverkernel_8hpp_source.html">serverkernel.hpp</a></li>
+<li>/home/tom/projects/linux/traintastic/server/src/hardware/protocol/z21/serverkernel.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

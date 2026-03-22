@@ -1,0 +1,8 @@
+<map id="MarklinCAN::SystemStatus" name="MarklinCAN::SystemStatus">
+<area shape="rect" id="node1" title=" " alt="" coords="109,229,293,256"/>
+<area shape="rect" id="node5" href="$structMarklinCAN_1_1SystemStatusRequest.html" title=" " alt="" coords="5,304,189,345"/>
+<area shape="rect" id="node6" href="$structMarklinCAN_1_1SystemStatusResponse.html" title=" " alt="" coords="213,304,397,345"/>
+<area shape="rect" id="node2" href="$structMarklinCAN_1_1SystemMessage.html" title=" " alt="" coords="102,155,301,181"/>
+<area shape="rect" id="node3" href="$structMarklinCAN_1_1UidMessage.html" title=" " alt="" coords="114,80,289,107"/>
+<area shape="rect" id="node4" href="$structMarklinCAN_1_1Message.html" title=" " alt="" coords="124,5,279,32"/>
+</map>

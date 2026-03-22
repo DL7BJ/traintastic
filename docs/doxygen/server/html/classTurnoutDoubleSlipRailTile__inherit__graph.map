@@ -1,0 +1,10 @@
+<map id="TurnoutDoubleSlipRailTile" name="TurnoutDoubleSlipRailTile">
+<area shape="rect" id="node1" title=" " alt="" coords="5,543,179,569"/>
+<area shape="rect" id="node2" href="$classTurnoutSlipRailTile.html" title=" " alt="" coords="26,468,158,495"/>
+<area shape="rect" id="node3" href="$classTurnoutRailTile.html" title=" " alt="" coords="37,393,147,420"/>
+<area shape="rect" id="node4" href="$classRailTile.html" title=" " alt="" coords="59,319,125,345"/>
+<area shape="rect" id="node5" href="$classTile.html" title=" " alt="" coords="71,244,113,271"/>
+<area shape="rect" id="node6" href="$classIdObject.html" title=" " alt="" coords="57,169,127,196"/>
+<area shape="rect" id="node7" href="$classObject.html" title=" " alt="" coords="62,95,122,121"/>
+<area shape="rect" id="node8" title=" " alt="" coords="19,5,165,47"/>
+</map>

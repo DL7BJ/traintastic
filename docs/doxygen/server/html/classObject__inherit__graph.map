@@ -1,0 +1,51 @@
+<map id="Object" name="Object">
+<area shape="rect" id="node1" title=" " alt="" coords="199,1032,259,1059"/>
+<area shape="rect" id="node3" href="$classDecoderFunction.html" title=" " alt="" coords="327,208,449,235"/>
+<area shape="rect" id="node4" href="$classIdObject.html" title=" " alt="" coords="353,259,423,285"/>
+<area shape="rect" id="node14" href="$classInputMapItem.html" title=" " alt="" coords="337,461,439,488"/>
+<area shape="rect" id="node16" href="$classInputMonitor.html" title=" " alt="" coords="341,537,435,564"/>
+<area shape="rect" id="node17" href="$classLNCVProgrammer.html" title="LNCV programmer." alt="" coords="323,588,453,615"/>
+<area shape="rect" id="node18" href="$classNonPersistentObject.html" title="Base class for objects that are never stored." alt="" coords="317,639,459,665"/>
+<area shape="rect" id="node22" href="$classOutputKeyboard.html" title=" " alt="" coords="330,715,446,741"/>
+<area shape="rect" id="node25" href="$classOutputMapItem.html" title=" " alt="" coords="332,937,444,964"/>
+<area shape="rect" id="node31" href="$classOutputMapOutputAction.html" title=" " alt="" coords="307,1123,469,1149"/>
+<area shape="rect" id="node36" href="$classSettings.html" title=" " alt="" coords="353,1173,423,1200"/>
+<area shape="rect" id="node37" href="$classStateObject.html" title="Object with storable state information Properties can&#39;t have the PropertyFlags::Store flag set...." alt="" coords="343,1312,433,1339"/>
+<area shape="rect" id="node40" href="$classSubObject.html" title=" " alt="" coords="347,1388,429,1415"/>
+<area shape="rect" id="node46" href="$classTableModel.html" title=" " alt="" coords="344,1439,432,1465"/>
+<area shape="rect" id="node47" href="$classTraintastic.html" title=" " alt="" coords="347,1489,429,1516"/>
+<area shape="rect" id="node48" href="$classWorld.html" title=" " alt="" coords="361,1540,415,1567"/>
+<area shape="rect" id="node49" href="$classWorldList.html" title=" " alt="" coords="350,1591,426,1617"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,1025,151,1066"/>
+<area shape="rect" id="node5" href="$classBoard.html" title=" " alt="" coords="591,5,647,32"/>
+<area shape="rect" id="node6" href="$classDecoder.html" title=" " alt="" coords="583,56,654,83"/>
+<area shape="rect" id="node7" href="$classIdentification.html" title=" " alt="" coords="571,107,667,133"/>
+<area shape="rect" id="node8" href="$classInterface.html" title="Base class for a hardware interface." alt="" coords="582,157,655,184"/>
+<area shape="rect" id="node9" href="$classLua_1_1Script.html" title=" " alt="" coords="576,208,661,235"/>
+<area shape="rect" id="node10" href="$classTile.html" title=" " alt="" coords="597,259,640,285"/>
+<area shape="rect" id="node11" href="$classTrain.html" title=" " alt="" coords="593,309,644,336"/>
+<area shape="rect" id="node12" href="$classVehicle.html" title=" " alt="" coords="586,360,651,387"/>
+<area shape="rect" id="node13" href="$classZone.html" title=" " alt="" coords="593,411,644,437"/>
+<area shape="rect" id="node15" href="$classBlockInputMapItem.html" title=" " alt="" coords="551,461,686,488"/>
+<area shape="rect" id="node19" href="$classInput.html" title=" " alt="" coords="593,512,644,539"/>
+<area shape="rect" id="node20" href="$classOutput.html" title=" " alt="" coords="588,563,649,589"/>
+<area shape="rect" id="node21" href="$classThrottle.html" title=" " alt="" coords="585,613,652,640"/>
+<area shape="rect" id="node23" href="$classPairOutputKeyboard.html" title=" " alt="" coords="549,664,688,691"/>
+<area shape="rect" id="node24" href="$classSingleOutputKeyboard.html" title=" " alt="" coords="543,715,695,741"/>
+<area shape="rect" id="node26" href="$classOutputMapItemBase.html" title=" " alt="" coords="543,766,694,807"/>
+<area shape="rect" id="node27" href="$classOutputMapItemBase.html" title=" " alt="" coords="543,831,694,873"/>
+<area shape="rect" id="node28" href="$classOutputMapItemBase.html" title=" " alt="" coords="543,897,694,938"/>
+<area shape="rect" id="node29" href="$classOutputMapItemBase.html" title=" " alt="" coords="543,962,694,1003"/>
+<area shape="rect" id="node30" href="$classOutputMapItemBase.html" title=" " alt="" coords="543,1027,694,1069"/>
+<area shape="rect" id="node32" href="$classOutputMapAspectOutputAction.html" title=" " alt="" coords="517,1093,720,1120"/>
+<area shape="rect" id="node33" href="$classOutputMapECoSStateOutputAction.html" title=" " alt="" coords="523,1145,714,1186"/>
+<area shape="rect" id="node34" href="$classOutputMapPairOutputAction.html" title=" " alt="" coords="526,1211,711,1237"/>
+<area shape="rect" id="node35" href="$classOutputMapSingleOutputAction.html" title=" " alt="" coords="519,1261,718,1288"/>
+<area shape="rect" id="node38" href="$classTrainBlockStatus.html" title="Represents the state of a train within a block." alt="" coords="557,1312,680,1339"/>
+<area shape="rect" id="node39" href="$classTrainZoneStatus.html" title="Represents the state of a train within a zone." alt="" coords="559,1363,678,1389"/>
+<area shape="rect" id="node41" href="$classAbstractObjectList.html" title=" " alt="" coords="553,1413,684,1440"/>
+<area shape="rect" id="node42" href="$classClock.html" title=" " alt="" coords="591,1464,647,1491"/>
+<area shape="rect" id="node43" href="$classDCCEX_1_1Settings.html" title=" " alt="" coords="555,1515,682,1541"/>
+<area shape="rect" id="node44" href="$classDecoderFunctions.html" title=" " alt="" coords="555,1565,683,1592"/>
+<area shape="rect" id="node45" href="$classECoS_1_1Settings.html" title=" " alt="" coords="562,1616,675,1643"/>
+</map>

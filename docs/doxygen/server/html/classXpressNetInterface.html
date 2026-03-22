@@ -1,0 +1,1041 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>traintastic-server: XpressNetInterface Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+   DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="appicon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">traintastic-server
+   &#160;<span id="projectnumber">0.4.0</span>
+   </div>
+   <div id="projectbrief">Traintastic server</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="classXpressNetInterface-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">XpressNetInterface Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="namespaceXpressNet.html">XpressNet</a> hardware interface.  
+ <a href="classXpressNetInterface.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="xpressnetinterface_8hpp_source.html">xpressnetinterface.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for XpressNetInterface:</div>
+<div class="dyncontent">
+<div class="center"><img src="classXpressNetInterface__inherit__graph.png" border="0" usemap="#aXpressNetInterface_inherit__map" alt="Inheritance graph"/></div>
+<map name="aXpressNetInterface_inherit__map" id="aXpressNetInterface_inherit__map">
+<area shape="rect" title="XpressNet hardware interface." alt="" coords="205,319,340,345"/>
+<area shape="rect" href="classInterface.html" title="Base class for a hardware interface." alt="" coords="41,244,115,271"/>
+<area shape="rect" href="classIdObject.html" title=" " alt="" coords="43,169,113,196"/>
+<area shape="rect" href="classObject.html" title=" " alt="" coords="48,95,108,121"/>
+<area shape="rect" title=" " alt="" coords="5,5,151,47"/>
+<area shape="rect" href="classDecoderController.html" title=" " alt="" coords="139,244,265,271"/>
+<area shape="rect" href="classInputController.html" title=" " alt="" coords="290,244,397,271"/>
+<area shape="rect" href="classOutputController.html" title=" " alt="" coords="421,244,538,271"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for XpressNetInterface:</div>
+<div class="dyncontent">
+<div class="center"><img src="classXpressNetInterface__coll__graph.png" border="0" usemap="#aXpressNetInterface_coll__map" alt="Collaboration graph"/></div>
+<map name="aXpressNetInterface_coll__map" id="aXpressNetInterface_coll__map">
+<area shape="rect" title="XpressNet hardware interface." alt="" coords="2144,2063,2279,2089"/>
+<area shape="rect" href="classInterface.html" title="Base class for a hardware interface." alt="" coords="1995,1187,2068,1213"/>
+<area shape="rect" href="classIdObject.html" title=" " alt="" coords="1595,1187,1665,1213"/>
+<area shape="rect" href="classObject.html" title=" " alt="" coords="797,2047,857,2073"/>
+<area shape="rect" href="classWorld.html" title=" " alt="" coords="1226,1187,1281,1213"/>
+<area shape="rect" title=" " alt="" coords="332,2031,477,2073"/>
+<area shape="rect" href="classInterfaceItems.html" title=" " alt="" coords="351,2097,458,2124"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="750,151,903,177"/>
+<area shape="rect" href="classSerialDeviceProperty.html" title=" " alt="" coords="1772,20,1917,47"/>
+<area shape="rect" href="classAbstractProperty.html" title=" " alt="" coords="156,1788,276,1815"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="513,475,674,501"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="527,519,660,545"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="767,380,886,407"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="508,574,679,615"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="756,2199,897,2225"/>
+<area shape="rect" href="classAbstractObjectProperty.html" title=" " alt="" coords="325,1403,484,1429"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="756,2148,897,2175"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="975,2242,1171,2283"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="1336,2298,1515,2339"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="1745,2361,1944,2388"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="1005,2420,1140,2447"/>
+<area shape="rect" href="classBaseProperty.html" title=" " alt="" coords="5,1788,107,1815"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="735,802,919,843"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="738,867,915,909"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="738,933,915,974"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="722,998,931,1039"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="703,1063,951,1105"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="737,1129,916,1170"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="741,1194,913,1235"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="725,1645,928,1672"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="735,1828,918,1855"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="730,1945,923,1972"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="729,1259,924,1301"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="727,1325,926,1352"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="733,1376,921,1403"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="735,1427,918,1453"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="743,1477,910,1504"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="744,1529,909,1570"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="735,1595,918,1621"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="733,1697,920,1738"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="755,1762,898,1803"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="738,1879,915,1921"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="743,619,911,661"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="725,685,928,712"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="738,737,915,778"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="1339,1779,1511,1821"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="1539,2057,1721,2098"/>
+<area shape="rect" href="classDecoderController.html" title=" " alt="" coords="1968,1743,2095,1769"/>
+<area shape="rect" href="classInputController.html" title=" " alt="" coords="1372,1972,1479,1999"/>
+<area shape="rect" href="classOutputController.html" title=" " alt="" coords="1195,1997,1312,2024"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:adac5fdf6c27e66730cef3d8cbe1ccdba"><td class="memItemLeft" align="right" valign="top"><a id="adac5fdf6c27e66730cef3d8cbe1ccdba" name="adac5fdf6c27e66730cef3d8cbe1ccdba"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>XpressNetInterface</b> (<a class="el" href="classWorld.html">World</a> &amp;world, std::string_view _id)</td></tr>
+<tr class="separator:adac5fdf6c27e66730cef3d8cbe1ccdba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a351a2602d2870887946d34d0457abb71"><td class="memItemLeft" align="right" valign="top">std::span&lt; const DecoderProtocol &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpressNetInterface.html#a351a2602d2870887946d34d0457abb71">decoderProtocols</a> () const final</td></tr>
+<tr class="memdesc:a351a2602d2870887946d34d0457abb71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get supported protocols.  <a href="classXpressNetInterface.html#a351a2602d2870887946d34d0457abb71">More...</a><br /></td></tr>
+<tr class="separator:a351a2602d2870887946d34d0457abb71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af84aed232e0f9e726db8e883fbaa13b3"><td class="memItemLeft" align="right" valign="top">std::pair&lt; uint16_t, uint16_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpressNetInterface.html#af84aed232e0f9e726db8e883fbaa13b3">decoderAddressMinMax</a> (DecoderProtocol protocol) const final</td></tr>
+<tr class="memdesc:af84aed232e0f9e726db8e883fbaa13b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get address range for given protocol.  <a href="classXpressNetInterface.html#af84aed232e0f9e726db8e883fbaa13b3">More...</a><br /></td></tr>
+<tr class="separator:af84aed232e0f9e726db8e883fbaa13b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9e855cc89b9ba15b9a63f84328bda08"><td class="memItemLeft" align="right" valign="top">std::span&lt; const uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpressNetInterface.html#af9e855cc89b9ba15b9a63f84328bda08">decoderSpeedSteps</a> (DecoderProtocol protocol) const final</td></tr>
+<tr class="memdesc:af9e855cc89b9ba15b9a63f84328bda08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get speed step options for given protocol.  <a href="classXpressNetInterface.html#af9e855cc89b9ba15b9a63f84328bda08">More...</a><br /></td></tr>
+<tr class="separator:af9e855cc89b9ba15b9a63f84328bda08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5656458b1c0ee09fa4efdd7b6353d4c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpressNetInterface.html#a5656458b1c0ee09fa4efdd7b6353d4c7">decoderChanged</a> (const <a class="el" href="classDecoder.html">Decoder</a> &amp;decoder, DecoderChangeFlags changes, uint32_t functionNumber) final</td></tr>
+<tr class="separator:a5656458b1c0ee09fa4efdd7b6353d4c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eb2da94a44aeae987c44e8e5dc76fcf"><td class="memItemLeft" align="right" valign="top">std::span&lt; const InputChannel &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpressNetInterface.html#a9eb2da94a44aeae987c44e8e5dc76fcf">inputChannels</a> () const final</td></tr>
+<tr class="separator:a9eb2da94a44aeae987c44e8e5dc76fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6119570d6fbe7f57d80d81a3c96bdab"><td class="memItemLeft" align="right" valign="top">std::pair&lt; uint32_t, uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpressNetInterface.html#ae6119570d6fbe7f57d80d81a3c96bdab">inputAddressMinMax</a> (InputChannel) const final</td></tr>
+<tr class="separator:ae6119570d6fbe7f57d80d81a3c96bdab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bce32bed7d6d57db912a1d520917f8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpressNetInterface.html#a8bce32bed7d6d57db912a1d520917f8c">inputSimulateChange</a> (InputChannel channel, uint32_t address, SimulateInputAction action) final</td></tr>
+<tr class="memdesc:a8bce32bed7d6d57db912a1d520917f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulate input change.  <a href="classXpressNetInterface.html#a8bce32bed7d6d57db912a1d520917f8c">More...</a><br /></td></tr>
+<tr class="separator:a8bce32bed7d6d57db912a1d520917f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8585e8d499bd468620ed0e1c254a0d5"><td class="memItemLeft" align="right" valign="top">std::span&lt; const OutputChannel &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpressNetInterface.html#ab8585e8d499bd468620ed0e1c254a0d5">outputChannels</a> () const final</td></tr>
+<tr class="separator:ab8585e8d499bd468620ed0e1c254a0d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e3c4df57cc22e3e70a57219c155bf79"><td class="memItemLeft" align="right" valign="top">std::pair&lt; uint32_t, uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpressNetInterface.html#a4e3c4df57cc22e3e70a57219c155bf79">outputAddressMinMax</a> (OutputChannel) const final</td></tr>
+<tr class="separator:a4e3c4df57cc22e3e70a57219c155bf79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebcd32e4af0da32bb9d02d3a0667edeb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpressNetInterface.html#aebcd32e4af0da32bb9d02d3a0667edeb">setOutputValue</a> (OutputChannel channel, uint32_t address, OutputValue value) final</td></tr>
+<tr class="memdesc:aebcd32e4af0da32bb9d02d3a0667edeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">...  <a href="classXpressNetInterface.html#aebcd32e4af0da32bb9d02d3a0667edeb">More...</a><br /></td></tr>
+<tr class="separator:aebcd32e4af0da32bb9d02d3a0667edeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classIdObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classIdObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIdObject.html">IdObject</a></td></tr>
+<tr class="memitem:a1253b43179abce710c0e161360326668 inherit pub_methods_classIdObject"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdObject.html#a1253b43179abce710c0e161360326668">getObjectId</a> () const final</td></tr>
+<tr class="separator:a1253b43179abce710c0e161360326668 inherit pub_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dea002a7738a6d48a51a6039f603fef inherit pub_methods_classIdObject"><td class="memItemLeft" align="right" valign="top"><a id="a3dea002a7738a6d48a51a6039f603fef" name="a3dea002a7738a6d48a51a6039f603fef"></a>
+<a class="el" href="classWorld.html">World</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>world</b> () const</td></tr>
+<tr class="separator:a3dea002a7738a6d48a51a6039f603fef inherit pub_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classObject.html">Object</a></td></tr>
+<tr class="memitem:aa20df9b729a0fa3161fbaf981d7cac95 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="aa20df9b729a0fa3161fbaf981d7cac95" name="aa20df9b729a0fa3161fbaf981d7cac95"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Object</b> (const <a class="el" href="classObject.html">Object</a> &amp;)=delete</td></tr>
+<tr class="separator:aa20df9b729a0fa3161fbaf981d7cac95 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a952b21b70315bbd70333893926c5ca16 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a952b21b70315bbd70333893926c5ca16" name="a952b21b70315bbd70333893926c5ca16"></a>
+<a class="el" href="classObject.html">Object</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classObject.html">Object</a> &amp;)=delete</td></tr>
+<tr class="separator:a952b21b70315bbd70333893926c5ca16 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40860402e64d8008fb42329df7097cdb inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#a40860402e64d8008fb42329df7097cdb">Object</a> ()</td></tr>
+<tr class="separator:a40860402e64d8008fb42329df7097cdb inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90493040af1919e08f538bf52b883aef inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a90493040af1919e08f538bf52b883aef" name="a90493040af1919e08f538bf52b883aef"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>dying</b> () const noexcept</td></tr>
+<tr class="separator:a90493040af1919e08f538bf52b883aef inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad14022400495b1f902037890e7a1cba8 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ad14022400495b1f902037890e7a1cba8" name="ad14022400495b1f902037890e7a1cba8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>destroy</b> ()</td></tr>
+<tr class="separator:ad14022400495b1f902037890e7a1cba8 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab62c4c263556c2dc80bdf81db211fcc inherit pub_methods_classObject"><td class="memTemplParams" colspan="2"><a id="aab62c4c263556c2dc80bdf81db211fcc" name="aab62c4c263556c2dc80bdf81db211fcc"></a>
+template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:aab62c4c263556c2dc80bdf81db211fcc inherit pub_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; const Derived &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>shared_ptr_c</b> () const</td></tr>
+<tr class="separator:aab62c4c263556c2dc80bdf81db211fcc inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac04d5b796164be33b6174139a7e2f97d inherit pub_methods_classObject"><td class="memTemplParams" colspan="2"><a id="ac04d5b796164be33b6174139a7e2f97d" name="ac04d5b796164be33b6174139a7e2f97d"></a>
+template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:ac04d5b796164be33b6174139a7e2f97d inherit pub_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; Derived &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>shared_ptr</b> ()</td></tr>
+<tr class="separator:ac04d5b796164be33b6174139a7e2f97d inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2336fc7090e2878b6c38edbd525cebe4 inherit pub_methods_classObject"><td class="memTemplParams" colspan="2"><a id="a2336fc7090e2878b6c38edbd525cebe4" name="a2336fc7090e2878b6c38edbd525cebe4"></a>
+template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a2336fc7090e2878b6c38edbd525cebe4 inherit pub_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">std::weak_ptr&lt; const Derived &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>weak_ptr_c</b> () const</td></tr>
+<tr class="separator:a2336fc7090e2878b6c38edbd525cebe4 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a33ab1c091e52d9233cf4e65ecbb196 inherit pub_methods_classObject"><td class="memTemplParams" colspan="2"><a id="a5a33ab1c091e52d9233cf4e65ecbb196" name="a5a33ab1c091e52d9233cf4e65ecbb196"></a>
+template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a5a33ab1c091e52d9233cf4e65ecbb196 inherit pub_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">std::weak_ptr&lt; Derived &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>weak_ptr</b> ()</td></tr>
+<tr class="separator:a5a33ab1c091e52d9233cf4e65ecbb196 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f20160832d59c707e5dc7387e43ae86 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a4f20160832d59c707e5dc7387e43ae86" name="a4f20160832d59c707e5dc7387e43ae86"></a>
+virtual std::string_view&#160;</td><td class="memItemRight" valign="bottom"><b>getClassId</b> () const =0</td></tr>
+<tr class="separator:a4f20160832d59c707e5dc7387e43ae86 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6178706791d8f4fcabff6080b4ba178b inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#a6178706791d8f4fcabff6080b4ba178b">getObjectId</a> () const =0</td></tr>
+<tr class="separator:a6178706791d8f4fcabff6080b4ba178b inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8199cd3d4bc06a0897285adb069f309e inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a8199cd3d4bc06a0897285adb069f309e" name="a8199cd3d4bc06a0897285adb069f309e"></a>
+const <a class="el" href="classInterfaceItems.html">InterfaceItems</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>interfaceItems</b> () const</td></tr>
+<tr class="separator:a8199cd3d4bc06a0897285adb069f309e inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97d0dbec9f02e145c2959fc1e065478d inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a97d0dbec9f02e145c2959fc1e065478d" name="a97d0dbec9f02e145c2959fc1e065478d"></a>
+const <a class="el" href="classInterfaceItem.html">InterfaceItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getItem</b> (std::string_view name) const</td></tr>
+<tr class="separator:a97d0dbec9f02e145c2959fc1e065478d inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1926034094df8357fe77409b11a81a0e inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a1926034094df8357fe77409b11a81a0e" name="a1926034094df8357fe77409b11a81a0e"></a>
+<a class="el" href="classInterfaceItem.html">InterfaceItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getItem</b> (std::string_view name)</td></tr>
+<tr class="separator:a1926034094df8357fe77409b11a81a0e inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7b2e432e8fe145196964ef3f838f0ee inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ab7b2e432e8fe145196964ef3f838f0ee" name="ab7b2e432e8fe145196964ef3f838f0ee"></a>
+const <a class="el" href="classAbstractMethod.html">AbstractMethod</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getMethod</b> (std::string_view name) const</td></tr>
+<tr class="separator:ab7b2e432e8fe145196964ef3f838f0ee inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81cedc74e10d4f4ccab13d1f34da1897 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a81cedc74e10d4f4ccab13d1f34da1897" name="a81cedc74e10d4f4ccab13d1f34da1897"></a>
+<a class="el" href="classAbstractMethod.html">AbstractMethod</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getMethod</b> (std::string_view name)</td></tr>
+<tr class="separator:a81cedc74e10d4f4ccab13d1f34da1897 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcbe5e085a3d833e7257653f68731377 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="abcbe5e085a3d833e7257653f68731377" name="abcbe5e085a3d833e7257653f68731377"></a>
+const <a class="el" href="classAbstractProperty.html">AbstractProperty</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getProperty</b> (std::string_view name) const</td></tr>
+<tr class="separator:abcbe5e085a3d833e7257653f68731377 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5cd29094e823a1df0b02d208af08240 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ac5cd29094e823a1df0b02d208af08240" name="ac5cd29094e823a1df0b02d208af08240"></a>
+<a class="el" href="classAbstractProperty.html">AbstractProperty</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getProperty</b> (std::string_view name)</td></tr>
+<tr class="separator:ac5cd29094e823a1df0b02d208af08240 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12c077de81de1b6868c826f70a004df4 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a12c077de81de1b6868c826f70a004df4" name="a12c077de81de1b6868c826f70a004df4"></a>
+const <a class="el" href="classAbstractObjectProperty.html">AbstractObjectProperty</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getObjectProperty</b> (std::string_view name) const</td></tr>
+<tr class="separator:a12c077de81de1b6868c826f70a004df4 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70ad6b5a0b93e7815df3e6461347fb85 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a70ad6b5a0b93e7815df3e6461347fb85" name="a70ad6b5a0b93e7815df3e6461347fb85"></a>
+<a class="el" href="classAbstractObjectProperty.html">AbstractObjectProperty</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getObjectProperty</b> (std::string_view name)</td></tr>
+<tr class="separator:a70ad6b5a0b93e7815df3e6461347fb85 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae47b594f5b5558924b40d2efb1eea78d inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ae47b594f5b5558924b40d2efb1eea78d" name="ae47b594f5b5558924b40d2efb1eea78d"></a>
+const <a class="el" href="classAbstractVectorProperty.html">AbstractVectorProperty</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getVectorProperty</b> (std::string_view name) const</td></tr>
+<tr class="separator:ae47b594f5b5558924b40d2efb1eea78d inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae01a900d2016e93aa456cdf55b28d67f inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ae01a900d2016e93aa456cdf55b28d67f" name="ae01a900d2016e93aa456cdf55b28d67f"></a>
+<a class="el" href="classAbstractVectorProperty.html">AbstractVectorProperty</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getVectorProperty</b> (std::string_view name)</td></tr>
+<tr class="separator:ae01a900d2016e93aa456cdf55b28d67f inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8d451bb98529ead13601394ef2fecfa inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ae8d451bb98529ead13601394ef2fecfa" name="ae8d451bb98529ead13601394ef2fecfa"></a>
+const <a class="el" href="classAbstractEvent.html">AbstractEvent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getEvent</b> (std::string_view name) const</td></tr>
+<tr class="separator:ae8d451bb98529ead13601394ef2fecfa inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7f336c0280a62e4a60783a5ab9ebe81 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ac7f336c0280a62e4a60783a5ab9ebe81" name="ac7f336c0280a62e4a60783a5ab9ebe81"></a>
+<a class="el" href="classAbstractEvent.html">AbstractEvent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getEvent</b> (std::string_view name)</td></tr>
+<tr class="separator:ac7f336c0280a62e4a60783a5ab9ebe81 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classDecoderController"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classDecoderController')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classDecoderController.html">DecoderController</a></td></tr>
+<tr class="memitem:a49bc22a303322e3b3a63be35105e8887 inherit pub_methods_classDecoderController"><td class="memItemLeft" align="right" valign="top">virtual std::span&lt; const DecoderProtocol &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDecoderController.html#a49bc22a303322e3b3a63be35105e8887">decoderProtocols</a> () const =0</td></tr>
+<tr class="memdesc:a49bc22a303322e3b3a63be35105e8887 inherit pub_methods_classDecoderController"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get supported protocols.  <a href="classDecoderController.html#a49bc22a303322e3b3a63be35105e8887">More...</a><br /></td></tr>
+<tr class="separator:a49bc22a303322e3b3a63be35105e8887 inherit pub_methods_classDecoderController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1a6319b8d660fe5695613e1b7dc8615 inherit pub_methods_classDecoderController"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; uint16_t, uint16_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDecoderController.html#ab1a6319b8d660fe5695613e1b7dc8615">decoderAddressMinMax</a> (DecoderProtocol protocol) const</td></tr>
+<tr class="memdesc:ab1a6319b8d660fe5695613e1b7dc8615 inherit pub_methods_classDecoderController"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get address range for given protocol.  <a href="classDecoderController.html#ab1a6319b8d660fe5695613e1b7dc8615">More...</a><br /></td></tr>
+<tr class="separator:ab1a6319b8d660fe5695613e1b7dc8615 inherit pub_methods_classDecoderController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b654b7ef6bd68a166a24348d2df6012 inherit pub_methods_classDecoderController"><td class="memItemLeft" align="right" valign="top">virtual std::span&lt; const uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDecoderController.html#a7b654b7ef6bd68a166a24348d2df6012">decoderSpeedSteps</a> (DecoderProtocol protocol) const</td></tr>
+<tr class="memdesc:a7b654b7ef6bd68a166a24348d2df6012 inherit pub_methods_classDecoderController"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get speed step options for given protocol.  <a href="classDecoderController.html#a7b654b7ef6bd68a166a24348d2df6012">More...</a><br /></td></tr>
+<tr class="separator:a7b654b7ef6bd68a166a24348d2df6012 inherit pub_methods_classDecoderController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad29a6f475658fead9a00d7dcf84937eb inherit pub_methods_classDecoderController"><td class="memItemLeft" align="right" valign="top"><a id="ad29a6f475658fead9a00d7dcf84937eb" name="ad29a6f475658fead9a00d7dcf84937eb"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>addDecoder</b> (<a class="el" href="classDecoder.html">Decoder</a> &amp;decoder)</td></tr>
+<tr class="separator:ad29a6f475658fead9a00d7dcf84937eb inherit pub_methods_classDecoderController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad32559d899e2f6e426e220354d891ad0 inherit pub_methods_classDecoderController"><td class="memItemLeft" align="right" valign="top"><a id="ad32559d899e2f6e426e220354d891ad0" name="ad32559d899e2f6e426e220354d891ad0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>removeDecoder</b> (<a class="el" href="classDecoder.html">Decoder</a> &amp;decoder)</td></tr>
+<tr class="separator:ad32559d899e2f6e426e220354d891ad0 inherit pub_methods_classDecoderController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a295546789ad64a0f9ca5e16d156cb3d1 inherit pub_methods_classDecoderController"><td class="memItemLeft" align="right" valign="top"><a id="a295546789ad64a0f9ca5e16d156cb3d1" name="a295546789ad64a0f9ca5e16d156cb3d1"></a>
+const std::shared_ptr&lt; <a class="el" href="classDecoder.html">Decoder</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getDecoder</b> (DecoderProtocol protocol, uint16_t address)</td></tr>
+<tr class="separator:a295546789ad64a0f9ca5e16d156cb3d1 inherit pub_methods_classDecoderController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a380ca8782471515c682487fb59bd9cf1 inherit pub_methods_classDecoderController"><td class="memItemLeft" align="right" valign="top"><a id="a380ca8782471515c682487fb59bd9cf1" name="a380ca8782471515c682487fb59bd9cf1"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>decoderChanged</b> (const <a class="el" href="classDecoder.html">Decoder</a> &amp;decoder, DecoderChangeFlags changes, uint32_t functionNumber)=0</td></tr>
+<tr class="separator:a380ca8782471515c682487fb59bd9cf1 inherit pub_methods_classDecoderController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classInputController"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classInputController')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classInputController.html">InputController</a></td></tr>
+<tr class="memitem:a61770da6020c4804c394a2b8bab261bc inherit pub_methods_classInputController"><td class="memItemLeft" align="right" valign="top"><a id="a61770da6020c4804c394a2b8bab261bc" name="a61770da6020c4804c394a2b8bab261bc"></a>
+const <a class="el" href="classInputMap.html">InputMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>inputMap</b> () const</td></tr>
+<tr class="separator:a61770da6020c4804c394a2b8bab261bc inherit pub_methods_classInputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3828c4611b648cc1ebf6609bc9a1fb33 inherit pub_methods_classInputController"><td class="memItemLeft" align="right" valign="top"><a id="a3828c4611b648cc1ebf6609bc9a1fb33" name="a3828c4611b648cc1ebf6609bc9a1fb33"></a>
+virtual std::span&lt; const InputChannel &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>inputChannels</b> () const =0</td></tr>
+<tr class="separator:a3828c4611b648cc1ebf6609bc9a1fb33 inherit pub_methods_classInputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9f454737eb081e102d0f59b26b3de64 inherit pub_methods_classInputController"><td class="memItemLeft" align="right" valign="top"><a id="ad9f454737eb081e102d0f59b26b3de64" name="ad9f454737eb081e102d0f59b26b3de64"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isInputChannel</b> (InputChannel channel) const</td></tr>
+<tr class="separator:ad9f454737eb081e102d0f59b26b3de64 inherit pub_methods_classInputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77dcd63b89ab88ec618c7fcfb460684f inherit pub_methods_classInputController"><td class="memItemLeft" align="right" valign="top"><a id="a77dcd63b89ab88ec618c7fcfb460684f" name="a77dcd63b89ab88ec618c7fcfb460684f"></a>
+virtual std::pair&lt; uint32_t, uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>inputAddressMinMax</b> (InputChannel channel) const =0</td></tr>
+<tr class="separator:a77dcd63b89ab88ec618c7fcfb460684f inherit pub_methods_classInputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e824605f78d2ab62a8c0fbc3362a819 inherit pub_methods_classInputController"><td class="memItemLeft" align="right" valign="top"><a id="a8e824605f78d2ab62a8c0fbc3362a819" name="a8e824605f78d2ab62a8c0fbc3362a819"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isInputAvailable</b> (InputChannel channel, uint32_t address) const</td></tr>
+<tr class="separator:a8e824605f78d2ab62a8c0fbc3362a819 inherit pub_methods_classInputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a627fdb374e895a5ef86d5e03ee318a66 inherit pub_methods_classInputController"><td class="memItemLeft" align="right" valign="top">std::optional&lt; uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputController.html#a627fdb374e895a5ef86d5e03ee318a66">getUnusedInputAddress</a> (InputChannel channel) const</td></tr>
+<tr class="memdesc:a627fdb374e895a5ef86d5e03ee318a66 inherit pub_methods_classInputController"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try get the lowest unused input address.  <a href="classInputController.html#a627fdb374e895a5ef86d5e03ee318a66">More...</a><br /></td></tr>
+<tr class="separator:a627fdb374e895a5ef86d5e03ee318a66 inherit pub_methods_classInputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e4e2050a49ad839dd3ce86310f52d2c inherit pub_methods_classInputController"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classInput.html">Input</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputController.html#a0e4e2050a49ad839dd3ce86310f52d2c">getInput</a> (InputChannel channel, uint32_t address, <a class="el" href="classObject.html">Object</a> &amp;usedBy)</td></tr>
+<tr class="memdesc:a0e4e2050a49ad839dd3ce86310f52d2c inherit pub_methods_classInputController"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an input.  <a href="classInputController.html#a0e4e2050a49ad839dd3ce86310f52d2c">More...</a><br /></td></tr>
+<tr class="separator:a0e4e2050a49ad839dd3ce86310f52d2c inherit pub_methods_classInputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada540154173947a6a637abbdf5ec9196 inherit pub_methods_classInputController"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputController.html#ada540154173947a6a637abbdf5ec9196">releaseInput</a> (<a class="el" href="classInput.html">Input</a> &amp;output, <a class="el" href="classObject.html">Object</a> &amp;usedBy)</td></tr>
+<tr class="memdesc:ada540154173947a6a637abbdf5ec9196 inherit pub_methods_classInputController"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release an input.  <a href="classInputController.html#ada540154173947a6a637abbdf5ec9196">More...</a><br /></td></tr>
+<tr class="separator:ada540154173947a6a637abbdf5ec9196 inherit pub_methods_classInputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80fd78d3ca34afa80088be4b02b04633 inherit pub_methods_classInputController"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputController.html#a80fd78d3ca34afa80088be4b02b04633">updateInputValue</a> (InputChannel channel, uint32_t address, TriState value)</td></tr>
+<tr class="memdesc:a80fd78d3ca34afa80088be4b02b04633 inherit pub_methods_classInputController"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the input value.  <a href="classInputController.html#a80fd78d3ca34afa80088be4b02b04633">More...</a><br /></td></tr>
+<tr class="separator:a80fd78d3ca34afa80088be4b02b04633 inherit pub_methods_classInputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22d78a5287ec45082510f1c5b3006c0e inherit pub_methods_classInputController"><td class="memItemLeft" align="right" valign="top"><a id="a22d78a5287ec45082510f1c5b3006c0e" name="a22d78a5287ec45082510f1c5b3006c0e"></a>
+std::shared_ptr&lt; <a class="el" href="classInputMonitor.html">InputMonitor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>inputMonitor</b> (InputChannel channel)</td></tr>
+<tr class="separator:a22d78a5287ec45082510f1c5b3006c0e inherit pub_methods_classInputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac1739ebf57e2fed0e35444e0ee40441 inherit pub_methods_classInputController"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputController.html#aac1739ebf57e2fed0e35444e0ee40441">inputSimulateChange</a> (InputChannel, uint32_t, SimulateInputAction)</td></tr>
+<tr class="memdesc:aac1739ebf57e2fed0e35444e0ee40441 inherit pub_methods_classInputController"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulate input change.  <a href="classInputController.html#aac1739ebf57e2fed0e35444e0ee40441">More...</a><br /></td></tr>
+<tr class="separator:aac1739ebf57e2fed0e35444e0ee40441 inherit pub_methods_classInputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classOutputController"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classOutputController')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classOutputController.html">OutputController</a></td></tr>
+<tr class="memitem:afe6bc893c98bbfd55d5800674852933e inherit pub_methods_classOutputController"><td class="memItemLeft" align="right" valign="top"><a id="afe6bc893c98bbfd55d5800674852933e" name="afe6bc893c98bbfd55d5800674852933e"></a>
+const <a class="el" href="classOutputMap.html">OutputMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>outputMap</b> () const</td></tr>
+<tr class="separator:afe6bc893c98bbfd55d5800674852933e inherit pub_methods_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada758005c5767cb9132d0df4553feaf7 inherit pub_methods_classOutputController"><td class="memItemLeft" align="right" valign="top"><a id="ada758005c5767cb9132d0df4553feaf7" name="ada758005c5767cb9132d0df4553feaf7"></a>
+virtual std::span&lt; const OutputChannel &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>outputChannels</b> () const =0</td></tr>
+<tr class="separator:ada758005c5767cb9132d0df4553feaf7 inherit pub_methods_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a862a0e9247fa606574643befe49c3230 inherit pub_methods_classOutputController"><td class="memItemLeft" align="right" valign="top"><a id="a862a0e9247fa606574643befe49c3230" name="a862a0e9247fa606574643befe49c3230"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isOutputChannel</b> (OutputChannel channel) const</td></tr>
+<tr class="separator:a862a0e9247fa606574643befe49c3230 inherit pub_methods_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47d43f7b326ecc62f718879ce7e9235f inherit pub_methods_classOutputController"><td class="memItemLeft" align="right" valign="top"><a id="a47d43f7b326ecc62f718879ce7e9235f" name="a47d43f7b326ecc62f718879ce7e9235f"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isOutputId</b> (OutputChannel channel, uint32_t id) const</td></tr>
+<tr class="separator:a47d43f7b326ecc62f718879ce7e9235f inherit pub_methods_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38a5f373c0e03a24ea3c748318df5557 inherit pub_methods_classOutputController"><td class="memItemLeft" align="right" valign="top"><a id="a38a5f373c0e03a24ea3c748318df5557" name="a38a5f373c0e03a24ea3c748318df5557"></a>
+virtual OutputType&#160;</td><td class="memItemRight" valign="bottom"><b>outputType</b> (OutputChannel channel) const</td></tr>
+<tr class="separator:a38a5f373c0e03a24ea3c748318df5557 inherit pub_methods_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68c1868a26b5b1c8341dfa53d116703c inherit pub_methods_classOutputController"><td class="memItemLeft" align="right" valign="top"><a id="a68c1868a26b5b1c8341dfa53d116703c" name="a68c1868a26b5b1c8341dfa53d116703c"></a>
+virtual std::pair&lt; uint32_t, uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>outputAddressMinMax</b> (OutputChannel channel) const</td></tr>
+<tr class="separator:a68c1868a26b5b1c8341dfa53d116703c inherit pub_methods_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a0502febfe5ba56c5ff5543b5515bdb inherit pub_methods_classOutputController"><td class="memItemLeft" align="right" valign="top"><a id="a5a0502febfe5ba56c5ff5543b5515bdb" name="a5a0502febfe5ba56c5ff5543b5515bdb"></a>
+virtual std::pair&lt; std::span&lt; const uint16_t &gt;, std::span&lt; const std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getOutputECoSObjects</b> (OutputChannel channel) const</td></tr>
+<tr class="separator:a5a0502febfe5ba56c5ff5543b5515bdb inherit pub_methods_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af354beb7a93a5b16581c5c2f9cbe2958 inherit pub_methods_classOutputController"><td class="memItemLeft" align="right" valign="top"><a id="af354beb7a93a5b16581c5c2f9cbe2958" name="af354beb7a93a5b16581c5c2f9cbe2958"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isOutputAvailable</b> (OutputChannel channel, uint32_t id) const</td></tr>
+<tr class="separator:af354beb7a93a5b16581c5c2f9cbe2958 inherit pub_methods_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4b406bd3e1ab6a77cf5a7d598351f61 inherit pub_methods_classOutputController"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOutputController.html#af4b406bd3e1ab6a77cf5a7d598351f61">getUnusedOutputAddress</a> (OutputChannel channel) const</td></tr>
+<tr class="memdesc:af4b406bd3e1ab6a77cf5a7d598351f61 inherit pub_methods_classOutputController"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the next unused output address.  <a href="classOutputController.html#af4b406bd3e1ab6a77cf5a7d598351f61">More...</a><br /></td></tr>
+<tr class="separator:af4b406bd3e1ab6a77cf5a7d598351f61 inherit pub_methods_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b77f99aa8ae970fc7fff6e0c9ebe3c4 inherit pub_methods_classOutputController"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classOutput.html">Output</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOutputController.html#a6b77f99aa8ae970fc7fff6e0c9ebe3c4">getOutput</a> (OutputChannel channel, uint32_t id, <a class="el" href="classObject.html">Object</a> &amp;usedBy)</td></tr>
+<tr class="memdesc:a6b77f99aa8ae970fc7fff6e0c9ebe3c4 inherit pub_methods_classOutputController"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an output.  <a href="classOutputController.html#a6b77f99aa8ae970fc7fff6e0c9ebe3c4">More...</a><br /></td></tr>
+<tr class="separator:a6b77f99aa8ae970fc7fff6e0c9ebe3c4 inherit pub_methods_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ed6deb3018b4752a151cdcb3c3f44b6 inherit pub_methods_classOutputController"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOutputController.html#a6ed6deb3018b4752a151cdcb3c3f44b6">releaseOutput</a> (<a class="el" href="classOutput.html">Output</a> &amp;output, <a class="el" href="classObject.html">Object</a> &amp;usedBy)</td></tr>
+<tr class="memdesc:a6ed6deb3018b4752a151cdcb3c3f44b6 inherit pub_methods_classOutputController"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release an output.  <a href="classOutputController.html#a6ed6deb3018b4752a151cdcb3c3f44b6">More...</a><br /></td></tr>
+<tr class="separator:a6ed6deb3018b4752a151cdcb3c3f44b6 inherit pub_methods_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2fb6b95f5813f3b146b4345eb7fb2e4 inherit pub_methods_classOutputController"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOutputController.html#ab2fb6b95f5813f3b146b4345eb7fb2e4">setOutputValue</a> (OutputChannel, uint32_t, OutputValue)=0</td></tr>
+<tr class="memdesc:ab2fb6b95f5813f3b146b4345eb7fb2e4 inherit pub_methods_classOutputController"><td class="mdescLeft">&#160;</td><td class="mdescRight">...  <a href="classOutputController.html#ab2fb6b95f5813f3b146b4345eb7fb2e4">More...</a><br /></td></tr>
+<tr class="separator:ab2fb6b95f5813f3b146b4345eb7fb2e4 inherit pub_methods_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada7ea70a1d81e1f6bfdcf575960afb29 inherit pub_methods_classOutputController"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOutputController.html#ada7ea70a1d81e1f6bfdcf575960afb29">updateOutputValue</a> (OutputChannel channel, uint32_t id, OutputValue value)</td></tr>
+<tr class="memdesc:ada7ea70a1d81e1f6bfdcf575960afb29 inherit pub_methods_classOutputController"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the output value.  <a href="classOutputController.html#ada7ea70a1d81e1f6bfdcf575960afb29">More...</a><br /></td></tr>
+<tr class="separator:ada7ea70a1d81e1f6bfdcf575960afb29 inherit pub_methods_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a893759c67caa8e22394ca3d11fd474ae inherit pub_methods_classOutputController"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOutputController.html#a893759c67caa8e22394ca3d11fd474ae">hasOutputKeyboard</a> (OutputChannel channel) const</td></tr>
+<tr class="memdesc:a893759c67caa8e22394ca3d11fd474ae inherit pub_methods_classOutputController"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check is there is an output keyboard available for the channel.  <a href="classOutputController.html#a893759c67caa8e22394ca3d11fd474ae">More...</a><br /></td></tr>
+<tr class="separator:a893759c67caa8e22394ca3d11fd474ae inherit pub_methods_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a455b930b22e0fb95cd5f9ee69561bc0d inherit pub_methods_classOutputController"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classOutputKeyboard.html">OutputKeyboard</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOutputController.html#a455b930b22e0fb95cd5f9ee69561bc0d">outputKeyboard</a> (OutputChannel channel)</td></tr>
+<tr class="memdesc:a455b930b22e0fb95cd5f9ee69561bc0d inherit pub_methods_classOutputController"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an output keyboard for the channel if available.  <a href="classOutputController.html#a455b930b22e0fb95cd5f9ee69561bc0d">More...</a><br /></td></tr>
+<tr class="separator:a455b930b22e0fb95cd5f9ee69561bc0d inherit pub_methods_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a99d4bf380478f2cf7e5ee56e79c36de9"><td class="memItemLeft" align="right" valign="top"><a id="a99d4bf380478f2cf7e5ee56e79c36de9" name="a99d4bf380478f2cf7e5ee56e79c36de9"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; XpressNetInterfaceType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
+<tr class="separator:a99d4bf380478f2cf7e5ee56e79c36de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7738f8bf92ca354d20e02eb6cf539e01"><td class="memItemLeft" align="right" valign="top"><a id="a7738f8bf92ca354d20e02eb6cf539e01" name="a7738f8bf92ca354d20e02eb6cf539e01"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; XpressNetSerialInterfaceType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>serialInterfaceType</b></td></tr>
+<tr class="separator:a7738f8bf92ca354d20e02eb6cf539e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41ba17cd26fed5beb39fea97cd091006"><td class="memItemLeft" align="right" valign="top"><a id="a41ba17cd26fed5beb39fea97cd091006" name="a41ba17cd26fed5beb39fea97cd091006"></a>
+<a class="el" href="classSerialDeviceProperty.html">SerialDeviceProperty</a>&#160;</td><td class="memItemRight" valign="bottom"><b>device</b></td></tr>
+<tr class="separator:a41ba17cd26fed5beb39fea97cd091006"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9011e3e2ace86918c5ccc49f8f9edd8"><td class="memItemLeft" align="right" valign="top"><a id="ab9011e3e2ace86918c5ccc49f8f9edd8" name="ab9011e3e2ace86918c5ccc49f8f9edd8"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>baudrate</b></td></tr>
+<tr class="separator:ab9011e3e2ace86918c5ccc49f8f9edd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e6063609850dbe8410ed3eb68ff5135"><td class="memItemLeft" align="right" valign="top"><a id="a2e6063609850dbe8410ed3eb68ff5135" name="a2e6063609850dbe8410ed3eb68ff5135"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; SerialFlowControl &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>flowControl</b></td></tr>
+<tr class="separator:a2e6063609850dbe8410ed3eb68ff5135"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9540bf8829c20a8a07b1198b7747bd7c"><td class="memItemLeft" align="right" valign="top"><a id="a9540bf8829c20a8a07b1198b7747bd7c" name="a9540bf8829c20a8a07b1198b7747bd7c"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>hostname</b></td></tr>
+<tr class="separator:a9540bf8829c20a8a07b1198b7747bd7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b1d6c371602d02804aaf7f8c989de33"><td class="memItemLeft" align="right" valign="top"><a id="a0b1d6c371602d02804aaf7f8c989de33" name="a0b1d6c371602d02804aaf7f8c989de33"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; uint16_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>port</b></td></tr>
+<tr class="separator:a0b1d6c371602d02804aaf7f8c989de33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac357c0c402eb268823823152baa830d"><td class="memItemLeft" align="right" valign="top"><a id="aac357c0c402eb268823823152baa830d" name="aac357c0c402eb268823823152baa830d"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>s88StartAddress</b></td></tr>
+<tr class="separator:aac357c0c402eb268823823152baa830d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6da16ad6c7c98ff7bee4aea77d25858"><td class="memItemLeft" align="right" valign="top"><a id="ad6da16ad6c7c98ff7bee4aea77d25858" name="ad6da16ad6c7c98ff7bee4aea77d25858"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>s88ModuleCount</b></td></tr>
+<tr class="separator:ad6da16ad6c7c98ff7bee4aea77d25858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0911352989cfc1a2021e01fd97f4f17f"><td class="memItemLeft" align="right" valign="top"><a id="a0911352989cfc1a2021e01fd97f4f17f" name="a0911352989cfc1a2021e01fd97f4f17f"></a>
+<a class="el" href="classObjectProperty.html">ObjectProperty</a>&lt; <a class="el" href="classXpressNet_1_1Settings.html">XpressNet::Settings</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>xpressnet</b></td></tr>
+<tr class="separator:a0911352989cfc1a2021e01fd97f4f17f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classInterface"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classInterface')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classInterface.html">Interface</a></td></tr>
+<tr class="memitem:a263ca490e7d23713226249d8a37dd544 inherit pub_attribs_classInterface"><td class="memItemLeft" align="right" valign="top"><a id="a263ca490e7d23713226249d8a37dd544" name="a263ca490e7d23713226249d8a37dd544"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="separator:a263ca490e7d23713226249d8a37dd544 inherit pub_attribs_classInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b907be3adb8584d582d1e790ec2e20d inherit pub_attribs_classInterface"><td class="memItemLeft" align="right" valign="top"><a id="a6b907be3adb8584d582d1e790ec2e20d" name="a6b907be3adb8584d582d1e790ec2e20d"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>online</b></td></tr>
+<tr class="separator:a6b907be3adb8584d582d1e790ec2e20d inherit pub_attribs_classInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52baf084317db2aefc193a6af12af24d inherit pub_attribs_classInterface"><td class="memItemLeft" align="right" valign="top"><a id="a52baf084317db2aefc193a6af12af24d" name="a52baf084317db2aefc193a6af12af24d"></a>
+<a class="el" href="classObjectProperty.html">ObjectProperty</a>&lt; <a class="el" href="classInterfaceStatus.html">InterfaceStatus</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>status</b></td></tr>
+<tr class="separator:a52baf084317db2aefc193a6af12af24d inherit pub_attribs_classInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a528794fa1be5d467570430fbbd7cddb0 inherit pub_attribs_classInterface"><td class="memItemLeft" align="right" valign="top"><a id="a528794fa1be5d467570430fbbd7cddb0" name="a528794fa1be5d467570430fbbd7cddb0"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>notes</b></td></tr>
+<tr class="separator:a528794fa1be5d467570430fbbd7cddb0 inherit pub_attribs_classInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classIdObject"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classIdObject')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classIdObject.html">IdObject</a></td></tr>
+<tr class="memitem:a2c795bdbd8f63e1f6160fb02f7ad3259 inherit pub_attribs_classIdObject"><td class="memItemLeft" align="right" valign="top"><a id="a2c795bdbd8f63e1f6160fb02f7ad3259" name="a2c795bdbd8f63e1f6160fb02f7ad3259"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
+<tr class="separator:a2c795bdbd8f63e1f6160fb02f7ad3259 inherit pub_attribs_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classObject"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classObject')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classObject.html">Object</a></td></tr>
+<tr class="memitem:a33b8abf3afd896dcdb2df9afa50563f0 inherit pub_attribs_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a33b8abf3afd896dcdb2df9afa50563f0" name="a33b8abf3afd896dcdb2df9afa50563f0"></a>
+boost::signals2::signal&lt; void(<a class="el" href="classObject.html">Object</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>onDestroying</b></td></tr>
+<tr class="separator:a33b8abf3afd896dcdb2df9afa50563f0 inherit pub_attribs_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b43ce3ca5dd9b8bb1fa80899f8fc369 inherit pub_attribs_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a5b43ce3ca5dd9b8bb1fa80899f8fc369" name="a5b43ce3ca5dd9b8bb1fa80899f8fc369"></a>
+boost::signals2::signal&lt; void(<a class="el" href="classBaseProperty.html">BaseProperty</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>propertyChanged</b></td></tr>
+<tr class="separator:a5b43ce3ca5dd9b8bb1fa80899f8fc369 inherit pub_attribs_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9e9926e136edeb9965bd0d19e711141 inherit pub_attribs_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ab9e9926e136edeb9965bd0d19e711141" name="ab9e9926e136edeb9965bd0d19e711141"></a>
+boost::signals2::signal&lt; void(<a class="el" href="classAbstractAttribute.html">AbstractAttribute</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>attributeChanged</b></td></tr>
+<tr class="separator:ab9e9926e136edeb9965bd0d19e711141 inherit pub_attribs_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4777c49ac247cab5e6695e7f9d7a4c04 inherit pub_attribs_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a4777c49ac247cab5e6695e7f9d7a4c04" name="a4777c49ac247cab5e6695e7f9d7a4c04"></a>
+boost::signals2::signal&lt; void(const <a class="el" href="classAbstractEvent.html">AbstractEvent</a> &amp;, const Arguments &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>onEventFired</b></td></tr>
+<tr class="separator:a4777c49ac247cab5e6695e7f9d7a4c04 inherit pub_attribs_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classDecoderController"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classDecoderController')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classDecoderController.html">DecoderController</a></td></tr>
+<tr class="memitem:a4219713f8ab9088aca845521ffcbb46e inherit pub_attribs_classDecoderController"><td class="memItemLeft" align="right" valign="top"><a id="a4219713f8ab9088aca845521ffcbb46e" name="a4219713f8ab9088aca845521ffcbb46e"></a>
+<a class="el" href="classObjectProperty.html">ObjectProperty</a>&lt; <a class="el" href="classDecoderList.html">DecoderList</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>decoders</b></td></tr>
+<tr class="separator:a4219713f8ab9088aca845521ffcbb46e inherit pub_attribs_classDecoderController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classInputController"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classInputController')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classInputController.html">InputController</a></td></tr>
+<tr class="memitem:a4723a6a3bb07866a52ea2bfa3708824a inherit pub_attribs_classInputController"><td class="memItemLeft" align="right" valign="top"><a id="a4723a6a3bb07866a52ea2bfa3708824a" name="a4723a6a3bb07866a52ea2bfa3708824a"></a>
+<a class="el" href="classObjectProperty.html">ObjectProperty</a>&lt; <a class="el" href="classInputList.html">InputList</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>inputs</b></td></tr>
+<tr class="separator:a4723a6a3bb07866a52ea2bfa3708824a inherit pub_attribs_classInputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classOutputController"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classOutputController')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classOutputController.html">OutputController</a></td></tr>
+<tr class="memitem:a67a2ba7dff4f6d82336ce7369bcb3aa5 inherit pub_attribs_classOutputController"><td class="memItemLeft" align="right" valign="top"><a id="a67a2ba7dff4f6d82336ce7369bcb3aa5" name="a67a2ba7dff4f6d82336ce7369bcb3aa5"></a>
+boost::signals2::signal&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>outputECoSObjectsChanged</b></td></tr>
+<tr class="separator:a67a2ba7dff4f6d82336ce7369bcb3aa5 inherit pub_attribs_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18c58d452a5e49431ff5e048d0a2b70f inherit pub_attribs_classOutputController"><td class="memItemLeft" align="right" valign="top"><a id="a18c58d452a5e49431ff5e048d0a2b70f" name="a18c58d452a5e49431ff5e048d0a2b70f"></a>
+<a class="el" href="classObjectProperty.html">ObjectProperty</a>&lt; <a class="el" href="classOutputList.html">OutputList</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>outputs</b></td></tr>
+<tr class="separator:a18c58d452a5e49431ff5e048d0a2b70f inherit pub_attribs_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a0c1e12c4c5e9e8395e00f55d97117ee1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXpressNetInterface.html#a0c1e12c4c5e9e8395e00f55d97117ee1">setOnline</a> (bool &amp;value, bool simulation) final</td></tr>
+<tr class="separator:a0c1e12c4c5e9e8395e00f55d97117ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classInterface"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classInterface')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classInterface.html">Interface</a></td></tr>
+<tr class="memitem:a00a43f725868a6487eb664201d475fa4 inherit pro_methods_classInterface"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterface.html#a00a43f725868a6487eb664201d475fa4">Interface</a> (<a class="el" href="classWorld.html">World</a> &amp;world, std::string_view _id)</td></tr>
+<tr class="separator:a00a43f725868a6487eb664201d475fa4 inherit pro_methods_classInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad76e319e751fc78f11bbfefb21243b27 inherit pro_methods_classInterface"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterface.html#ad76e319e751fc78f11bbfefb21243b27">addToWorld</a> () override</td></tr>
+<tr class="separator:ad76e319e751fc78f11bbfefb21243b27 inherit pro_methods_classInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70ebe4ec6d9565148b264656a4f4fb56 inherit pro_methods_classInterface"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterface.html#a70ebe4ec6d9565148b264656a4f4fb56">destroying</a> () override</td></tr>
+<tr class="separator:a70ebe4ec6d9565148b264656a4f4fb56 inherit pro_methods_classInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a174c49626892cc218527f566634157f0 inherit pro_methods_classInterface"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterface.html#a174c49626892cc218527f566634157f0">worldEvent</a> (WorldState state, WorldEvent event) override</td></tr>
+<tr class="separator:a174c49626892cc218527f566634157f0 inherit pro_methods_classInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae07af7f98159bb7e135e4cea8e22b13 inherit pro_methods_classInterface"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterface.html#aae07af7f98159bb7e135e4cea8e22b13">setOnline</a> (bool &amp;value, bool simulation)=0</td></tr>
+<tr class="separator:aae07af7f98159bb7e135e4cea8e22b13 inherit pro_methods_classInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7912e289e2fe55d17392b26b28d29569 inherit pro_methods_classInterface"><td class="memItemLeft" align="right" valign="top"><a id="a7912e289e2fe55d17392b26b28d29569" name="a7912e289e2fe55d17392b26b28d29569"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setState</b> (InterfaceState value)</td></tr>
+<tr class="separator:a7912e289e2fe55d17392b26b28d29569 inherit pro_methods_classInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classIdObject"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classIdObject')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classIdObject.html">IdObject</a></td></tr>
+<tr class="memitem:ada6b78a8b3de3df01afbf0ca97ac699d inherit pro_methods_classIdObject"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdObject.html#ada6b78a8b3de3df01afbf0ca97ac699d">IdObject</a> (<a class="el" href="classWorld.html">World</a> &amp;world, std::string_view _id)</td></tr>
+<tr class="separator:ada6b78a8b3de3df01afbf0ca97ac699d inherit pro_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a643990339b6071b9116a5e288127b2ab inherit pro_methods_classIdObject"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdObject.html#a643990339b6071b9116a5e288127b2ab">destroying</a> () override</td></tr>
+<tr class="separator:a643990339b6071b9116a5e288127b2ab inherit pro_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5577361eb15bd28c2ffd96f5d80144e inherit pro_methods_classIdObject"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdObject.html#ad5577361eb15bd28c2ffd96f5d80144e">loaded</a> () override</td></tr>
+<tr class="separator:ad5577361eb15bd28c2ffd96f5d80144e inherit pro_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8f83278a908829dcd65c181b9d3f1dc inherit pro_methods_classIdObject"><td class="memItemLeft" align="right" valign="top"><a id="aa8f83278a908829dcd65c181b9d3f1dc" name="aa8f83278a908829dcd65c181b9d3f1dc"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>addToWorld</b> ()</td></tr>
+<tr class="separator:aa8f83278a908829dcd65c181b9d3f1dc inherit pro_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a884f89d0200a8dabea97648f66251fec inherit pro_methods_classIdObject"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdObject.html#a884f89d0200a8dabea97648f66251fec">worldEvent</a> (WorldState state, WorldEvent event) override</td></tr>
+<tr class="separator:a884f89d0200a8dabea97648f66251fec inherit pro_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12c0b898e07dca5593770b895459c40a inherit pro_methods_classIdObject"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdObject.html#a12c0b898e07dca5593770b895459c40a">worldFeaturesChanged</a> (const <a class="el" href="classWorldFeatures.html">WorldFeatures</a> features, WorldFeature changed) override</td></tr>
+<tr class="separator:a12c0b898e07dca5593770b895459c40a inherit pro_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classObject"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classObject')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classObject.html">Object</a></td></tr>
+<tr class="memitem:a5dba71d5b40d393ad6d49b196b394050 inherit pro_methods_classObject"><td class="memTemplParams" colspan="2"><a id="a5dba71d5b40d393ad6d49b196b394050" name="a5dba71d5b40d393ad6d49b196b394050"></a>
+template&lt;class... Args&gt; </td></tr>
+<tr class="memitem:a5dba71d5b40d393ad6d49b196b394050 inherit pro_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>fireEvent</b> (<a class="el" href="classEvent.html">Event</a>&lt; Args... &gt; &amp;event, Args... args)</td></tr>
+<tr class="separator:a5dba71d5b40d393ad6d49b196b394050 inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd7f07ccfe17b954fac1f1adf717aacb inherit pro_methods_classObject"><td class="memTemplParams" colspan="2"><a id="abd7f07ccfe17b954fac1f1adf717aacb" name="abd7f07ccfe17b954fac1f1adf717aacb"></a>
+template&lt;class T , class... Args&gt; </td></tr>
+<tr class="memitem:abd7f07ccfe17b954fac1f1adf717aacb inherit pro_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>fireEvent</b> (<a class="el" href="classEvent.html">Event</a>&lt; const std::shared_ptr&lt; T &gt; &amp;, Args... &gt; &amp;event, const std::shared_ptr&lt; T &gt; &amp;object, Args... args)</td></tr>
+<tr class="separator:abd7f07ccfe17b954fac1f1adf717aacb inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69133e2897f55974527c3b2348df5afa inherit pro_methods_classObject"><td class="memTemplParams" colspan="2"><a id="a69133e2897f55974527c3b2348df5afa" name="a69133e2897f55974527c3b2348df5afa"></a>
+template&lt;class T1 , class T2 , class... Args&gt; </td></tr>
+<tr class="memitem:a69133e2897f55974527c3b2348df5afa inherit pro_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>fireEvent</b> (<a class="el" href="classEvent.html">Event</a>&lt; T1, const std::shared_ptr&lt; T2 &gt; &amp;, Args... &gt; &amp;event, T1 value1, const std::shared_ptr&lt; T2 &gt; &amp;object2, Args... args)</td></tr>
+<tr class="separator:a69133e2897f55974527c3b2348df5afa inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a369fd2fa336ed59cdc57565ef4c61e75 inherit pro_methods_classObject"><td class="memTemplParams" colspan="2"><a id="a369fd2fa336ed59cdc57565ef4c61e75" name="a369fd2fa336ed59cdc57565ef4c61e75"></a>
+template&lt;class T1 , class T2 , class... Args&gt; </td></tr>
+<tr class="memitem:a369fd2fa336ed59cdc57565ef4c61e75 inherit pro_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>fireEvent</b> (<a class="el" href="classEvent.html">Event</a>&lt; const std::shared_ptr&lt; T1 &gt; &amp;, const std::shared_ptr&lt; T2 &gt; &amp;, Args... &gt; &amp;event, const std::shared_ptr&lt; T1 &gt; &amp;object1, const std::shared_ptr&lt; T2 &gt; &amp;object2, Args... args)</td></tr>
+<tr class="separator:a369fd2fa336ed59cdc57565ef4c61e75 inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f5ffd8b2e4717964dfd2090d7d848ef inherit pro_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a4f5ffd8b2e4717964dfd2090d7d848ef" name="a4f5ffd8b2e4717964dfd2090d7d848ef"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>destroying</b> ()</td></tr>
+<tr class="separator:a4f5ffd8b2e4717964dfd2090d7d848ef inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a771d92b98129f766ecf119540d5293c4 inherit pro_methods_classObject"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#a771d92b98129f766ecf119540d5293c4">load</a> (<a class="el" href="classWorldLoader.html">WorldLoader</a> &amp;loader, const nlohmann::json &amp;data)</td></tr>
+<tr class="separator:a771d92b98129f766ecf119540d5293c4 inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0700c21c9211b01b74174270f23237f inherit pro_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ac0700c21c9211b01b74174270f23237f" name="ac0700c21c9211b01b74174270f23237f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>save</b> (<a class="el" href="classWorldSaver.html">WorldSaver</a> &amp;saver, nlohmann::json &amp;data, nlohmann::json &amp;state) const</td></tr>
+<tr class="separator:ac0700c21c9211b01b74174270f23237f inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a759f928ce30606b3eb732f55899e9b0e inherit pro_methods_classObject"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#a759f928ce30606b3eb732f55899e9b0e">loaded</a> ()</td></tr>
+<tr class="separator:a759f928ce30606b3eb732f55899e9b0e inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adff01caad3b8e5e6b1f7e57c0bd2c312 inherit pro_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="adff01caad3b8e5e6b1f7e57c0bd2c312" name="adff01caad3b8e5e6b1f7e57c0bd2c312"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>worldEvent</b> (WorldState state, WorldEvent event)</td></tr>
+<tr class="separator:adff01caad3b8e5e6b1f7e57c0bd2c312 inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f15faf985909aa8ec5221c1b88629d5 inherit pro_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a0f15faf985909aa8ec5221c1b88629d5" name="a0f15faf985909aa8ec5221c1b88629d5"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>worldFeaturesChanged</b> (<a class="el" href="classWorldFeatures.html">WorldFeatures</a> features, WorldFeature changed)</td></tr>
+<tr class="separator:a0f15faf985909aa8ec5221c1b88629d5 inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classDecoderController"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classDecoderController')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classDecoderController.html">DecoderController</a></td></tr>
+<tr class="memitem:aff920da428a46b0141f65d62852d93dd inherit pro_methods_classDecoderController"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDecoderController.html#aff920da428a46b0141f65d62852d93dd">DecoderController</a> (<a class="el" href="classIdObject.html">IdObject</a> &amp;interface, DecoderListColumn columns)</td></tr>
+<tr class="separator:aff920da428a46b0141f65d62852d93dd inherit pro_methods_classDecoderController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64962645a8a149d09d5756808bd54b3c inherit pro_methods_classDecoderController"><td class="memItemLeft" align="right" valign="top"><a id="a64962645a8a149d09d5756808bd54b3c" name="a64962645a8a149d09d5756808bd54b3c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addToWorld</b> ()</td></tr>
+<tr class="separator:a64962645a8a149d09d5756808bd54b3c inherit pro_methods_classDecoderController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30500d42745c9399201f6919ecf5b43a inherit pro_methods_classDecoderController"><td class="memItemLeft" align="right" valign="top"><a id="a30500d42745c9399201f6919ecf5b43a" name="a30500d42745c9399201f6919ecf5b43a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>destroying</b> ()</td></tr>
+<tr class="separator:a30500d42745c9399201f6919ecf5b43a inherit pro_methods_classDecoderController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c8660ea361f6a1cb8086d3afb4140c6 inherit pro_methods_classDecoderController"><td class="memItemLeft" align="right" valign="top"><a id="a6c8660ea361f6a1cb8086d3afb4140c6" name="a6c8660ea361f6a1cb8086d3afb4140c6"></a>
+DecoderVector::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>findDecoder</b> (const <a class="el" href="classDecoder.html">Decoder</a> &amp;decoder)</td></tr>
+<tr class="separator:a6c8660ea361f6a1cb8086d3afb4140c6 inherit pro_methods_classDecoderController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0880248722ca655887bc820cbaad3a2 inherit pro_methods_classDecoderController"><td class="memItemLeft" align="right" valign="top"><a id="ae0880248722ca655887bc820cbaad3a2" name="ae0880248722ca655887bc820cbaad3a2"></a>
+DecoderVector::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>findDecoder</b> (DecoderProtocol protocol, uint16_t address)</td></tr>
+<tr class="separator:ae0880248722ca655887bc820cbaad3a2 inherit pro_methods_classDecoderController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f4c85fe059ab719546c8f0c0eba055f inherit pro_methods_classDecoderController"><td class="memItemLeft" align="right" valign="top"><a id="a1f4c85fe059ab719546c8f0c0eba055f" name="a1f4c85fe059ab719546c8f0c0eba055f"></a>
+DecoderVector::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>findDecoderMFX</b> (uint32_t mfxUID)</td></tr>
+<tr class="separator:a1f4c85fe059ab719546c8f0c0eba055f inherit pro_methods_classDecoderController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17d37ac4629c4b08b38a8e434a710ffc inherit pro_methods_classDecoderController"><td class="memItemLeft" align="right" valign="top"><a id="a17d37ac4629c4b08b38a8e434a710ffc" name="a17d37ac4629c4b08b38a8e434a710ffc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>restoreDecoderSpeed</b> ()</td></tr>
+<tr class="memdesc:a17d37ac4629c4b08b38a8e434a710ffc inherit pro_methods_classDecoderController"><td class="mdescLeft">&#160;</td><td class="mdescRight">restore speed of all decoders that are not (emergency) stopped <br /></td></tr>
+<tr class="separator:a17d37ac4629c4b08b38a8e434a710ffc inherit pro_methods_classDecoderController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classInputController"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classInputController')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classInputController.html">InputController</a></td></tr>
+<tr class="memitem:a1fb09716270c88ff4b2ebd1f1a3ef72e inherit pro_methods_classInputController"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputController.html#a1fb09716270c88ff4b2ebd1f1a3ef72e">InputController</a> (<a class="el" href="classIdObject.html">IdObject</a> &amp;interface)</td></tr>
+<tr class="separator:a1fb09716270c88ff4b2ebd1f1a3ef72e inherit pro_methods_classInputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a615fb25bb997ec7d11966234c17da7ac inherit pro_methods_classInputController"><td class="memItemLeft" align="right" valign="top"><a id="a615fb25bb997ec7d11966234c17da7ac" name="a615fb25bb997ec7d11966234c17da7ac"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addToWorld</b> (InputListColumn columns)</td></tr>
+<tr class="separator:a615fb25bb997ec7d11966234c17da7ac inherit pro_methods_classInputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad60ab39a32353b786f5dce2f6a147612 inherit pro_methods_classInputController"><td class="memItemLeft" align="right" valign="top"><a id="ad60ab39a32353b786f5dce2f6a147612" name="ad60ab39a32353b786f5dce2f6a147612"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>destroying</b> ()</td></tr>
+<tr class="separator:ad60ab39a32353b786f5dce2f6a147612 inherit pro_methods_classInputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classOutputController"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classOutputController')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classOutputController.html">OutputController</a></td></tr>
+<tr class="memitem:a61d2eff6fff37129b9b9402390f0abe3 inherit pro_methods_classOutputController"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOutputController.html#a61d2eff6fff37129b9b9402390f0abe3">OutputController</a> (<a class="el" href="classIdObject.html">IdObject</a> &amp;interface)</td></tr>
+<tr class="separator:a61d2eff6fff37129b9b9402390f0abe3 inherit pro_methods_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97739bc6476ffba31a57f65afc6b0d9a inherit pro_methods_classOutputController"><td class="memItemLeft" align="right" valign="top"><a id="a97739bc6476ffba31a57f65afc6b0d9a" name="a97739bc6476ffba31a57f65afc6b0d9a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addToWorld</b> (OutputListColumn columns)</td></tr>
+<tr class="separator:a97739bc6476ffba31a57f65afc6b0d9a inherit pro_methods_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef23d68035a27d49f865725e8554d0b7 inherit pro_methods_classOutputController"><td class="memItemLeft" align="right" valign="top"><a id="aef23d68035a27d49f865725e8554d0b7" name="aef23d68035a27d49f865725e8554d0b7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>destroying</b> ()</td></tr>
+<tr class="separator:aef23d68035a27d49f865725e8554d0b7 inherit pro_methods_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classDecoderController"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classDecoderController')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classDecoderController.html">DecoderController</a></td></tr>
+<tr class="memitem:a2ff6f85efe323c61ea2759cea9452168 inherit pub_types_classDecoderController"><td class="memItemLeft" align="right" valign="top"><a id="a2ff6f85efe323c61ea2759cea9452168" name="a2ff6f85efe323c61ea2759cea9452168"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>DecoderVector</b> = std::vector&lt; std::shared_ptr&lt; <a class="el" href="classDecoder.html">Decoder</a> &gt; &gt;</td></tr>
+<tr class="separator:a2ff6f85efe323c61ea2759cea9452168 inherit pub_types_classDecoderController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classInputController"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classInputController')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classInputController.html">InputController</a></td></tr>
+<tr class="memitem:a557626d547ad9781e6a23f7813c1baa5 inherit pub_types_classInputController"><td class="memItemLeft" align="right" valign="top"><a id="a557626d547ad9781e6a23f7813c1baa5" name="a557626d547ad9781e6a23f7813c1baa5"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>InputMap</b> = std::unordered_map&lt; <a class="el" href="structInputController_1_1InputMapKey.html">InputMapKey</a>, std::shared_ptr&lt; <a class="el" href="classInput.html">Input</a> &gt;, <a class="el" href="structInputController_1_1InputMapKeyHash.html">InputMapKeyHash</a> &gt;</td></tr>
+<tr class="separator:a557626d547ad9781e6a23f7813c1baa5 inherit pub_types_classInputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classOutputController"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classOutputController')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classOutputController.html">OutputController</a></td></tr>
+<tr class="memitem:a4849bb39fce44147c8e31b05d870e523 inherit pub_types_classOutputController"><td class="memItemLeft" align="right" valign="top"><a id="a4849bb39fce44147c8e31b05d870e523" name="a4849bb39fce44147c8e31b05d870e523"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>OutputMap</b> = std::unordered_map&lt; <a class="el" href="structOutputController_1_1OutputMapKey.html">OutputMapKey</a>, std::shared_ptr&lt; <a class="el" href="classOutput.html">Output</a> &gt;, <a class="el" href="structOutputController_1_1OutputMapKeyHash.html">OutputMapKeyHash</a> &gt;</td></tr>
+<tr class="separator:a4849bb39fce44147c8e31b05d870e523 inherit pub_types_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_classDecoderController"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classDecoderController')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classDecoderController.html">DecoderController</a></td></tr>
+<tr class="memitem:ab01183f33214ac72bec8035786584072 inherit pub_static_attribs_classDecoderController"><td class="memItemLeft" align="right" valign="top"><a id="ab01183f33214ac72bec8035786584072" name="ab01183f33214ac72bec8035786584072"></a>
+static constexpr std::pair&lt; uint16_t, uint16_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>noAddressMinMax</b> {std::numeric_limits&lt;uint16_t&gt;::max(), std::numeric_limits&lt;uint16_t&gt;::min()}</td></tr>
+<tr class="separator:ab01183f33214ac72bec8035786584072 inherit pub_static_attribs_classDecoderController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_classOutputController"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classOutputController')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classOutputController.html">OutputController</a></td></tr>
+<tr class="memitem:aec646ed9f60edc8661139440c30c09fd inherit pub_static_attribs_classOutputController"><td class="memItemLeft" align="right" valign="top"><a id="aec646ed9f60edc8661139440c30c09fd" name="aec646ed9f60edc8661139440c30c09fd"></a>
+static constexpr std::pair&lt; uint32_t, uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>noAddressMinMax</b> {std::numeric_limits&lt;uint32_t&gt;::max(), std::numeric_limits&lt;uint32_t&gt;::min()}</td></tr>
+<tr class="separator:aec646ed9f60edc8661139440c30c09fd inherit pub_static_attribs_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classIdObject"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classIdObject')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classIdObject.html">IdObject</a></td></tr>
+<tr class="memitem:abeeecd81cf2b08a6653d791d37ae059f inherit pro_attribs_classIdObject"><td class="memItemLeft" align="right" valign="top"><a id="abeeecd81cf2b08a6653d791d37ae059f" name="abeeecd81cf2b08a6653d791d37ae059f"></a>
+<a class="el" href="classWorld.html">World</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>m_world</b></td></tr>
+<tr class="separator:abeeecd81cf2b08a6653d791d37ae059f inherit pro_attribs_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classObject"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classObject')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classObject.html">Object</a></td></tr>
+<tr class="memitem:ad2d20112565b4b5f08e310b3ccb2fb6d inherit pro_attribs_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ad2d20112565b4b5f08e310b3ccb2fb6d" name="ad2d20112565b4b5f08e310b3ccb2fb6d"></a>
+<a class="el" href="classInterfaceItems.html">InterfaceItems</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_interfaceItems</b></td></tr>
+<tr class="separator:ad2d20112565b4b5f08e310b3ccb2fb6d inherit pro_attribs_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classInputController"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classInputController')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classInputController.html">InputController</a></td></tr>
+<tr class="memitem:a4d1d13357d7a80ec60a232b89884d152 inherit pro_attribs_classInputController"><td class="memItemLeft" align="right" valign="top"><a id="a4d1d13357d7a80ec60a232b89884d152" name="a4d1d13357d7a80ec60a232b89884d152"></a>
+<a class="el" href="classInputMap.html">InputMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_inputs</b></td></tr>
+<tr class="separator:a4d1d13357d7a80ec60a232b89884d152 inherit pro_attribs_classInputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35dfc89e135e80976e71eafbe10488ce inherit pro_attribs_classInputController"><td class="memItemLeft" align="right" valign="top"><a id="a35dfc89e135e80976e71eafbe10488ce" name="a35dfc89e135e80976e71eafbe10488ce"></a>
+std::unordered_map&lt; InputChannel, std::weak_ptr&lt; <a class="el" href="classInputMonitor.html">InputMonitor</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_inputMonitors</b></td></tr>
+<tr class="separator:a35dfc89e135e80976e71eafbe10488ce inherit pro_attribs_classInputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classOutputController"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classOutputController')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classOutputController.html">OutputController</a></td></tr>
+<tr class="memitem:a615aa01bd27d78876ed19cbbd8b47ee8 inherit pro_attribs_classOutputController"><td class="memItemLeft" align="right" valign="top"><a id="a615aa01bd27d78876ed19cbbd8b47ee8" name="a615aa01bd27d78876ed19cbbd8b47ee8"></a>
+<a class="el" href="classOutputMap.html">OutputMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_outputs</b></td></tr>
+<tr class="separator:a615aa01bd27d78876ed19cbbd8b47ee8 inherit pro_attribs_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e6a3cda7ad23d5bf2ae131dbe8be7f2 inherit pro_attribs_classOutputController"><td class="memItemLeft" align="right" valign="top"><a id="a8e6a3cda7ad23d5bf2ae131dbe8be7f2" name="a8e6a3cda7ad23d5bf2ae131dbe8be7f2"></a>
+std::unordered_map&lt; OutputChannel, std::weak_ptr&lt; <a class="el" href="classOutputKeyboard.html">OutputKeyboard</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_outputKeyboards</b></td></tr>
+<tr class="separator:a8e6a3cda7ad23d5bf2ae131dbe8be7f2 inherit pro_attribs_classOutputController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p ><a class="el" href="namespaceXpressNet.html">XpressNet</a> hardware interface. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="af84aed232e0f9e726db8e883fbaa13b3" name="af84aed232e0f9e726db8e883fbaa13b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af84aed232e0f9e726db8e883fbaa13b3">&#9670;&nbsp;</a></span>decoderAddressMinMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; uint16_t, uint16_t &gt; XpressNetInterface::decoderAddressMinMax </td>
+          <td>(</td>
+          <td class="paramtype">DecoderProtocol&#160;</td>
+          <td class="paramname"><em>protocol</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get address range for given protocol. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">protocol</td><td>The decoder protocol </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Address range or <code>noAddressMinMax</code> if address isn't supported for the given protocol </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classDecoderController.html#ab1a6319b8d660fe5695613e1b7dc8615">DecoderController</a>.</p>
+
+</div>
+</div>
+<a id="a5656458b1c0ee09fa4efdd7b6353d4c7" name="a5656458b1c0ee09fa4efdd7b6353d4c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5656458b1c0ee09fa4efdd7b6353d4c7">&#9670;&nbsp;</a></span>decoderChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XpressNetInterface::decoderChanged </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classDecoder.html">Decoder</a> &amp;&#160;</td>
+          <td class="paramname"><em>decoder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DecoderChangeFlags&#160;</td>
+          <td class="paramname"><em>changes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>functionNumber</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classDecoderController.html">DecoderController</a>.</p>
+
+</div>
+</div>
+<a id="a351a2602d2870887946d34d0457abb71" name="a351a2602d2870887946d34d0457abb71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a351a2602d2870887946d34d0457abb71">&#9670;&nbsp;</a></span>decoderProtocols()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::span&lt; const DecoderProtocol &gt; XpressNetInterface::decoderProtocols </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get supported protocols. </p>
+<dl class="section return"><dt>Returns</dt><dd>Supported protocols, may not be empty and must be constant for the instance! </dd></dl>
+
+<p>Implements <a class="el" href="classDecoderController.html#a49bc22a303322e3b3a63be35105e8887">DecoderController</a>.</p>
+
+</div>
+</div>
+<a id="af9e855cc89b9ba15b9a63f84328bda08" name="af9e855cc89b9ba15b9a63f84328bda08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9e855cc89b9ba15b9a63f84328bda08">&#9670;&nbsp;</a></span>decoderSpeedSteps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::span&lt; const uint8_t &gt; XpressNetInterface::decoderSpeedSteps </td>
+          <td>(</td>
+          <td class="paramtype">DecoderProtocol&#160;</td>
+          <td class="paramname"><em>protocol</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get speed step options for given protocol. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">protocol</td><td>The decoder protocol </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Speed step options for the given protocol </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classDecoderController.html#a7b654b7ef6bd68a166a24348d2df6012">DecoderController</a>.</p>
+
+</div>
+</div>
+<a id="ae6119570d6fbe7f57d80d81a3c96bdab" name="ae6119570d6fbe7f57d80d81a3c96bdab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6119570d6fbe7f57d80d81a3c96bdab">&#9670;&nbsp;</a></span>inputAddressMinMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; uint32_t, uint32_t &gt; XpressNetInterface::inputAddressMinMax </td>
+          <td>(</td>
+          <td class="paramtype">InputChannel&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classInputController.html">InputController</a>.</p>
+
+</div>
+</div>
+<a id="a9eb2da94a44aeae987c44e8e5dc76fcf" name="a9eb2da94a44aeae987c44e8e5dc76fcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eb2da94a44aeae987c44e8e5dc76fcf">&#9670;&nbsp;</a></span>inputChannels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::span&lt; const InputChannel &gt; XpressNetInterface::inputChannels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classInputController.html">InputController</a>.</p>
+
+</div>
+</div>
+<a id="a8bce32bed7d6d57db912a1d520917f8c" name="a8bce32bed7d6d57db912a1d520917f8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bce32bed7d6d57db912a1d520917f8c">&#9670;&nbsp;</a></span>inputSimulateChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XpressNetInterface::inputSimulateChange </td>
+          <td>(</td>
+          <td class="paramtype">InputChannel&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SimulateInputAction&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Simulate input change. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">channel</td><td><a class="el" href="classInput.html">Input</a> channel </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">address</td><td><a class="el" href="classInput.html">Input</a> address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">action</td><td>Simulation action to perform </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classInputController.html#aac1739ebf57e2fed0e35444e0ee40441">InputController</a>.</p>
+
+</div>
+</div>
+<a id="a4e3c4df57cc22e3e70a57219c155bf79" name="a4e3c4df57cc22e3e70a57219c155bf79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e3c4df57cc22e3e70a57219c155bf79">&#9670;&nbsp;</a></span>outputAddressMinMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; uint32_t, uint32_t &gt; XpressNetInterface::outputAddressMinMax </td>
+          <td>(</td>
+          <td class="paramtype">OutputChannel&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classOutputController.html">OutputController</a>.</p>
+
+</div>
+</div>
+<a id="ab8585e8d499bd468620ed0e1c254a0d5" name="ab8585e8d499bd468620ed0e1c254a0d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8585e8d499bd468620ed0e1c254a0d5">&#9670;&nbsp;</a></span>outputChannels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::span&lt; const OutputChannel &gt; XpressNetInterface::outputChannels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classOutputController.html">OutputController</a>.</p>
+
+</div>
+</div>
+<a id="a0c1e12c4c5e9e8395e00f55d97117ee1" name="a0c1e12c4c5e9e8395e00f55d97117ee1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c1e12c4c5e9e8395e00f55d97117ee1">&#9670;&nbsp;</a></span>setOnline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XpressNetInterface::setOnline </td>
+          <td>(</td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>simulation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classInterface.html">Interface</a>.</p>
+
+</div>
+</div>
+<a id="aebcd32e4af0da32bb9d02d3a0667edeb" name="aebcd32e4af0da32bb9d02d3a0667edeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebcd32e4af0da32bb9d02d3a0667edeb">&#9670;&nbsp;</a></span>setOutputValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XpressNetInterface::setOutputValue </td>
+          <td>(</td>
+          <td class="paramtype">OutputChannel&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutputValue&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>... </p>
+
+<p>Implements <a class="el" href="classOutputController.html#ab2fb6b95f5813f3b146b4345eb7fb2e4">OutputController</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/tom/projects/linux/traintastic/server/src/hardware/interface/<a class="el" href="xpressnetinterface_8hpp_source.html">xpressnetinterface.hpp</a></li>
+<li>/home/tom/projects/linux/traintastic/server/src/hardware/interface/xpressnetinterface.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

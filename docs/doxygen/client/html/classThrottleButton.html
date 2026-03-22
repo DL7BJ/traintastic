@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>traintastic-client: ThrottleButton Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+   DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="appicon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">traintastic-client
+   &#160;<span id="projectnumber">0.4.0</span>
+   </div>
+   <div id="projectbrief">Traintastic client</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#signals">Signals</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="classThrottleButton-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">ThrottleButton Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="throttlebutton_8hpp_source.html">throttlebutton.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for ThrottleButton:</div>
+<div class="dyncontent">
+<div class="center"><img src="classThrottleButton__inherit__graph.png" border="0" usemap="#aThrottleButton_inherit__map" alt="Inheritance graph"/></div>
+<map name="aThrottleButton_inherit__map" id="aThrottleButton_inherit__map">
+<area shape="rect" title=" " alt="" coords="31,80,135,107"/>
+<area shape="rect" href="classThrottleFunctionButton.html" title=" " alt="" coords="5,155,160,181"/>
+<area shape="rect" title=" " alt="" coords="46,5,119,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for ThrottleButton:</div>
+<div class="dyncontent">
+<div class="center"><img src="classThrottleButton__coll__graph.png" border="0" usemap="#aThrottleButton_coll__map" alt="Collaboration graph"/></div>
+<map name="aThrottleButton_coll__map" id="aThrottleButton_coll__map">
+<area shape="rect" title=" " alt="" coords="5,80,109,107"/>
+<area shape="rect" title=" " alt="" coords="21,5,94,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
+Signals</h2></td></tr>
+<tr class="memitem:a3eca49f98b44e206a85c7f90ff7bab47"><td class="memItemLeft" align="right" valign="top"><a id="a3eca49f98b44e206a85c7f90ff7bab47" name="a3eca49f98b44e206a85c7f90ff7bab47"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>pressed</b> ()</td></tr>
+<tr class="separator:a3eca49f98b44e206a85c7f90ff7bab47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb4d06b31489ea5b61fa3997c8050494"><td class="memItemLeft" align="right" valign="top"><a id="afb4d06b31489ea5b61fa3997c8050494" name="afb4d06b31489ea5b61fa3997c8050494"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>released</b> ()</td></tr>
+<tr class="separator:afb4d06b31489ea5b61fa3997c8050494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f262fd506945db4ea6bde95333ddfe0"><td class="memItemLeft" align="right" valign="top"><a id="a6f262fd506945db4ea6bde95333ddfe0" name="a6f262fd506945db4ea6bde95333ddfe0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clicked</b> ()</td></tr>
+<tr class="separator:a6f262fd506945db4ea6bde95333ddfe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a738e927e7ea13b9f306281b6ccd3b947"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThrottleButton.html#a738e927e7ea13b9f306281b6ccd3b947">ThrottleButton</a> (QWidget *parent=nullptr)</td></tr>
+<tr class="separator:a738e927e7ea13b9f306281b6ccd3b947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a56c02dff026d78b3cd32273410451f"><td class="memItemLeft" align="right" valign="top"><a id="a0a56c02dff026d78b3cd32273410451f" name="a0a56c02dff026d78b3cd32273410451f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ThrottleButton</b> (const QString &amp;text_, QWidget *parent=nullptr)</td></tr>
+<tr class="separator:a0a56c02dff026d78b3cd32273410451f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfc970dcae0b06986d2a6982424f2412"><td class="memItemLeft" align="right" valign="top"><a id="abfc970dcae0b06986d2a6982424f2412" name="abfc970dcae0b06986d2a6982424f2412"></a>
+QSize&#160;</td><td class="memItemRight" valign="bottom"><b>minimumSizeHint</b> () const override</td></tr>
+<tr class="separator:abfc970dcae0b06986d2a6982424f2412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1cb1423f32e8927fd23363b18f419dd"><td class="memItemLeft" align="right" valign="top"><a id="ae1cb1423f32e8927fd23363b18f419dd" name="ae1cb1423f32e8927fd23363b18f419dd"></a>
+const QColor &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>color</b> () const</td></tr>
+<tr class="separator:ae1cb1423f32e8927fd23363b18f419dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac881c345cb5ec4c0b73796992111613c"><td class="memItemLeft" align="right" valign="top"><a id="ac881c345cb5ec4c0b73796992111613c" name="ac881c345cb5ec4c0b73796992111613c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setColor</b> (const QColor &amp;value)</td></tr>
+<tr class="separator:ac881c345cb5ec4c0b73796992111613c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf942da57ab274e9893c9b6a7888b063"><td class="memItemLeft" align="right" valign="top"><a id="abf942da57ab274e9893c9b6a7888b063" name="abf942da57ab274e9893c9b6a7888b063"></a>
+const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>resource</b> () const</td></tr>
+<tr class="separator:abf942da57ab274e9893c9b6a7888b063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a514d0f6a4cbf9f95f55797c5c00fe1"><td class="memItemLeft" align="right" valign="top"><a id="a4a514d0f6a4cbf9f95f55797c5c00fe1" name="a4a514d0f6a4cbf9f95f55797c5c00fe1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setResource</b> (const QString &amp;value)</td></tr>
+<tr class="separator:a4a514d0f6a4cbf9f95f55797c5c00fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a025b49f0fe4075b57b3607857e9474fc"><td class="memItemLeft" align="right" valign="top"><a id="a025b49f0fe4075b57b3607857e9474fc" name="a025b49f0fe4075b57b3607857e9474fc"></a>
+const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>text</b> () const</td></tr>
+<tr class="separator:a025b49f0fe4075b57b3607857e9474fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a199aa3cbe65e899b0a4fd5205af6ca5e"><td class="memItemLeft" align="right" valign="top"><a id="a199aa3cbe65e899b0a4fd5205af6ca5e" name="a199aa3cbe65e899b0a4fd5205af6ca5e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setText</b> (const QString &amp;value)</td></tr>
+<tr class="separator:a199aa3cbe65e899b0a4fd5205af6ca5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ab9c3a8560e0b16416d9f11bbf1914281"><td class="memItemLeft" align="right" valign="top"><a id="ab9c3a8560e0b16416d9f11bbf1914281" name="ab9c3a8560e0b16416d9f11bbf1914281"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>paintEvent</b> (QPaintEvent *) override</td></tr>
+<tr class="separator:ab9c3a8560e0b16416d9f11bbf1914281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa30c040455d21b8b4563b7d54061cb76"><td class="memItemLeft" align="right" valign="top"><a id="aa30c040455d21b8b4563b7d54061cb76" name="aa30c040455d21b8b4563b7d54061cb76"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>mousePressEvent</b> (QMouseEvent *event) override</td></tr>
+<tr class="separator:aa30c040455d21b8b4563b7d54061cb76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ea1b235b695d945645f2e19187264c0"><td class="memItemLeft" align="right" valign="top"><a id="a4ea1b235b695d945645f2e19187264c0" name="a4ea1b235b695d945645f2e19187264c0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>mouseReleaseEvent</b> (QMouseEvent *event) override</td></tr>
+<tr class="separator:a4ea1b235b695d945645f2e19187264c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >This file is part of Traintastic, see <a href="https://github.com/traintastic/traintastic">https://github.com/traintastic/traintastic</a>.</p>
+<p >Copyright (C) 2025 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a738e927e7ea13b9f306281b6ccd3b947" name="a738e927e7ea13b9f306281b6ccd3b947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a738e927e7ea13b9f306281b6ccd3b947">&#9670;&nbsp;</a></span>ThrottleButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ThrottleButton::ThrottleButton </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >This file is part of Traintastic, see <a href="https://github.com/traintastic/traintastic">https://github.com/traintastic/traintastic</a>.</p>
+<p >Copyright (C) 2025 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/tom/projects/linux/traintastic/client/src/widget/throttle/<a class="el" href="throttlebutton_8hpp_source.html">throttlebutton.hpp</a></li>
+<li>/home/tom/projects/linux/traintastic/client/src/widget/throttle/throttlebutton.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<map id="Z21::LanX" name="Z21::LanX">
+<area shape="rect" id="node1" title=" " alt="" coords="159,604,241,631"/>
+<area shape="rect" id="node3" href="$structZ21_1_1LanXBCStopped.html" title=" " alt="" coords="318,5,467,32"/>
+<area shape="rect" id="node4" href="$structZ21_1_1LanXBCTrackPowerOff.html" title=" " alt="" coords="298,56,487,83"/>
+<area shape="rect" id="node5" href="$structZ21_1_1LanXBCTrackPowerOn.html" title=" " alt="" coords="299,107,487,133"/>
+<area shape="rect" id="node6" href="$structZ21_1_1LanXBCTrackShortCircuit.html" title=" " alt="" coords="291,157,494,184"/>
+<area shape="rect" id="node7" href="$structZ21_1_1LanXExtAccessoryInfo.html" title=" " alt="" coords="299,208,486,235"/>
+<area shape="rect" id="node8" href="$structZ21_1_1LanXGetExtAccessoryInfo.html" title=" " alt="" coords="289,259,496,285"/>
+<area shape="rect" id="node9" href="$structZ21_1_1LanXGetFirmwareVersion.html" title=" " alt="" coords="292,309,493,336"/>
+<area shape="rect" id="node10" href="$structZ21_1_1LanXGetFirmwareVersionReply.html" title=" " alt="" coords="292,361,493,402"/>
+<area shape="rect" id="node11" href="$structZ21_1_1LanXGetLocoInfo.html" title=" " alt="" coords="316,427,469,453"/>
+<area shape="rect" id="node12" href="$structZ21_1_1LanXGetStatus.html" title=" " alt="" coords="322,477,463,504"/>
+<area shape="rect" id="node13" href="$structZ21_1_1LanXGetTurnoutInfo.html" title=" " alt="" coords="308,528,477,555"/>
+<area shape="rect" id="node14" href="$structZ21_1_1LanXGetVersion.html" title=" " alt="" coords="319,579,466,605"/>
+<area shape="rect" id="node15" href="$structZ21_1_1LanXGetVersionReply.html" title=" " alt="" coords="302,629,483,656"/>
+<area shape="rect" id="node16" href="$structZ21_1_1LanXLocoInfo.html" title=" " alt="" coords="327,680,459,707"/>
+<area shape="rect" id="node17" href="$structZ21_1_1LanXSetExtAccessory.html" title=" " alt="" coords="301,731,485,757"/>
+<area shape="rect" id="node18" href="$structZ21_1_1LanXSetLocoDrive.html" title=" " alt="" coords="312,781,473,808"/>
+<area shape="rect" id="node19" href="$structZ21_1_1LanXSetLocoFunction.html" title=" " alt="" coords="303,832,483,859"/>
+<area shape="rect" id="node20" href="$structZ21_1_1LanXSetStop.html" title=" " alt="" coords="328,883,457,909"/>
+<area shape="rect" id="node21" href="$structZ21_1_1LanXSetTrackPowerOff.html" title=" " alt="" coords="297,933,488,960"/>
+<area shape="rect" id="node22" href="$structZ21_1_1LanXSetTrackPowerOn.html" title=" " alt="" coords="298,984,487,1011"/>
+<area shape="rect" id="node23" href="$structZ21_1_1LanXSetTurnout.html" title=" " alt="" coords="319,1035,466,1061"/>
+<area shape="rect" id="node24" href="$structZ21_1_1LanXStatusChanged.html" title=" " alt="" coords="307,1085,479,1112"/>
+<area shape="rect" id="node25" href="$structZ21_1_1LanXTurnoutInfo.html" title=" " alt="" coords="319,1136,467,1163"/>
+<area shape="rect" id="node26" href="$structZ21_1_1LanXUnknownCommand.html" title=" " alt="" coords="294,1187,491,1213"/>
+<area shape="rect" id="node2" href="$structZ21_1_1Message.html" title=" " alt="" coords="5,604,111,631"/>
+</map>

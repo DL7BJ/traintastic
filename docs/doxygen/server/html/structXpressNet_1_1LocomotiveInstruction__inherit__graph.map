@@ -1,0 +1,17 @@
+<map id="XpressNet::LocomotiveInstruction" name="XpressNet::LocomotiveInstruction">
+<area shape="rect" id="node1" title=" " alt="" coords="199,271,419,298"/>
+<area shape="rect" id="node3" href="$structXpressNet_1_1FunctionInstructionGroup.html" title=" " alt="" coords="467,169,670,211"/>
+<area shape="rect" id="node9" href="$structXpressNet_1_1LocomotiveBusy.html" title=" " alt="" coords="474,242,663,269"/>
+<area shape="rect" id="node10" href="$structXpressNet_1_1RocoMultiMAUS_1_1FunctionInstructionF13F20.html" title=" " alt="" coords="473,293,664,335"/>
+<area shape="rect" id="node11" href="$structXpressNet_1_1SpeedAndDirectionInstruction.html" title=" " alt="" coords="467,397,671,439"/>
+<area shape="rect" id="node2" href="$structXpressNet_1_1Message.html" title=" " alt="" coords="5,271,151,298"/>
+<area shape="rect" id="node4" href="$structXpressNet_1_1FunctionInstructionGroup1.html" title=" " alt="" coords="719,5,922,47"/>
+<area shape="rect" id="node5" href="$structXpressNet_1_1FunctionInstructionGroup2.html" title=" " alt="" coords="719,71,922,112"/>
+<area shape="rect" id="node6" href="$structXpressNet_1_1FunctionInstructionGroup3.html" title=" " alt="" coords="719,136,922,177"/>
+<area shape="rect" id="node7" href="$structXpressNet_1_1FunctionInstructionGroup4.html" title=" " alt="" coords="719,201,922,243"/>
+<area shape="rect" id="node8" href="$structXpressNet_1_1FunctionInstructionGroup5.html" title=" " alt="" coords="719,267,922,308"/>
+<area shape="rect" id="node12" href="$structXpressNet_1_1SpeedAndDirectionInstruction128.html" title=" " alt="" coords="719,332,923,373"/>
+<area shape="rect" id="node13" href="$structXpressNet_1_1SpeedAndDirectionInstruction14.html" title=" " alt="" coords="719,397,923,439"/>
+<area shape="rect" id="node14" href="$structXpressNet_1_1SpeedAndDirectionInstruction27.html" title=" " alt="" coords="719,463,923,504"/>
+<area shape="rect" id="node15" href="$structXpressNet_1_1SpeedAndDirectionInstruction28.html" title=" " alt="" coords="719,528,923,569"/>
+</map>

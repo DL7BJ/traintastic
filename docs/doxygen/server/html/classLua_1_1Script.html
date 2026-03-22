@@ -1,0 +1,666 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>traintastic-server: Lua::Script Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+   DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="appicon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">traintastic-server
+   &#160;<span id="projectnumber">0.4.0</span>
+   </div>
+   <div id="projectbrief">Traintastic server</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceLua.html">Lua</a></li><li class="navelem"><a class="el" href="classLua_1_1Script.html">Script</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
+<a href="classLua_1_1Script-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">Lua::Script Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Inheritance diagram for Lua::Script:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLua_1_1Script__inherit__graph.png" border="0" usemap="#aLua_1_1Script_inherit__map" alt="Inheritance graph"/></div>
+<map name="aLua_1_1Script_inherit__map" id="aLua_1_1Script_inherit__map">
+<area shape="rect" title=" " alt="" coords="35,244,121,271"/>
+<area shape="rect" href="classIdObject.html" title=" " alt="" coords="43,169,113,196"/>
+<area shape="rect" href="classObject.html" title=" " alt="" coords="48,95,108,121"/>
+<area shape="rect" title=" " alt="" coords="5,5,151,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Lua::Script:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLua_1_1Script__coll__graph.png" border="0" usemap="#aLua_1_1Script_coll__map" alt="Collaboration graph"/></div>
+<map name="aLua_1_1Script_coll__map" id="aLua_1_1Script_coll__map">
+<area shape="rect" title=" " alt="" coords="1627,363,1712,389"/>
+<area shape="rect" href="classIdObject.html" title=" " alt="" coords="1375,363,1445,389"/>
+<area shape="rect" href="classObject.html" title=" " alt="" coords="834,348,894,375"/>
+<area shape="rect" href="classWorld.html" title=" " alt="" coords="1219,1295,1273,1321"/>
+<area shape="rect" title=" " alt="" coords="351,370,496,411"/>
+<area shape="rect" href="classInterfaceItems.html" title=" " alt="" coords="370,319,477,345"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="787,68,941,95"/>
+<area shape="rect" href="classAbstractProperty.html" title=" " alt="" coords="156,883,276,909"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="550,856,711,883"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="564,916,697,943"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="805,268,923,295"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="545,967,716,1009"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="560,1037,701,1064"/>
+<area shape="rect" href="classAbstractObjectProperty.html" title=" " alt="" coords="344,1731,503,1757"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="560,423,701,449"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="551,475,710,501"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="1013,2544,1194,2571"/>
+<area shape="rect" href="classBaseProperty.html" title=" " alt="" coords="5,883,107,909"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="772,2037,956,2078"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="775,2102,953,2143"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="775,2167,953,2209"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="759,2233,969,2274"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="740,2298,988,2339"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="775,2363,953,2405"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="778,2429,950,2470"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="763,2495,965,2521"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="773,1104,955,1131"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="767,1155,961,1181"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="767,1206,961,1247"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="765,1272,963,1299"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="770,1323,958,1349"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="773,1373,955,1400"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="781,1424,947,1451"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="781,1475,947,1517"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="773,1541,955,1568"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="771,1593,957,1634"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="793,1658,935,1699"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="775,1723,953,1765"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="780,1789,948,1830"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="763,1855,965,1881"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="775,1906,953,1947"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="773,1971,955,2013"/>
+<area shape="rect" href="classObjectVectorProperty.html" title=" " alt="" coords="791,525,937,566"/>
+<area shape="rect" href="classAbstractObjectVectorProperty.html" title=" " alt="" coords="325,537,521,564"/>
+<area shape="rect" href="classMethod.html" title=" " alt="" coords="805,656,923,683"/>
+<area shape="rect" href="classMethod.html" title=" " alt="" coords="780,707,948,749"/>
+<area shape="rect" href="classMethod.html" title=" " alt="" coords="783,773,945,829"/>
+<area shape="rect" href="classEvent.html" title=" " alt="" coords="796,590,932,631"/>
+<area shape="rect" href="classAbstractEvent.html" title=" " alt="" coords="371,597,476,624"/>
+<area shape="rect" title=" " alt="" coords="1387,1396,1433,1423"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ae22171797f5fb697af7b7f9b3b7b73f7"><td class="memItemLeft" align="right" valign="top"><a id="ae22171797f5fb697af7b7f9b3b7b73f7" name="ae22171797f5fb697af7b7f9b3b7b73f7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Script</b> (<a class="el" href="classWorld.html">World</a> &amp;world, std::string_view _id)</td></tr>
+<tr class="separator:ae22171797f5fb697af7b7f9b3b7b73f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classIdObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classIdObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIdObject.html">IdObject</a></td></tr>
+<tr class="memitem:a1253b43179abce710c0e161360326668 inherit pub_methods_classIdObject"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdObject.html#a1253b43179abce710c0e161360326668">getObjectId</a> () const final</td></tr>
+<tr class="separator:a1253b43179abce710c0e161360326668 inherit pub_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dea002a7738a6d48a51a6039f603fef inherit pub_methods_classIdObject"><td class="memItemLeft" align="right" valign="top"><a id="a3dea002a7738a6d48a51a6039f603fef" name="a3dea002a7738a6d48a51a6039f603fef"></a>
+<a class="el" href="classWorld.html">World</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>world</b> () const</td></tr>
+<tr class="separator:a3dea002a7738a6d48a51a6039f603fef inherit pub_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classObject.html">Object</a></td></tr>
+<tr class="memitem:aa20df9b729a0fa3161fbaf981d7cac95 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="aa20df9b729a0fa3161fbaf981d7cac95" name="aa20df9b729a0fa3161fbaf981d7cac95"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Object</b> (const <a class="el" href="classObject.html">Object</a> &amp;)=delete</td></tr>
+<tr class="separator:aa20df9b729a0fa3161fbaf981d7cac95 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a952b21b70315bbd70333893926c5ca16 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a952b21b70315bbd70333893926c5ca16" name="a952b21b70315bbd70333893926c5ca16"></a>
+<a class="el" href="classObject.html">Object</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classObject.html">Object</a> &amp;)=delete</td></tr>
+<tr class="separator:a952b21b70315bbd70333893926c5ca16 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40860402e64d8008fb42329df7097cdb inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#a40860402e64d8008fb42329df7097cdb">Object</a> ()</td></tr>
+<tr class="separator:a40860402e64d8008fb42329df7097cdb inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90493040af1919e08f538bf52b883aef inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a90493040af1919e08f538bf52b883aef" name="a90493040af1919e08f538bf52b883aef"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>dying</b> () const noexcept</td></tr>
+<tr class="separator:a90493040af1919e08f538bf52b883aef inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad14022400495b1f902037890e7a1cba8 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ad14022400495b1f902037890e7a1cba8" name="ad14022400495b1f902037890e7a1cba8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>destroy</b> ()</td></tr>
+<tr class="separator:ad14022400495b1f902037890e7a1cba8 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab62c4c263556c2dc80bdf81db211fcc inherit pub_methods_classObject"><td class="memTemplParams" colspan="2"><a id="aab62c4c263556c2dc80bdf81db211fcc" name="aab62c4c263556c2dc80bdf81db211fcc"></a>
+template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:aab62c4c263556c2dc80bdf81db211fcc inherit pub_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; const Derived &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>shared_ptr_c</b> () const</td></tr>
+<tr class="separator:aab62c4c263556c2dc80bdf81db211fcc inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac04d5b796164be33b6174139a7e2f97d inherit pub_methods_classObject"><td class="memTemplParams" colspan="2"><a id="ac04d5b796164be33b6174139a7e2f97d" name="ac04d5b796164be33b6174139a7e2f97d"></a>
+template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:ac04d5b796164be33b6174139a7e2f97d inherit pub_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; Derived &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>shared_ptr</b> ()</td></tr>
+<tr class="separator:ac04d5b796164be33b6174139a7e2f97d inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2336fc7090e2878b6c38edbd525cebe4 inherit pub_methods_classObject"><td class="memTemplParams" colspan="2"><a id="a2336fc7090e2878b6c38edbd525cebe4" name="a2336fc7090e2878b6c38edbd525cebe4"></a>
+template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a2336fc7090e2878b6c38edbd525cebe4 inherit pub_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">std::weak_ptr&lt; const Derived &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>weak_ptr_c</b> () const</td></tr>
+<tr class="separator:a2336fc7090e2878b6c38edbd525cebe4 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a33ab1c091e52d9233cf4e65ecbb196 inherit pub_methods_classObject"><td class="memTemplParams" colspan="2"><a id="a5a33ab1c091e52d9233cf4e65ecbb196" name="a5a33ab1c091e52d9233cf4e65ecbb196"></a>
+template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a5a33ab1c091e52d9233cf4e65ecbb196 inherit pub_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">std::weak_ptr&lt; Derived &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>weak_ptr</b> ()</td></tr>
+<tr class="separator:a5a33ab1c091e52d9233cf4e65ecbb196 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f20160832d59c707e5dc7387e43ae86 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a4f20160832d59c707e5dc7387e43ae86" name="a4f20160832d59c707e5dc7387e43ae86"></a>
+virtual std::string_view&#160;</td><td class="memItemRight" valign="bottom"><b>getClassId</b> () const =0</td></tr>
+<tr class="separator:a4f20160832d59c707e5dc7387e43ae86 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6178706791d8f4fcabff6080b4ba178b inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#a6178706791d8f4fcabff6080b4ba178b">getObjectId</a> () const =0</td></tr>
+<tr class="separator:a6178706791d8f4fcabff6080b4ba178b inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8199cd3d4bc06a0897285adb069f309e inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a8199cd3d4bc06a0897285adb069f309e" name="a8199cd3d4bc06a0897285adb069f309e"></a>
+const <a class="el" href="classInterfaceItems.html">InterfaceItems</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>interfaceItems</b> () const</td></tr>
+<tr class="separator:a8199cd3d4bc06a0897285adb069f309e inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97d0dbec9f02e145c2959fc1e065478d inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a97d0dbec9f02e145c2959fc1e065478d" name="a97d0dbec9f02e145c2959fc1e065478d"></a>
+const <a class="el" href="classInterfaceItem.html">InterfaceItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getItem</b> (std::string_view name) const</td></tr>
+<tr class="separator:a97d0dbec9f02e145c2959fc1e065478d inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1926034094df8357fe77409b11a81a0e inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a1926034094df8357fe77409b11a81a0e" name="a1926034094df8357fe77409b11a81a0e"></a>
+<a class="el" href="classInterfaceItem.html">InterfaceItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getItem</b> (std::string_view name)</td></tr>
+<tr class="separator:a1926034094df8357fe77409b11a81a0e inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7b2e432e8fe145196964ef3f838f0ee inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ab7b2e432e8fe145196964ef3f838f0ee" name="ab7b2e432e8fe145196964ef3f838f0ee"></a>
+const <a class="el" href="classAbstractMethod.html">AbstractMethod</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getMethod</b> (std::string_view name) const</td></tr>
+<tr class="separator:ab7b2e432e8fe145196964ef3f838f0ee inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81cedc74e10d4f4ccab13d1f34da1897 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a81cedc74e10d4f4ccab13d1f34da1897" name="a81cedc74e10d4f4ccab13d1f34da1897"></a>
+<a class="el" href="classAbstractMethod.html">AbstractMethod</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getMethod</b> (std::string_view name)</td></tr>
+<tr class="separator:a81cedc74e10d4f4ccab13d1f34da1897 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcbe5e085a3d833e7257653f68731377 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="abcbe5e085a3d833e7257653f68731377" name="abcbe5e085a3d833e7257653f68731377"></a>
+const <a class="el" href="classAbstractProperty.html">AbstractProperty</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getProperty</b> (std::string_view name) const</td></tr>
+<tr class="separator:abcbe5e085a3d833e7257653f68731377 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5cd29094e823a1df0b02d208af08240 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ac5cd29094e823a1df0b02d208af08240" name="ac5cd29094e823a1df0b02d208af08240"></a>
+<a class="el" href="classAbstractProperty.html">AbstractProperty</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getProperty</b> (std::string_view name)</td></tr>
+<tr class="separator:ac5cd29094e823a1df0b02d208af08240 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12c077de81de1b6868c826f70a004df4 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a12c077de81de1b6868c826f70a004df4" name="a12c077de81de1b6868c826f70a004df4"></a>
+const <a class="el" href="classAbstractObjectProperty.html">AbstractObjectProperty</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getObjectProperty</b> (std::string_view name) const</td></tr>
+<tr class="separator:a12c077de81de1b6868c826f70a004df4 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70ad6b5a0b93e7815df3e6461347fb85 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a70ad6b5a0b93e7815df3e6461347fb85" name="a70ad6b5a0b93e7815df3e6461347fb85"></a>
+<a class="el" href="classAbstractObjectProperty.html">AbstractObjectProperty</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getObjectProperty</b> (std::string_view name)</td></tr>
+<tr class="separator:a70ad6b5a0b93e7815df3e6461347fb85 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae47b594f5b5558924b40d2efb1eea78d inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ae47b594f5b5558924b40d2efb1eea78d" name="ae47b594f5b5558924b40d2efb1eea78d"></a>
+const <a class="el" href="classAbstractVectorProperty.html">AbstractVectorProperty</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getVectorProperty</b> (std::string_view name) const</td></tr>
+<tr class="separator:ae47b594f5b5558924b40d2efb1eea78d inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae01a900d2016e93aa456cdf55b28d67f inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ae01a900d2016e93aa456cdf55b28d67f" name="ae01a900d2016e93aa456cdf55b28d67f"></a>
+<a class="el" href="classAbstractVectorProperty.html">AbstractVectorProperty</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getVectorProperty</b> (std::string_view name)</td></tr>
+<tr class="separator:ae01a900d2016e93aa456cdf55b28d67f inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8d451bb98529ead13601394ef2fecfa inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ae8d451bb98529ead13601394ef2fecfa" name="ae8d451bb98529ead13601394ef2fecfa"></a>
+const <a class="el" href="classAbstractEvent.html">AbstractEvent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getEvent</b> (std::string_view name) const</td></tr>
+<tr class="separator:ae8d451bb98529ead13601394ef2fecfa inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7f336c0280a62e4a60783a5ab9ebe81 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ac7f336c0280a62e4a60783a5ab9ebe81" name="ac7f336c0280a62e4a60783a5ab9ebe81"></a>
+<a class="el" href="classAbstractEvent.html">AbstractEvent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getEvent</b> (std::string_view name)</td></tr>
+<tr class="separator:ac7f336c0280a62e4a60783a5ab9ebe81 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a27a4666f2751a453da93b1d22fe81801"><td class="memItemLeft" align="right" valign="top"><a id="a27a4666f2751a453da93b1d22fe81801" name="a27a4666f2751a453da93b1d22fe81801"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="separator:a27a4666f2751a453da93b1d22fe81801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5575363731a46d862e8ed55607ae2dce"><td class="memItemLeft" align="right" valign="top"><a id="a5575363731a46d862e8ed55607ae2dce" name="a5575363731a46d862e8ed55607ae2dce"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>disabled</b></td></tr>
+<tr class="separator:a5575363731a46d862e8ed55607ae2dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4331dff4c1bb3a49eef4942963a3a140"><td class="memItemLeft" align="right" valign="top"><a id="a4331dff4c1bb3a49eef4942963a3a140" name="a4331dff4c1bb3a49eef4942963a3a140"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; LuaScriptState &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>state</b></td></tr>
+<tr class="separator:a4331dff4c1bb3a49eef4942963a3a140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af60da77a48e085dcf134a263a7958aa2"><td class="memItemLeft" align="right" valign="top"><a id="af60da77a48e085dcf134a263a7958aa2" name="af60da77a48e085dcf134a263a7958aa2"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>code</b></td></tr>
+<tr class="separator:af60da77a48e085dcf134a263a7958aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9fcd3f983780cf5a82d871c35bec906"><td class="memItemLeft" align="right" valign="top"><a id="ac9fcd3f983780cf5a82d871c35bec906" name="ac9fcd3f983780cf5a82d871c35bec906"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>error</b></td></tr>
+<tr class="separator:ac9fcd3f983780cf5a82d871c35bec906"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52d0818b32d14cf23ab412aa0a4ec889"><td class="memItemLeft" align="right" valign="top"><a id="a52d0818b32d14cf23ab412aa0a4ec889" name="a52d0818b32d14cf23ab412aa0a4ec889"></a>
+<a class="el" href="classMethod.html">::Method</a>&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>start</b></td></tr>
+<tr class="separator:a52d0818b32d14cf23ab412aa0a4ec889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaabc49750eee84e6ef6f9cf8cbe2a74f"><td class="memItemLeft" align="right" valign="top"><a id="aaabc49750eee84e6ef6f9cf8cbe2a74f" name="aaabc49750eee84e6ef6f9cf8cbe2a74f"></a>
+<a class="el" href="classMethod.html">::Method</a>&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>stop</b></td></tr>
+<tr class="separator:aaabc49750eee84e6ef6f9cf8cbe2a74f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3389ae7da7ff05b3cad2588374e93cc8"><td class="memItemLeft" align="right" valign="top"><a id="a3389ae7da7ff05b3cad2588374e93cc8" name="a3389ae7da7ff05b3cad2588374e93cc8"></a>
+<a class="el" href="classMethod.html">::Method</a>&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>clearPersistentVariables</b></td></tr>
+<tr class="separator:a3389ae7da7ff05b3cad2588374e93cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classIdObject"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classIdObject')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classIdObject.html">IdObject</a></td></tr>
+<tr class="memitem:a2c795bdbd8f63e1f6160fb02f7ad3259 inherit pub_attribs_classIdObject"><td class="memItemLeft" align="right" valign="top"><a id="a2c795bdbd8f63e1f6160fb02f7ad3259" name="a2c795bdbd8f63e1f6160fb02f7ad3259"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
+<tr class="separator:a2c795bdbd8f63e1f6160fb02f7ad3259 inherit pub_attribs_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classObject"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classObject')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classObject.html">Object</a></td></tr>
+<tr class="memitem:a33b8abf3afd896dcdb2df9afa50563f0 inherit pub_attribs_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a33b8abf3afd896dcdb2df9afa50563f0" name="a33b8abf3afd896dcdb2df9afa50563f0"></a>
+boost::signals2::signal&lt; void(<a class="el" href="classObject.html">Object</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>onDestroying</b></td></tr>
+<tr class="separator:a33b8abf3afd896dcdb2df9afa50563f0 inherit pub_attribs_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b43ce3ca5dd9b8bb1fa80899f8fc369 inherit pub_attribs_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a5b43ce3ca5dd9b8bb1fa80899f8fc369" name="a5b43ce3ca5dd9b8bb1fa80899f8fc369"></a>
+boost::signals2::signal&lt; void(<a class="el" href="classBaseProperty.html">BaseProperty</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>propertyChanged</b></td></tr>
+<tr class="separator:a5b43ce3ca5dd9b8bb1fa80899f8fc369 inherit pub_attribs_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9e9926e136edeb9965bd0d19e711141 inherit pub_attribs_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ab9e9926e136edeb9965bd0d19e711141" name="ab9e9926e136edeb9965bd0d19e711141"></a>
+boost::signals2::signal&lt; void(<a class="el" href="classAbstractAttribute.html">AbstractAttribute</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>attributeChanged</b></td></tr>
+<tr class="separator:ab9e9926e136edeb9965bd0d19e711141 inherit pub_attribs_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4777c49ac247cab5e6695e7f9d7a4c04 inherit pub_attribs_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a4777c49ac247cab5e6695e7f9d7a4c04" name="a4777c49ac247cab5e6695e7f9d7a4c04"></a>
+boost::signals2::signal&lt; void(const <a class="el" href="classAbstractEvent.html">AbstractEvent</a> &amp;, const Arguments &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>onEventFired</b></td></tr>
+<tr class="separator:a4777c49ac247cab5e6695e7f9d7a4c04 inherit pub_attribs_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a600569bd23c0134a22ce920d64af741f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLua_1_1Script.html#a600569bd23c0134a22ce920d64af741f">load</a> (<a class="el" href="classWorldLoader.html">WorldLoader</a> &amp;loader, const nlohmann::json &amp;data) final</td></tr>
+<tr class="separator:a600569bd23c0134a22ce920d64af741f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cccbcabe85441322824f9134e345cb7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLua_1_1Script.html#a1cccbcabe85441322824f9134e345cb7">save</a> (<a class="el" href="classWorldSaver.html">WorldSaver</a> &amp;saver, nlohmann::json &amp;data, nlohmann::json &amp;stateData) const final</td></tr>
+<tr class="separator:a1cccbcabe85441322824f9134e345cb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65d9b7a3c46f0d622f3ff0567a295188"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLua_1_1Script.html#a65d9b7a3c46f0d622f3ff0567a295188">addToWorld</a> () final</td></tr>
+<tr class="separator:a65d9b7a3c46f0d622f3ff0567a295188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb42948a2ee1bbe7896a44c3cbb82688"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLua_1_1Script.html#abb42948a2ee1bbe7896a44c3cbb82688">destroying</a> () final</td></tr>
+<tr class="separator:abb42948a2ee1bbe7896a44c3cbb82688"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af41db78da175bdd214e12e14de4242e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLua_1_1Script.html#af41db78da175bdd214e12e14de4242e0">loaded</a> () final</td></tr>
+<tr class="separator:af41db78da175bdd214e12e14de4242e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbabcb1448269ab53bc2f74007a1eb87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLua_1_1Script.html#adbabcb1448269ab53bc2f74007a1eb87">worldEvent</a> (WorldState worldState, WorldEvent worldEvent) final</td></tr>
+<tr class="separator:adbabcb1448269ab53bc2f74007a1eb87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a586833897bd5ada8d376d3c33429f9b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLua_1_1Script.html#a586833897bd5ada8d376d3c33429f9b7">worldFeaturesChanged</a> (const <a class="el" href="classWorldFeatures.html">WorldFeatures</a> features, WorldFeature changed) final</td></tr>
+<tr class="separator:a586833897bd5ada8d376d3c33429f9b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a483426491ad92888ca0081f0698f102a"><td class="memItemLeft" align="right" valign="top"><a id="a483426491ad92888ca0081f0698f102a" name="a483426491ad92888ca0081f0698f102a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateEnabled</b> ()</td></tr>
+<tr class="separator:a483426491ad92888ca0081f0698f102a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1ad12d245f429d8d5fb55cd0fe3e0fd"><td class="memItemLeft" align="right" valign="top"><a id="ae1ad12d245f429d8d5fb55cd0fe3e0fd" name="ae1ad12d245f429d8d5fb55cd0fe3e0fd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setState</b> (LuaScriptState value)</td></tr>
+<tr class="separator:ae1ad12d245f429d8d5fb55cd0fe3e0fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2af946ed9b7bdc4f8ec08d03279d66e"><td class="memItemLeft" align="right" valign="top"><a id="ac2af946ed9b7bdc4f8ec08d03279d66e" name="ac2af946ed9b7bdc4f8ec08d03279d66e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>startSandbox</b> ()</td></tr>
+<tr class="separator:ac2af946ed9b7bdc4f8ec08d03279d66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07f98954737b06f4963645b13593c1ce"><td class="memItemLeft" align="right" valign="top"><a id="a07f98954737b06f4963645b13593c1ce" name="a07f98954737b06f4963645b13593c1ce"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>stopSandbox</b> ()</td></tr>
+<tr class="separator:a07f98954737b06f4963645b13593c1ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classIdObject"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classIdObject')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classIdObject.html">IdObject</a></td></tr>
+<tr class="memitem:ada6b78a8b3de3df01afbf0ca97ac699d inherit pro_methods_classIdObject"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdObject.html#ada6b78a8b3de3df01afbf0ca97ac699d">IdObject</a> (<a class="el" href="classWorld.html">World</a> &amp;world, std::string_view _id)</td></tr>
+<tr class="separator:ada6b78a8b3de3df01afbf0ca97ac699d inherit pro_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a643990339b6071b9116a5e288127b2ab inherit pro_methods_classIdObject"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdObject.html#a643990339b6071b9116a5e288127b2ab">destroying</a> () override</td></tr>
+<tr class="separator:a643990339b6071b9116a5e288127b2ab inherit pro_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5577361eb15bd28c2ffd96f5d80144e inherit pro_methods_classIdObject"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdObject.html#ad5577361eb15bd28c2ffd96f5d80144e">loaded</a> () override</td></tr>
+<tr class="separator:ad5577361eb15bd28c2ffd96f5d80144e inherit pro_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8f83278a908829dcd65c181b9d3f1dc inherit pro_methods_classIdObject"><td class="memItemLeft" align="right" valign="top"><a id="aa8f83278a908829dcd65c181b9d3f1dc" name="aa8f83278a908829dcd65c181b9d3f1dc"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>addToWorld</b> ()</td></tr>
+<tr class="separator:aa8f83278a908829dcd65c181b9d3f1dc inherit pro_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a884f89d0200a8dabea97648f66251fec inherit pro_methods_classIdObject"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdObject.html#a884f89d0200a8dabea97648f66251fec">worldEvent</a> (WorldState state, WorldEvent event) override</td></tr>
+<tr class="separator:a884f89d0200a8dabea97648f66251fec inherit pro_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12c0b898e07dca5593770b895459c40a inherit pro_methods_classIdObject"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdObject.html#a12c0b898e07dca5593770b895459c40a">worldFeaturesChanged</a> (const <a class="el" href="classWorldFeatures.html">WorldFeatures</a> features, WorldFeature changed) override</td></tr>
+<tr class="separator:a12c0b898e07dca5593770b895459c40a inherit pro_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classObject"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classObject')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classObject.html">Object</a></td></tr>
+<tr class="memitem:a5dba71d5b40d393ad6d49b196b394050 inherit pro_methods_classObject"><td class="memTemplParams" colspan="2"><a id="a5dba71d5b40d393ad6d49b196b394050" name="a5dba71d5b40d393ad6d49b196b394050"></a>
+template&lt;class... Args&gt; </td></tr>
+<tr class="memitem:a5dba71d5b40d393ad6d49b196b394050 inherit pro_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>fireEvent</b> (<a class="el" href="classEvent.html">Event</a>&lt; Args... &gt; &amp;event, Args... args)</td></tr>
+<tr class="separator:a5dba71d5b40d393ad6d49b196b394050 inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd7f07ccfe17b954fac1f1adf717aacb inherit pro_methods_classObject"><td class="memTemplParams" colspan="2"><a id="abd7f07ccfe17b954fac1f1adf717aacb" name="abd7f07ccfe17b954fac1f1adf717aacb"></a>
+template&lt;class T , class... Args&gt; </td></tr>
+<tr class="memitem:abd7f07ccfe17b954fac1f1adf717aacb inherit pro_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>fireEvent</b> (<a class="el" href="classEvent.html">Event</a>&lt; const std::shared_ptr&lt; T &gt; &amp;, Args... &gt; &amp;event, const std::shared_ptr&lt; T &gt; &amp;object, Args... args)</td></tr>
+<tr class="separator:abd7f07ccfe17b954fac1f1adf717aacb inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69133e2897f55974527c3b2348df5afa inherit pro_methods_classObject"><td class="memTemplParams" colspan="2"><a id="a69133e2897f55974527c3b2348df5afa" name="a69133e2897f55974527c3b2348df5afa"></a>
+template&lt;class T1 , class T2 , class... Args&gt; </td></tr>
+<tr class="memitem:a69133e2897f55974527c3b2348df5afa inherit pro_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>fireEvent</b> (<a class="el" href="classEvent.html">Event</a>&lt; T1, const std::shared_ptr&lt; T2 &gt; &amp;, Args... &gt; &amp;event, T1 value1, const std::shared_ptr&lt; T2 &gt; &amp;object2, Args... args)</td></tr>
+<tr class="separator:a69133e2897f55974527c3b2348df5afa inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a369fd2fa336ed59cdc57565ef4c61e75 inherit pro_methods_classObject"><td class="memTemplParams" colspan="2"><a id="a369fd2fa336ed59cdc57565ef4c61e75" name="a369fd2fa336ed59cdc57565ef4c61e75"></a>
+template&lt;class T1 , class T2 , class... Args&gt; </td></tr>
+<tr class="memitem:a369fd2fa336ed59cdc57565ef4c61e75 inherit pro_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>fireEvent</b> (<a class="el" href="classEvent.html">Event</a>&lt; const std::shared_ptr&lt; T1 &gt; &amp;, const std::shared_ptr&lt; T2 &gt; &amp;, Args... &gt; &amp;event, const std::shared_ptr&lt; T1 &gt; &amp;object1, const std::shared_ptr&lt; T2 &gt; &amp;object2, Args... args)</td></tr>
+<tr class="separator:a369fd2fa336ed59cdc57565ef4c61e75 inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f5ffd8b2e4717964dfd2090d7d848ef inherit pro_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a4f5ffd8b2e4717964dfd2090d7d848ef" name="a4f5ffd8b2e4717964dfd2090d7d848ef"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>destroying</b> ()</td></tr>
+<tr class="separator:a4f5ffd8b2e4717964dfd2090d7d848ef inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a771d92b98129f766ecf119540d5293c4 inherit pro_methods_classObject"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#a771d92b98129f766ecf119540d5293c4">load</a> (<a class="el" href="classWorldLoader.html">WorldLoader</a> &amp;loader, const nlohmann::json &amp;data)</td></tr>
+<tr class="separator:a771d92b98129f766ecf119540d5293c4 inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0700c21c9211b01b74174270f23237f inherit pro_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ac0700c21c9211b01b74174270f23237f" name="ac0700c21c9211b01b74174270f23237f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>save</b> (<a class="el" href="classWorldSaver.html">WorldSaver</a> &amp;saver, nlohmann::json &amp;data, nlohmann::json &amp;state) const</td></tr>
+<tr class="separator:ac0700c21c9211b01b74174270f23237f inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a759f928ce30606b3eb732f55899e9b0e inherit pro_methods_classObject"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#a759f928ce30606b3eb732f55899e9b0e">loaded</a> ()</td></tr>
+<tr class="separator:a759f928ce30606b3eb732f55899e9b0e inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adff01caad3b8e5e6b1f7e57c0bd2c312 inherit pro_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="adff01caad3b8e5e6b1f7e57c0bd2c312" name="adff01caad3b8e5e6b1f7e57c0bd2c312"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>worldEvent</b> (WorldState state, WorldEvent event)</td></tr>
+<tr class="separator:adff01caad3b8e5e6b1f7e57c0bd2c312 inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f15faf985909aa8ec5221c1b88629d5 inherit pro_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a0f15faf985909aa8ec5221c1b88629d5" name="a0f15faf985909aa8ec5221c1b88629d5"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>worldFeaturesChanged</b> (<a class="el" href="classWorldFeatures.html">WorldFeatures</a> features, WorldFeature changed)</td></tr>
+<tr class="separator:a0f15faf985909aa8ec5221c1b88629d5 inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a1029539a42dccc5e7fa7e385bf0beff0"><td class="memItemLeft" align="right" valign="top"><a id="a1029539a42dccc5e7fa7e385bf0beff0" name="a1029539a42dccc5e7fa7e385bf0beff0"></a>
+SandboxPtr&#160;</td><td class="memItemRight" valign="bottom"><b>m_sandbox</b></td></tr>
+<tr class="separator:a1029539a42dccc5e7fa7e385bf0beff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0f95d61ed1023a6bc4589bf6d5eab9e"><td class="memItemLeft" align="right" valign="top"><a id="ae0f95d61ed1023a6bc4589bf6d5eab9e" name="ae0f95d61ed1023a6bc4589bf6d5eab9e"></a>
+nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><b>m_persistentVariables</b></td></tr>
+<tr class="separator:ae0f95d61ed1023a6bc4589bf6d5eab9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classIdObject"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classIdObject')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classIdObject.html">IdObject</a></td></tr>
+<tr class="memitem:abeeecd81cf2b08a6653d791d37ae059f inherit pro_attribs_classIdObject"><td class="memItemLeft" align="right" valign="top"><a id="abeeecd81cf2b08a6653d791d37ae059f" name="abeeecd81cf2b08a6653d791d37ae059f"></a>
+<a class="el" href="classWorld.html">World</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>m_world</b></td></tr>
+<tr class="separator:abeeecd81cf2b08a6653d791d37ae059f inherit pro_attribs_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classObject"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classObject')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classObject.html">Object</a></td></tr>
+<tr class="memitem:ad2d20112565b4b5f08e310b3ccb2fb6d inherit pro_attribs_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ad2d20112565b4b5f08e310b3ccb2fb6d" name="ad2d20112565b4b5f08e310b3ccb2fb6d"></a>
+<a class="el" href="classInterfaceItems.html">InterfaceItems</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_interfaceItems</b></td></tr>
+<tr class="separator:ad2d20112565b4b5f08e310b3ccb2fb6d inherit pro_attribs_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a525f6316eddad81645a5e5a92b7031ef"><td class="memItemLeft" align="right" valign="top"><a id="a525f6316eddad81645a5e5a92b7031ef" name="a525f6316eddad81645a5e5a92b7031ef"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>Sandbox</b></td></tr>
+<tr class="separator:a525f6316eddad81645a5e5a92b7031ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a65d9b7a3c46f0d622f3ff0567a295188" name="a65d9b7a3c46f0d622f3ff0567a295188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65d9b7a3c46f0d622f3ff0567a295188">&#9670;&nbsp;</a></span>addToWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lua::Script::addToWorld </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classIdObject.html">IdObject</a>.</p>
+
+</div>
+</div>
+<a id="abb42948a2ee1bbe7896a44c3cbb82688" name="abb42948a2ee1bbe7896a44c3cbb82688"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb42948a2ee1bbe7896a44c3cbb82688">&#9670;&nbsp;</a></span>destroying()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lua::Script::destroying </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classIdObject.html">IdObject</a>.</p>
+
+</div>
+</div>
+<a id="a600569bd23c0134a22ce920d64af741f" name="a600569bd23c0134a22ce920d64af741f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a600569bd23c0134a22ce920d64af741f">&#9670;&nbsp;</a></span>load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lua::Script::load </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classWorldLoader.html">WorldLoader</a> &amp;&#160;</td>
+          <td class="paramname"><em>loader</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classObject.html">Object</a>.</p>
+
+</div>
+</div>
+<a id="af41db78da175bdd214e12e14de4242e0" name="af41db78da175bdd214e12e14de4242e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af41db78da175bdd214e12e14de4242e0">&#9670;&nbsp;</a></span>loaded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lua::Script::loaded </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classIdObject.html">IdObject</a>.</p>
+
+</div>
+</div>
+<a id="a1cccbcabe85441322824f9134e345cb7" name="a1cccbcabe85441322824f9134e345cb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cccbcabe85441322824f9134e345cb7">&#9670;&nbsp;</a></span>save()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lua::Script::save </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classWorldSaver.html">WorldSaver</a> &amp;&#160;</td>
+          <td class="paramname"><em>saver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>stateData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classObject.html">Object</a>.</p>
+
+</div>
+</div>
+<a id="adbabcb1448269ab53bc2f74007a1eb87" name="adbabcb1448269ab53bc2f74007a1eb87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbabcb1448269ab53bc2f74007a1eb87">&#9670;&nbsp;</a></span>worldEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lua::Script::worldEvent </td>
+          <td>(</td>
+          <td class="paramtype">WorldState&#160;</td>
+          <td class="paramname"><em>worldState</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WorldEvent&#160;</td>
+          <td class="paramname"><em>worldEvent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classIdObject.html">IdObject</a>.</p>
+
+</div>
+</div>
+<a id="a586833897bd5ada8d376d3c33429f9b7" name="a586833897bd5ada8d376d3c33429f9b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a586833897bd5ada8d376d3c33429f9b7">&#9670;&nbsp;</a></span>worldFeaturesChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lua::Script::worldFeaturesChanged </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classWorldFeatures.html">WorldFeatures</a>&#160;</td>
+          <td class="paramname"><em>features</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WorldFeature&#160;</td>
+          <td class="paramname"><em>changed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classIdObject.html">IdObject</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/tom/projects/linux/traintastic/server/src/lua/<a class="el" href="script_8hpp_source.html">script.hpp</a></li>
+<li>/home/tom/projects/linux/traintastic/server/src/lua/script.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

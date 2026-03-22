@@ -1,0 +1,10 @@
+<map id="Throttle" name="Throttle">
+<area shape="rect" id="node1" title=" " alt="" coords="226,244,293,271"/>
+<area shape="rect" id="node5" href="$classClientThrottle.html" title=" " alt="" coords="5,319,105,345"/>
+<area shape="rect" id="node6" href="$classHardwareThrottle.html" title=" " alt="" coords="130,319,253,345"/>
+<area shape="rect" id="node7" href="$classScriptThrottle.html" title=" " alt="" coords="277,319,377,345"/>
+<area shape="rect" id="node8" href="$classWebThrottle.html" title=" " alt="" coords="401,319,493,345"/>
+<area shape="rect" id="node2" href="$classNonPersistentObject.html" title="Base class for objects that are never stored." alt="" coords="188,169,331,196"/>
+<area shape="rect" id="node3" href="$classObject.html" title=" " alt="" coords="229,95,289,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="187,5,332,47"/>
+</map>

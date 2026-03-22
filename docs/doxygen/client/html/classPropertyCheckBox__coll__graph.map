@@ -1,0 +1,9 @@
+<map id="PropertyCheckBox" name="PropertyCheckBox">
+<area shape="rect" id="node1" title=" " alt="" coords="7,399,139,425"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,309,99,336"/>
+<area shape="rect" id="node3" href="$classProperty.html" title=" " alt="" coords="123,309,194,336"/>
+<area shape="rect" id="node4" href="$classAbstractProperty.html" title=" " alt="" coords="99,233,219,260"/>
+<area shape="rect" id="node5" href="$classBaseProperty.html" title=" " alt="" coords="108,157,209,184"/>
+<area shape="rect" id="node6" href="$classInterfaceItem.html" title=" " alt="" coords="109,81,208,108"/>
+<area shape="rect" id="node7" title=" " alt="" coords="123,5,194,32"/>
+</map>

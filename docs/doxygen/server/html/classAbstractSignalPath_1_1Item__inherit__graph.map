@@ -1,0 +1,7 @@
+<map id="AbstractSignalPath::Item" name="AbstractSignalPath::Item">
+<area shape="rect" id="node1" title=" " alt="" coords="5,104,140,145"/>
+<area shape="rect" id="node2" href="$classAbstractSignalPath_1_1BlockItem.html" title=" " alt="" coords="196,5,331,47"/>
+<area shape="rect" id="node3" href="$classAbstractSignalPath_1_1DirectionControlItem.html" title=" " alt="" coords="188,71,339,112"/>
+<area shape="rect" id="node4" href="$classAbstractSignalPath_1_1SignalItem.html" title=" " alt="" coords="196,136,331,177"/>
+<area shape="rect" id="node5" href="$classAbstractSignalPath_1_1TurnoutItem.html" title=" " alt="" coords="196,201,331,243"/>
+</map>

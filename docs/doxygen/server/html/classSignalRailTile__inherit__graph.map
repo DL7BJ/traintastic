@@ -1,0 +1,11 @@
+<map id="SignalRailTile" name="SignalRailTile">
+<area shape="rect" id="node1" title=" " alt="" coords="116,468,219,495"/>
+<area shape="rect" id="node8" href="$classSignal2AspectRailTile.html" title=" " alt="" coords="5,543,156,569"/>
+<area shape="rect" id="node9" href="$classSignal3AspectRailTile.html" title=" " alt="" coords="180,543,331,569"/>
+<area shape="rect" id="node2" href="$classStraightRailTile.html" title=" " alt="" coords="112,393,223,420"/>
+<area shape="rect" id="node3" href="$classRailTile.html" title=" " alt="" coords="134,319,201,345"/>
+<area shape="rect" id="node4" href="$classTile.html" title=" " alt="" coords="146,244,189,271"/>
+<area shape="rect" id="node5" href="$classIdObject.html" title=" " alt="" coords="132,169,203,196"/>
+<area shape="rect" id="node6" href="$classObject.html" title=" " alt="" coords="137,95,197,121"/>
+<area shape="rect" id="node7" title=" " alt="" coords="95,5,240,47"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="MarklinCAN::IOHandler" name="MarklinCAN::IOHandler">
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,165,133"/>
+<area shape="rect" id="node2" href="$classMarklinCAN_1_1NetworkIOHandler.html" title=" " alt="" coords="224,56,433,83"/>
+<area shape="rect" id="node6" href="$classMarklinCAN_1_1SimulationIOHandler.html" title=" " alt="" coords="218,107,439,133"/>
+<area shape="rect" id="node7" href="$classMarklinCAN_1_1SocketCANIOHandler.html" title=" " alt="" coords="213,157,444,184"/>
+<area shape="rect" id="node3" href="$classMarklinCAN_1_1SerialIOHandler.html" title=" " alt="" coords="492,5,685,32"/>
+<area shape="rect" id="node4" href="$classMarklinCAN_1_1TCPIOHandler.html" title=" " alt="" coords="495,56,682,83"/>
+<area shape="rect" id="node5" href="$classMarklinCAN_1_1UDPIOHandler.html" title=" " alt="" coords="494,107,683,133"/>
+</map>

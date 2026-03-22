@@ -1,0 +1,6 @@
+<map id="LocoNet::FastClockSlotWriteData" name="LocoNet::FastClockSlotWriteData">
+<area shape="rect" id="node1" title=" " alt="" coords="5,229,225,256"/>
+<area shape="rect" id="node2" href="$structLocoNet_1_1FastClockSlotData.html" title=" " alt="" coords="20,155,211,181"/>
+<area shape="rect" id="node3" href="$structLocoNet_1_1SlotDataBase.html" title=" " alt="" coords="35,80,195,107"/>
+<area shape="rect" id="node4" href="$structLocoNet_1_1Message.html" title=" " alt="" coords="49,5,181,32"/>
+</map>

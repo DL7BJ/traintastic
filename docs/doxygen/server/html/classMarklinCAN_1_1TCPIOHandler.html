@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>traintastic-server: MarklinCAN::TCPIOHandler Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+   DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="appicon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">traintastic-server
+   &#160;<span id="projectnumber">0.4.0</span>
+   </div>
+   <div id="projectbrief">Traintastic server</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceMarklinCAN.html">MarklinCAN</a></li><li class="navelem"><a class="el" href="classMarklinCAN_1_1TCPIOHandler.html">TCPIOHandler</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classMarklinCAN_1_1TCPIOHandler-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">MarklinCAN::TCPIOHandler Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Inheritance diagram for MarklinCAN::TCPIOHandler:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMarklinCAN_1_1TCPIOHandler__inherit__graph.png" border="0" usemap="#aMarklinCAN_1_1TCPIOHandler_inherit__map" alt="Inheritance graph"/></div>
+<map name="aMarklinCAN_1_1TCPIOHandler_inherit__map" id="aMarklinCAN_1_1TCPIOHandler_inherit__map">
+<area shape="rect" title=" " alt="" coords="17,155,203,181"/>
+<area shape="rect" href="classMarklinCAN_1_1NetworkIOHandler.html" title=" " alt="" coords="5,80,215,107"/>
+<area shape="rect" href="classMarklinCAN_1_1IOHandler.html" title=" " alt="" coords="30,5,190,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for MarklinCAN::TCPIOHandler:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMarklinCAN_1_1TCPIOHandler__coll__graph.png" border="0" usemap="#aMarklinCAN_1_1TCPIOHandler_coll__map" alt="Collaboration graph"/></div>
+<map name="aMarklinCAN_1_1TCPIOHandler_coll__map" id="aMarklinCAN_1_1TCPIOHandler_coll__map">
+<area shape="rect" title=" " alt="" coords="96,351,283,377"/>
+<area shape="rect" href="classMarklinCAN_1_1NetworkIOHandler.html" title=" " alt="" coords="85,275,294,301"/>
+<area shape="rect" href="classMarklinCAN_1_1IOHandler.html" title=" " alt="" coords="5,178,165,205"/>
+<area shape="rect" href="classMarklinCAN_1_1Kernel.html" title=" " alt="" coords="16,81,155,108"/>
+<area shape="rect" href="classKernelBase.html" title=" " alt="" coords="41,5,130,32"/>
+<area shape="rect" href="structMarklinCAN_1_1NetworkIOHandler_1_1NetworkMessage.html" title=" " alt="" coords="190,171,399,212"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a603612d2de6ccca26247e522912b06b4"><td class="memItemLeft" align="right" valign="top"><a id="a603612d2de6ccca26247e522912b06b4" name="a603612d2de6ccca26247e522912b06b4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TCPIOHandler</b> (<a class="el" href="classMarklinCAN_1_1Kernel.html">Kernel</a> &amp;kernel, std::string hostname)</td></tr>
+<tr class="separator:a603612d2de6ccca26247e522912b06b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbb1d6bdd96abfc45bd31e6e5af1e409"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMarklinCAN_1_1TCPIOHandler.html#adbb1d6bdd96abfc45bd31e6e5af1e409">start</a> () final</td></tr>
+<tr class="separator:adbb1d6bdd96abfc45bd31e6e5af1e409"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54be0f1c3bd2fff5e554dad9664a58e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMarklinCAN_1_1TCPIOHandler.html#a54be0f1c3bd2fff5e554dad9664a58e7">stop</a> () final</td></tr>
+<tr class="separator:a54be0f1c3bd2fff5e554dad9664a58e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classMarklinCAN_1_1NetworkIOHandler"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classMarklinCAN_1_1NetworkIOHandler')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classMarklinCAN_1_1NetworkIOHandler.html">MarklinCAN::NetworkIOHandler</a></td></tr>
+<tr class="memitem:aa7f10d7d900f42e9783e0d12fdf50dd3 inherit pub_methods_classMarklinCAN_1_1NetworkIOHandler"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMarklinCAN_1_1NetworkIOHandler.html#aa7f10d7d900f42e9783e0d12fdf50dd3">start</a> () override</td></tr>
+<tr class="separator:aa7f10d7d900f42e9783e0d12fdf50dd3 inherit pub_methods_classMarklinCAN_1_1NetworkIOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c8ed33ce795705590872e6d0c229c9b inherit pub_methods_classMarklinCAN_1_1NetworkIOHandler"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMarklinCAN_1_1NetworkIOHandler.html#a4c8ed33ce795705590872e6d0c229c9b">send</a> (const <a class="el" href="structMarklinCAN_1_1Message.html">Message</a> &amp;message) final</td></tr>
+<tr class="separator:a4c8ed33ce795705590872e6d0c229c9b inherit pub_methods_classMarklinCAN_1_1NetworkIOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classMarklinCAN_1_1IOHandler"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classMarklinCAN_1_1IOHandler')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classMarklinCAN_1_1IOHandler.html">MarklinCAN::IOHandler</a></td></tr>
+<tr class="memitem:ad796d084af46fda28551d88270a6d530 inherit pub_methods_classMarklinCAN_1_1IOHandler"><td class="memItemLeft" align="right" valign="top"><a id="ad796d084af46fda28551d88270a6d530" name="ad796d084af46fda28551d88270a6d530"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>IOHandler</b> (const <a class="el" href="classMarklinCAN_1_1IOHandler.html">IOHandler</a> &amp;)=delete</td></tr>
+<tr class="separator:ad796d084af46fda28551d88270a6d530 inherit pub_methods_classMarklinCAN_1_1IOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea93e46a88f7bbca58954e4cde9465aa inherit pub_methods_classMarklinCAN_1_1IOHandler"><td class="memItemLeft" align="right" valign="top"><a id="aea93e46a88f7bbca58954e4cde9465aa" name="aea93e46a88f7bbca58954e4cde9465aa"></a>
+<a class="el" href="classMarklinCAN_1_1IOHandler.html">IOHandler</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classMarklinCAN_1_1IOHandler.html">IOHandler</a> &amp;)=delete</td></tr>
+<tr class="separator:aea93e46a88f7bbca58954e4cde9465aa inherit pub_methods_classMarklinCAN_1_1IOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ff357de528942a3b670a75f275625d8 inherit pub_methods_classMarklinCAN_1_1IOHandler"><td class="memItemLeft" align="right" valign="top"><a id="a3ff357de528942a3b670a75f275625d8" name="a3ff357de528942a3b670a75f275625d8"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> ()=0</td></tr>
+<tr class="separator:a3ff357de528942a3b670a75f275625d8 inherit pub_methods_classMarklinCAN_1_1IOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17fc21d3aa0b1bacd34c4a6d6e7321b7 inherit pub_methods_classMarklinCAN_1_1IOHandler"><td class="memItemLeft" align="right" valign="top"><a id="a17fc21d3aa0b1bacd34c4a6d6e7321b7" name="a17fc21d3aa0b1bacd34c4a6d6e7321b7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>stop</b> ()=0</td></tr>
+<tr class="separator:a17fc21d3aa0b1bacd34c4a6d6e7321b7 inherit pub_methods_classMarklinCAN_1_1IOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7d9889268d89dc75a8dd399ec2aff08 inherit pub_methods_classMarklinCAN_1_1IOHandler"><td class="memItemLeft" align="right" valign="top"><a id="ad7d9889268d89dc75a8dd399ec2aff08" name="ad7d9889268d89dc75a8dd399ec2aff08"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>send</b> (const <a class="el" href="structMarklinCAN_1_1Message.html">Message</a> &amp;message)=0</td></tr>
+<tr class="separator:ad7d9889268d89dc75a8dd399ec2aff08 inherit pub_methods_classMarklinCAN_1_1IOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classMarklinCAN_1_1NetworkIOHandler"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classMarklinCAN_1_1NetworkIOHandler')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classMarklinCAN_1_1NetworkIOHandler.html">MarklinCAN::NetworkIOHandler</a></td></tr>
+<tr class="memitem:ac33e4e93b2d0a4f1da3c51fd3d46363a inherit pro_methods_classMarklinCAN_1_1NetworkIOHandler"><td class="memItemLeft" align="right" valign="top"><a id="ac33e4e93b2d0a4f1da3c51fd3d46363a" name="ac33e4e93b2d0a4f1da3c51fd3d46363a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>NetworkIOHandler</b> (<a class="el" href="classMarklinCAN_1_1Kernel.html">Kernel</a> &amp;kernel)</td></tr>
+<tr class="separator:ac33e4e93b2d0a4f1da3c51fd3d46363a inherit pro_methods_classMarklinCAN_1_1NetworkIOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88c6d79333c8d95bbedfe39b6a355c31 inherit pro_methods_classMarklinCAN_1_1NetworkIOHandler"><td class="memItemLeft" align="right" valign="top"><a id="a88c6d79333c8d95bbedfe39b6a355c31" name="a88c6d79333c8d95bbedfe39b6a355c31"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> ()=0</td></tr>
+<tr class="separator:a88c6d79333c8d95bbedfe39b6a355c31 inherit pro_methods_classMarklinCAN_1_1NetworkIOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1812c581dec1c99b3f400482e6f2e9ae inherit pro_methods_classMarklinCAN_1_1NetworkIOHandler"><td class="memItemLeft" align="right" valign="top"><a id="a1812c581dec1c99b3f400482e6f2e9ae" name="a1812c581dec1c99b3f400482e6f2e9ae"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> ()=0</td></tr>
+<tr class="separator:a1812c581dec1c99b3f400482e6f2e9ae inherit pro_methods_classMarklinCAN_1_1NetworkIOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classMarklinCAN_1_1IOHandler"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classMarklinCAN_1_1IOHandler')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classMarklinCAN_1_1IOHandler.html">MarklinCAN::IOHandler</a></td></tr>
+<tr class="memitem:aac3cb384562acab854b8ff5a128bed29 inherit pro_methods_classMarklinCAN_1_1IOHandler"><td class="memItemLeft" align="right" valign="top"><a id="aac3cb384562acab854b8ff5a128bed29" name="aac3cb384562acab854b8ff5a128bed29"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>IOHandler</b> (<a class="el" href="classMarklinCAN_1_1Kernel.html">Kernel</a> &amp;kernel)</td></tr>
+<tr class="separator:aac3cb384562acab854b8ff5a128bed29 inherit pro_methods_classMarklinCAN_1_1IOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_methods_classMarklinCAN_1_1NetworkIOHandler"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classMarklinCAN_1_1NetworkIOHandler')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classMarklinCAN_1_1NetworkIOHandler.html">MarklinCAN::NetworkIOHandler</a></td></tr>
+<tr class="memitem:a25cf807512c469b8d5996a9435183f0e inherit pro_static_methods_classMarklinCAN_1_1NetworkIOHandler"><td class="memItemLeft" align="right" valign="top"><a id="a25cf807512c469b8d5996a9435183f0e" name="a25cf807512c469b8d5996a9435183f0e"></a>
+static <a class="el" href="structMarklinCAN_1_1Message.html">Message</a>&#160;</td><td class="memItemRight" valign="bottom"><b>toMessage</b> (const <a class="el" href="structMarklinCAN_1_1NetworkIOHandler_1_1NetworkMessage.html">NetworkMessage</a> &amp;networkMessage)</td></tr>
+<tr class="separator:a25cf807512c469b8d5996a9435183f0e inherit pro_static_methods_classMarklinCAN_1_1NetworkIOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac95e5571ea26cb7c5dc4c1e1b4040d2a inherit pro_static_methods_classMarklinCAN_1_1NetworkIOHandler"><td class="memItemLeft" align="right" valign="top"><a id="ac95e5571ea26cb7c5dc4c1e1b4040d2a" name="ac95e5571ea26cb7c5dc4c1e1b4040d2a"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>toNetworkMessage</b> (const <a class="el" href="structMarklinCAN_1_1Message.html">Message</a> &amp;message, <a class="el" href="structMarklinCAN_1_1NetworkIOHandler_1_1NetworkMessage.html">NetworkMessage</a> &amp;networkMessage)</td></tr>
+<tr class="separator:ac95e5571ea26cb7c5dc4c1e1b4040d2a inherit pro_static_methods_classMarklinCAN_1_1NetworkIOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classMarklinCAN_1_1NetworkIOHandler"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classMarklinCAN_1_1NetworkIOHandler')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classMarklinCAN_1_1NetworkIOHandler.html">MarklinCAN::NetworkIOHandler</a></td></tr>
+<tr class="memitem:abfe4eec855d635ef2ef9a72d1ea5327f inherit pro_attribs_classMarklinCAN_1_1NetworkIOHandler"><td class="memItemLeft" align="right" valign="top"><a id="abfe4eec855d635ef2ef9a72d1ea5327f" name="abfe4eec855d635ef2ef9a72d1ea5327f"></a>
+PRAGMA_PACK_PUSH_1 struct <a class="el" href="structMarklinCAN_1_1NetworkIOHandler_1_1NetworkMessage.html">MarklinCAN::NetworkIOHandler::NetworkMessage</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ATTRIBUTE_PACKED</b></td></tr>
+<tr class="separator:abfe4eec855d635ef2ef9a72d1ea5327f inherit pro_attribs_classMarklinCAN_1_1NetworkIOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3788ed6e81d5ba6182b672301d6016d6 inherit pro_attribs_classMarklinCAN_1_1NetworkIOHandler"><td class="memItemLeft" align="right" valign="top"><a id="a3788ed6e81d5ba6182b672301d6016d6" name="a3788ed6e81d5ba6182b672301d6016d6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>PRAGMA_PACK_POP</b></td></tr>
+<tr class="separator:a3788ed6e81d5ba6182b672301d6016d6 inherit pro_attribs_classMarklinCAN_1_1NetworkIOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c58403b01ebb9bcc65c8908b6ca3b85 inherit pro_attribs_classMarklinCAN_1_1NetworkIOHandler"><td class="memItemLeft" align="right" valign="top"><a id="a2c58403b01ebb9bcc65c8908b6ca3b85" name="a2c58403b01ebb9bcc65c8908b6ca3b85"></a>
+std::array&lt; std::byte, 1500 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_writeBuffer</b></td></tr>
+<tr class="separator:a2c58403b01ebb9bcc65c8908b6ca3b85 inherit pro_attribs_classMarklinCAN_1_1NetworkIOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4c4163d1f929397bb2c295fcf762a37 inherit pro_attribs_classMarklinCAN_1_1NetworkIOHandler"><td class="memItemLeft" align="right" valign="top"><a id="ae4c4163d1f929397bb2c295fcf762a37" name="ae4c4163d1f929397bb2c295fcf762a37"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_writeBufferOffset</b></td></tr>
+<tr class="separator:ae4c4163d1f929397bb2c295fcf762a37 inherit pro_attribs_classMarklinCAN_1_1NetworkIOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classMarklinCAN_1_1IOHandler"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classMarklinCAN_1_1IOHandler')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classMarklinCAN_1_1IOHandler.html">MarklinCAN::IOHandler</a></td></tr>
+<tr class="memitem:ac82db80b09521bf23c28ff1135109d38 inherit pro_attribs_classMarklinCAN_1_1IOHandler"><td class="memItemLeft" align="right" valign="top"><a id="ac82db80b09521bf23c28ff1135109d38" name="ac82db80b09521bf23c28ff1135109d38"></a>
+<a class="el" href="classMarklinCAN_1_1Kernel.html">Kernel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>m_kernel</b></td></tr>
+<tr class="separator:ac82db80b09521bf23c28ff1135109d38 inherit pro_attribs_classMarklinCAN_1_1IOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="adbb1d6bdd96abfc45bd31e6e5af1e409" name="adbb1d6bdd96abfc45bd31e6e5af1e409"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbb1d6bdd96abfc45bd31e6e5af1e409">&#9670;&nbsp;</a></span>start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MarklinCAN::TCPIOHandler::start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classMarklinCAN_1_1NetworkIOHandler.html">MarklinCAN::NetworkIOHandler</a>.</p>
+
+</div>
+</div>
+<a id="a54be0f1c3bd2fff5e554dad9664a58e7" name="a54be0f1c3bd2fff5e554dad9664a58e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54be0f1c3bd2fff5e554dad9664a58e7">&#9670;&nbsp;</a></span>stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MarklinCAN::TCPIOHandler::stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classMarklinCAN_1_1IOHandler.html">MarklinCAN::IOHandler</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/tom/projects/linux/traintastic/server/src/hardware/protocol/marklincan/iohandler/<a class="el" href="marklincan_2iohandler_2tcpiohandler_8hpp_source.html">tcpiohandler.hpp</a></li>
+<li>/home/tom/projects/linux/traintastic/server/src/hardware/protocol/marklincan/iohandler/tcpiohandler.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

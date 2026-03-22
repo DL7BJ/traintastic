@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>traintastic-server: SpanAttribute&lt; T, N &gt; Class Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+   DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="appicon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">traintastic-server
+   &#160;<span id="projectnumber">0.4.0</span>
+   </div>
+   <div id="projectbrief">Traintastic server</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="classSpanAttribute-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">SpanAttribute&lt; T, N &gt; Class Template Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="spanattribute_8hpp_source.html">spanattribute.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for SpanAttribute&lt; T, N &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSpanAttribute__inherit__graph.png" border="0" usemap="#aSpanAttribute_3_01T_00_01N_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="aSpanAttribute_3_01T_00_01N_01_4_inherit__map" id="aSpanAttribute_3_01T_00_01N_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="10,155,159,181"/>
+<area shape="rect" href="classAbstractValuesAttribute.html" title=" " alt="" coords="5,80,164,107"/>
+<area shape="rect" href="classAbstractAttribute.html" title=" " alt="" coords="25,5,145,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for SpanAttribute&lt; T, N &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSpanAttribute__coll__graph.png" border="0" usemap="#aSpanAttribute_3_01T_00_01N_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="aSpanAttribute_3_01T_00_01N_01_4_coll__map" id="aSpanAttribute_3_01T_00_01N_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="78,440,227,467"/>
+<area shape="rect" href="classAbstractValuesAttribute.html" title=" " alt="" coords="73,364,232,391"/>
+<area shape="rect" href="classAbstractAttribute.html" title=" " alt="" coords="93,288,213,315"/>
+<area shape="rect" href="classInterfaceItem.html" title=" " alt="" coords="103,199,202,225"/>
+<area shape="rect" href="classObject.html" title=" " alt="" coords="123,109,183,136"/>
+<area shape="rect" title=" " alt="" coords="5,5,151,47"/>
+<area shape="rect" href="classInterfaceItems.html" title=" " alt="" coords="175,13,282,39"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ab60d6a06785e37c11025cc22b0266700"><td class="memItemLeft" align="right" valign="top"><a id="ab60d6a06785e37c11025cc22b0266700" name="ab60d6a06785e37c11025cc22b0266700"></a>
+typedef std::span&lt; const T, N &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Span</b></td></tr>
+<tr class="separator:ab60d6a06785e37c11025cc22b0266700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:af7f014c6ecb129be69c9f6010ba24fd1"><td class="memItemLeft" align="right" valign="top"><a id="af7f014c6ecb129be69c9f6010ba24fd1" name="af7f014c6ecb129be69c9f6010ba24fd1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SpanAttribute</b> (<a class="el" href="classInterfaceItem.html">InterfaceItem</a> &amp;_item, AttributeName _name, Span values)</td></tr>
+<tr class="separator:af7f014c6ecb129be69c9f6010ba24fd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a999f6535b6db5bcb4333e30dd6568972"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpanAttribute.html#a999f6535b6db5bcb4333e30dd6568972">length</a> () const final</td></tr>
+<tr class="separator:a999f6535b6db5bcb4333e30dd6568972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8da8954cf87a0dfbeb981debf92bf52"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpanAttribute.html#ab8da8954cf87a0dfbeb981debf92bf52">getBool</a> (uint32_t index) const final</td></tr>
+<tr class="separator:ab8da8954cf87a0dfbeb981debf92bf52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60080b8828777a509af124d428f13688"><td class="memItemLeft" align="right" valign="top">virtual int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpanAttribute.html#a60080b8828777a509af124d428f13688">getInt64</a> (uint32_t index) const final</td></tr>
+<tr class="separator:a60080b8828777a509af124d428f13688"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a239f07b0b9a0cd966d16fce85ccf5afd"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpanAttribute.html#a239f07b0b9a0cd966d16fce85ccf5afd">getDouble</a> (uint32_t index) const final</td></tr>
+<tr class="separator:a239f07b0b9a0cd966d16fce85ccf5afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab242fc1958c2b751c03e6236de0bebca"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpanAttribute.html#ab242fc1958c2b751c03e6236de0bebca">getString</a> (uint32_t index) const final</td></tr>
+<tr class="separator:ab242fc1958c2b751c03e6236de0bebca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a693e7ef5320554649a225de6f03db893"><td class="memItemLeft" align="right" valign="top"><a id="a693e7ef5320554649a225de6f03db893" name="a693e7ef5320554649a225de6f03db893"></a>
+Span&#160;</td><td class="memItemRight" valign="bottom"><b>values</b> () const</td></tr>
+<tr class="separator:a693e7ef5320554649a225de6f03db893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34cc71a48c776abc7d846c9d713111ad"><td class="memItemLeft" align="right" valign="top"><a id="a34cc71a48c776abc7d846c9d713111ad" name="a34cc71a48c776abc7d846c9d713111ad"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setValues</b> (Span values)</td></tr>
+<tr class="separator:a34cc71a48c776abc7d846c9d713111ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classAbstractValuesAttribute"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAbstractValuesAttribute')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAbstractValuesAttribute.html">AbstractValuesAttribute</a></td></tr>
+<tr class="memitem:a809202c08a8fe0af4f18ab88f428ce25 inherit pub_methods_classAbstractValuesAttribute"><td class="memItemLeft" align="right" valign="top"><a id="a809202c08a8fe0af4f18ab88f428ce25" name="a809202c08a8fe0af4f18ab88f428ce25"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AbstractValuesAttribute</b> (<a class="el" href="classInterfaceItem.html">InterfaceItem</a> &amp;_item, AttributeName _name, ValueType _type)</td></tr>
+<tr class="separator:a809202c08a8fe0af4f18ab88f428ce25 inherit pub_methods_classAbstractValuesAttribute"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a848094b2c52d5dc8adc95e8fea11072e inherit pub_methods_classAbstractValuesAttribute"><td class="memItemLeft" align="right" valign="top"><a id="a848094b2c52d5dc8adc95e8fea11072e" name="a848094b2c52d5dc8adc95e8fea11072e"></a>
+virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>length</b> () const =0</td></tr>
+<tr class="separator:a848094b2c52d5dc8adc95e8fea11072e inherit pub_methods_classAbstractValuesAttribute"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71ee03e80fe2aea7401fa81e37d0d5f6 inherit pub_methods_classAbstractValuesAttribute"><td class="memItemLeft" align="right" valign="top"><a id="a71ee03e80fe2aea7401fa81e37d0d5f6" name="a71ee03e80fe2aea7401fa81e37d0d5f6"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>getBool</b> (uint32_t index) const =0</td></tr>
+<tr class="separator:a71ee03e80fe2aea7401fa81e37d0d5f6 inherit pub_methods_classAbstractValuesAttribute"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84c1490bbcf7382bff77198083a686fc inherit pub_methods_classAbstractValuesAttribute"><td class="memItemLeft" align="right" valign="top"><a id="a84c1490bbcf7382bff77198083a686fc" name="a84c1490bbcf7382bff77198083a686fc"></a>
+virtual int64_t&#160;</td><td class="memItemRight" valign="bottom"><b>getInt64</b> (uint32_t index) const =0</td></tr>
+<tr class="separator:a84c1490bbcf7382bff77198083a686fc inherit pub_methods_classAbstractValuesAttribute"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d4a9f8943e7ee2847b55bf7db9bb23b inherit pub_methods_classAbstractValuesAttribute"><td class="memItemLeft" align="right" valign="top"><a id="a0d4a9f8943e7ee2847b55bf7db9bb23b" name="a0d4a9f8943e7ee2847b55bf7db9bb23b"></a>
+virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getDouble</b> (uint32_t index) const =0</td></tr>
+<tr class="separator:a0d4a9f8943e7ee2847b55bf7db9bb23b inherit pub_methods_classAbstractValuesAttribute"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeeb61ca3dcc41f87eb46aa547812393 inherit pub_methods_classAbstractValuesAttribute"><td class="memItemLeft" align="right" valign="top"><a id="abeeb61ca3dcc41f87eb46aa547812393" name="abeeb61ca3dcc41f87eb46aa547812393"></a>
+virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getString</b> (uint32_t index) const =0</td></tr>
+<tr class="separator:abeeb61ca3dcc41f87eb46aa547812393 inherit pub_methods_classAbstractValuesAttribute"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98f1bbc8b0282b97d72a6171e5f777cd inherit pub_methods_classAbstractValuesAttribute"><td class="memItemLeft" align="right" valign="top"><a id="a98f1bbc8b0282b97d72a6171e5f777cd" name="a98f1bbc8b0282b97d72a6171e5f777cd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (int64_t value) const</td></tr>
+<tr class="separator:a98f1bbc8b0282b97d72a6171e5f777cd inherit pub_methods_classAbstractValuesAttribute"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classAbstractAttribute"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAbstractAttribute')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAbstractAttribute.html">AbstractAttribute</a></td></tr>
+<tr class="memitem:aad939eb91dc9651aa1500cafe71f722e inherit pub_methods_classAbstractAttribute"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractAttribute.html#aad939eb91dc9651aa1500cafe71f722e">AbstractAttribute</a> (<a class="el" href="classInterfaceItem.html">InterfaceItem</a> &amp;_item, AttributeName _name, ValueType _type)</td></tr>
+<tr class="separator:aad939eb91dc9651aa1500cafe71f722e inherit pub_methods_classAbstractAttribute"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace7dab5975b6de77b67463586ac00454 inherit pub_methods_classAbstractAttribute"><td class="memItemLeft" align="right" valign="top"><a id="ace7dab5975b6de77b67463586ac00454" name="ace7dab5975b6de77b67463586ac00454"></a>
+<a class="el" href="classInterfaceItem.html">InterfaceItem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>item</b> () const</td></tr>
+<tr class="separator:ace7dab5975b6de77b67463586ac00454 inherit pub_methods_classAbstractAttribute"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc50a80247c376c7298b41a1b81aeba4 inherit pub_methods_classAbstractAttribute"><td class="memItemLeft" align="right" valign="top"><a id="abc50a80247c376c7298b41a1b81aeba4" name="abc50a80247c376c7298b41a1b81aeba4"></a>
+AttributeName&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> () const</td></tr>
+<tr class="separator:abc50a80247c376c7298b41a1b81aeba4 inherit pub_methods_classAbstractAttribute"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a6c26c5f11a8abf8f51d06442685d08 inherit pub_methods_classAbstractAttribute"><td class="memItemLeft" align="right" valign="top"><a id="a8a6c26c5f11a8abf8f51d06442685d08" name="a8a6c26c5f11a8abf8f51d06442685d08"></a>
+ValueType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> () const</td></tr>
+<tr class="separator:a8a6c26c5f11a8abf8f51d06442685d08 inherit pub_methods_classAbstractAttribute"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a289ae089ec2e34af10d0aac721dc7498"><td class="memItemLeft" align="right" valign="top"><a id="a289ae089ec2e34af10d0aac721dc7498" name="a289ae089ec2e34af10d0aac721dc7498"></a>
+Span&#160;</td><td class="memItemRight" valign="bottom"><b>m_values</b></td></tr>
+<tr class="separator:a289ae089ec2e34af10d0aac721dc7498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classAbstractAttribute"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classAbstractAttribute')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classAbstractAttribute.html">AbstractAttribute</a></td></tr>
+<tr class="memitem:af30430b75eb962cca4d8ca10971091e6 inherit pro_attribs_classAbstractAttribute"><td class="memItemLeft" align="right" valign="top"><a id="af30430b75eb962cca4d8ca10971091e6" name="af30430b75eb962cca4d8ca10971091e6"></a>
+<a class="el" href="classInterfaceItem.html">InterfaceItem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>m_item</b></td></tr>
+<tr class="separator:af30430b75eb962cca4d8ca10971091e6 inherit pro_attribs_classAbstractAttribute"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34a5e7fda7c960e42de43eecd94fd8e5 inherit pro_attribs_classAbstractAttribute"><td class="memItemLeft" align="right" valign="top"><a id="a34a5e7fda7c960e42de43eecd94fd8e5" name="a34a5e7fda7c960e42de43eecd94fd8e5"></a>
+const AttributeName&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td></tr>
+<tr class="separator:a34a5e7fda7c960e42de43eecd94fd8e5 inherit pro_attribs_classAbstractAttribute"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18db6a99efb342992a99de6fbb394d11 inherit pro_attribs_classAbstractAttribute"><td class="memItemLeft" align="right" valign="top"><a id="a18db6a99efb342992a99de6fbb394d11" name="a18db6a99efb342992a99de6fbb394d11"></a>
+const ValueType&#160;</td><td class="memItemRight" valign="bottom"><b>m_type</b></td></tr>
+<tr class="separator:a18db6a99efb342992a99de6fbb394d11 inherit pro_attribs_classAbstractAttribute"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classAbstractAttribute"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classAbstractAttribute')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classAbstractAttribute.html">AbstractAttribute</a></td></tr>
+<tr class="memitem:a8b93770e48bde78e47d3f4aee32bd125 inherit pro_methods_classAbstractAttribute"><td class="memItemLeft" align="right" valign="top"><a id="a8b93770e48bde78e47d3f4aee32bd125" name="a8b93770e48bde78e47d3f4aee32bd125"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>changed</b> ()</td></tr>
+<tr class="separator:a8b93770e48bde78e47d3f4aee32bd125 inherit pro_methods_classAbstractAttribute"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T, size_t N = std::dynamic_extent&gt;<br />
+class SpanAttribute&lt; T, N &gt;</div><p ><a class="el" href="spanattribute_8hpp_source.html">server/src/core/spanattribute.hpp</a></p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2019-2020,2023-2025 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab8da8954cf87a0dfbeb981debf92bf52" name="ab8da8954cf87a0dfbeb981debf92bf52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8da8954cf87a0dfbeb981debf92bf52">&#9670;&nbsp;</a></span>getBool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , size_t N = std::dynamic_extent&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool <a class="el" href="classSpanAttribute.html">SpanAttribute</a>&lt; T, N &gt;::getBool </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classAbstractValuesAttribute.html">AbstractValuesAttribute</a>.</p>
+
+</div>
+</div>
+<a id="a239f07b0b9a0cd966d16fce85ccf5afd" name="a239f07b0b9a0cd966d16fce85ccf5afd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a239f07b0b9a0cd966d16fce85ccf5afd">&#9670;&nbsp;</a></span>getDouble()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , size_t N = std::dynamic_extent&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double <a class="el" href="classSpanAttribute.html">SpanAttribute</a>&lt; T, N &gt;::getDouble </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classAbstractValuesAttribute.html">AbstractValuesAttribute</a>.</p>
+
+</div>
+</div>
+<a id="a60080b8828777a509af124d428f13688" name="a60080b8828777a509af124d428f13688"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60080b8828777a509af124d428f13688">&#9670;&nbsp;</a></span>getInt64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , size_t N = std::dynamic_extent&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int64_t <a class="el" href="classSpanAttribute.html">SpanAttribute</a>&lt; T, N &gt;::getInt64 </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classAbstractValuesAttribute.html">AbstractValuesAttribute</a>.</p>
+
+</div>
+</div>
+<a id="ab242fc1958c2b751c03e6236de0bebca" name="ab242fc1958c2b751c03e6236de0bebca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab242fc1958c2b751c03e6236de0bebca">&#9670;&nbsp;</a></span>getString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , size_t N = std::dynamic_extent&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string <a class="el" href="classSpanAttribute.html">SpanAttribute</a>&lt; T, N &gt;::getString </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classAbstractValuesAttribute.html">AbstractValuesAttribute</a>.</p>
+
+</div>
+</div>
+<a id="a999f6535b6db5bcb4333e30dd6568972" name="a999f6535b6db5bcb4333e30dd6568972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a999f6535b6db5bcb4333e30dd6568972">&#9670;&nbsp;</a></span>length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , size_t N = std::dynamic_extent&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint32_t <a class="el" href="classSpanAttribute.html">SpanAttribute</a>&lt; T, N &gt;::length </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classAbstractValuesAttribute.html">AbstractValuesAttribute</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/tom/projects/linux/traintastic/server/src/core/<a class="el" href="spanattribute_8hpp_source.html">spanattribute.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

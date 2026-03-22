@@ -1,0 +1,8 @@
+<map id="SettingsBase" name="SettingsBase">
+<area shape="rect" id="node1" title=" " alt="" coords="222,80,322,107"/>
+<area shape="rect" id="node3" href="$classBoardSettings.html" title=" " alt="" coords="5,155,109,181"/>
+<area shape="rect" id="node4" href="$classDeveloperSettings.html" title=" " alt="" coords="134,155,263,181"/>
+<area shape="rect" id="node5" href="$classGeneralSettings.html" title=" " alt="" coords="288,155,403,181"/>
+<area shape="rect" id="node6" href="$classStatusBarSettings.html" title=" " alt="" coords="427,155,555,181"/>
+<area shape="rect" id="node2" title=" " alt="" coords="237,5,307,32"/>
+</map>

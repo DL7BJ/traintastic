@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>traintastic-client: Connection Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+   DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="appicon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">traintastic-client
+   &#160;<span id="projectnumber">0.4.0</span>
+   </div>
+   <div id="projectbrief">Traintastic client</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#signals">Signals</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pro-slots">Protected Slots</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
+<a href="classConnection-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">Connection Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Inheritance diagram for Connection:</div>
+<div class="dyncontent">
+<div class="center"><img src="classConnection__inherit__graph.png" border="0" usemap="#aConnection_inherit__map" alt="Inheritance graph"/></div>
+<map name="aConnection_inherit__map" id="aConnection_inherit__map">
+<area shape="rect" title=" " alt="" coords="70,95,158,121"/>
+<area shape="rect" title=" " alt="" coords="5,13,76,39"/>
+<area shape="rect" title=" " alt="" coords="101,5,274,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Connection:</div>
+<div class="dyncontent">
+<div class="center"><img src="classConnection__coll__graph.png" border="0" usemap="#aConnection_coll__map" alt="Collaboration graph"/></div>
+<map name="aConnection_coll__map" id="aConnection_coll__map">
+<area shape="rect" title=" " alt="" coords="987,72,1075,99"/>
+<area shape="rect" title=" " alt="" coords="5,17,76,44"/>
+<area shape="rect" href="classInterfaceItem.html" title=" " alt="" coords="125,43,224,69"/>
+<area shape="rect" title=" " alt="" coords="620,94,793,135"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="652,43,761,69"/>
+<area shape="rect" href="classAbstractProperty.html" title=" " alt="" coords="437,43,557,69"/>
+<area shape="rect" href="classBaseProperty.html" title=" " alt="" coords="273,43,375,69"/>
+<area shape="rect" href="classServerLogTableModel.html" title=" " alt="" coords="633,160,780,187"/>
+<area shape="rect" title=" " alt="" coords="424,160,571,187"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a529ed975c6d7f5a7382cf565a201c06a"><td class="memItemLeft" align="right" valign="top"><a id="a529ed975c6d7f5a7382cf565a201c06a" name="a529ed975c6d7f5a7382cf565a201c06a"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>State</b> { <br />
+&#160;&#160;<b>Disconnected</b>
+, <b>Disconnecting</b>
+, <b>Connected</b>
+, <b>Connecting</b>
+, <br />
+&#160;&#160;<b>Authenticating</b>
+, <b>CreatingSession</b>
+, <b>FetchingWorld</b>
+, <b>SocketError</b>
+, <br />
+&#160;&#160;<b>ErrorAuthenticationFailed</b>
+, <b>ErrorNewSessionFailed</b>
+<br />
+ }</td></tr>
+<tr class="separator:a529ed975c6d7f5a7382cf565a201c06a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a638baf8620bb1217fd63f2be413eb76e"><td class="memItemLeft" align="right" valign="top"><a id="a638baf8620bb1217fd63f2be413eb76e" name="a638baf8620bb1217fd63f2be413eb76e"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SocketError</b> = QAbstractSocket::SocketError</td></tr>
+<tr class="separator:a638baf8620bb1217fd63f2be413eb76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
+Signals</h2></td></tr>
+<tr class="memitem:aeb54d0fe73df1ca3c434a1935f0ff571"><td class="memItemLeft" align="right" valign="top"><a id="aeb54d0fe73df1ca3c434a1935f0ff571" name="aeb54d0fe73df1ca3c434a1935f0ff571"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>stateChanged</b> ()</td></tr>
+<tr class="separator:aeb54d0fe73df1ca3c434a1935f0ff571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a339bf898aa41c0265a643227566b864b"><td class="memItemLeft" align="right" valign="top"><a id="a339bf898aa41c0265a643227566b864b" name="a339bf898aa41c0265a643227566b864b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>worldChanged</b> ()</td></tr>
+<tr class="separator:a339bf898aa41c0265a643227566b864b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aca8da70e25d2e4ecbc32fba34e24c2b3"><td class="memItemLeft" align="right" valign="top"><a id="aca8da70e25d2e4ecbc32fba34e24c2b3" name="aca8da70e25d2e4ecbc32fba34e24c2b3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isConnected</b> () const</td></tr>
+<tr class="separator:aca8da70e25d2e4ecbc32fba34e24c2b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2452d34996876eb21621bdd02b919433"><td class="memItemLeft" align="right" valign="top"><a id="a2452d34996876eb21621bdd02b919433" name="a2452d34996876eb21621bdd02b919433"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isDisconnected</b> () const</td></tr>
+<tr class="separator:a2452d34996876eb21621bdd02b919433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f11ba745e157aeab31b66fc827160f1"><td class="memItemLeft" align="right" valign="top"><a id="a0f11ba745e157aeab31b66fc827160f1" name="a0f11ba745e157aeab31b66fc827160f1"></a>
+State&#160;</td><td class="memItemRight" valign="bottom"><b>state</b> () const</td></tr>
+<tr class="separator:a0f11ba745e157aeab31b66fc827160f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aead3ea1b918ec49d6f2864620c8fbef7"><td class="memItemLeft" align="right" valign="top"><a id="aead3ea1b918ec49d6f2864620c8fbef7" name="aead3ea1b918ec49d6f2864620c8fbef7"></a>
+SocketError&#160;</td><td class="memItemRight" valign="bottom"><b>error</b> () const</td></tr>
+<tr class="separator:aead3ea1b918ec49d6f2864620c8fbef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00ff1494eccd3acc2a0d4790a0498fbd"><td class="memItemLeft" align="right" valign="top"><a id="a00ff1494eccd3acc2a0d4790a0498fbd" name="a00ff1494eccd3acc2a0d4790a0498fbd"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>errorString</b> () const</td></tr>
+<tr class="separator:a00ff1494eccd3acc2a0d4790a0498fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab51dd716b03456a044fe060a4af4e7b0"><td class="memItemLeft" align="right" valign="top"><a id="ab51dd716b03456a044fe060a4af4e7b0" name="ab51dd716b03456a044fe060a4af4e7b0"></a>
+QHostAddress&#160;</td><td class="memItemRight" valign="bottom"><b>peerAddress</b> () const</td></tr>
+<tr class="separator:ab51dd716b03456a044fe060a4af4e7b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40ca05e82050016dcb4369c060c180d1"><td class="memItemLeft" align="right" valign="top"><a id="a40ca05e82050016dcb4369c060c180d1" name="a40ca05e82050016dcb4369c060c180d1"></a>
+quint16&#160;</td><td class="memItemRight" valign="bottom"><b>peerPort</b> () const</td></tr>
+<tr class="separator:a40ca05e82050016dcb4369c060c180d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35fbe5295ef451b178f3d8df9bde8bad"><td class="memItemLeft" align="right" valign="top"><a id="a35fbe5295ef451b178f3d8df9bde8bad" name="a35fbe5295ef451b178f3d8df9bde8bad"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>connectToHost</b> (const QUrl &amp;url, const QString &amp;username, const QString &amp;password)</td></tr>
+<tr class="separator:a35fbe5295ef451b178f3d8df9bde8bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abedd34121cd04603b232d8ae93d80b39"><td class="memItemLeft" align="right" valign="top"><a id="abedd34121cd04603b232d8ae93d80b39" name="abedd34121cd04603b232d8ae93d80b39"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>disconnectFromHost</b> ()</td></tr>
+<tr class="separator:abedd34121cd04603b232d8ae93d80b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c8d6357a0f7fb9cf55619d48202a4b"><td class="memItemLeft" align="right" valign="top"><a id="a73c8d6357a0f7fb9cf55619d48202a4b" name="a73c8d6357a0f7fb9cf55619d48202a4b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>send</b> (std::unique_ptr&lt; Message &gt; &amp;message)</td></tr>
+<tr class="separator:a73c8d6357a0f7fb9cf55619d48202a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdb27ab9bce7caf483a0b528d5018ad9"><td class="memItemLeft" align="right" valign="top"><a id="abdb27ab9bce7caf483a0b528d5018ad9" name="abdb27ab9bce7caf483a0b528d5018ad9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>send</b> (std::unique_ptr&lt; Message &gt; &amp;message, std::function&lt; void(const std::shared_ptr&lt; Message &gt; &amp;)&gt; callback)</td></tr>
+<tr class="separator:abdb27ab9bce7caf483a0b528d5018ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bd9ca62977edd2f3ebf2db8b6d70cee"><td class="memItemLeft" align="right" valign="top"><a id="a1bd9ca62977edd2f3ebf2db8b6d70cee" name="a1bd9ca62977edd2f3ebf2db8b6d70cee"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>cancelRequest</b> (int requestId)</td></tr>
+<tr class="separator:a1bd9ca62977edd2f3ebf2db8b6d70cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b084c7e5fb81ac102ae38dc537b02c5"><td class="memItemLeft" align="right" valign="top"><a id="a0b084c7e5fb81ac102ae38dc537b02c5" name="a0b084c7e5fb81ac102ae38dc537b02c5"></a>
+const ObjectPtr &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>traintastic</b> () const</td></tr>
+<tr class="separator:a0b084c7e5fb81ac102ae38dc537b02c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03fe87a39170b678aa1987632626d70f"><td class="memItemLeft" align="right" valign="top"><a id="a03fe87a39170b678aa1987632626d70f" name="a03fe87a39170b678aa1987632626d70f"></a>
+const ObjectPtr &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>world</b> () const</td></tr>
+<tr class="separator:a03fe87a39170b678aa1987632626d70f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56995589e528769da237d52b70e2af0d"><td class="memItemLeft" align="right" valign="top"><a id="a56995589e528769da237d52b70e2af0d" name="a56995589e528769da237d52b70e2af0d"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>worldUUID</b> () const</td></tr>
+<tr class="separator:a56995589e528769da237d52b70e2af0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe07a694cac4f7d3612c9746a303cac7"><td class="memItemLeft" align="right" valign="top"><a id="abe07a694cac4f7d3612c9746a303cac7" name="abe07a694cac4f7d3612c9746a303cac7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>serverLog</b> (<a class="el" href="classServerLogTableModel.html">ServerLogTableModel</a> &amp;model, bool enable)</td></tr>
+<tr class="separator:abe07a694cac4f7d3612c9746a303cac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57a2214c3df41d02bd65bacdc3765c35"><td class="memItemLeft" align="right" valign="top"><a id="a57a2214c3df41d02bd65bacdc3765c35" name="a57a2214c3df41d02bd65bacdc3765c35"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>createObject</b> (const QString &amp;classId, std::function&lt; void(const ObjectPtr &amp;, std::optional&lt; const <a class="el" href="structError.html">Error</a> &gt;)&gt; callback)</td></tr>
+<tr class="separator:a57a2214c3df41d02bd65bacdc3765c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad74376c5126a13b6a86c79910deef779"><td class="memItemLeft" align="right" valign="top"><a id="ad74376c5126a13b6a86c79910deef779" name="ad74376c5126a13b6a86c79910deef779"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getObject</b> (const QString &amp;id, std::function&lt; void(const ObjectPtr &amp;, std::optional&lt; const <a class="el" href="structError.html">Error</a> &gt;)&gt; callback)</td></tr>
+<tr class="separator:ad74376c5126a13b6a86c79910deef779"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bb434676aaaeaf24e2e99f7c2b326be"><td class="memItemLeft" align="right" valign="top"><a id="a3bb434676aaaeaf24e2e99f7c2b326be" name="a3bb434676aaaeaf24e2e99f7c2b326be"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getObject</b> (const <a class="el" href="classObjectProperty.html">ObjectProperty</a> &amp;property, std::function&lt; void(const ObjectPtr &amp;, std::optional&lt; const <a class="el" href="structError.html">Error</a> &gt;)&gt; callback)</td></tr>
+<tr class="separator:a3bb434676aaaeaf24e2e99f7c2b326be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92d8b8e0ceb5648c7025c51937182517"><td class="memItemLeft" align="right" valign="top"><a id="a92d8b8e0ceb5648c7025c51937182517" name="a92d8b8e0ceb5648c7025c51937182517"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getObject</b> (const <a class="el" href="classObjectVectorProperty.html">ObjectVectorProperty</a> &amp;property, uint32_t index, std::function&lt; void(const ObjectPtr &amp;, std::optional&lt; const <a class="el" href="structError.html">Error</a> &gt;)&gt; callback)</td></tr>
+<tr class="separator:a92d8b8e0ceb5648c7025c51937182517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aacdb8287448254e9043714c58913fa"><td class="memItemLeft" align="right" valign="top"><a id="a8aacdb8287448254e9043714c58913fa" name="a8aacdb8287448254e9043714c58913fa"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getObjects</b> (const <a class="el" href="classObject.html">Object</a> &amp;objectList, uint32_t startIndex, uint32_t endIndex, std::function&lt; void(const std::vector&lt; ObjectPtr &gt; &amp;, std::optional&lt; const <a class="el" href="structError.html">Error</a> &gt;)&gt; callback)</td></tr>
+<tr class="separator:a8aacdb8287448254e9043714c58913fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2efbcd5a45da4dbe466ffd9e73b7fb7c"><td class="memItemLeft" align="right" valign="top"><a id="a2efbcd5a45da4dbe466ffd9e73b7fb7c" name="a2efbcd5a45da4dbe466ffd9e73b7fb7c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getObjects</b> (const <a class="el" href="classObjectVectorProperty.html">ObjectVectorProperty</a> &amp;property, uint32_t startIndex, uint32_t endIndex, std::function&lt; void(const std::vector&lt; ObjectPtr &gt; &amp;, std::optional&lt; const <a class="el" href="structError.html">Error</a> &gt;)&gt; callback)</td></tr>
+<tr class="separator:a2efbcd5a45da4dbe466ffd9e73b7fb7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af480ca2e9b707e20e64f7e3f49ad0de5"><td class="memItemLeft" align="right" valign="top"><a id="af480ca2e9b707e20e64f7e3f49ad0de5" name="af480ca2e9b707e20e64f7e3f49ad0de5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>releaseObject</b> (<a class="el" href="classObject.html">Object</a> *object)</td></tr>
+<tr class="separator:af480ca2e9b707e20e64f7e3f49ad0de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec824a60d7310a3c5ba56d82a88df830"><td class="memItemLeft" align="right" valign="top"><a id="aec824a60d7310a3c5ba56d82a88df830" name="aec824a60d7310a3c5ba56d82a88df830"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setUnitPropertyUnit</b> (<a class="el" href="classUnitProperty.html">UnitProperty</a> &amp;property, int64_t value)</td></tr>
+<tr class="separator:aec824a60d7310a3c5ba56d82a88df830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a056253e736735a9ab5ba73a5f272b8bd"><td class="memItemLeft" align="right" valign="top"><a id="a056253e736735a9ab5ba73a5f272b8bd" name="a056253e736735a9ab5ba73a5f272b8bd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setObjectPropertyById</b> (const <a class="el" href="classObjectProperty.html">ObjectProperty</a> &amp;property, const QString &amp;value)</td></tr>
+<tr class="separator:a056253e736735a9ab5ba73a5f272b8bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3083633c3706bb411ec8f7aa0888135c"><td class="memItemLeft" align="right" valign="top"><a id="a3083633c3706bb411ec8f7aa0888135c" name="a3083633c3706bb411ec8f7aa0888135c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>callMethod</b> (<a class="el" href="classMethod.html">Method</a> &amp;method)</td></tr>
+<tr class="separator:a3083633c3706bb411ec8f7aa0888135c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee96301e4ec22ba86e56fe210af00dc9"><td class="memItemLeft" align="right" valign="top"><a id="aee96301e4ec22ba86e56fe210af00dc9" name="aee96301e4ec22ba86e56fe210af00dc9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>callMethod</b> (<a class="el" href="classMethod.html">Method</a> &amp;method, const QString &amp;arg)</td></tr>
+<tr class="separator:aee96301e4ec22ba86e56fe210af00dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f5bc18210d6538d3858bd335338c705"><td class="memItemLeft" align="right" valign="top"><a id="a6f5bc18210d6538d3858bd335338c705" name="a6f5bc18210d6538d3858bd335338c705"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>callMethod</b> (<a class="el" href="classMethod.html">Method</a> &amp;method, std::function&lt; void(const ObjectPtr &amp;, std::optional&lt; const <a class="el" href="structError.html">Error</a> &gt;)&gt; callback)</td></tr>
+<tr class="separator:a6f5bc18210d6538d3858bd335338c705"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71fc840bc610c2aa49f027cec9a6a1a4"><td class="memItemLeft" align="right" valign="top"><a id="a71fc840bc610c2aa49f027cec9a6a1a4" name="a71fc840bc610c2aa49f027cec9a6a1a4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>callMethod</b> (<a class="el" href="classMethod.html">Method</a> &amp;method, const QString &amp;arg, std::function&lt; void(const ObjectPtr &amp;, std::optional&lt; const <a class="el" href="structError.html">Error</a> &gt;)&gt; callback)</td></tr>
+<tr class="separator:a71fc840bc610c2aa49f027cec9a6a1a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef54165ffac69c91aa61922e2ab66bc6"><td class="memItemLeft" align="right" valign="top"><a id="aef54165ffac69c91aa61922e2ab66bc6" name="aef54165ffac69c91aa61922e2ab66bc6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getTableModel</b> (const ObjectPtr &amp;object, std::function&lt; void(const TableModelPtr &amp;, std::optional&lt; const <a class="el" href="structError.html">Error</a> &gt;)&gt; callback)</td></tr>
+<tr class="separator:aef54165ffac69c91aa61922e2ab66bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18773d26449e3f14146f3a9550f130df"><td class="memItemLeft" align="right" valign="top"><a id="a18773d26449e3f14146f3a9550f130df" name="a18773d26449e3f14146f3a9550f130df"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>releaseTableModel</b> (<a class="el" href="classTableModel.html">TableModel</a> *tableModel)</td></tr>
+<tr class="separator:a18773d26449e3f14146f3a9550f130df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a32436b507cf3434a94e69191f9e773"><td class="memItemLeft" align="right" valign="top"><a id="a7a32436b507cf3434a94e69191f9e773" name="a7a32436b507cf3434a94e69191f9e773"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setTableModelRegion</b> (<a class="el" href="classTableModel.html">TableModel</a> *tableModel, uint32_t columnMin, uint32_t columnMax, uint32_t rowMin, uint32_t rowMax)</td></tr>
+<tr class="separator:a7a32436b507cf3434a94e69191f9e773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab72fda9979c81cb4b55308094ba0de95"><td class="memItemLeft" align="right" valign="top"><a id="ab72fda9979c81cb4b55308094ba0de95" name="ab72fda9979c81cb4b55308094ba0de95"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getTileData</b> (<a class="el" href="classBoard.html">Board</a> &amp;object)</td></tr>
+<tr class="separator:ab72fda9979c81cb4b55308094ba0de95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a1b240c50f94b23a8fb1f0bb7416652e2"><td class="memItemLeft" align="right" valign="top"><a id="a1b240c50f94b23a8fb1f0bb7416652e2" name="a1b240c50f94b23a8fb1f0bb7416652e2"></a>
+static const quint16&#160;</td><td class="memItemRight" valign="bottom"><b>defaultPort</b> = 5740</td></tr>
+<tr class="separator:a1b240c50f94b23a8fb1f0bb7416652e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9547bbfe02bc9331cd243c72d70cd27"><td class="memItemLeft" align="right" valign="top"><a id="ad9547bbfe02bc9331cd243c72d70cd27" name="ad9547bbfe02bc9331cd243c72d70cd27"></a>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>invalidRequestId</b> = -1</td></tr>
+<tr class="separator:ad9547bbfe02bc9331cd243c72d70cd27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-slots" name="pro-slots"></a>
+Protected Slots</h2></td></tr>
+<tr class="memitem:a691b9bde31bccf80a9fa24710f13339e"><td class="memItemLeft" align="right" valign="top"><a id="a691b9bde31bccf80a9fa24710f13339e" name="a691b9bde31bccf80a9fa24710f13339e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>socketConnected</b> ()</td></tr>
+<tr class="separator:a691b9bde31bccf80a9fa24710f13339e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abebd60df52862cfcecfe9baf6ffefae8"><td class="memItemLeft" align="right" valign="top"><a id="abebd60df52862cfcecfe9baf6ffefae8" name="abebd60df52862cfcecfe9baf6ffefae8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>socketDisconnected</b> ()</td></tr>
+<tr class="separator:abebd60df52862cfcecfe9baf6ffefae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9c367c07b5f8c1ded95a9e66027f0fe"><td class="memItemLeft" align="right" valign="top"><a id="af9c367c07b5f8c1ded95a9e66027f0fe" name="af9c367c07b5f8c1ded95a9e66027f0fe"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>socketError</b> (QAbstractSocket::SocketError)</td></tr>
+<tr class="separator:af9c367c07b5f8c1ded95a9e66027f0fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a97676795f2dca6e04ab84083dd4cdf2c"><td class="memItemLeft" align="right" valign="top"><a id="a97676795f2dca6e04ab84083dd4cdf2c" name="a97676795f2dca6e04ab84083dd4cdf2c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setState</b> (State state)</td></tr>
+<tr class="separator:a97676795f2dca6e04ab84083dd4cdf2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25fa133dcefe92ef0d1fa8c3a8544d0c"><td class="memItemLeft" align="right" valign="top"><a id="a25fa133dcefe92ef0d1fa8c3a8544d0c" name="a25fa133dcefe92ef0d1fa8c3a8544d0c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>processMessage</b> (const std::shared_ptr&lt; Message &gt; message)</td></tr>
+<tr class="separator:a25fa133dcefe92ef0d1fa8c3a8544d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ff2359b7e747b34582cb857da85bf51"><td class="memItemLeft" align="right" valign="top"><a id="a8ff2359b7e747b34582cb857da85bf51" name="a8ff2359b7e747b34582cb857da85bf51"></a>
+ObjectPtr&#160;</td><td class="memItemRight" valign="bottom"><b>readObject</b> (const Message &amp;message)</td></tr>
+<tr class="separator:a8ff2359b7e747b34582cb857da85bf51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2648469abdefa57d25223ce676bca992"><td class="memItemLeft" align="right" valign="top"><a id="a2648469abdefa57d25223ce676bca992" name="a2648469abdefa57d25223ce676bca992"></a>
+TableModelPtr&#160;</td><td class="memItemRight" valign="bottom"><b>readTableModel</b> (const Message &amp;message)</td></tr>
+<tr class="separator:a2648469abdefa57d25223ce676bca992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a842e6254193e830a0969cb2efaa740ad"><td class="memItemLeft" align="right" valign="top"><a id="a842e6254193e830a0969cb2efaa740ad" name="a842e6254193e830a0969cb2efaa740ad"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>getWorld</b> ()</td></tr>
+<tr class="separator:a842e6254193e830a0969cb2efaa740ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03cbed5c4c164bfe5cf51f5660a69b6b"><td class="memItemLeft" align="right" valign="top"><a id="a03cbed5c4c164bfe5cf51f5660a69b6b" name="a03cbed5c4c164bfe5cf51f5660a69b6b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setWorld</b> (const ObjectPtr &amp;world)</td></tr>
+<tr class="separator:a03cbed5c4c164bfe5cf51f5660a69b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a4b86fa4e039b4e7e08e74d1d0d5914f2"><td class="memItemLeft" align="right" valign="top"><a id="a4b86fa4e039b4e7e08e74d1d0d5914f2" name="a4b86fa4e039b4e7e08e74d1d0d5914f2"></a>
+QWebSocket *&#160;</td><td class="memItemRight" valign="bottom"><b>m_socket</b></td></tr>
+<tr class="separator:a4b86fa4e039b4e7e08e74d1d0d5914f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ad3a709b3473e2bef7176b32bb36c4a"><td class="memItemLeft" align="right" valign="top"><a id="a7ad3a709b3473e2bef7176b32bb36c4a" name="a7ad3a709b3473e2bef7176b32bb36c4a"></a>
+State&#160;</td><td class="memItemRight" valign="bottom"><b>m_state</b></td></tr>
+<tr class="separator:a7ad3a709b3473e2bef7176b32bb36c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b5b3126a6998b1842001fc2c9a41a79"><td class="memItemLeft" align="right" valign="top"><a id="a1b5b3126a6998b1842001fc2c9a41a79" name="a1b5b3126a6998b1842001fc2c9a41a79"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>m_username</b></td></tr>
+<tr class="separator:a1b5b3126a6998b1842001fc2c9a41a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9788c1f32966c4c977db5b85d00e560c"><td class="memItemLeft" align="right" valign="top"><a id="a9788c1f32966c4c977db5b85d00e560c" name="a9788c1f32966c4c977db5b85d00e560c"></a>
+QByteArray&#160;</td><td class="memItemRight" valign="bottom"><b>m_password</b></td></tr>
+<tr class="separator:a9788c1f32966c4c977db5b85d00e560c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41f6fdee7966a43d8f37061155dfcd79"><td class="memItemLeft" ><a id="a41f6fdee7966a43d8f37061155dfcd79" name="a41f6fdee7966a43d8f37061155dfcd79"></a>
+struct {</td></tr>
+<tr class="memitem:a0c7e2927049f1afa8a0ffa01cbe7e808"><td class="memItemLeft" >
+&#160;&#160;&#160;qint64&#160;&#160;&#160;<b>offset</b> = 0</td></tr>
+<tr class="separator:a0c7e2927049f1afa8a0ffa01cbe7e808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a018a9c1aa3aeede9d39deb3356bbafca"><td class="memItemLeft" >
+&#160;&#160;&#160;Message::Header&#160;&#160;&#160;<b>header</b></td></tr>
+<tr class="separator:a018a9c1aa3aeede9d39deb3356bbafca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b32d504cf2f61b8456ba317d016e801"><td class="memItemLeft" >
+&#160;&#160;&#160;std::shared_ptr&lt; Message &gt;&#160;&#160;&#160;<b>message</b></td></tr>
+<tr class="separator:a9b32d504cf2f61b8456ba317d016e801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41f6fdee7966a43d8f37061155dfcd79"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><b>m_readBuffer</b></td></tr>
+<tr class="separator:a41f6fdee7966a43d8f37061155dfcd79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a187a3fd95c6253fbe3ade368d5d93e05"><td class="memItemLeft" align="right" valign="top"><a id="a187a3fd95c6253fbe3ade368d5d93e05" name="a187a3fd95c6253fbe3ade368d5d93e05"></a>
+QMap&lt; uint16_t, std::function&lt; void(const std::shared_ptr&lt; Message &gt; &amp;)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_requestCallback</b></td></tr>
+<tr class="separator:a187a3fd95c6253fbe3ade368d5d93e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3accf1b3175a24c663d7468ef8360060"><td class="memItemLeft" align="right" valign="top"><a id="a3accf1b3175a24c663d7468ef8360060" name="a3accf1b3175a24c663d7468ef8360060"></a>
+QUuid&#160;</td><td class="memItemRight" valign="bottom"><b>m_sessionUUID</b></td></tr>
+<tr class="separator:a3accf1b3175a24c663d7468ef8360060"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aeaa03c7f65d979fbf8dac0f2feff21"><td class="memItemLeft" align="right" valign="top"><a id="a2aeaa03c7f65d979fbf8dac0f2feff21" name="a2aeaa03c7f65d979fbf8dac0f2feff21"></a>
+ObjectPtr&#160;</td><td class="memItemRight" valign="bottom"><b>m_traintastic</b></td></tr>
+<tr class="separator:a2aeaa03c7f65d979fbf8dac0f2feff21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad79f1f5d32db37fb2e854d1f7f2435a"><td class="memItemLeft" align="right" valign="top"><a id="aad79f1f5d32db37fb2e854d1f7f2435a" name="aad79f1f5d32db37fb2e854d1f7f2435a"></a>
+<a class="el" href="classObjectProperty.html">ObjectProperty</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_worldProperty</b></td></tr>
+<tr class="separator:aad79f1f5d32db37fb2e854d1f7f2435a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0da8871ccfce431968e711a300f1bffe"><td class="memItemLeft" align="right" valign="top"><a id="a0da8871ccfce431968e711a300f1bffe" name="a0da8871ccfce431968e711a300f1bffe"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_worldRequestId</b></td></tr>
+<tr class="separator:a0da8871ccfce431968e711a300f1bffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a893267eded94be5b60f507d1cf645581"><td class="memItemLeft" align="right" valign="top"><a id="a893267eded94be5b60f507d1cf645581" name="a893267eded94be5b60f507d1cf645581"></a>
+ObjectPtr&#160;</td><td class="memItemRight" valign="bottom"><b>m_world</b></td></tr>
+<tr class="separator:a893267eded94be5b60f507d1cf645581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebaa66d777232620715dbac220413f14"><td class="memItemLeft" align="right" valign="top"><a id="aebaa66d777232620715dbac220413f14" name="aebaa66d777232620715dbac220413f14"></a>
+<a class="el" href="classServerLogTableModel.html">ServerLogTableModel</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_serverLogTableModel</b></td></tr>
+<tr class="separator:aebaa66d777232620715dbac220413f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab95266603a06720fbba2949eedd76467"><td class="memItemLeft" align="right" valign="top"><a id="ab95266603a06720fbba2949eedd76467" name="ab95266603a06720fbba2949eedd76467"></a>
+QMap&lt; Handle, std::weak_ptr&lt; <a class="el" href="classObject.html">Object</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_objects</b></td></tr>
+<tr class="separator:ab95266603a06720fbba2949eedd76467"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e25a35ecfe269345c8bbb2d1ef2303b"><td class="memItemLeft" align="right" valign="top"><a id="a2e25a35ecfe269345c8bbb2d1ef2303b" name="a2e25a35ecfe269345c8bbb2d1ef2303b"></a>
+std::unordered_map&lt; Handle, uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_handleCounter</b></td></tr>
+<tr class="separator:a2e25a35ecfe269345c8bbb2d1ef2303b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3182edb49e27b2bfbf5c9c063a8d7b99"><td class="memItemLeft" align="right" valign="top"><a id="a3182edb49e27b2bfbf5c9c063a8d7b99" name="a3182edb49e27b2bfbf5c9c063a8d7b99"></a>
+std::unordered_map&lt; Handle, std::unique_ptr&lt; <a class="el" href="classObject.html">Object</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_requestForRelease</b></td></tr>
+<tr class="separator:a3182edb49e27b2bfbf5c9c063a8d7b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b38c16b05e5282486af564bf87b097c"><td class="memItemLeft" align="right" valign="top"><a id="a1b38c16b05e5282486af564bf87b097c" name="a1b38c16b05e5282486af564bf87b097c"></a>
+QMap&lt; Handle, <a class="el" href="classTableModel.html">TableModel</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_tableModels</b></td></tr>
+<tr class="separator:a1b38c16b05e5282486af564bf87b097c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a12525b6ed7c8186be0bee5cf78e2a49c"><td class="memItemLeft" align="right" valign="top"><a id="a12525b6ed7c8186be0bee5cf78e2a49c" name="a12525b6ed7c8186be0bee5cf78e2a49c"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>Board</b></td></tr>
+<tr class="separator:a12525b6ed7c8186be0bee5cf78e2a49c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab277425c4fbd5bb685c305d50bdbd6b9"><td class="memTemplParams" colspan="2"><a id="ab277425c4fbd5bb685c305d50bdbd6b9" name="ab277425c4fbd5bb685c305d50bdbd6b9"></a>
+template&lt;typename R &gt; </td></tr>
+<tr class="memitem:ab277425c4fbd5bb685c305d50bdbd6b9"><td class="memTemplItemLeft" align="right" valign="top">R&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getResult</b> (<a class="el" href="classConnection.html">Connection</a> &amp;, const Message &amp;)</td></tr>
+<tr class="separator:ab277425c4fbd5bb685c305d50bdbd6b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/tom/projects/linux/traintastic/client/src/network/<a class="el" href="connection_8hpp_source.html">connection.hpp</a></li>
+<li>/home/tom/projects/linux/traintastic/client/src/network/connection.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<map id="AbstractEditWidget" name="AbstractEditWidget">
+<area shape="rect" id="node1" title=" " alt="" coords="151,80,285,107"/>
+<area shape="rect" id="node3" href="$classItemsEditWidget.html" title=" " alt="" coords="5,155,124,181"/>
+<area shape="rect" id="node4" href="$classLuaScriptEditWidget.html" title=" " alt="" coords="147,155,289,181"/>
+<area shape="rect" id="node5" href="$classObjectEditWidget.html" title=" " alt="" coords="313,155,437,181"/>
+<area shape="rect" id="node2" title=" " alt="" coords="181,5,255,32"/>
+<area shape="rect" id="node6" href="$classServerSettingsWidget.html" title=" " alt="" coords="301,229,450,256"/>
+</map>

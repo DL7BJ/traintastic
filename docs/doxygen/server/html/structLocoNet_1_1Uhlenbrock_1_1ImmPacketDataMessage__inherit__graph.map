@@ -1,0 +1,10 @@
+<map id="LocoNet::Uhlenbrock::ImmPacketDataMessage" name="LocoNet::Uhlenbrock::ImmPacketDataMessage">
+<area shape="rect" id="node1" title=" " alt="" coords="379,136,557,177"/>
+<area shape="rect" id="node4" href="$structLocoNet_1_1Uhlenbrock_1_1LNCVRead.html" title=" " alt="" coords="605,5,751,47"/>
+<area shape="rect" id="node5" href="$structLocoNet_1_1Uhlenbrock_1_1LNCVStart.html" title=" " alt="" coords="605,71,751,112"/>
+<area shape="rect" id="node6" href="$structLocoNet_1_1Uhlenbrock_1_1LNCVStop.html" title=" " alt="" coords="605,136,751,177"/>
+<area shape="rect" id="node7" href="$structLocoNet_1_1Uhlenbrock_1_1LNCVWrite.html" title=" " alt="" coords="605,201,751,243"/>
+<area shape="rect" id="node8" href="$structLocoNet_1_1Uhlenbrock_1_1ReadSpecialOption.html" title=" " alt="" coords="605,267,751,308"/>
+<area shape="rect" id="node2" href="$structLocoNet_1_1Uhlenbrock_1_1DataMessage.html" title=" " alt="" coords="185,136,331,177"/>
+<area shape="rect" id="node3" href="$structLocoNet_1_1Message.html" title=" " alt="" coords="5,143,137,170"/>
+</map>

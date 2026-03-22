@@ -1,0 +1,12 @@
+<map id="LocoNetInterface" name="LocoNetInterface">
+<area shape="rect" id="node1" title="LocoNet hardware interface." alt="" coords="664,139,787,166"/>
+<area shape="rect" id="node2" href="$classInterface.html" title="Base class for a hardware interface." alt="" coords="484,13,557,39"/>
+<area shape="rect" id="node3" href="$classIdObject.html" title=" " alt="" coords="307,13,377,39"/>
+<area shape="rect" id="node4" href="$classObject.html" title=" " alt="" coords="199,13,259,39"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,5,151,47"/>
+<area shape="rect" id="node6" href="$classDecoderController.html" title=" " alt="" coords="457,63,584,90"/>
+<area shape="rect" id="node7" href="$classInputController.html" title=" " alt="" coords="467,114,574,141"/>
+<area shape="rect" id="node8" href="$classOutputController.html" title=" " alt="" coords="462,165,579,191"/>
+<area shape="rect" id="node9" href="$classIdentificationController.html" title=" " alt="" coords="445,215,597,242"/>
+<area shape="rect" id="node10" href="$classLNCVProgrammingController.html" title="LNCV programming controller." alt="" coords="425,266,616,293"/>
+</map>

@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>traintastic-server: ECoS Namespace Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+   DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="appicon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">traintastic-server
+   &#160;<span id="projectnumber">0.4.0</span>
+   </div>
+   <div id="projectbrief">Traintastic server</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">ECoS Namespace Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structECoS_1_1Command.html">Command</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structECoS_1_1Config.html">Config</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1ECoS.html">ECoS</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structECoS_1_1Event.html">Event</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Feedback.html">Feedback</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1FeedbackManager.html">FeedbackManager</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1IOHandler.html">IOHandler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Kernel.html">Kernel</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structECoS_1_1Line.html">Line</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Locomotive.html">Locomotive</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1LocomotiveManager.html">LocomotiveManager</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Object.html">Object</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structECoS_1_1ObjectId.html">ObjectId</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structECoS_1_1Option.html">Option</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structECoS_1_1Reply.html">Reply</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structECoS_1_1Request.html">Request</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Settings.html">Settings</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structECoS_1_1Simulation.html">Simulation</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1SimulationIOHandler.html">SimulationIOHandler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Switch.html">Switch</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1SwitchManager.html">SwitchManager</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1TCPIOHandler.html">TCPIOHandler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a2021203349aa96ed904c17eff5a17c7d"><td class="memItemLeft" align="right" valign="top"><a id="a2021203349aa96ed904c17eff5a17c7d" name="a2021203349aa96ed904c17eff5a17c7d"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>Status</b> : uint32_t { <b>Ok</b> = 0
+, <b>UnknownOption</b> = 11
+, <b>UnknownObject</b> = 15
+, <b>NoManagerObject</b> = 22
+ }</td></tr>
+<tr class="separator:a2021203349aa96ed904c17eff5a17c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfa9537c6d2aa92f5d01e7f76114a397"><td class="memItemLeft" align="right" valign="top"><a id="abfa9537c6d2aa92f5d01e7f76114a397" name="abfa9537c6d2aa92f5d01e7f76114a397"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>LocomotiveProtocol</b> { <br />
+&#160;&#160;<b>Unknown</b> = 0
+, <b>MM14</b> = 1
+, <b>MM27</b> = 2
+, <b>MM28</b> = 3
+, <br />
+&#160;&#160;<b>DCC14</b> = 4
+, <b>DCC28</b> = 5
+, <b>DCC128</b> = 6
+, <b>SX32</b> = 7
+, <br />
+&#160;&#160;<b>MMFKT</b> = 8
+<br />
+ }</td></tr>
+<tr class="separator:abfa9537c6d2aa92f5d01e7f76114a397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ce83d42a2493707694247dcfb4a2d8c"><td class="memItemLeft" align="right" valign="top"><a id="a3ce83d42a2493707694247dcfb4a2d8c" name="a3ce83d42a2493707694247dcfb4a2d8c"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>SwitchProtocol</b> { <b>Unknown</b> = 0
+, <b>DCC</b> = 1
+, <b>Motorola</b> = 2
+ }</td></tr>
+<tr class="separator:a3ce83d42a2493707694247dcfb4a2d8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ae6227960b3a31b6b29d12779a12e5d7b"><td class="memTemplParams" colspan="2"><a id="ae6227960b3a31b6b29d12779a12e5d7b" name="ae6227960b3a31b6b29d12779a12e5d7b"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:ae6227960b3a31b6b29d12779a12e5d7b"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>isSimulation</b> ()</td></tr>
+<tr class="separator:ae6227960b3a31b6b29d12779a12e5d7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab79b7df808a6bcdcefd25e16b181a84c"><td class="memItemLeft" align="right" valign="top"><a id="ab79b7df808a6bcdcefd25e16b181a84c" name="ab79b7df808a6bcdcefd25e16b181a84c"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:ab79b7df808a6bcdcefd25e16b181a84c"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>isSimulation&lt; SimulationIOHandler &gt;</b> ()</td></tr>
+<tr class="separator:ab79b7df808a6bcdcefd25e16b181a84c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87f60cf20b814a517b9525f7a0c9d339"><td class="memItemLeft" align="right" valign="top"><a id="a87f60cf20b814a517b9525f7a0c9d339" name="a87f60cf20b814a517b9525f7a0c9d339"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>parseRequest</b> (std::string_view message, <a class="el" href="structECoS_1_1Request.html">Request</a> &amp;request)</td></tr>
+<tr class="separator:a87f60cf20b814a517b9525f7a0c9d339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48ebc48c9e6b0e2d47d85cf2979e3393"><td class="memItemLeft" align="right" valign="top"><a id="a48ebc48c9e6b0e2d47d85cf2979e3393" name="a48ebc48c9e6b0e2d47d85cf2979e3393"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isReply</b> (std::string_view message)</td></tr>
+<tr class="separator:a48ebc48c9e6b0e2d47d85cf2979e3393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d6eadad3874e39031574d48ee149bcc"><td class="memItemLeft" align="right" valign="top"><a id="a2d6eadad3874e39031574d48ee149bcc" name="a2d6eadad3874e39031574d48ee149bcc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>parseReply</b> (std::string_view message, <a class="el" href="structECoS_1_1Reply.html">Reply</a> &amp;reply)</td></tr>
+<tr class="separator:a2d6eadad3874e39031574d48ee149bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71898be1a05408e8ec7b269aee9df488"><td class="memItemLeft" align="right" valign="top"><a id="a71898be1a05408e8ec7b269aee9df488" name="a71898be1a05408e8ec7b269aee9df488"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>parseEvent</b> (std::string_view message, <a class="el" href="structECoS_1_1Event.html">Event</a> &amp;event)</td></tr>
+<tr class="separator:a71898be1a05408e8ec7b269aee9df488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38d261f0d83deed994a083e3abf77ff3"><td class="memItemLeft" align="right" valign="top"><a id="a38d261f0d83deed994a083e3abf77ff3" name="a38d261f0d83deed994a083e3abf77ff3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>parseId</b> (std::string_view line, uint16_t &amp;id)</td></tr>
+<tr class="separator:a38d261f0d83deed994a083e3abf77ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a7c761a9df52f7656b0bfa188f03861"><td class="memItemLeft" align="right" valign="top"><a id="a3a7c761a9df52f7656b0bfa188f03861" name="a3a7c761a9df52f7656b0bfa188f03861"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>parseLine</b> (std::string_view text, <a class="el" href="structECoS_1_1Line.html">Line</a> &amp;line)</td></tr>
+<tr class="separator:a3a7c761a9df52f7656b0bfa188f03861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f7c4af6dc6e8e8fbaacb59e3e715025"><td class="memItemLeft" align="right" valign="top"><a id="a6f7c4af6dc6e8e8fbaacb59e3e715025" name="a6f7c4af6dc6e8e8fbaacb59e3e715025"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>parseOptionValue</b> (std::string_view text, std::string_view &amp;option, std::string_view &amp;value)</td></tr>
+<tr class="separator:a6f7c4af6dc6e8e8fbaacb59e3e715025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17e5ef190c2d2581db8b430a504ab062"><td class="memItemLeft" align="right" valign="top"><a id="a17e5ef190c2d2581db8b430a504ab062" name="a17e5ef190c2d2581db8b430a504ab062"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>buildCommand</b> (std::string_view command, uint16_t objectId, std::initializer_list&lt; std::string_view &gt; options)</td></tr>
+<tr class="separator:a17e5ef190c2d2581db8b430a504ab062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a880ac4dcabf3f65035ea5572f5a94b2e"><td class="memItemLeft" align="right" valign="top"><a id="a880ac4dcabf3f65035ea5572f5a94b2e" name="a880ac4dcabf3f65035ea5572f5a94b2e"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>queryObjects</b> (uint16_t objectId, std::initializer_list&lt; std::string_view &gt; options={})</td></tr>
+<tr class="separator:a880ac4dcabf3f65035ea5572f5a94b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d1900d217f407337b9b8788e9627787"><td class="memItemLeft" align="right" valign="top"><a id="a8d1900d217f407337b9b8788e9627787" name="a8d1900d217f407337b9b8788e9627787"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (uint16_t objectId, std::initializer_list&lt; std::string_view &gt; options)</td></tr>
+<tr class="separator:a8d1900d217f407337b9b8788e9627787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a309673ff52551513606852a3fb9b4edf"><td class="memTemplParams" colspan="2"><a id="a309673ff52551513606852a3fb9b4edf" name="a309673ff52551513606852a3fb9b4edf"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a309673ff52551513606852a3fb9b4edf"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>set</b> (uint16_t objectId, std::string_view option, T value)</td></tr>
+<tr class="separator:a309673ff52551513606852a3fb9b4edf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c6a745bb50ada6ac99a792b8f57ae71"><td class="memTemplParams" colspan="2"><a id="a5c6a745bb50ada6ac99a792b8f57ae71" name="a5c6a745bb50ada6ac99a792b8f57ae71"></a>
+template&lt;class T1 , class T2 &gt; </td></tr>
+<tr class="memitem:a5c6a745bb50ada6ac99a792b8f57ae71"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>set</b> (uint16_t objectId, std::string_view option, T1 value1, T2 value2)</td></tr>
+<tr class="separator:a5c6a745bb50ada6ac99a792b8f57ae71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac322c24917522467b871609adc5e0f06"><td class="memItemLeft" align="right" valign="top"><a id="ac322c24917522467b871609adc5e0f06" name="ac322c24917522467b871609adc5e0f06"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (uint16_t objectId, std::initializer_list&lt; std::string_view &gt; options)</td></tr>
+<tr class="separator:ac322c24917522467b871609adc5e0f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba57c52db460f257cd2edd5137daea6a"><td class="memTemplParams" colspan="2"><a id="aba57c52db460f257cd2edd5137daea6a" name="aba57c52db460f257cd2edd5137daea6a"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:aba57c52db460f257cd2edd5137daea6a"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>get</b> (uint16_t objectId, std::string_view option, T value)</td></tr>
+<tr class="separator:aba57c52db460f257cd2edd5137daea6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d62c4c7f4a0ae216f39fbe25b54f23f"><td class="memItemLeft" align="right" valign="top"><a id="a3d62c4c7f4a0ae216f39fbe25b54f23f" name="a3d62c4c7f4a0ae216f39fbe25b54f23f"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> (uint16_t objectId, std::initializer_list&lt; std::string_view &gt; options)</td></tr>
+<tr class="separator:a3d62c4c7f4a0ae216f39fbe25b54f23f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad18e1d7308528ad5cf4e632a411fc69c"><td class="memItemLeft" align="right" valign="top"><a id="ad18e1d7308528ad5cf4e632a411fc69c" name="ad18e1d7308528ad5cf4e632a411fc69c"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>delete_</b> (uint16_t objectId, std::initializer_list&lt; std::string_view &gt; options)</td></tr>
+<tr class="separator:ad18e1d7308528ad5cf4e632a411fc69c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68875d78a94165740d0dd9fb8f023e1f"><td class="memItemLeft" align="right" valign="top"><a id="a68875d78a94165740d0dd9fb8f023e1f" name="a68875d78a94165740d0dd9fb8f023e1f"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>request</b> (uint16_t objectId, std::initializer_list&lt; std::string_view &gt; options)</td></tr>
+<tr class="separator:a68875d78a94165740d0dd9fb8f023e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6865bd6fd05aee4b6598f8c7c3a89590"><td class="memItemLeft" align="right" valign="top"><a id="a6865bd6fd05aee4b6598f8c7c3a89590" name="a6865bd6fd05aee4b6598f8c7c3a89590"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>release</b> (uint16_t objectId, std::initializer_list&lt; std::string_view &gt; options)</td></tr>
+<tr class="separator:a6865bd6fd05aee4b6598f8c7c3a89590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae154bcbb0cc804c2857143e7715a525e"><td class="memItemLeft" align="right" valign="top"><a id="ae154bcbb0cc804c2857143e7715a525e" name="ae154bcbb0cc804c2857143e7715a525e"></a>
+constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>isS88FeedbackId</b> (uint16_t id)</td></tr>
+<tr class="separator:ae154bcbb0cc804c2857143e7715a525e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf3c1f618f08bc16cb600e154446b98e"><td class="memItemLeft" align="right" valign="top"><a id="acf3c1f618f08bc16cb600e154446b98e" name="acf3c1f618f08bc16cb600e154446b98e"></a>
+constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>fromString</b> (std::string_view text, ECoS::Model &amp;model)</td></tr>
+<tr class="separator:acf3c1f618f08bc16cb600e154446b98e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57aeb8ee8214713cba379a3bad1ce3db"><td class="memItemLeft" align="right" valign="top"><a id="a57aeb8ee8214713cba379a3bad1ce3db" name="a57aeb8ee8214713cba379a3bad1ce3db"></a>
+constexpr std::string_view&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> (ECoS::Model value)</td></tr>
+<tr class="separator:a57aeb8ee8214713cba379a3bad1ce3db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a100ad0fbfa24f9ec01eff24e36f367ca"><td class="memItemLeft" align="right" valign="top"><a id="a100ad0fbfa24f9ec01eff24e36f367ca" name="a100ad0fbfa24f9ec01eff24e36f367ca"></a>
+constexpr std::string_view&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> (LocomotiveProtocol protocol)</td></tr>
+<tr class="separator:a100ad0fbfa24f9ec01eff24e36f367ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87b25d82f131285bb611f89e146fafc0"><td class="memItemLeft" align="right" valign="top"><a id="a87b25d82f131285bb611f89e146fafc0" name="a87b25d82f131285bb611f89e146fafc0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>fromString</b> (std::string_view text, LocomotiveProtocol &amp;protocol)</td></tr>
+<tr class="separator:a87b25d82f131285bb611f89e146fafc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fb709a73ebc1b0af4aa9a9462b60583"><td class="memItemLeft" align="right" valign="top"><a id="a4fb709a73ebc1b0af4aa9a9462b60583" name="a4fb709a73ebc1b0af4aa9a9462b60583"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> (const Switch::AddrExt &amp;values)</td></tr>
+<tr class="separator:a4fb709a73ebc1b0af4aa9a9462b60583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8803026355de0e7acfcbd4a7bd46383"><td class="memItemLeft" align="right" valign="top"><a id="ab8803026355de0e7acfcbd4a7bd46383" name="ab8803026355de0e7acfcbd4a7bd46383"></a>
+constexpr std::string_view&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> (Switch::Mode value)</td></tr>
+<tr class="separator:ab8803026355de0e7acfcbd4a7bd46383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5877d523926eddfea960f99715490a57"><td class="memItemLeft" align="right" valign="top"><a id="a5877d523926eddfea960f99715490a57" name="a5877d523926eddfea960f99715490a57"></a>
+constexpr std::string_view&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> (SwitchProtocol value)</td></tr>
+<tr class="separator:a5877d523926eddfea960f99715490a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56d60a5df74332cb3e1347680a8dbfaf"><td class="memItemLeft" align="right" valign="top"><a id="a56d60a5df74332cb3e1347680a8dbfaf" name="a56d60a5df74332cb3e1347680a8dbfaf"></a>
+constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>fromString</b> (std::string_view text, SwitchProtocol &amp;protocol)</td></tr>
+<tr class="separator:a56d60a5df74332cb3e1347680a8dbfaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p ><a class="el" href="ecosinterface_8hpp_source.html">server/src/hardware/interface/ecosinterface.hpp</a></p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021-2025 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p ><a class="el" href="ecos_2config_8hpp_source.html">server/src/hardware/protocol/ecos/config.hpp</a></p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p ><a class="el" href="ecos_2iohandler_2iohandler_8hpp_source.html">server/src/hardware/protocol/ecos/iohandler/iohandler.hpp</a></p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021-2022 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p >server/src/hardware/protocol/ecos/iohandler/simulationiohandler.cpp</p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2022,2024 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p ><a class="el" href="ecos_2iohandler_2simulationiohandler_8hpp_source.html">server/src/hardware/protocol/ecos/iohandler/simulationiohandler.hpp</a></p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2022,2024 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p >server/src/hardware/protocol/ecos/iohandler/serialiohandler.cpp</p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021-2024 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p >server/src/hardware/protocol/ecos/iohandler/serialiohandler.hpp</p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021-2022,2024 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p >server/src/hardware/protocol/ecos/messages.cpp</p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021-2022,2024 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p ><a class="el" href="ecos_2messages_8hpp_source.html">server/src/hardware/protocol/ecos/messages.hpp</a></p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021-2022,2024 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p >server/src/hardware/protocol/ecos/object/ecos.cpp</p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021-2022,2024 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p ><a class="el" href="ecos_8hpp_source.html">server/src/hardware/protocol/ecos/object/ecos.hpp</a></p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021-2022,2024 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p >server/src/hardware/protocol/ecos/object/feedback.cpp</p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021-2022 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p ><a class="el" href="feedback_8hpp_source.html">server/src/hardware/protocol/ecos/object/feedback.hpp</a></p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021-2022 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p >server/src/hardware/protocol/ecos/object/feedbackmanager.cpp</p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021-2022 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p ><a class="el" href="feedbackmanager_8hpp_source.html">server/src/hardware/protocol/ecos/object/feedbackmanager.hpp</a></p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p >server/src/hardware/protocol/ecos/object/locomotive.cpp</p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021-2022 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p ><a class="el" href="hardware_2protocol_2ecos_2object_2locomotive_8hpp_source.html">server/src/hardware/protocol/ecos/object/locomotive.hpp</a></p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021-2022 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p >server/src/hardware/protocol/ecos/object/locomotivemanager.cpp</p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p ><a class="el" href="locomotivemanager_8hpp_source.html">server/src/hardware/protocol/ecos/object/locomotivemanager.hpp</a></p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p ><a class="el" href="locomotiveprotocol_8hpp_source.html">server/src/hardware/protocol/ecos/object/locomotiveprotocol.hpp</a></p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2022 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p >server/src/hardware/protocol/ecos/object/object.cpp</p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021-2022,2024 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p ><a class="el" href="hardware_2protocol_2ecos_2object_2object_8hpp_source.html">server/src/hardware/protocol/ecos/object/object.hpp</a></p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021-2022,2024 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p >server/src/hardware/protocol/ecos/object/switch.cpp</p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021-2022,2024 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p >server/src/hardware/protocol/ecos/object/switchmanager.cpp</p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021-2022,2024 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p ><a class="el" href="switchmanager_8hpp_source.html">server/src/hardware/protocol/ecos/object/switchmanager.hpp</a></p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021-2022,2024 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p ><a class="el" href="switchprotocol_8hpp_source.html">server/src/hardware/protocol/ecos/object/switchprotocol.hpp</a></p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2022 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p >server/src/hardware/protocol/ecos/settings.cpp</p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p ><a class="el" href="hardware_2protocol_2ecos_2settings_8hpp_source.html">server/src/hardware/protocol/ecos/settings.hpp</a></p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2021 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+<p ><a class="el" href="simulation_8hpp_source.html">server/src/hardware/protocol/ecos/simulation.hpp</a></p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2022,2024 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

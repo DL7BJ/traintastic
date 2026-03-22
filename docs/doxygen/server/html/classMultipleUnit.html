@@ -1,0 +1,487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>traintastic-server: MultipleUnit Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+   DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="appicon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">traintastic-server
+   &#160;<span id="projectnumber">0.4.0</span>
+   </div>
+   <div id="projectbrief">Traintastic server</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classMultipleUnit-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">MultipleUnit Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="multipleunit_8hpp_source.html">multipleunit.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for MultipleUnit:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMultipleUnit__inherit__graph.png" border="0" usemap="#aMultipleUnit_inherit__map" alt="Inheritance graph"/></div>
+<map name="aMultipleUnit_inherit__map" id="aMultipleUnit_inherit__map">
+<area shape="rect" title=" " alt="" coords="33,468,123,495"/>
+<area shape="rect" href="classPoweredRailVehicle.html" title=" " alt="" coords="9,393,147,420"/>
+<area shape="rect" href="classRailVehicle.html" title=" " alt="" coords="34,319,122,345"/>
+<area shape="rect" href="classVehicle.html" title=" " alt="" coords="45,244,111,271"/>
+<area shape="rect" href="classIdObject.html" title=" " alt="" coords="43,169,113,196"/>
+<area shape="rect" href="classObject.html" title=" " alt="" coords="48,95,108,121"/>
+<area shape="rect" title=" " alt="" coords="5,5,151,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for MultipleUnit:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMultipleUnit__coll__graph.png" border="0" usemap="#aMultipleUnit_coll__map" alt="Collaboration graph"/></div>
+<map name="aMultipleUnit_coll__map" id="aMultipleUnit_coll__map">
+<area shape="rect" title=" " alt="" coords="2533,301,2624,327"/>
+<area shape="rect" href="classPoweredRailVehicle.html" title=" " alt="" coords="2345,301,2484,327"/>
+<area shape="rect" href="classRailVehicle.html" title=" " alt="" coords="2208,338,2296,365"/>
+<area shape="rect" href="classVehicle.html" title=" " alt="" coords="1903,363,1969,390"/>
+<area shape="rect" href="classIdObject.html" title=" " alt="" coords="1559,361,1630,387"/>
+<area shape="rect" href="classObject.html" title=" " alt="" coords="873,407,933,434"/>
+<area shape="rect" href="classWorld.html" title=" " alt="" coords="1257,966,1312,993"/>
+<area shape="rect" title=" " alt="" coords="389,384,535,425"/>
+<area shape="rect" href="classInterfaceItems.html" title=" " alt="" coords="409,450,515,477"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="826,231,979,258"/>
+<area shape="rect" href="classAbstractProperty.html" title=" " alt="" coords="175,333,295,359"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="589,283,750,310"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="603,339,736,366"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="843,2019,962,2046"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="584,493,755,535"/>
+<area shape="rect" href="classProperty.html" title=" " alt="" coords="599,546,740,573"/>
+<area shape="rect" href="classAbstractObjectProperty.html" title=" " alt="" coords="383,1170,541,1197"/>
+<area shape="rect" href="classAbstractUnitProperty.html" title=" " alt="" coords="1523,149,1667,175"/>
+<area shape="rect" href="classBaseProperty.html" title=" " alt="" coords="5,309,107,335"/>
+<area shape="rect" href="classAbstractVectorProperty.html" title=" " alt="" coords="156,199,315,226"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="811,1384,995,1425"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="814,1449,991,1491"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="814,1515,991,1556"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="798,1580,1007,1621"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="779,1645,1027,1687"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="813,1711,992,1752"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="817,1776,989,1817"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="801,583,1004,610"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="811,634,994,661"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="806,685,999,711"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="805,736,1000,777"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="803,802,1002,829"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="809,853,997,879"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="811,903,994,930"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="819,954,986,981"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="820,1005,985,1047"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="811,1071,994,1098"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="809,1123,996,1164"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="831,1188,974,1229"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="814,1253,991,1295"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="819,1319,987,1360"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="1051,1743,1233,1770"/>
+<area shape="rect" href="classObjectProperty.html" title=" " alt="" coords="1336,1931,1499,1958"/>
+<area shape="rect" href="classMethod.html" title=" " alt="" coords="844,1842,961,1869"/>
+<area shape="rect" href="classUnitProperty.html" title=" " alt="" coords="1861,297,2011,339"/>
+<area shape="rect" href="classUnitProperty.html" title=" " alt="" coords="1861,167,2011,208"/>
+<area shape="rect" href="classUnitProperty.html" title=" " alt="" coords="1861,232,2011,273"/>
+<area shape="rect" href="classUnitProperty.html" title=" " alt="" coords="2035,5,2184,47"/>
+<area shape="rect" href="classObjectVectorProperty.html" title=" " alt="" coords="1691,56,1837,97"/>
+<area shape="rect" href="classAbstractObjectVectorProperty.html" title=" " alt="" coords="364,77,560,103"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ad5110b64558644d9d33a4fadb6570db4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMultipleUnit.html#ad5110b64558644d9d33a4fadb6570db4">MultipleUnit</a> (<a class="el" href="classWorld.html">World</a> &amp;world, std::string_view _id)</td></tr>
+<tr class="separator:ad5110b64558644d9d33a4fadb6570db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classPoweredRailVehicle"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classPoweredRailVehicle')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classPoweredRailVehicle.html">PoweredRailVehicle</a></td></tr>
+<tr class="memitem:ad3a970056d207541093a621434dab8d2 inherit pub_methods_classPoweredRailVehicle"><td class="memItemLeft" align="right" valign="top"><a id="ad3a970056d207541093a621434dab8d2" name="ad3a970056d207541093a621434dab8d2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setDirection</b> (Direction value)</td></tr>
+<tr class="separator:ad3a970056d207541093a621434dab8d2 inherit pub_methods_classPoweredRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad378a23fdc338596652dc7962dbca68d inherit pub_methods_classPoweredRailVehicle"><td class="memItemLeft" align="right" valign="top"><a id="ad378a23fdc338596652dc7962dbca68d" name="ad378a23fdc338596652dc7962dbca68d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setEmergencyStop</b> (bool value)</td></tr>
+<tr class="separator:ad378a23fdc338596652dc7962dbca68d inherit pub_methods_classPoweredRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a61286317db73f038ef51b79e242497 inherit pub_methods_classPoweredRailVehicle"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPoweredRailVehicle.html#a0a61286317db73f038ef51b79e242497">setSpeed</a> (double kmph)</td></tr>
+<tr class="separator:a0a61286317db73f038ef51b79e242497 inherit pub_methods_classPoweredRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classRailVehicle"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classRailVehicle')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classRailVehicle.html">RailVehicle</a></td></tr>
+<tr class="memitem:a023cf098e60c8abb18b07facf493c013 inherit pub_methods_classRailVehicle"><td class="memItemLeft" align="right" valign="top"><a id="a023cf098e60c8abb18b07facf493c013" name="a023cf098e60c8abb18b07facf493c013"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setActiveTrain</b> (const std::shared_ptr&lt; <a class="el" href="classTrain.html">Train</a> &gt; &amp;train)</td></tr>
+<tr class="separator:a023cf098e60c8abb18b07facf493c013 inherit pub_methods_classRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9c864765875a179c08420761809be54 inherit pub_methods_classRailVehicle"><td class="memItemLeft" align="right" valign="top"><a id="aa9c864765875a179c08420761809be54" name="aa9c864765875a179c08420761809be54"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateMute</b> ()</td></tr>
+<tr class="separator:aa9c864765875a179c08420761809be54 inherit pub_methods_classRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31b2080b72e641cb3b866d06ad2604a0 inherit pub_methods_classRailVehicle"><td class="memItemLeft" align="right" valign="top"><a id="a31b2080b72e641cb3b866d06ad2604a0" name="a31b2080b72e641cb3b866d06ad2604a0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateNoSmoke</b> ()</td></tr>
+<tr class="separator:a31b2080b72e641cb3b866d06ad2604a0 inherit pub_methods_classRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classIdObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classIdObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIdObject.html">IdObject</a></td></tr>
+<tr class="memitem:a1253b43179abce710c0e161360326668 inherit pub_methods_classIdObject"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdObject.html#a1253b43179abce710c0e161360326668">getObjectId</a> () const final</td></tr>
+<tr class="separator:a1253b43179abce710c0e161360326668 inherit pub_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dea002a7738a6d48a51a6039f603fef inherit pub_methods_classIdObject"><td class="memItemLeft" align="right" valign="top"><a id="a3dea002a7738a6d48a51a6039f603fef" name="a3dea002a7738a6d48a51a6039f603fef"></a>
+<a class="el" href="classWorld.html">World</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>world</b> () const</td></tr>
+<tr class="separator:a3dea002a7738a6d48a51a6039f603fef inherit pub_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classObject.html">Object</a></td></tr>
+<tr class="memitem:aa20df9b729a0fa3161fbaf981d7cac95 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="aa20df9b729a0fa3161fbaf981d7cac95" name="aa20df9b729a0fa3161fbaf981d7cac95"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Object</b> (const <a class="el" href="classObject.html">Object</a> &amp;)=delete</td></tr>
+<tr class="separator:aa20df9b729a0fa3161fbaf981d7cac95 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a952b21b70315bbd70333893926c5ca16 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a952b21b70315bbd70333893926c5ca16" name="a952b21b70315bbd70333893926c5ca16"></a>
+<a class="el" href="classObject.html">Object</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classObject.html">Object</a> &amp;)=delete</td></tr>
+<tr class="separator:a952b21b70315bbd70333893926c5ca16 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40860402e64d8008fb42329df7097cdb inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#a40860402e64d8008fb42329df7097cdb">Object</a> ()</td></tr>
+<tr class="separator:a40860402e64d8008fb42329df7097cdb inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90493040af1919e08f538bf52b883aef inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a90493040af1919e08f538bf52b883aef" name="a90493040af1919e08f538bf52b883aef"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>dying</b> () const noexcept</td></tr>
+<tr class="separator:a90493040af1919e08f538bf52b883aef inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad14022400495b1f902037890e7a1cba8 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ad14022400495b1f902037890e7a1cba8" name="ad14022400495b1f902037890e7a1cba8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>destroy</b> ()</td></tr>
+<tr class="separator:ad14022400495b1f902037890e7a1cba8 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab62c4c263556c2dc80bdf81db211fcc inherit pub_methods_classObject"><td class="memTemplParams" colspan="2"><a id="aab62c4c263556c2dc80bdf81db211fcc" name="aab62c4c263556c2dc80bdf81db211fcc"></a>
+template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:aab62c4c263556c2dc80bdf81db211fcc inherit pub_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; const Derived &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>shared_ptr_c</b> () const</td></tr>
+<tr class="separator:aab62c4c263556c2dc80bdf81db211fcc inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac04d5b796164be33b6174139a7e2f97d inherit pub_methods_classObject"><td class="memTemplParams" colspan="2"><a id="ac04d5b796164be33b6174139a7e2f97d" name="ac04d5b796164be33b6174139a7e2f97d"></a>
+template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:ac04d5b796164be33b6174139a7e2f97d inherit pub_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; Derived &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>shared_ptr</b> ()</td></tr>
+<tr class="separator:ac04d5b796164be33b6174139a7e2f97d inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2336fc7090e2878b6c38edbd525cebe4 inherit pub_methods_classObject"><td class="memTemplParams" colspan="2"><a id="a2336fc7090e2878b6c38edbd525cebe4" name="a2336fc7090e2878b6c38edbd525cebe4"></a>
+template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a2336fc7090e2878b6c38edbd525cebe4 inherit pub_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">std::weak_ptr&lt; const Derived &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>weak_ptr_c</b> () const</td></tr>
+<tr class="separator:a2336fc7090e2878b6c38edbd525cebe4 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a33ab1c091e52d9233cf4e65ecbb196 inherit pub_methods_classObject"><td class="memTemplParams" colspan="2"><a id="a5a33ab1c091e52d9233cf4e65ecbb196" name="a5a33ab1c091e52d9233cf4e65ecbb196"></a>
+template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a5a33ab1c091e52d9233cf4e65ecbb196 inherit pub_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">std::weak_ptr&lt; Derived &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>weak_ptr</b> ()</td></tr>
+<tr class="separator:a5a33ab1c091e52d9233cf4e65ecbb196 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f20160832d59c707e5dc7387e43ae86 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a4f20160832d59c707e5dc7387e43ae86" name="a4f20160832d59c707e5dc7387e43ae86"></a>
+virtual std::string_view&#160;</td><td class="memItemRight" valign="bottom"><b>getClassId</b> () const =0</td></tr>
+<tr class="separator:a4f20160832d59c707e5dc7387e43ae86 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6178706791d8f4fcabff6080b4ba178b inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#a6178706791d8f4fcabff6080b4ba178b">getObjectId</a> () const =0</td></tr>
+<tr class="separator:a6178706791d8f4fcabff6080b4ba178b inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8199cd3d4bc06a0897285adb069f309e inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a8199cd3d4bc06a0897285adb069f309e" name="a8199cd3d4bc06a0897285adb069f309e"></a>
+const <a class="el" href="classInterfaceItems.html">InterfaceItems</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>interfaceItems</b> () const</td></tr>
+<tr class="separator:a8199cd3d4bc06a0897285adb069f309e inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97d0dbec9f02e145c2959fc1e065478d inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a97d0dbec9f02e145c2959fc1e065478d" name="a97d0dbec9f02e145c2959fc1e065478d"></a>
+const <a class="el" href="classInterfaceItem.html">InterfaceItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getItem</b> (std::string_view name) const</td></tr>
+<tr class="separator:a97d0dbec9f02e145c2959fc1e065478d inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1926034094df8357fe77409b11a81a0e inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a1926034094df8357fe77409b11a81a0e" name="a1926034094df8357fe77409b11a81a0e"></a>
+<a class="el" href="classInterfaceItem.html">InterfaceItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getItem</b> (std::string_view name)</td></tr>
+<tr class="separator:a1926034094df8357fe77409b11a81a0e inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7b2e432e8fe145196964ef3f838f0ee inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ab7b2e432e8fe145196964ef3f838f0ee" name="ab7b2e432e8fe145196964ef3f838f0ee"></a>
+const <a class="el" href="classAbstractMethod.html">AbstractMethod</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getMethod</b> (std::string_view name) const</td></tr>
+<tr class="separator:ab7b2e432e8fe145196964ef3f838f0ee inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81cedc74e10d4f4ccab13d1f34da1897 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a81cedc74e10d4f4ccab13d1f34da1897" name="a81cedc74e10d4f4ccab13d1f34da1897"></a>
+<a class="el" href="classAbstractMethod.html">AbstractMethod</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getMethod</b> (std::string_view name)</td></tr>
+<tr class="separator:a81cedc74e10d4f4ccab13d1f34da1897 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcbe5e085a3d833e7257653f68731377 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="abcbe5e085a3d833e7257653f68731377" name="abcbe5e085a3d833e7257653f68731377"></a>
+const <a class="el" href="classAbstractProperty.html">AbstractProperty</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getProperty</b> (std::string_view name) const</td></tr>
+<tr class="separator:abcbe5e085a3d833e7257653f68731377 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5cd29094e823a1df0b02d208af08240 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ac5cd29094e823a1df0b02d208af08240" name="ac5cd29094e823a1df0b02d208af08240"></a>
+<a class="el" href="classAbstractProperty.html">AbstractProperty</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getProperty</b> (std::string_view name)</td></tr>
+<tr class="separator:ac5cd29094e823a1df0b02d208af08240 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12c077de81de1b6868c826f70a004df4 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a12c077de81de1b6868c826f70a004df4" name="a12c077de81de1b6868c826f70a004df4"></a>
+const <a class="el" href="classAbstractObjectProperty.html">AbstractObjectProperty</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getObjectProperty</b> (std::string_view name) const</td></tr>
+<tr class="separator:a12c077de81de1b6868c826f70a004df4 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70ad6b5a0b93e7815df3e6461347fb85 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a70ad6b5a0b93e7815df3e6461347fb85" name="a70ad6b5a0b93e7815df3e6461347fb85"></a>
+<a class="el" href="classAbstractObjectProperty.html">AbstractObjectProperty</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getObjectProperty</b> (std::string_view name)</td></tr>
+<tr class="separator:a70ad6b5a0b93e7815df3e6461347fb85 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae47b594f5b5558924b40d2efb1eea78d inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ae47b594f5b5558924b40d2efb1eea78d" name="ae47b594f5b5558924b40d2efb1eea78d"></a>
+const <a class="el" href="classAbstractVectorProperty.html">AbstractVectorProperty</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getVectorProperty</b> (std::string_view name) const</td></tr>
+<tr class="separator:ae47b594f5b5558924b40d2efb1eea78d inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae01a900d2016e93aa456cdf55b28d67f inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ae01a900d2016e93aa456cdf55b28d67f" name="ae01a900d2016e93aa456cdf55b28d67f"></a>
+<a class="el" href="classAbstractVectorProperty.html">AbstractVectorProperty</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getVectorProperty</b> (std::string_view name)</td></tr>
+<tr class="separator:ae01a900d2016e93aa456cdf55b28d67f inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8d451bb98529ead13601394ef2fecfa inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ae8d451bb98529ead13601394ef2fecfa" name="ae8d451bb98529ead13601394ef2fecfa"></a>
+const <a class="el" href="classAbstractEvent.html">AbstractEvent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getEvent</b> (std::string_view name) const</td></tr>
+<tr class="separator:ae8d451bb98529ead13601394ef2fecfa inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7f336c0280a62e4a60783a5ab9ebe81 inherit pub_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ac7f336c0280a62e4a60783a5ab9ebe81" name="ac7f336c0280a62e4a60783a5ab9ebe81"></a>
+<a class="el" href="classAbstractEvent.html">AbstractEvent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getEvent</b> (std::string_view name)</td></tr>
+<tr class="separator:ac7f336c0280a62e4a60783a5ab9ebe81 inherit pub_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_attribs_classPoweredRailVehicle"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classPoweredRailVehicle')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classPoweredRailVehicle.html">PoweredRailVehicle</a></td></tr>
+<tr class="memitem:ae78b0040d8722dd1a5d62b6d8080176f inherit pub_attribs_classPoweredRailVehicle"><td class="memItemLeft" align="right" valign="top"><a id="ae78b0040d8722dd1a5d62b6d8080176f" name="ae78b0040d8722dd1a5d62b6d8080176f"></a>
+<a class="el" href="classUnitProperty.html">PowerProperty</a>&#160;</td><td class="memItemRight" valign="bottom"><b>power</b></td></tr>
+<tr class="separator:ae78b0040d8722dd1a5d62b6d8080176f inherit pub_attribs_classPoweredRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classRailVehicle"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classRailVehicle')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classRailVehicle.html">RailVehicle</a></td></tr>
+<tr class="memitem:abcdd296ac0588796683687c2633e170f inherit pub_attribs_classRailVehicle"><td class="memItemLeft" align="right" valign="top"><a id="abcdd296ac0588796683687c2633e170f" name="abcdd296ac0588796683687c2633e170f"></a>
+<a class="el" href="classObjectProperty.html">ObjectProperty</a>&lt; <a class="el" href="classDecoder.html">Decoder</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>decoder</b></td></tr>
+<tr class="separator:abcdd296ac0588796683687c2633e170f inherit pub_attribs_classRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad7f7c857de42f38eb64bd1bdcdfe6ab inherit pub_attribs_classRailVehicle"><td class="memItemLeft" align="right" valign="top"><a id="aad7f7c857de42f38eb64bd1bdcdfe6ab" name="aad7f7c857de42f38eb64bd1bdcdfe6ab"></a>
+<a class="el" href="classUnitProperty.html">LengthProperty</a>&#160;</td><td class="memItemRight" valign="bottom"><b>length</b></td></tr>
+<tr class="separator:aad7f7c857de42f38eb64bd1bdcdfe6ab inherit pub_attribs_classRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1fbae29630e1b5594eb93d19c28431d inherit pub_attribs_classRailVehicle"><td class="memItemLeft" align="right" valign="top"><a id="af1fbae29630e1b5594eb93d19c28431d" name="af1fbae29630e1b5594eb93d19c28431d"></a>
+<a class="el" href="classUnitProperty.html">SpeedProperty</a>&#160;</td><td class="memItemRight" valign="bottom"><b>speedMax</b></td></tr>
+<tr class="separator:af1fbae29630e1b5594eb93d19c28431d inherit pub_attribs_classRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a897cb89919fa7197ed6fea3de5349f92 inherit pub_attribs_classRailVehicle"><td class="memItemLeft" align="right" valign="top"><a id="a897cb89919fa7197ed6fea3de5349f92" name="a897cb89919fa7197ed6fea3de5349f92"></a>
+<a class="el" href="classUnitProperty.html">WeightProperty</a>&#160;</td><td class="memItemRight" valign="bottom"><b>weight</b></td></tr>
+<tr class="separator:a897cb89919fa7197ed6fea3de5349f92 inherit pub_attribs_classRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1320e33183d301bf589214bccd5cfbc inherit pub_attribs_classRailVehicle"><td class="memItemLeft" align="right" valign="top"><a id="af1320e33183d301bf589214bccd5cfbc" name="af1320e33183d301bf589214bccd5cfbc"></a>
+<a class="el" href="classUnitProperty.html">WeightProperty</a>&#160;</td><td class="memItemRight" valign="bottom"><b>totalWeight</b></td></tr>
+<tr class="separator:af1320e33183d301bf589214bccd5cfbc inherit pub_attribs_classRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76f9adbfa72c6436e413c4e3bb9e5e68 inherit pub_attribs_classRailVehicle"><td class="memItemLeft" align="right" valign="top"><a id="a76f9adbfa72c6436e413c4e3bb9e5e68" name="a76f9adbfa72c6436e413c4e3bb9e5e68"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mute</b></td></tr>
+<tr class="separator:a76f9adbfa72c6436e413c4e3bb9e5e68 inherit pub_attribs_classRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab09b5eb6ea96d4c0bbe21d91e5bdbaea inherit pub_attribs_classRailVehicle"><td class="memItemLeft" align="right" valign="top"><a id="ab09b5eb6ea96d4c0bbe21d91e5bdbaea" name="ab09b5eb6ea96d4c0bbe21d91e5bdbaea"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>noSmoke</b></td></tr>
+<tr class="separator:ab09b5eb6ea96d4c0bbe21d91e5bdbaea inherit pub_attribs_classRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35368e12fb7c80d1c1fa7812e7cbe729 inherit pub_attribs_classRailVehicle"><td class="memItemLeft" align="right" valign="top"><a id="a35368e12fb7c80d1c1fa7812e7cbe729" name="a35368e12fb7c80d1c1fa7812e7cbe729"></a>
+<a class="el" href="classObjectProperty.html">ObjectProperty</a>&lt; <a class="el" href="classTrain.html">Train</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>activeTrain</b></td></tr>
+<tr class="separator:a35368e12fb7c80d1c1fa7812e7cbe729 inherit pub_attribs_classRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a07ef94cdfadf5d5df38ce56ba952c7 inherit pub_attribs_classRailVehicle"><td class="memItemLeft" align="right" valign="top"><a id="a4a07ef94cdfadf5d5df38ce56ba952c7" name="a4a07ef94cdfadf5d5df38ce56ba952c7"></a>
+<a class="el" href="classObjectVectorProperty.html">ObjectVectorProperty</a>&lt; <a class="el" href="classTrain.html">Train</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>trains</b></td></tr>
+<tr class="separator:a4a07ef94cdfadf5d5df38ce56ba952c7 inherit pub_attribs_classRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f633fc38d842a4caf758f18143ac1df inherit pub_attribs_classRailVehicle"><td class="memItemLeft" align="right" valign="top"><a id="a8f633fc38d842a4caf758f18143ac1df" name="a8f633fc38d842a4caf758f18143ac1df"></a>
+<a class="el" href="classMethod.html">Method</a>&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>createDecoder</b></td></tr>
+<tr class="separator:a8f633fc38d842a4caf758f18143ac1df inherit pub_attribs_classRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23174aac6da94774ff8a6d9eb6e42001 inherit pub_attribs_classRailVehicle"><td class="memItemLeft" align="right" valign="top"><a id="a23174aac6da94774ff8a6d9eb6e42001" name="a23174aac6da94774ff8a6d9eb6e42001"></a>
+<a class="el" href="classMethod.html">Method</a>&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>deleteDecoder</b></td></tr>
+<tr class="separator:a23174aac6da94774ff8a6d9eb6e42001 inherit pub_attribs_classRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classVehicle"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classVehicle')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classVehicle.html">Vehicle</a></td></tr>
+<tr class="memitem:ac40fcf6115996bcbca6621a947c27d25 inherit pub_attribs_classVehicle"><td class="memItemLeft" align="right" valign="top"><a id="ac40fcf6115996bcbca6621a947c27d25" name="ac40fcf6115996bcbca6621a947c27d25"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="separator:ac40fcf6115996bcbca6621a947c27d25 inherit pub_attribs_classVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a5ee78256387b4ac4b451bb0ccb801d inherit pub_attribs_classVehicle"><td class="memItemLeft" align="right" valign="top"><a id="a4a5ee78256387b4ac4b451bb0ccb801d" name="a4a5ee78256387b4ac4b451bb0ccb801d"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>notes</b></td></tr>
+<tr class="separator:a4a5ee78256387b4ac4b451bb0ccb801d inherit pub_attribs_classVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classIdObject"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classIdObject')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classIdObject.html">IdObject</a></td></tr>
+<tr class="memitem:a2c795bdbd8f63e1f6160fb02f7ad3259 inherit pub_attribs_classIdObject"><td class="memItemLeft" align="right" valign="top"><a id="a2c795bdbd8f63e1f6160fb02f7ad3259" name="a2c795bdbd8f63e1f6160fb02f7ad3259"></a>
+<a class="el" href="classProperty.html">Property</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
+<tr class="separator:a2c795bdbd8f63e1f6160fb02f7ad3259 inherit pub_attribs_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classObject"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classObject')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classObject.html">Object</a></td></tr>
+<tr class="memitem:a33b8abf3afd896dcdb2df9afa50563f0 inherit pub_attribs_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a33b8abf3afd896dcdb2df9afa50563f0" name="a33b8abf3afd896dcdb2df9afa50563f0"></a>
+boost::signals2::signal&lt; void(<a class="el" href="classObject.html">Object</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>onDestroying</b></td></tr>
+<tr class="separator:a33b8abf3afd896dcdb2df9afa50563f0 inherit pub_attribs_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b43ce3ca5dd9b8bb1fa80899f8fc369 inherit pub_attribs_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a5b43ce3ca5dd9b8bb1fa80899f8fc369" name="a5b43ce3ca5dd9b8bb1fa80899f8fc369"></a>
+boost::signals2::signal&lt; void(<a class="el" href="classBaseProperty.html">BaseProperty</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>propertyChanged</b></td></tr>
+<tr class="separator:a5b43ce3ca5dd9b8bb1fa80899f8fc369 inherit pub_attribs_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9e9926e136edeb9965bd0d19e711141 inherit pub_attribs_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ab9e9926e136edeb9965bd0d19e711141" name="ab9e9926e136edeb9965bd0d19e711141"></a>
+boost::signals2::signal&lt; void(<a class="el" href="classAbstractAttribute.html">AbstractAttribute</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>attributeChanged</b></td></tr>
+<tr class="separator:ab9e9926e136edeb9965bd0d19e711141 inherit pub_attribs_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4777c49ac247cab5e6695e7f9d7a4c04 inherit pub_attribs_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a4777c49ac247cab5e6695e7f9d7a4c04" name="a4777c49ac247cab5e6695e7f9d7a4c04"></a>
+boost::signals2::signal&lt; void(const <a class="el" href="classAbstractEvent.html">AbstractEvent</a> &amp;, const Arguments &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>onEventFired</b></td></tr>
+<tr class="separator:a4777c49ac247cab5e6695e7f9d7a4c04 inherit pub_attribs_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classPoweredRailVehicle"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classPoweredRailVehicle')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classPoweredRailVehicle.html">PoweredRailVehicle</a></td></tr>
+<tr class="memitem:ab2be2c342702c6231b4a595d8bb4c6ec inherit pro_methods_classPoweredRailVehicle"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPoweredRailVehicle.html#ab2be2c342702c6231b4a595d8bb4c6ec">PoweredRailVehicle</a> (<a class="el" href="classWorld.html">World</a> &amp;world, std::string_view id_)</td></tr>
+<tr class="separator:ab2be2c342702c6231b4a595d8bb4c6ec inherit pro_methods_classPoweredRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e3f07f0761124578c47309c8722652 inherit pro_methods_classPoweredRailVehicle"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPoweredRailVehicle.html#a41e3f07f0761124578c47309c8722652">worldEvent</a> (WorldState state, WorldEvent event) override</td></tr>
+<tr class="separator:a41e3f07f0761124578c47309c8722652 inherit pro_methods_classPoweredRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classRailVehicle"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classRailVehicle')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classRailVehicle.html">RailVehicle</a></td></tr>
+<tr class="memitem:a35da825d88516aab1b566edb3099695e inherit pro_methods_classRailVehicle"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRailVehicle.html#a35da825d88516aab1b566edb3099695e">RailVehicle</a> (<a class="el" href="classWorld.html">World</a> &amp;world, std::string_view _id)</td></tr>
+<tr class="separator:a35da825d88516aab1b566edb3099695e inherit pro_methods_classRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed2d2dc25ca75d5ba5241033c9562c48 inherit pro_methods_classRailVehicle"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRailVehicle.html#aed2d2dc25ca75d5ba5241033c9562c48">addToWorld</a> () override</td></tr>
+<tr class="separator:aed2d2dc25ca75d5ba5241033c9562c48 inherit pro_methods_classRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc534eded4d10f188d399fff3c7bddad inherit pro_methods_classRailVehicle"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRailVehicle.html#afc534eded4d10f188d399fff3c7bddad">destroying</a> () override</td></tr>
+<tr class="separator:afc534eded4d10f188d399fff3c7bddad inherit pro_methods_classRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32030798d6cffa1bd6d5df73c5996b59 inherit pro_methods_classRailVehicle"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRailVehicle.html#a32030798d6cffa1bd6d5df73c5996b59">loaded</a> () override</td></tr>
+<tr class="separator:a32030798d6cffa1bd6d5df73c5996b59 inherit pro_methods_classRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdcf78eaaa77ca0861ffcd1b62cafef4 inherit pro_methods_classRailVehicle"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRailVehicle.html#afdcf78eaaa77ca0861ffcd1b62cafef4">worldEvent</a> (WorldState state, WorldEvent event) override</td></tr>
+<tr class="separator:afdcf78eaaa77ca0861ffcd1b62cafef4 inherit pro_methods_classRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a902888bdc3ce70bbe66312d6e48b77d4 inherit pro_methods_classRailVehicle"><td class="memItemLeft" align="right" valign="top"><a id="a902888bdc3ce70bbe66312d6e48b77d4" name="a902888bdc3ce70bbe66312d6e48b77d4"></a>
+virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>calcTotalWeight</b> (WeightUnit unit) const</td></tr>
+<tr class="separator:a902888bdc3ce70bbe66312d6e48b77d4 inherit pro_methods_classRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adee5ecdd8caa5af17f64e64f8ea1166b inherit pro_methods_classRailVehicle"><td class="memItemLeft" align="right" valign="top"><a id="adee5ecdd8caa5af17f64e64f8ea1166b" name="adee5ecdd8caa5af17f64e64f8ea1166b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateTotalWeight</b> ()</td></tr>
+<tr class="separator:adee5ecdd8caa5af17f64e64f8ea1166b inherit pro_methods_classRailVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classVehicle"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classVehicle')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classVehicle.html">Vehicle</a></td></tr>
+<tr class="memitem:a7653da5d927f9c89eac85a69a1857457 inherit pro_methods_classVehicle"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVehicle.html#a7653da5d927f9c89eac85a69a1857457">Vehicle</a> (<a class="el" href="classWorld.html">World</a> &amp;world, std::string_view _id)</td></tr>
+<tr class="separator:a7653da5d927f9c89eac85a69a1857457 inherit pro_methods_classVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33df98de28bd3fa7994c7cf2cbf25f1f inherit pro_methods_classVehicle"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVehicle.html#a33df98de28bd3fa7994c7cf2cbf25f1f">worldEvent</a> (WorldState state, WorldEvent event) override</td></tr>
+<tr class="separator:a33df98de28bd3fa7994c7cf2cbf25f1f inherit pro_methods_classVehicle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classIdObject"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classIdObject')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classIdObject.html">IdObject</a></td></tr>
+<tr class="memitem:ada6b78a8b3de3df01afbf0ca97ac699d inherit pro_methods_classIdObject"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdObject.html#ada6b78a8b3de3df01afbf0ca97ac699d">IdObject</a> (<a class="el" href="classWorld.html">World</a> &amp;world, std::string_view _id)</td></tr>
+<tr class="separator:ada6b78a8b3de3df01afbf0ca97ac699d inherit pro_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a643990339b6071b9116a5e288127b2ab inherit pro_methods_classIdObject"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdObject.html#a643990339b6071b9116a5e288127b2ab">destroying</a> () override</td></tr>
+<tr class="separator:a643990339b6071b9116a5e288127b2ab inherit pro_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5577361eb15bd28c2ffd96f5d80144e inherit pro_methods_classIdObject"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdObject.html#ad5577361eb15bd28c2ffd96f5d80144e">loaded</a> () override</td></tr>
+<tr class="separator:ad5577361eb15bd28c2ffd96f5d80144e inherit pro_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8f83278a908829dcd65c181b9d3f1dc inherit pro_methods_classIdObject"><td class="memItemLeft" align="right" valign="top"><a id="aa8f83278a908829dcd65c181b9d3f1dc" name="aa8f83278a908829dcd65c181b9d3f1dc"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>addToWorld</b> ()</td></tr>
+<tr class="separator:aa8f83278a908829dcd65c181b9d3f1dc inherit pro_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a884f89d0200a8dabea97648f66251fec inherit pro_methods_classIdObject"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdObject.html#a884f89d0200a8dabea97648f66251fec">worldEvent</a> (WorldState state, WorldEvent event) override</td></tr>
+<tr class="separator:a884f89d0200a8dabea97648f66251fec inherit pro_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12c0b898e07dca5593770b895459c40a inherit pro_methods_classIdObject"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdObject.html#a12c0b898e07dca5593770b895459c40a">worldFeaturesChanged</a> (const <a class="el" href="classWorldFeatures.html">WorldFeatures</a> features, WorldFeature changed) override</td></tr>
+<tr class="separator:a12c0b898e07dca5593770b895459c40a inherit pro_methods_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classObject"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classObject')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classObject.html">Object</a></td></tr>
+<tr class="memitem:a5dba71d5b40d393ad6d49b196b394050 inherit pro_methods_classObject"><td class="memTemplParams" colspan="2"><a id="a5dba71d5b40d393ad6d49b196b394050" name="a5dba71d5b40d393ad6d49b196b394050"></a>
+template&lt;class... Args&gt; </td></tr>
+<tr class="memitem:a5dba71d5b40d393ad6d49b196b394050 inherit pro_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>fireEvent</b> (<a class="el" href="classEvent.html">Event</a>&lt; Args... &gt; &amp;event, Args... args)</td></tr>
+<tr class="separator:a5dba71d5b40d393ad6d49b196b394050 inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd7f07ccfe17b954fac1f1adf717aacb inherit pro_methods_classObject"><td class="memTemplParams" colspan="2"><a id="abd7f07ccfe17b954fac1f1adf717aacb" name="abd7f07ccfe17b954fac1f1adf717aacb"></a>
+template&lt;class T , class... Args&gt; </td></tr>
+<tr class="memitem:abd7f07ccfe17b954fac1f1adf717aacb inherit pro_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>fireEvent</b> (<a class="el" href="classEvent.html">Event</a>&lt; const std::shared_ptr&lt; T &gt; &amp;, Args... &gt; &amp;event, const std::shared_ptr&lt; T &gt; &amp;object, Args... args)</td></tr>
+<tr class="separator:abd7f07ccfe17b954fac1f1adf717aacb inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69133e2897f55974527c3b2348df5afa inherit pro_methods_classObject"><td class="memTemplParams" colspan="2"><a id="a69133e2897f55974527c3b2348df5afa" name="a69133e2897f55974527c3b2348df5afa"></a>
+template&lt;class T1 , class T2 , class... Args&gt; </td></tr>
+<tr class="memitem:a69133e2897f55974527c3b2348df5afa inherit pro_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>fireEvent</b> (<a class="el" href="classEvent.html">Event</a>&lt; T1, const std::shared_ptr&lt; T2 &gt; &amp;, Args... &gt; &amp;event, T1 value1, const std::shared_ptr&lt; T2 &gt; &amp;object2, Args... args)</td></tr>
+<tr class="separator:a69133e2897f55974527c3b2348df5afa inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a369fd2fa336ed59cdc57565ef4c61e75 inherit pro_methods_classObject"><td class="memTemplParams" colspan="2"><a id="a369fd2fa336ed59cdc57565ef4c61e75" name="a369fd2fa336ed59cdc57565ef4c61e75"></a>
+template&lt;class T1 , class T2 , class... Args&gt; </td></tr>
+<tr class="memitem:a369fd2fa336ed59cdc57565ef4c61e75 inherit pro_methods_classObject"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>fireEvent</b> (<a class="el" href="classEvent.html">Event</a>&lt; const std::shared_ptr&lt; T1 &gt; &amp;, const std::shared_ptr&lt; T2 &gt; &amp;, Args... &gt; &amp;event, const std::shared_ptr&lt; T1 &gt; &amp;object1, const std::shared_ptr&lt; T2 &gt; &amp;object2, Args... args)</td></tr>
+<tr class="separator:a369fd2fa336ed59cdc57565ef4c61e75 inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f5ffd8b2e4717964dfd2090d7d848ef inherit pro_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a4f5ffd8b2e4717964dfd2090d7d848ef" name="a4f5ffd8b2e4717964dfd2090d7d848ef"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>destroying</b> ()</td></tr>
+<tr class="separator:a4f5ffd8b2e4717964dfd2090d7d848ef inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a771d92b98129f766ecf119540d5293c4 inherit pro_methods_classObject"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#a771d92b98129f766ecf119540d5293c4">load</a> (<a class="el" href="classWorldLoader.html">WorldLoader</a> &amp;loader, const nlohmann::json &amp;data)</td></tr>
+<tr class="separator:a771d92b98129f766ecf119540d5293c4 inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0700c21c9211b01b74174270f23237f inherit pro_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ac0700c21c9211b01b74174270f23237f" name="ac0700c21c9211b01b74174270f23237f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>save</b> (<a class="el" href="classWorldSaver.html">WorldSaver</a> &amp;saver, nlohmann::json &amp;data, nlohmann::json &amp;state) const</td></tr>
+<tr class="separator:ac0700c21c9211b01b74174270f23237f inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a759f928ce30606b3eb732f55899e9b0e inherit pro_methods_classObject"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObject.html#a759f928ce30606b3eb732f55899e9b0e">loaded</a> ()</td></tr>
+<tr class="separator:a759f928ce30606b3eb732f55899e9b0e inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adff01caad3b8e5e6b1f7e57c0bd2c312 inherit pro_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="adff01caad3b8e5e6b1f7e57c0bd2c312" name="adff01caad3b8e5e6b1f7e57c0bd2c312"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>worldEvent</b> (WorldState state, WorldEvent event)</td></tr>
+<tr class="separator:adff01caad3b8e5e6b1f7e57c0bd2c312 inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f15faf985909aa8ec5221c1b88629d5 inherit pro_methods_classObject"><td class="memItemLeft" align="right" valign="top"><a id="a0f15faf985909aa8ec5221c1b88629d5" name="a0f15faf985909aa8ec5221c1b88629d5"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>worldFeaturesChanged</b> (<a class="el" href="classWorldFeatures.html">WorldFeatures</a> features, WorldFeature changed)</td></tr>
+<tr class="separator:a0f15faf985909aa8ec5221c1b88629d5 inherit pro_methods_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classIdObject"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classIdObject')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classIdObject.html">IdObject</a></td></tr>
+<tr class="memitem:abeeecd81cf2b08a6653d791d37ae059f inherit pro_attribs_classIdObject"><td class="memItemLeft" align="right" valign="top"><a id="abeeecd81cf2b08a6653d791d37ae059f" name="abeeecd81cf2b08a6653d791d37ae059f"></a>
+<a class="el" href="classWorld.html">World</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>m_world</b></td></tr>
+<tr class="separator:abeeecd81cf2b08a6653d791d37ae059f inherit pro_attribs_classIdObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classObject"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classObject')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classObject.html">Object</a></td></tr>
+<tr class="memitem:ad2d20112565b4b5f08e310b3ccb2fb6d inherit pro_attribs_classObject"><td class="memItemLeft" align="right" valign="top"><a id="ad2d20112565b4b5f08e310b3ccb2fb6d" name="ad2d20112565b4b5f08e310b3ccb2fb6d"></a>
+<a class="el" href="classInterfaceItems.html">InterfaceItems</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_interfaceItems</b></td></tr>
+<tr class="separator:ad2d20112565b4b5f08e310b3ccb2fb6d inherit pro_attribs_classObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p ><a class="el" href="multipleunit_8hpp_source.html">server/src/vehicle/rail/multipleunit.hpp</a></p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2023 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ad5110b64558644d9d33a4fadb6570db4" name="ad5110b64558644d9d33a4fadb6570db4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5110b64558644d9d33a4fadb6570db4">&#9670;&nbsp;</a></span>MultipleUnit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MultipleUnit::MultipleUnit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classWorld.html">World</a> &amp;&#160;</td>
+          <td class="paramname"><em>world</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >server/src/vehicle/rail/multipleunit.cpp</p>
+<p >This file is part of the traintastic source code.</p>
+<p >Copyright (C) 2023 Reinder Feenstra</p>
+<p >This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p >You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/tom/projects/linux/traintastic/server/src/vehicle/rail/<a class="el" href="multipleunit_8hpp_source.html">multipleunit.hpp</a></li>
+<li>/home/tom/projects/linux/traintastic/server/src/vehicle/rail/multipleunit.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

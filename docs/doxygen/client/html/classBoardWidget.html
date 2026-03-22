@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>traintastic-client: BoardWidget Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+   DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="appicon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">traintastic-client
+   &#160;<span id="projectnumber">0.4.0</span>
+   </div>
+   <div id="projectbrief">Traintastic client</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-slots">Protected Slots</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
+<a href="classBoardWidget-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">BoardWidget Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Inheritance diagram for BoardWidget:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBoardWidget__inherit__graph.png" border="0" usemap="#aBoardWidget_inherit__map" alt="Inheritance graph"/></div>
+<map name="aBoardWidget_inherit__map" id="aBoardWidget_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,80,103,107"/>
+<area shape="rect" title=" " alt="" coords="17,5,91,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for BoardWidget:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBoardWidget__coll__graph.png" border="0" usemap="#aBoardWidget_coll__map" alt="Collaboration graph"/></div>
+<map name="aBoardWidget_coll__map" id="aBoardWidget_coll__map">
+<area shape="rect" title=" " alt="" coords="16,483,113,509"/>
+<area shape="rect" title=" " alt="" coords="5,260,79,287"/>
+<area shape="rect" href="classBoardAreaWidget.html" title=" " alt="" coords="81,393,205,420"/>
+<area shape="rect" href="classAbstractProperty.html" title=" " alt="" coords="103,260,223,287"/>
+<area shape="rect" href="classBaseProperty.html" title=" " alt="" coords="107,171,209,197"/>
+<area shape="rect" href="classInterfaceItem.html" title=" " alt="" coords="87,95,186,121"/>
+<area shape="rect" title=" " alt="" coords="123,5,193,32"/>
+<area shape="rect" href="classBlockHighlight.html" title=" " alt="" coords="210,95,317,121"/>
+<area shape="rect" href="classColorPool.html" title=" " alt="" coords="224,5,303,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a1bf247618d5150b566ad893322481cb6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoardWidget.html#a1bf247618d5150b566ad893322481cb6">BoardWidget</a> (std::shared_ptr&lt; <a class="el" href="classBoard.html">Board</a> &gt; object, QWidget *parent=nullptr)</td></tr>
+<tr class="separator:a1bf247618d5150b566ad893322481cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c54fa582446d2fb0f89a023b67f3467"><td class="memItemLeft" align="right" valign="top"><a id="a7c54fa582446d2fb0f89a023b67f3467" name="a7c54fa582446d2fb0f89a023b67f3467"></a>
+<a class="el" href="classBoard.html">Board</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>board</b> ()</td></tr>
+<tr class="separator:a7c54fa582446d2fb0f89a023b67f3467"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-slots" name="pro-slots"></a>
+Protected Slots</h2></td></tr>
+<tr class="memitem:a7846d2631270756dd7b8a0e14e275afe"><td class="memItemLeft" align="right" valign="top"><a id="a7846d2631270756dd7b8a0e14e275afe" name="a7846d2631270756dd7b8a0e14e275afe"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>stopTimerAndReleaseButtons</b> ()</td></tr>
+<tr class="separator:a7846d2631270756dd7b8a0e14e275afe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e246eb101619e71a2e9fca36d282a42"><td class="memItemLeft" align="right" valign="top"><a id="a1e246eb101619e71a2e9fca36d282a42" name="a1e246eb101619e71a2e9fca36d282a42"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>worldEditChanged</b> (bool value)</td></tr>
+<tr class="separator:a1e246eb101619e71a2e9fca36d282a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a548757b29b5aa7988283a45cb4f1f399"><td class="memItemLeft" align="right" valign="top"><a id="a548757b29b5aa7988283a45cb4f1f399" name="a548757b29b5aa7988283a45cb4f1f399"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>zoomLevelChanged</b> (int value)</td></tr>
+<tr class="separator:a548757b29b5aa7988283a45cb4f1f399"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abedff95e651f4f17a6da9255a9f3b2be"><td class="memItemLeft" align="right" valign="top"><a id="abedff95e651f4f17a6da9255a9f3b2be" name="abedff95e651f4f17a6da9255a9f3b2be"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>tileClicked</b> (int16_t x, int16_t y)</td></tr>
+<tr class="separator:abedff95e651f4f17a6da9255a9f3b2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cfb80966b39ad27376cfbb7d77c27f0"><td class="memItemLeft" align="right" valign="top"><a id="a2cfb80966b39ad27376cfbb7d77c27f0" name="a2cfb80966b39ad27376cfbb7d77c27f0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>rightClicked</b> ()</td></tr>
+<tr class="separator:a2cfb80966b39ad27376cfbb7d77c27f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a22fec862feb99b8440fb0256fad11c3b"><td class="memItemLeft" align="right" valign="top"><a id="a22fec862feb99b8440fb0256fad11c3b" name="a22fec862feb99b8440fb0256fad11c3b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>startHoldTimer</b> (const std::shared_ptr&lt; <a class="el" href="classNXButtonRailTile.html">NXButtonRailTile</a> &gt; &amp;nxButton)</td></tr>
+<tr class="separator:a22fec862feb99b8440fb0256fad11c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad60d193cf50e1b3c03f585df6bdfba47"><td class="memItemLeft" align="right" valign="top"><a id="ad60d193cf50e1b3c03f585df6bdfba47" name="ad60d193cf50e1b3c03f585df6bdfba47"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>startReleaseTimer</b> (const std::shared_ptr&lt; <a class="el" href="classNXButtonRailTile.html">NXButtonRailTile</a> &gt; &amp;firstButton, const std::shared_ptr&lt; <a class="el" href="classNXButtonRailTile.html">NXButtonRailTile</a> &gt; &amp;nxButton)</td></tr>
+<tr class="separator:ad60d193cf50e1b3c03f585df6bdfba47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47b4a60ab8a94ed6b2dc65f2adf1f1be"><td class="memItemLeft" align="right" valign="top"><a id="a47b4a60ab8a94ed6b2dc65f2adf1f1be" name="a47b4a60ab8a94ed6b2dc65f2adf1f1be"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>actionSelected</b> (const <a class="el" href="structBoard_1_1TileInfo.html">Board::TileInfo</a> *tile)</td></tr>
+<tr class="separator:a47b4a60ab8a94ed6b2dc65f2adf1f1be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15a672c503a50ff9295217cf84a82ab7"><td class="memItemLeft" align="right" valign="top"><a id="a15a672c503a50ff9295217cf84a82ab7" name="a15a672c503a50ff9295217cf84a82ab7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>keyPressEvent</b> (QKeyEvent *event) override</td></tr>
+<tr class="separator:a15a672c503a50ff9295217cf84a82ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01e4d73c2f4ef1f4e237cd52796e71bd"><td class="memItemLeft" align="right" valign="top"><a id="a01e4d73c2f4ef1f4e237cd52796e71bd" name="a01e4d73c2f4ef1f4e237cd52796e71bd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>timerEvent</b> (QTimerEvent *e) override</td></tr>
+<tr class="separator:a01e4d73c2f4ef1f4e237cd52796e71bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea1c288c5b4ed248acb93a4102b6caee"><td class="memItemLeft" align="right" valign="top"><a id="aea1c288c5b4ed248acb93a4102b6caee" name="aea1c288c5b4ed248acb93a4102b6caee"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>rotateTile</b> (bool ccw=false)</td></tr>
+<tr class="separator:aea1c288c5b4ed248acb93a4102b6caee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecb45e19e0882ef27fce56ffc68ccdb9"><td class="memItemLeft" align="right" valign="top"><a id="aecb45e19e0882ef27fce56ffc68ccdb9" name="aecb45e19e0882ef27fce56ffc68ccdb9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>releaseNXButton</b> (const std::shared_ptr&lt; <a class="el" href="classNXButtonRailTile.html">NXButtonRailTile</a> &gt; &amp;nxButton)</td></tr>
+<tr class="separator:aecb45e19e0882ef27fce56ffc68ccdb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a5cca3424adc8369ba877e0e433f707b6"><td class="memItemLeft" align="right" valign="top"><a id="a5cca3424adc8369ba877e0e433f707b6" name="a5cca3424adc8369ba877e0e433f707b6"></a>
+std::shared_ptr&lt; <a class="el" href="classBoard.html">Board</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_object</b></td></tr>
+<tr class="separator:a5cca3424adc8369ba877e0e433f707b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54b47d5e84170325f35c330b72061c85"><td class="memItemLeft" align="right" valign="top"><a id="a54b47d5e84170325f35c330b72061c85" name="a54b47d5e84170325f35c330b72061c85"></a>
+std::shared_ptr&lt; <a class="el" href="classObject.html">Object</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_nxManager</b></td></tr>
+<tr class="separator:a54b47d5e84170325f35c330b72061c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36ab5502adf72710e81d6b230ddaf88d"><td class="memItemLeft" align="right" valign="top"><a id="a36ab5502adf72710e81d6b230ddaf88d" name="a36ab5502adf72710e81d6b230ddaf88d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nxManagerRequestId</b></td></tr>
+<tr class="separator:a36ab5502adf72710e81d6b230ddaf88d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b2c385a4c9330d1210122fb9cae389a"><td class="memItemLeft" align="right" valign="top"><a id="a7b2c385a4c9330d1210122fb9cae389a" name="a7b2c385a4c9330d1210122fb9cae389a"></a>
+<a class="el" href="classBoardAreaWidget.html">BoardAreaWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_boardArea</b></td></tr>
+<tr class="separator:a7b2c385a4c9330d1210122fb9cae389a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98a700df2794f7af038eca6e011cbb05"><td class="memItemLeft" align="right" valign="top"><a id="a98a700df2794f7af038eca6e011cbb05" name="a98a700df2794f7af038eca6e011cbb05"></a>
+QStatusBar *&#160;</td><td class="memItemRight" valign="bottom"><b>m_statusBar</b></td></tr>
+<tr class="separator:a98a700df2794f7af038eca6e011cbb05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77e39bb1ce96aa5adb5201bf70a541ed"><td class="memItemLeft" align="right" valign="top"><a id="a77e39bb1ce96aa5adb5201bf70a541ed" name="a77e39bb1ce96aa5adb5201bf70a541ed"></a>
+QLabel *&#160;</td><td class="memItemRight" valign="bottom"><b>m_statusBarMessage</b></td></tr>
+<tr class="separator:a77e39bb1ce96aa5adb5201bf70a541ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a965f02672601d3eec05a2b55633f8fb0"><td class="memItemLeft" align="right" valign="top"><a id="a965f02672601d3eec05a2b55633f8fb0" name="a965f02672601d3eec05a2b55633f8fb0"></a>
+QLabel *&#160;</td><td class="memItemRight" valign="bottom"><b>m_statusBarCoords</b></td></tr>
+<tr class="separator:a965f02672601d3eec05a2b55633f8fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b53f3906a068e2bbeacc6089182decb"><td class="memItemLeft" align="right" valign="top"><a id="a8b53f3906a068e2bbeacc6089182decb" name="a8b53f3906a068e2bbeacc6089182decb"></a>
+QLabel *&#160;</td><td class="memItemRight" valign="bottom"><b>m_statusBarZoom</b></td></tr>
+<tr class="separator:a8b53f3906a068e2bbeacc6089182decb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bb9e5951fc103ef8a16b80413420781"><td class="memItemLeft" align="right" valign="top"><a id="a6bb9e5951fc103ef8a16b80413420781" name="a6bb9e5951fc103ef8a16b80413420781"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_actionZoomIn</b></td></tr>
+<tr class="separator:a6bb9e5951fc103ef8a16b80413420781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc5bfc39ff8c0e259910ef055070558b"><td class="memItemLeft" align="right" valign="top"><a id="abc5bfc39ff8c0e259910ef055070558b" name="abc5bfc39ff8c0e259910ef055070558b"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_actionZoomOut</b></td></tr>
+<tr class="separator:abc5bfc39ff8c0e259910ef055070558b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5a523bd7672b84a754a4a64de748035"><td class="memItemLeft" align="right" valign="top"><a id="ad5a523bd7672b84a754a4a64de748035" name="ad5a523bd7672b84a754a4a64de748035"></a>
+QToolBar *&#160;</td><td class="memItemRight" valign="bottom"><b>m_toolbarEdit</b></td></tr>
+<tr class="separator:ad5a523bd7672b84a754a4a64de748035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ee654c83777fd8b5129d486a0e8b078"><td class="memItemLeft" align="right" valign="top"><a id="a7ee654c83777fd8b5129d486a0e8b078" name="a7ee654c83777fd8b5129d486a0e8b078"></a>
+QVector&lt; QAction * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_addActions</b></td></tr>
+<tr class="separator:a7ee654c83777fd8b5129d486a0e8b078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ae697bc9d7d0e43adb50cbe589a7b93"><td class="memItemLeft" align="right" valign="top"><a id="a4ae697bc9d7d0e43adb50cbe589a7b93" name="a4ae697bc9d7d0e43adb50cbe589a7b93"></a>
+QActionGroup *&#160;</td><td class="memItemRight" valign="bottom"><b>m_editActions</b></td></tr>
+<tr class="separator:a4ae697bc9d7d0e43adb50cbe589a7b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ab70258362427ee3ef0a6e3fbe3e373"><td class="memItemLeft" align="right" valign="top"><a id="a6ab70258362427ee3ef0a6e3fbe3e373" name="a6ab70258362427ee3ef0a6e3fbe3e373"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_editActionNone</b></td></tr>
+<tr class="separator:a6ab70258362427ee3ef0a6e3fbe3e373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f818e5a7628a2aaafd9cdc2f10b9f3f"><td class="memItemLeft" align="right" valign="top"><a id="a1f818e5a7628a2aaafd9cdc2f10b9f3f" name="a1f818e5a7628a2aaafd9cdc2f10b9f3f"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_editActionMove</b></td></tr>
+<tr class="separator:a1f818e5a7628a2aaafd9cdc2f10b9f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af11b47c50286b6195167181e37427031"><td class="memItemLeft" align="right" valign="top"><a id="af11b47c50286b6195167181e37427031" name="af11b47c50286b6195167181e37427031"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_editActionResize</b></td></tr>
+<tr class="separator:af11b47c50286b6195167181e37427031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20a57d35f29e1802834397e556552fbc"><td class="memItemLeft" align="right" valign="top"><a id="a20a57d35f29e1802834397e556552fbc" name="a20a57d35f29e1802834397e556552fbc"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_editActionDelete</b></td></tr>
+<tr class="separator:a20a57d35f29e1802834397e556552fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51e5246dfe4dc6e1307b8abb61514e26"><td class="memItemLeft" align="right" valign="top"><a id="a51e5246dfe4dc6e1307b8abb61514e26" name="a51e5246dfe4dc6e1307b8abb61514e26"></a>
+QAction *&#160;</td><td class="memItemRight" valign="bottom"><b>m_editActionResizeToContents</b></td></tr>
+<tr class="separator:a51e5246dfe4dc6e1307b8abb61514e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae111e0042f4b2e1d2e685e94f9e2338d"><td class="memItemLeft" align="right" valign="top"><a id="ae111e0042f4b2e1d2e685e94f9e2338d" name="ae111e0042f4b2e1d2e685e94f9e2338d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_tileMoveStarted</b></td></tr>
+<tr class="separator:ae111e0042f4b2e1d2e685e94f9e2338d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5daa59283780d667effcf3a432ef8cdb"><td class="memItemLeft" align="right" valign="top"><a id="a5daa59283780d667effcf3a432ef8cdb" name="a5daa59283780d667effcf3a432ef8cdb"></a>
+int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_tileMoveX</b></td></tr>
+<tr class="separator:a5daa59283780d667effcf3a432ef8cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ab855b7b70d14c551620465acebd628"><td class="memItemLeft" align="right" valign="top"><a id="a3ab855b7b70d14c551620465acebd628" name="a3ab855b7b70d14c551620465acebd628"></a>
+int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_tileMoveY</b></td></tr>
+<tr class="separator:a3ab855b7b70d14c551620465acebd628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a719e6a8ad7d4297c9f73eed46c2d2"><td class="memItemLeft" align="right" valign="top"><a id="a06a719e6a8ad7d4297c9f73eed46c2d2" name="a06a719e6a8ad7d4297c9f73eed46c2d2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_tileResizeStarted</b></td></tr>
+<tr class="separator:a06a719e6a8ad7d4297c9f73eed46c2d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48e5b7599ad2ebef7179a47f65ba5fb7"><td class="memItemLeft" align="right" valign="top"><a id="a48e5b7599ad2ebef7179a47f65ba5fb7" name="a48e5b7599ad2ebef7179a47f65ba5fb7"></a>
+int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_tileResizeX</b></td></tr>
+<tr class="separator:a48e5b7599ad2ebef7179a47f65ba5fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29d964cd9f9ba0ed65a13c7da23ceb88"><td class="memItemLeft" align="right" valign="top"><a id="a29d964cd9f9ba0ed65a13c7da23ceb88" name="a29d964cd9f9ba0ed65a13c7da23ceb88"></a>
+int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_tileResizeY</b></td></tr>
+<tr class="separator:a29d964cd9f9ba0ed65a13c7da23ceb88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8169baa5904825cb95d2fab07a569c91"><td class="memItemLeft" align="right" valign="top"><a id="a8169baa5904825cb95d2fab07a569c91" name="a8169baa5904825cb95d2fab07a569c91"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_tileRotates</b> = 0</td></tr>
+<tr class="memdesc:a8169baa5904825cb95d2fab07a569c91"><td class="mdescLeft">&#160;</td><td class="mdescRight">allowed rotate for add/move tile <br /></td></tr>
+<tr class="separator:a8169baa5904825cb95d2fab07a569c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7341bfe1def2126e3cc3899d74d02ec"><td class="memItemLeft" align="right" valign="top"><a id="ad7341bfe1def2126e3cc3899d74d02ec" name="ad7341bfe1def2126e3cc3899d74d02ec"></a>
+TileRotate&#160;</td><td class="memItemRight" valign="bottom"><b>m_tileRotateLast</b> = TileRotate::Deg0</td></tr>
+<tr class="memdesc:ad7341bfe1def2126e3cc3899d74d02ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last used tile rotate for add/move. <br /></td></tr>
+<tr class="separator:ad7341bfe1def2126e3cc3899d74d02ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdbc188ba352ad00aceecfe7450db578"><td class="memItemLeft" align="right" valign="top"><a id="abdbc188ba352ad00aceecfe7450db578" name="abdbc188ba352ad00aceecfe7450db578"></a>
+std::weak_ptr&lt; <a class="el" href="classNXButtonRailTile.html">NXButtonRailTile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_nxButtonPressed</b></td></tr>
+<tr class="separator:abdbc188ba352ad00aceecfe7450db578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a484995d5c985992180ddd35765e3cf22"><td class="memItemLeft" align="right" valign="top"><a id="a484995d5c985992180ddd35765e3cf22" name="a484995d5c985992180ddd35765e3cf22"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>m_nxButtonTimerId</b></td></tr>
+<tr class="separator:a484995d5c985992180ddd35765e3cf22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10600301378c3af14c6999c17afd7972"><td class="memItemLeft" align="right" valign="top"><a id="a10600301378c3af14c6999c17afd7972" name="a10600301378c3af14c6999c17afd7972"></a>
+std::weak_ptr&lt; <a class="el" href="classNXButtonRailTile.html">NXButtonRailTile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_releaseButton1</b></td></tr>
+<tr class="separator:a10600301378c3af14c6999c17afd7972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb1fd45510834e74fa7e00227820e4c6"><td class="memItemLeft" align="right" valign="top"><a id="acb1fd45510834e74fa7e00227820e4c6" name="acb1fd45510834e74fa7e00227820e4c6"></a>
+std::weak_ptr&lt; <a class="el" href="classNXButtonRailTile.html">NXButtonRailTile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_releaseButton2</b></td></tr>
+<tr class="separator:acb1fd45510834e74fa7e00227820e4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a4baca12d6f652831fdc37a02026e2227"><td class="memItemLeft" align="right" valign="top"><a id="a4baca12d6f652831fdc37a02026e2227" name="a4baca12d6f652831fdc37a02026e2227"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>ScreenShotDialog</b></td></tr>
+<tr class="separator:a4baca12d6f652831fdc37a02026e2227"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a1bf247618d5150b566ad893322481cb6" name="a1bf247618d5150b566ad893322481cb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bf247618d5150b566ad893322481cb6">&#9670;&nbsp;</a></span>BoardWidget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BoardWidget::BoardWidget </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classBoard.html">Board</a> &gt;&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>add multi level menu support (not yet used) </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/tom/projects/linux/traintastic/client/src/board/<a class="el" href="boardwidget_8hpp_source.html">boardwidget.hpp</a></li>
+<li>/home/tom/projects/linux/traintastic/client/src/board/boardwidget.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

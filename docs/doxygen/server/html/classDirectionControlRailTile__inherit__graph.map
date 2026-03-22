@@ -1,0 +1,9 @@
+<map id="DirectionControlRailTile" name="DirectionControlRailTile">
+<area shape="rect" id="node1" title=" " alt="" coords="5,468,165,495"/>
+<area shape="rect" id="node2" href="$classStraightRailTile.html" title=" " alt="" coords="30,393,141,420"/>
+<area shape="rect" id="node3" href="$classRailTile.html" title=" " alt="" coords="52,319,119,345"/>
+<area shape="rect" id="node4" href="$classTile.html" title=" " alt="" coords="64,244,107,271"/>
+<area shape="rect" id="node5" href="$classIdObject.html" title=" " alt="" coords="50,169,121,196"/>
+<area shape="rect" id="node6" href="$classObject.html" title=" " alt="" coords="55,95,115,121"/>
+<area shape="rect" id="node7" title=" " alt="" coords="13,5,158,47"/>
+</map>

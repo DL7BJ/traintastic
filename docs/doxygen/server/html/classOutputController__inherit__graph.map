@@ -1,0 +1,10 @@
+<map id="OutputController" name="OutputController">
+<area shape="rect" id="node1" title=" " alt="" coords="5,157,123,184"/>
+<area shape="rect" id="node2" href="$classDCCEXInterface.html" title="DCC&#45;EX hardware interface." alt="" coords="189,5,310,32"/>
+<area shape="rect" id="node3" href="$classECoSInterface.html" title="ECoS hardware interface." alt="" coords="195,56,303,83"/>
+<area shape="rect" id="node4" href="$classLocoNetInterface.html" title="LocoNet hardware interface." alt="" coords="188,107,311,133"/>
+<area shape="rect" id="node5" href="$classMarklinCANInterface.html" title="Märklin CAN hardware interface." alt="" coords="177,157,321,184"/>
+<area shape="rect" id="node6" href="$classTraintasticDIYInterface.html" title="Traintastic DIY hardware interface." alt="" coords="171,208,328,235"/>
+<area shape="rect" id="node7" href="$classXpressNetInterface.html" title="XpressNet hardware interface." alt="" coords="182,259,317,285"/>
+<area shape="rect" id="node8" href="$classZ21Interface.html" title="Z21 hardware interface." alt="" coords="202,309,297,336"/>
+</map>

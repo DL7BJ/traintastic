@@ -1,0 +1,13 @@
+<map id="DCCEX::Settings" name="DCCEX::Settings">
+<area shape="rect" id="node1" title=" " alt="" coords="240,541,367,568"/>
+<area shape="rect" id="node2" href="$classSubObject.html" title=" " alt="" coords="90,249,173,276"/>
+<area shape="rect" id="node3" href="$classObject.html" title=" " alt="" coords="123,109,183,136"/>
+<area shape="rect" id="node9" href="$classInterfaceItem.html" title=" " alt="" coords="198,199,297,225"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,5,151,47"/>
+<area shape="rect" id="node5" href="$classInterfaceItems.html" title=" " alt="" coords="175,13,282,39"/>
+<area shape="rect" id="node6" href="$classProperty.html" title=" " alt="" coords="169,452,304,479"/>
+<area shape="rect" id="node7" href="$classAbstractProperty.html" title=" " alt="" coords="291,376,411,403"/>
+<area shape="rect" id="node10" href="$classProperty.html" title=" " alt="" coords="329,452,470,479"/>
+<area shape="rect" id="node11" href="$classProperty.html" title=" " alt="" coords="495,452,613,479"/>
+<area shape="rect" id="node8" href="$classBaseProperty.html" title=" " alt="" coords="226,300,327,327"/>
+</map>

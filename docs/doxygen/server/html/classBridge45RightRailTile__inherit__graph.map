@@ -1,0 +1,9 @@
+<map id="Bridge45RightRailTile" name="Bridge45RightRailTile">
+<area shape="rect" id="node1" title=" " alt="" coords="5,468,153,495"/>
+<area shape="rect" id="node2" href="$classBridgeRailTile.html" title=" " alt="" coords="28,393,131,420"/>
+<area shape="rect" id="node3" href="$classRailTile.html" title=" " alt="" coords="46,319,113,345"/>
+<area shape="rect" id="node4" href="$classTile.html" title=" " alt="" coords="58,244,101,271"/>
+<area shape="rect" id="node5" href="$classIdObject.html" title=" " alt="" coords="44,169,115,196"/>
+<area shape="rect" id="node6" href="$classObject.html" title=" " alt="" coords="49,95,109,121"/>
+<area shape="rect" id="node7" title=" " alt="" coords="7,5,152,47"/>
+</map>

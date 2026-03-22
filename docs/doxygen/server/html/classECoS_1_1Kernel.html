@@ -1,0 +1,807 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>traintastic-server: ECoS::Kernel Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+   DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="appicon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">traintastic-server
+   &#160;<span id="projectnumber">0.4.0</span>
+   </div>
+   <div id="projectbrief">Traintastic server</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceECoS.html">ECoS</a></li><li class="navelem"><a class="el" href="classECoS_1_1Kernel.html">Kernel</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
+<a href="classECoS_1_1Kernel-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">ECoS::Kernel Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Inheritance diagram for ECoS::Kernel:</div>
+<div class="dyncontent">
+<div class="center"><img src="classECoS_1_1Kernel__inherit__graph.png" border="0" usemap="#aECoS_1_1Kernel_inherit__map" alt="Inheritance graph"/></div>
+<map name="aECoS_1_1Kernel_inherit__map" id="aECoS_1_1Kernel_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,80,108,107"/>
+<area shape="rect" href="classKernelBase.html" title=" " alt="" coords="12,5,101,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for ECoS::Kernel:</div>
+<div class="dyncontent">
+<div class="center"><img src="classECoS_1_1Kernel__coll__graph.png" border="0" usemap="#aECoS_1_1Kernel_coll__map" alt="Collaboration graph"/></div>
+<map name="aECoS_1_1Kernel_coll__map" id="aECoS_1_1Kernel_coll__map">
+<area shape="rect" title=" " alt="" coords="5,80,108,107"/>
+<area shape="rect" href="classKernelBase.html" title=" " alt="" coords="12,5,101,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a9948273174eaa1faba7d09937251b5fd"><td class="memItemLeft" align="right" valign="top"><a id="a9948273174eaa1faba7d09937251b5fd" name="a9948273174eaa1faba7d09937251b5fd"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>OnObjectChanged</b> = std::function&lt; void(std::size_t, uint16_t, const std::string &amp;)&gt;</td></tr>
+<tr class="separator:a9948273174eaa1faba7d09937251b5fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0380a758ffe21408a75d12a80cc8057e"><td class="memItemLeft" align="right" valign="top"><a id="a0380a758ffe21408a75d12a80cc8057e" name="a0380a758ffe21408a75d12a80cc8057e"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>OnObjectRemoved</b> = std::function&lt; void(uint16_t)&gt;</td></tr>
+<tr class="separator:a0380a758ffe21408a75d12a80cc8057e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a8fae74fb42eb5230e551f8716d8f2875"><td class="memItemLeft" align="right" valign="top"><a id="a8fae74fb42eb5230e551f8716d8f2875" name="a8fae74fb42eb5230e551f8716d8f2875"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>postSend</b> (const std::string &amp;message)</td></tr>
+<tr class="separator:a8fae74fb42eb5230e551f8716d8f2875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e2e6276ac639fe681c88b30da9969ed"><td class="memItemLeft" align="right" valign="top"><a id="a3e2e6276ac639fe681c88b30da9969ed" name="a3e2e6276ac639fe681c88b30da9969ed"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>send</b> (std::string_view message)</td></tr>
+<tr class="separator:a3e2e6276ac639fe681c88b30da9969ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae08a45f99f32bc0c25c31f3e3592c123"><td class="memItemLeft" align="right" valign="top"><a id="ae08a45f99f32bc0c25c31f3e3592c123" name="ae08a45f99f32bc0c25c31f3e3592c123"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Kernel</b> (const <a class="el" href="classECoS_1_1Kernel.html">Kernel</a> &amp;)=delete</td></tr>
+<tr class="separator:ae08a45f99f32bc0c25c31f3e3592c123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55aed505adbc465d1d470389e6d523bf"><td class="memItemLeft" align="right" valign="top"><a id="a55aed505adbc465d1d470389e6d523bf" name="a55aed505adbc465d1d470389e6d523bf"></a>
+<a class="el" href="classECoS_1_1Kernel.html">Kernel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classECoS_1_1Kernel.html">Kernel</a> &amp;)=delete</td></tr>
+<tr class="separator:a55aed505adbc465d1d470389e6d523bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b560a5dc661ce7b78a1f98f12a6dd00"><td class="memItemLeft" align="right" valign="top"><a id="a0b560a5dc661ce7b78a1f98f12a6dd00" name="a0b560a5dc661ce7b78a1f98f12a6dd00"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isKernelThread</b> () const</td></tr>
+<tr class="separator:a0b560a5dc661ce7b78a1f98f12a6dd00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f8b86f6546c644827be07de327fe1cd"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a5f8b86f6546c644827be07de327fe1cd"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classECoS_1_1Kernel.html#a5f8b86f6546c644827be07de327fe1cd">ioHandler</a> ()</td></tr>
+<tr class="memdesc:a5f8b86f6546c644827be07de327fe1cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the IO handler.  <a href="classECoS_1_1Kernel.html#a5f8b86f6546c644827be07de327fe1cd">More...</a><br /></td></tr>
+<tr class="separator:a5f8b86f6546c644827be07de327fe1cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ac4685676fdd1576e40a5443e6f2055"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Kernel.html#a0ac4685676fdd1576e40a5443e6f2055">setConfig</a> (const <a class="el" href="structECoS_1_1Config.html">Config</a> &amp;config)</td></tr>
+<tr class="memdesc:a0ac4685676fdd1576e40a5443e6f2055"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set <a class="el" href="classECoS_1_1ECoS.html">ECoS</a> configuration.  <a href="classECoS_1_1Kernel.html#a0ac4685676fdd1576e40a5443e6f2055">More...</a><br /></td></tr>
+<tr class="separator:a0ac4685676fdd1576e40a5443e6f2055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe1026a2457d863135a57b38b7e44da1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Kernel.html#abe1026a2457d863135a57b38b7e44da1">setOnEmergencyStop</a> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memdesc:abe1026a2457d863135a57b38b7e44da1"><td class="mdescLeft">&#160;</td><td class="mdescRight">...  <a href="classECoS_1_1Kernel.html#abe1026a2457d863135a57b38b7e44da1">More...</a><br /></td></tr>
+<tr class="separator:abe1026a2457d863135a57b38b7e44da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fd3bcc399ba0ab1c91c1c4efdcc0e50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Kernel.html#a5fd3bcc399ba0ab1c91c1c4efdcc0e50">setOnGo</a> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memdesc:a5fd3bcc399ba0ab1c91c1c4efdcc0e50"><td class="mdescLeft">&#160;</td><td class="mdescRight">...  <a href="classECoS_1_1Kernel.html#a5fd3bcc399ba0ab1c91c1c4efdcc0e50">More...</a><br /></td></tr>
+<tr class="separator:a5fd3bcc399ba0ab1c91c1c4efdcc0e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e855f50f8ff668d6128e2efbe26c095"><td class="memItemLeft" align="right" valign="top"><a id="a7e855f50f8ff668d6128e2efbe26c095" name="a7e855f50f8ff668d6128e2efbe26c095"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setOnObjectChanged</b> (OnObjectChanged callback)</td></tr>
+<tr class="separator:a7e855f50f8ff668d6128e2efbe26c095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81896348732e13e41dd7d9f0909e3664"><td class="memItemLeft" align="right" valign="top"><a id="a81896348732e13e41dd7d9f0909e3664" name="a81896348732e13e41dd7d9f0909e3664"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setOnObjectRemoved</b> (OnObjectRemoved callback)</td></tr>
+<tr class="separator:a81896348732e13e41dd7d9f0909e3664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4761493af6b78e52d2680802e0b0f2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Kernel.html#aa4761493af6b78e52d2680802e0b0f2a">setDecoderController</a> (<a class="el" href="classDecoderController.html">DecoderController</a> *decoderController)</td></tr>
+<tr class="memdesc:aa4761493af6b78e52d2680802e0b0f2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the decoder controller.  <a href="classECoS_1_1Kernel.html#aa4761493af6b78e52d2680802e0b0f2a">More...</a><br /></td></tr>
+<tr class="separator:aa4761493af6b78e52d2680802e0b0f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af77b9237411f486ce88d6ea93f3f4a4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Kernel.html#af77b9237411f486ce88d6ea93f3f4a4b">setInputController</a> (<a class="el" href="classInputController.html">InputController</a> *inputController)</td></tr>
+<tr class="memdesc:af77b9237411f486ce88d6ea93f3f4a4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the input controller.  <a href="classECoS_1_1Kernel.html#af77b9237411f486ce88d6ea93f3f4a4b">More...</a><br /></td></tr>
+<tr class="separator:af77b9237411f486ce88d6ea93f3f4a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a051eefb4294c70e014d9b22a477b466c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Kernel.html#a051eefb4294c70e014d9b22a477b466c">setOutputController</a> (<a class="el" href="classOutputController.html">OutputController</a> *outputController)</td></tr>
+<tr class="memdesc:a051eefb4294c70e014d9b22a477b466c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the output controller.  <a href="classECoS_1_1Kernel.html#a051eefb4294c70e014d9b22a477b466c">More...</a><br /></td></tr>
+<tr class="separator:a051eefb4294c70e014d9b22a477b466c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d4d6f93547bfdc702f45cd89e584811"><td class="memItemLeft" align="right" valign="top"><a id="a7d4d6f93547bfdc702f45cd89e584811" name="a7d4d6f93547bfdc702f45cd89e584811"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> ()</td></tr>
+<tr class="memdesc:a7d4d6f93547bfdc702f45cd89e584811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the kernel and IO handler. <br /></td></tr>
+<tr class="separator:a7d4d6f93547bfdc702f45cd89e584811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e1f240dd558a0c543368feff3f74364"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Kernel.html#a3e1f240dd558a0c543368feff3f74364">stop</a> (<a class="el" href="structECoS_1_1Simulation.html">Simulation</a> *simulation)</td></tr>
+<tr class="memdesc:a3e1f240dd558a0c543368feff3f74364"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the kernel and IO handler.  <a href="classECoS_1_1Kernel.html#a3e1f240dd558a0c543368feff3f74364">More...</a><br /></td></tr>
+<tr class="separator:a3e1f240dd558a0c543368feff3f74364"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66bc65b314d378dea2dafa16a040b81e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Kernel.html#a66bc65b314d378dea2dafa16a040b81e">started</a> () final</td></tr>
+<tr class="memdesc:a66bc65b314d378dea2dafa16a040b81e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify kernel the IO handler is started.  <a href="classECoS_1_1Kernel.html#a66bc65b314d378dea2dafa16a040b81e">More...</a><br /></td></tr>
+<tr class="separator:a66bc65b314d378dea2dafa16a040b81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef49d53131e353c36c903ce9c532bdb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Kernel.html#aef49d53131e353c36c903ce9c532bdb1">receive</a> (std::string_view message)</td></tr>
+<tr class="memdesc:aef49d53131e353c36c903ce9c532bdb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">...  <a href="classECoS_1_1Kernel.html#aef49d53131e353c36c903ce9c532bdb1">More...</a><br /></td></tr>
+<tr class="separator:aef49d53131e353c36c903ce9c532bdb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affefde4ef3aece548d66f4f0f7ca1fd6"><td class="memItemLeft" align="right" valign="top"><a id="affefde4ef3aece548d66f4f0f7ca1fd6" name="affefde4ef3aece548d66f4f0f7ca1fd6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>emergencyStop</b> ()</td></tr>
+<tr class="memdesc:affefde4ef3aece548d66f4f0f7ca1fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">... <br /></td></tr>
+<tr class="separator:affefde4ef3aece548d66f4f0f7ca1fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a137779536b22539807512e5cd78e23b0"><td class="memItemLeft" align="right" valign="top"><a id="a137779536b22539807512e5cd78e23b0" name="a137779536b22539807512e5cd78e23b0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>go</b> ()</td></tr>
+<tr class="memdesc:a137779536b22539807512e5cd78e23b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">... <br /></td></tr>
+<tr class="separator:a137779536b22539807512e5cd78e23b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c5c8dd5a5578570fa62041b38539e8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Kernel.html#a6c5c8dd5a5578570fa62041b38539e8f">decoderChanged</a> (const <a class="el" href="classDecoder.html">Decoder</a> &amp;decoder, DecoderChangeFlags changes, uint32_t functionNumber)</td></tr>
+<tr class="memdesc:a6c5c8dd5a5578570fa62041b38539e8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">...  <a href="classECoS_1_1Kernel.html#a6c5c8dd5a5578570fa62041b38539e8f">More...</a><br /></td></tr>
+<tr class="separator:a6c5c8dd5a5578570fa62041b38539e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab70f082e379cedfcfc371be6b48bc37f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Kernel.html#ab70f082e379cedfcfc371be6b48bc37f">setOutput</a> (OutputChannel channel, uint32_t id, OutputValue value)</td></tr>
+<tr class="memdesc:ab70f082e379cedfcfc371be6b48bc37f"><td class="mdescLeft">&#160;</td><td class="mdescRight">...  <a href="classECoS_1_1Kernel.html#ab70f082e379cedfcfc371be6b48bc37f">More...</a><br /></td></tr>
+<tr class="separator:ab70f082e379cedfcfc371be6b48bc37f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13b7d0055abc00ddbfcdc1067cf118d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Kernel.html#a13b7d0055abc00ddbfcdc1067cf118d2">simulateInputChange</a> (InputChannel channel, uint32_t address, SimulateInputAction action)</td></tr>
+<tr class="separator:a13b7d0055abc00ddbfcdc1067cf118d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20f163b43cb2689af0f81a86023cb698"><td class="memItemLeft" align="right" valign="top"><a id="a20f163b43cb2689af0f81a86023cb698" name="a20f163b43cb2689af0f81a86023cb698"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>switchManagerSwitched</b> (SwitchProtocol protocol, uint16_t address, OutputPairValue value)</td></tr>
+<tr class="separator:a20f163b43cb2689af0f81a86023cb698"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0efc06c6533ccb88f750369d85dc87d0"><td class="memItemLeft" align="right" valign="top"><a id="a0efc06c6533ccb88f750369d85dc87d0" name="a0efc06c6533ccb88f750369d85dc87d0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>switchStateChanged</b> (uint16_t objectId, uint8_t state)</td></tr>
+<tr class="separator:a0efc06c6533ccb88f750369d85dc87d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c5ed05b84c1b8910097736b14473aa3"><td class="memItemLeft" align="right" valign="top"><a id="a1c5ed05b84c1b8910097736b14473aa3" name="a1c5ed05b84c1b8910097736b14473aa3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>feedbackStateChanged</b> (<a class="el" href="classECoS_1_1Feedback.html">Feedback</a> &amp;object, uint8_t port, TriState value)</td></tr>
+<tr class="separator:a1c5ed05b84c1b8910097736b14473aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classKernelBase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classKernelBase')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classKernelBase.html">KernelBase</a></td></tr>
+<tr class="memitem:a25dcbf42c357ad857c9f1f57db7fb289 inherit pub_methods_classKernelBase"><td class="memItemLeft" align="right" valign="top">boost::asio::io_context &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKernelBase.html#a25dcbf42c357ad857c9f1f57db7fb289">ioContext</a> ()</td></tr>
+<tr class="memdesc:a25dcbf42c357ad857c9f1f57db7fb289 inherit pub_methods_classKernelBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">IO context for <a class="el" href="namespaceLocoNet.html">LocoNet</a> kernel and IO handler.  <a href="classKernelBase.html#a25dcbf42c357ad857c9f1f57db7fb289">More...</a><br /></td></tr>
+<tr class="separator:a25dcbf42c357ad857c9f1f57db7fb289 inherit pub_methods_classKernelBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60c47417b4553b64843a422d9bc21c91 inherit pub_methods_classKernelBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKernelBase.html#a60c47417b4553b64843a422d9bc21c91">setOnStarted</a> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memdesc:a60c47417b4553b64843a422d9bc21c91 inherit pub_methods_classKernelBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">...  <a href="classKernelBase.html#a60c47417b4553b64843a422d9bc21c91">More...</a><br /></td></tr>
+<tr class="separator:a60c47417b4553b64843a422d9bc21c91 inherit pub_methods_classKernelBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cf67c5ff9db456b069b31664974eec4 inherit pub_methods_classKernelBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKernelBase.html#a8cf67c5ff9db456b069b31664974eec4">setOnError</a> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memdesc:a8cf67c5ff9db456b069b31664974eec4 inherit pub_methods_classKernelBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register error handler.  <a href="classKernelBase.html#a8cf67c5ff9db456b069b31664974eec4">More...</a><br /></td></tr>
+<tr class="separator:a8cf67c5ff9db456b069b31664974eec4 inherit pub_methods_classKernelBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2458ac76c65c970286dd7757244800d inherit pub_methods_classKernelBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKernelBase.html#ab2458ac76c65c970286dd7757244800d">error</a> ()</td></tr>
+<tr class="memdesc:ab2458ac76c65c970286dd7757244800d inherit pub_methods_classKernelBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report fatal error Must be called by the IO handler in case of a fatal error. This will put the interface in error state.  <a href="classKernelBase.html#ab2458ac76c65c970286dd7757244800d">More...</a><br /></td></tr>
+<tr class="separator:ab2458ac76c65c970286dd7757244800d inherit pub_methods_classKernelBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a8bb813e7eb6ba425bcc6ab9c2ea732a4"><td class="memTemplParams" colspan="2">template&lt;class IOHandlerType , class... Args&gt; </td></tr>
+<tr class="memitem:a8bb813e7eb6ba425bcc6ab9c2ea732a4"><td class="memTemplItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="classECoS_1_1Kernel.html">Kernel</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classECoS_1_1Kernel.html#a8bb813e7eb6ba425bcc6ab9c2ea732a4">create</a> (std::string logId_, const <a class="el" href="structECoS_1_1Config.html">Config</a> &amp;config, Args... args)</td></tr>
+<tr class="memdesc:a8bb813e7eb6ba425bcc6ab9c2ea732a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create kernel and IO handler.  <a href="classECoS_1_1Kernel.html#a8bb813e7eb6ba425bcc6ab9c2ea732a4">More...</a><br /></td></tr>
+<tr class="separator:a8bb813e7eb6ba425bcc6ab9c2ea732a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a7cfbeeefc51c3628829c08429d973dd2"><td class="memItemLeft" align="right" valign="top"><a id="a7cfbeeefc51c3628829c08429d973dd2" name="a7cfbeeefc51c3628829c08429d973dd2"></a>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>s88AddressMin</b> = 1</td></tr>
+<tr class="separator:a7cfbeeefc51c3628829c08429d973dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69eb262b1a07837593746d0d3cd6db25"><td class="memItemLeft" align="right" valign="top">static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Kernel.html#a69eb262b1a07837593746d0d3cd6db25">s88AddressMax</a> = 1000</td></tr>
+<tr class="separator:a69eb262b1a07837593746d0d3cd6db25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80ce3ab738274b25af222a13c4ba8e30"><td class="memItemLeft" align="right" valign="top"><a id="a80ce3ab738274b25af222a13c4ba8e30" name="a80ce3ab738274b25af222a13c4ba8e30"></a>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ecosDetectorAddressMin</b> = 1</td></tr>
+<tr class="separator:a80ce3ab738274b25af222a13c4ba8e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcc0caa116d0ff2417b6043d85eecca2"><td class="memItemLeft" align="right" valign="top">static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Kernel.html#abcc0caa116d0ff2417b6043d85eecca2">ecosDetectorAddressMax</a> = 1000</td></tr>
+<tr class="separator:abcc0caa116d0ff2417b6043d85eecca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a0720b5f434e636e22a3ed34f847eec57"><td class="memItemLeft" align="right" valign="top"><a id="a0720b5f434e636e22a3ed34f847eec57" name="a0720b5f434e636e22a3ed34f847eec57"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>Object</b></td></tr>
+<tr class="separator:a0720b5f434e636e22a3ed34f847eec57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1095d25d4f03c9bc4bdcb4d6bd1373f0"><td class="memItemLeft" align="right" valign="top"><a id="a1095d25d4f03c9bc4bdcb4d6bd1373f0" name="a1095d25d4f03c9bc4bdcb4d6bd1373f0"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>ECoS</b></td></tr>
+<tr class="separator:a1095d25d4f03c9bc4bdcb4d6bd1373f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_attribs_classKernelBase"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classKernelBase')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classKernelBase.html">KernelBase</a></td></tr>
+<tr class="memitem:a5d2ba05a54be2c34ad7eaf87973dac4f inherit pub_attribs_classKernelBase"><td class="memItemLeft" align="right" valign="top"><a id="a5d2ba05a54be2c34ad7eaf87973dac4f" name="a5d2ba05a54be2c34ad7eaf87973dac4f"></a>
+const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>logId</b></td></tr>
+<tr class="memdesc:a5d2ba05a54be2c34ad7eaf87973dac4f inherit pub_attribs_classKernelBase"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classObject.html">Object</a> id for log messages. <br /></td></tr>
+<tr class="separator:a5d2ba05a54be2c34ad7eaf87973dac4f inherit pub_attribs_classKernelBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classKernelBase"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classKernelBase')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classKernelBase.html">KernelBase</a></td></tr>
+<tr class="memitem:ab0382088c2345c1e55a3b4f0394f2d69 inherit pro_methods_classKernelBase"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKernelBase.html#ab0382088c2345c1e55a3b4f0394f2d69">KernelBase</a> (std::string logId_)</td></tr>
+<tr class="separator:ab0382088c2345c1e55a3b4f0394f2d69 inherit pro_methods_classKernelBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ffe7f527b63680b270fd9fd4cf0672d inherit pro_methods_classKernelBase"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKernelBase.html#a5ffe7f527b63680b270fd9fd4cf0672d">started</a> ()</td></tr>
+<tr class="separator:a5ffe7f527b63680b270fd9fd4cf0672d inherit pro_methods_classKernelBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classKernelBase"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classKernelBase')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classKernelBase.html">KernelBase</a></td></tr>
+<tr class="memitem:a159b4696f36bcf29ebd25ede7366676d inherit pro_attribs_classKernelBase"><td class="memItemLeft" align="right" valign="top"><a id="a159b4696f36bcf29ebd25ede7366676d" name="a159b4696f36bcf29ebd25ede7366676d"></a>
+boost::asio::io_context&#160;</td><td class="memItemRight" valign="bottom"><b>m_ioContext</b></td></tr>
+<tr class="separator:a159b4696f36bcf29ebd25ede7366676d inherit pro_attribs_classKernelBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6765c629c79539393af1f908db093948 inherit pro_attribs_classKernelBase"><td class="memItemLeft" align="right" valign="top"><a id="a6765c629c79539393af1f908db093948" name="a6765c629c79539393af1f908db093948"></a>
+std::thread&#160;</td><td class="memItemRight" valign="bottom"><b>m_thread</b></td></tr>
+<tr class="separator:a6765c629c79539393af1f908db093948 inherit pro_attribs_classKernelBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28fbff30534b909a486f0b4ff5b1aa80 inherit pro_attribs_classKernelBase"><td class="memItemLeft" align="right" valign="top"><a id="a28fbff30534b909a486f0b4ff5b1aa80" name="a28fbff30534b909a486f0b4ff5b1aa80"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_started</b> = false</td></tr>
+<tr class="separator:a28fbff30534b909a486f0b4ff5b1aa80 inherit pro_attribs_classKernelBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8bb813e7eb6ba425bcc6ab9c2ea732a4" name="a8bb813e7eb6ba425bcc6ab9c2ea732a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bb813e7eb6ba425bcc6ab9c2ea732a4">&#9670;&nbsp;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class IOHandlerType , class... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::unique_ptr&lt; <a class="el" href="classECoS_1_1Kernel.html">Kernel</a> &gt; ECoS::Kernel::create </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>logId_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structECoS_1_1Config.html">Config</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create kernel and IO handler. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td><a class="el" href="namespaceLocoNet.html">LocoNet</a> configuration </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>IO handler arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The kernel instance </dd></dl>
+
+</div>
+</div>
+<a id="a6c5c8dd5a5578570fa62041b38539e8f" name="a6c5c8dd5a5578570fa62041b38539e8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c5c8dd5a5578570fa62041b38539e8f">&#9670;&nbsp;</a></span>decoderChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECoS::Kernel::decoderChanged </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classDecoder.html">Decoder</a> &amp;&#160;</td>
+          <td class="paramname"><em>decoder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DecoderChangeFlags&#160;</td>
+          <td class="paramname"><em>changes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>functionNumber</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>... </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">decoder</td><td>... </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">changes</td><td>... </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">functionNumber</td><td>... </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5f8b86f6546c644827be07de327fe1cd" name="a5f8b86f6546c644827be07de327fe1cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f8b86f6546c644827be07de327fe1cd">&#9670;&nbsp;</a></span>ioHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T &amp; ECoS::Kernel::ioHandler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the IO handler. </p>
+<dl class="section return"><dt>Returns</dt><dd>The IO handler </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The IO handler runs in the kernel's IO context, not all functions can be called safely! </dd></dl>
+
+</div>
+</div>
+<a id="aef49d53131e353c36c903ce9c532bdb1" name="aef49d53131e353c36c903ce9c532bdb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef49d53131e353c36c903ce9c532bdb1">&#9670;&nbsp;</a></span>receive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECoS::Kernel::receive </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>... </p>
+<p >This must be called by the IO handler whenever a <a class="el" href="classECoS_1_1ECoS.html">ECoS</a> message is received.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>The received <a class="el" href="classECoS_1_1ECoS.html">ECoS</a> message </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This function must run in the kernel's IO context </dd></dl>
+
+</div>
+</div>
+<a id="a0ac4685676fdd1576e40a5443e6f2055" name="a0ac4685676fdd1576e40a5443e6f2055"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ac4685676fdd1576e40a5443e6f2055">&#9670;&nbsp;</a></span>setConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECoS::Kernel::setConfig </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structECoS_1_1Config.html">Config</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set <a class="el" href="classECoS_1_1ECoS.html">ECoS</a> configuration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>The <a class="el" href="namespaceLocoNet.html">LocoNet</a> configuration </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa4761493af6b78e52d2680802e0b0f2a" name="aa4761493af6b78e52d2680802e0b0f2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4761493af6b78e52d2680802e0b0f2a">&#9670;&nbsp;</a></span>setDecoderController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECoS::Kernel::setDecoderController </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classDecoderController.html">DecoderController</a> *&#160;</td>
+          <td class="paramname"><em>decoderController</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the decoder controller. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">decoderController</td><td>The decoder controller </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This function may not be called when the kernel is running. </dd></dl>
+
+</div>
+</div>
+<a id="af77b9237411f486ce88d6ea93f3f4a4b" name="af77b9237411f486ce88d6ea93f3f4a4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af77b9237411f486ce88d6ea93f3f4a4b">&#9670;&nbsp;</a></span>setInputController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECoS::Kernel::setInputController </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classInputController.html">InputController</a> *&#160;</td>
+          <td class="paramname"><em>inputController</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the input controller. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">inputController</td><td>The input controller </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This function may not be called when the kernel is running. </dd></dl>
+
+</div>
+</div>
+<a id="abe1026a2457d863135a57b38b7e44da1" name="abe1026a2457d863135a57b38b7e44da1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe1026a2457d863135a57b38b7e44da1">&#9670;&nbsp;</a></span>setOnEmergencyStop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECoS::Kernel::setOnEmergencyStop </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>... </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>... </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This function may not be called when the kernel is running. </dd></dl>
+
+</div>
+</div>
+<a id="a5fd3bcc399ba0ab1c91c1c4efdcc0e50" name="a5fd3bcc399ba0ab1c91c1c4efdcc0e50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fd3bcc399ba0ab1c91c1c4efdcc0e50">&#9670;&nbsp;</a></span>setOnGo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECoS::Kernel::setOnGo </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>... </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>... </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This function may not be called when the kernel is running. </dd></dl>
+
+</div>
+</div>
+<a id="ab70f082e379cedfcfc371be6b48bc37f" name="ab70f082e379cedfcfc371be6b48bc37f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab70f082e379cedfcfc371be6b48bc37f">&#9670;&nbsp;</a></span>setOutput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ECoS::Kernel::setOutput </td>
+          <td>(</td>
+          <td class="paramtype">OutputChannel&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutputValue&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>... </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">channel</td><td>Channel </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td><a class="el" href="classOutput.html">Output</a> id/address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td><a class="el" href="classOutput.html">Output</a> value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if send successful, <code>false</code> otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a051eefb4294c70e014d9b22a477b466c" name="a051eefb4294c70e014d9b22a477b466c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a051eefb4294c70e014d9b22a477b466c">&#9670;&nbsp;</a></span>setOutputController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECoS::Kernel::setOutputController </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classOutputController.html">OutputController</a> *&#160;</td>
+          <td class="paramname"><em>outputController</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the output controller. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">outputController</td><td>The output controller </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This function may not be called when the kernel is running. </dd></dl>
+
+</div>
+</div>
+<a id="a13b7d0055abc00ddbfcdc1067cf118d2" name="a13b7d0055abc00ddbfcdc1067cf118d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13b7d0055abc00ddbfcdc1067cf118d2">&#9670;&nbsp;</a></span>simulateInputChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECoS::Kernel::simulateInputChange </td>
+          <td>(</td>
+          <td class="paramtype">InputChannel&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SimulateInputAction&#160;</td>
+          <td class="paramname"><em>action</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000023">Todo:</a></b></dt><dd>Implement <a class="el" href="classECoS_1_1ECoS.html">ECoS</a> detector simulation </dd></dl>
+
+</div>
+</div>
+<a id="a66bc65b314d378dea2dafa16a040b81e" name="a66bc65b314d378dea2dafa16a040b81e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66bc65b314d378dea2dafa16a040b81e">&#9670;&nbsp;</a></span>started()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECoS::Kernel::started </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notify kernel the IO handler is started. </p>
+<dl class="section note"><dt>Note</dt><dd>This function must run in the kernel's IO context </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classKernelBase.html">KernelBase</a>.</p>
+
+</div>
+</div>
+<a id="a3e1f240dd558a0c543368feff3f74364" name="a3e1f240dd558a0c543368feff3f74364"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e1f240dd558a0c543368feff3f74364">&#9670;&nbsp;</a></span>stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ECoS::Kernel::stop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structECoS_1_1Simulation.html">Simulation</a> *&#160;</td>
+          <td class="paramname"><em>simulation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stop the kernel and IO handler. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">simulation</td><td>Get simulation data (optional) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="abcc0caa116d0ff2417b6043d85eecca2" name="abcc0caa116d0ff2417b6043d85eecca2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcc0caa116d0ff2417b6043d85eecca2">&#9670;&nbsp;</a></span>ecosDetectorAddressMax</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint16_t ECoS::Kernel::ecosDetectorAddressMax = 1000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000025">Todo:</a></b></dt><dd>what is the maximum </dd></dl>
+
+</div>
+</div>
+<a id="a69eb262b1a07837593746d0d3cd6db25" name="a69eb262b1a07837593746d0d3cd6db25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69eb262b1a07837593746d0d3cd6db25">&#9670;&nbsp;</a></span>s88AddressMax</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint16_t ECoS::Kernel::s88AddressMax = 1000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000024">Todo:</a></b></dt><dd>what is the maximum </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/tom/projects/linux/traintastic/server/src/hardware/protocol/ecos/<a class="el" href="ecos_2kernel_8hpp_source.html">kernel.hpp</a></li>
+<li>/home/tom/projects/linux/traintastic/server/src/hardware/protocol/ecos/kernel.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

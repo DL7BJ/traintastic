@@ -135,6 +135,23 @@ install(TARGETS traintastic-client
 if(LINUX)
   install(FILES ${CMAKE_SOURCE_DIR}/debian/traintastic-client.desktop DESTINATION share/applications)
   install(FILES ${CMAKE_SOURCE_DIR}/debian/traintastic_256.png DESTINATION "/opt/traintastic/icons/")
+  find_package(Doxygen OPTIONAL_COMPONENTS dot mscgen dia)
+
+  if(DOXYGEN_FOUND)
+    set(DOXYGEN_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/../docs/doxygen/client")
+    set(DOXYGEN_HTML_EXTRA_STYLESHEET "${CMAKE_SOURCE_DIR}/../docs/doxygen/doxygen-awesome.css")
+    set(DOXYGEN_HTML_EXTRA_FILES "${CMAKE_SOURCE_DIR}/../docs/doxygen/doxygen-awesome-darkmode-toggle.js")
+    set(DOXYGEN_HTML_HEADER "${CMAKE_SOURCE_DIR}/../docs/doxygen/header.html")
+    set(DOXYGEN_HTML_COLORSTYLE LIGHT)
+    set(DOXYGEN_PROJECT_LOGO "${CMAKE_SOURCE_DIR}/../client/gfx/appicon.png")
+    doxygen_add_docs(doxygen
+    ${SOURCES})
+      #[filesOrDirs...]
+      #[ALL]
+      #[USE_STAMP_FILE]
+      #[WORKING_DIRECTORY dir]
+      #[COMMENT comment])
+  endif()
 endif()
 
 ### BUILD TYPE ###

@@ -1,0 +1,6 @@
+<map id="TrainBlockStatus" name="TrainBlockStatus">
+<area shape="rect" id="node1" title="Represents the state of a train within a block." alt="" coords="17,244,139,271"/>
+<area shape="rect" id="node2" href="$classStateObject.html" title="Object with storable state information Properties can&#39;t have the PropertyFlags::Store flag set...." alt="" coords="33,169,123,196"/>
+<area shape="rect" id="node3" href="$classObject.html" title=" " alt="" coords="48,95,108,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,5,151,47"/>
+</map>

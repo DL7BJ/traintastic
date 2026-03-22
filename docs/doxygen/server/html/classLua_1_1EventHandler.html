@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>traintastic-server: Lua::EventHandler Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+   DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="appicon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">traintastic-server
+   &#160;<span id="projectnumber">0.4.0</span>
+   </div>
+   <div id="projectbrief">Traintastic server</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceLua.html">Lua</a></li><li class="navelem"><a class="el" href="classLua_1_1EventHandler.html">EventHandler</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classLua_1_1EventHandler-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">Lua::EventHandler Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Inheritance diagram for Lua::EventHandler:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLua_1_1EventHandler__inherit__graph.png" border="0" usemap="#aLua_1_1EventHandler_inherit__map" alt="Inheritance graph"/></div>
+<map name="aLua_1_1EventHandler_inherit__map" id="aLua_1_1EventHandler_inherit__map">
+<area shape="rect" title=" " alt="" coords="57,169,188,196"/>
+<area shape="rect" href="classAbstractEventHandler.html" title=" " alt="" coords="47,95,198,121"/>
+<area shape="rect" title=" " alt="" coords="5,5,240,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Lua::EventHandler:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLua_1_1EventHandler__coll__graph.png" border="0" usemap="#aLua_1_1EventHandler_coll__map" alt="Collaboration graph"/></div>
+<map name="aLua_1_1EventHandler_coll__map" id="aLua_1_1EventHandler_coll__map">
+<area shape="rect" title=" " alt="" coords="79,455,209,481"/>
+<area shape="rect" href="classAbstractEventHandler.html" title=" " alt="" coords="69,379,219,405"/>
+<area shape="rect" title=" " alt="" coords="5,275,240,316"/>
+<area shape="rect" href="classAbstractEvent.html" title=" " alt="" coords="263,282,369,309"/>
+<area shape="rect" href="classInterfaceItem.html" title=" " alt="" coords="267,199,365,225"/>
+<area shape="rect" href="classObject.html" title=" " alt="" coords="286,109,346,136"/>
+<area shape="rect" title=" " alt="" coords="169,5,314,47"/>
+<area shape="rect" href="classInterfaceItems.html" title=" " alt="" coords="339,13,445,39"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ace1f5c59d7c7d1089a04709c3f21b260"><td class="memItemLeft" align="right" valign="top"><a id="ace1f5c59d7c7d1089a04709c3f21b260" name="ace1f5c59d7c7d1089a04709c3f21b260"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>EventHandler</b> (<a class="el" href="classAbstractEvent.html">AbstractEvent</a> &amp;evt, lua_State *L, int functionIndex=1)</td></tr>
+<tr class="separator:ace1f5c59d7c7d1089a04709c3f21b260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a799830edf73f1fb92f05f22eb7f984ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLua_1_1EventHandler.html#a799830edf73f1fb92f05f22eb7f984ad">execute</a> (const Arguments &amp;args) final</td></tr>
+<tr class="separator:a799830edf73f1fb92f05f22eb7f984ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f95b71a726c213b92b93cacbc1bca49"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLua_1_1EventHandler.html#a4f95b71a726c213b92b93cacbc1bca49">disconnect</a> () final</td></tr>
+<tr class="separator:a4f95b71a726c213b92b93cacbc1bca49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classAbstractEventHandler"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAbstractEventHandler')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAbstractEventHandler.html">AbstractEventHandler</a></td></tr>
+<tr class="memitem:afc89128ad637cfa7f46db32db46c1935 inherit pub_methods_classAbstractEventHandler"><td class="memItemLeft" align="right" valign="top"><a id="afc89128ad637cfa7f46db32db46c1935" name="afc89128ad637cfa7f46db32db46c1935"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AbstractEventHandler</b> (const <a class="el" href="classAbstractEventHandler.html">AbstractEventHandler</a> &amp;)=delete</td></tr>
+<tr class="separator:afc89128ad637cfa7f46db32db46c1935 inherit pub_methods_classAbstractEventHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a631193ce1aea513dbd7749dfe1aa1620 inherit pub_methods_classAbstractEventHandler"><td class="memItemLeft" align="right" valign="top"><a id="a631193ce1aea513dbd7749dfe1aa1620" name="a631193ce1aea513dbd7749dfe1aa1620"></a>
+<a class="el" href="classAbstractEventHandler.html">AbstractEventHandler</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classAbstractEventHandler.html">AbstractEventHandler</a> &amp;)=delete</td></tr>
+<tr class="separator:a631193ce1aea513dbd7749dfe1aa1620 inherit pub_methods_classAbstractEventHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abedff9c7038d44a6287bbb070e37dcfb inherit pub_methods_classAbstractEventHandler"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractEventHandler.html#abedff9c7038d44a6287bbb070e37dcfb">AbstractEventHandler</a> (<a class="el" href="classAbstractEvent.html">AbstractEvent</a> &amp;evt)</td></tr>
+<tr class="separator:abedff9c7038d44a6287bbb070e37dcfb inherit pub_methods_classAbstractEventHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5337793bd11a87661549064d9cdd52e2 inherit pub_methods_classAbstractEventHandler"><td class="memItemLeft" align="right" valign="top"><a id="a5337793bd11a87661549064d9cdd52e2" name="a5337793bd11a87661549064d9cdd52e2"></a>
+<a class="el" href="classAbstractEvent.html">AbstractEvent</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>event</b> () const</td></tr>
+<tr class="separator:a5337793bd11a87661549064d9cdd52e2 inherit pub_methods_classAbstractEventHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a371aebacc39e6e8f4ff095c9c578cc42 inherit pub_methods_classAbstractEventHandler"><td class="memItemLeft" align="right" valign="top"><a id="a371aebacc39e6e8f4ff095c9c578cc42" name="a371aebacc39e6e8f4ff095c9c578cc42"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>execute</b> (const Arguments &amp;args)=0</td></tr>
+<tr class="separator:a371aebacc39e6e8f4ff095c9c578cc42 inherit pub_methods_classAbstractEventHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8e8ca41de740a6bcd677b7456a1428f inherit pub_methods_classAbstractEventHandler"><td class="memItemLeft" align="right" valign="top"><a id="ae8e8ca41de740a6bcd677b7456a1428f" name="ae8e8ca41de740a6bcd677b7456a1428f"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>disconnect</b> ()</td></tr>
+<tr class="separator:ae8e8ca41de740a6bcd677b7456a1428f inherit pub_methods_classAbstractEventHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_classAbstractEventHandler"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classAbstractEventHandler')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classAbstractEventHandler.html">AbstractEventHandler</a></td></tr>
+<tr class="memitem:a6f364cdde120f1eafc1773a8fa875ae5 inherit pro_attribs_classAbstractEventHandler"><td class="memItemLeft" align="right" valign="top"><a id="a6f364cdde120f1eafc1773a8fa875ae5" name="a6f364cdde120f1eafc1773a8fa875ae5"></a>
+<a class="el" href="classAbstractEvent.html">AbstractEvent</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>m_event</b></td></tr>
+<tr class="separator:a6f364cdde120f1eafc1773a8fa875ae5 inherit pro_attribs_classAbstractEventHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4f95b71a726c213b92b93cacbc1bca49" name="a4f95b71a726c213b92b93cacbc1bca49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f95b71a726c213b92b93cacbc1bca49">&#9670;&nbsp;</a></span>disconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Lua::EventHandler::disconnect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classAbstractEventHandler.html">AbstractEventHandler</a>.</p>
+
+</div>
+</div>
+<a id="a799830edf73f1fb92f05f22eb7f984ad" name="a799830edf73f1fb92f05f22eb7f984ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a799830edf73f1fb92f05f22eb7f984ad">&#9670;&nbsp;</a></span>execute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lua::EventHandler::execute </td>
+          <td>(</td>
+          <td class="paramtype">const Arguments &amp;&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classAbstractEventHandler.html">AbstractEventHandler</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/tom/projects/linux/traintastic/server/src/lua/<a class="el" href="eventhandler_8hpp_source.html">eventhandler.hpp</a></li>
+<li>/home/tom/projects/linux/traintastic/server/src/lua/eventhandler.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

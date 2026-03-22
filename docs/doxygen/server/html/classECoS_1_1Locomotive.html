@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>traintastic-server: ECoS::Locomotive Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+   DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="appicon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">traintastic-server
+   &#160;<span id="projectnumber">0.4.0</span>
+   </div>
+   <div id="projectbrief">Traintastic server</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceECoS.html">ECoS</a></li><li class="navelem"><a class="el" href="classECoS_1_1Locomotive.html">Locomotive</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="classECoS_1_1Locomotive-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">ECoS::Locomotive Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Inheritance diagram for ECoS::Locomotive:</div>
+<div class="dyncontent">
+<div class="center"><img src="classECoS_1_1Locomotive__inherit__graph.png" border="0" usemap="#aECoS_1_1Locomotive_inherit__map" alt="Inheritance graph"/></div>
+<map name="aECoS_1_1Locomotive_inherit__map" id="aECoS_1_1Locomotive_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,80,137,107"/>
+<area shape="rect" href="classECoS_1_1Object.html" title=" " alt="" coords="20,5,123,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for ECoS::Locomotive:</div>
+<div class="dyncontent">
+<div class="center"><img src="classECoS_1_1Locomotive__coll__graph.png" border="0" usemap="#aECoS_1_1Locomotive_coll__map" alt="Collaboration graph"/></div>
+<map name="aECoS_1_1Locomotive_coll__map" id="aECoS_1_1Locomotive_coll__map">
+<area shape="rect" title=" " alt="" coords="5,247,137,273"/>
+<area shape="rect" href="classECoS_1_1Object.html" title=" " alt="" coords="20,171,123,197"/>
+<area shape="rect" href="classECoS_1_1Kernel.html" title=" " alt="" coords="20,81,123,108"/>
+<area shape="rect" href="classKernelBase.html" title=" " alt="" coords="27,5,116,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a1def89130f947ec700771de616a13c96"><td class="memItemLeft" align="right" valign="top"><a id="a1def89130f947ec700771de616a13c96" name="a1def89130f947ec700771de616a13c96"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Locomotive</b> (<a class="el" href="classECoS_1_1Kernel.html">Kernel</a> &amp;kernel, uint16_t id)</td></tr>
+<tr class="separator:a1def89130f947ec700771de616a13c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86052423e87aa5d301b7e95f70736272"><td class="memItemLeft" align="right" valign="top"><a id="a86052423e87aa5d301b7e95f70736272" name="a86052423e87aa5d301b7e95f70736272"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Locomotive</b> (<a class="el" href="classECoS_1_1Kernel.html">Kernel</a> &amp;kernel, const <a class="el" href="structECoS_1_1Line.html">Line</a> &amp;data)</td></tr>
+<tr class="separator:a86052423e87aa5d301b7e95f70736272"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a137094d57fa9ad26b18da1b1e943afe3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Locomotive.html#a137094d57fa9ad26b18da1b1e943afe3">receiveReply</a> (const <a class="el" href="structECoS_1_1Reply.html">Reply</a> &amp;reply) final</td></tr>
+<tr class="separator:a137094d57fa9ad26b18da1b1e943afe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a088001553a1ac1123b42d09de69da64b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Locomotive.html#a088001553a1ac1123b42d09de69da64b">receiveEvent</a> (const <a class="el" href="structECoS_1_1Event.html">Event</a> &amp;event) final</td></tr>
+<tr class="separator:a088001553a1ac1123b42d09de69da64b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4d32027ff0f4a36639648b5222c6a76"><td class="memItemLeft" align="right" valign="top"><a id="af4d32027ff0f4a36639648b5222c6a76" name="af4d32027ff0f4a36639648b5222c6a76"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>address</b> () const</td></tr>
+<tr class="separator:af4d32027ff0f4a36639648b5222c6a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44fe7180c3385b18d4f491159eb6b192"><td class="memItemLeft" align="right" valign="top"><a id="a44fe7180c3385b18d4f491159eb6b192" name="a44fe7180c3385b18d4f491159eb6b192"></a>
+LocomotiveProtocol&#160;</td><td class="memItemRight" valign="bottom"><b>protocol</b> () const</td></tr>
+<tr class="separator:a44fe7180c3385b18d4f491159eb6b192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0183e6b7be93180147509f6e46839bf9"><td class="memItemLeft" align="right" valign="top"><a id="a0183e6b7be93180147509f6e46839bf9" name="a0183e6b7be93180147509f6e46839bf9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>stop</b> ()</td></tr>
+<tr class="separator:a0183e6b7be93180147509f6e46839bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a310d4110c058a904f178dcf7f20f83b4"><td class="memItemLeft" align="right" valign="top"><a id="a310d4110c058a904f178dcf7f20f83b4" name="a310d4110c058a904f178dcf7f20f83b4"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>speedStep</b> () const</td></tr>
+<tr class="separator:a310d4110c058a904f178dcf7f20f83b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a2acb186d2307925012f355a830fed9"><td class="memItemLeft" align="right" valign="top"><a id="a1a2acb186d2307925012f355a830fed9" name="a1a2acb186d2307925012f355a830fed9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setSpeedStep</b> (uint8_t value)</td></tr>
+<tr class="separator:a1a2acb186d2307925012f355a830fed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa94c6d1b8ce15a5571689558cc2d8dbb"><td class="memItemLeft" align="right" valign="top"><a id="aa94c6d1b8ce15a5571689558cc2d8dbb" name="aa94c6d1b8ce15a5571689558cc2d8dbb"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>speedSteps</b> () const</td></tr>
+<tr class="separator:aa94c6d1b8ce15a5571689558cc2d8dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a9d98e86a6f433d5469c21b703beb1f"><td class="memItemLeft" align="right" valign="top"><a id="a2a9d98e86a6f433d5469c21b703beb1f" name="a2a9d98e86a6f433d5469c21b703beb1f"></a>
+Direction&#160;</td><td class="memItemRight" valign="bottom"><b>direction</b> () const</td></tr>
+<tr class="separator:a2a9d98e86a6f433d5469c21b703beb1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af65d61960b109dbdea3764ff1b8e3ad0"><td class="memItemLeft" align="right" valign="top"><a id="af65d61960b109dbdea3764ff1b8e3ad0" name="af65d61960b109dbdea3764ff1b8e3ad0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setDirection</b> (Direction value)</td></tr>
+<tr class="separator:af65d61960b109dbdea3764ff1b8e3ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7cad97989a25e8ec1dc3efcc2ebf32e"><td class="memItemLeft" align="right" valign="top"><a id="aa7cad97989a25e8ec1dc3efcc2ebf32e" name="aa7cad97989a25e8ec1dc3efcc2ebf32e"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>getFunctionCount</b> () const</td></tr>
+<tr class="separator:aa7cad97989a25e8ec1dc3efcc2ebf32e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56ac55a12574fe6d5ea5fd59bf205d8f"><td class="memItemLeft" align="right" valign="top"><a id="a56ac55a12574fe6d5ea5fd59bf205d8f" name="a56ac55a12574fe6d5ea5fd59bf205d8f"></a>
+TriState&#160;</td><td class="memItemRight" valign="bottom"><b>getFunctionValue</b> (uint8_t index) const</td></tr>
+<tr class="separator:a56ac55a12574fe6d5ea5fd59bf205d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bb706b64332b00f5969fe328d7d2433"><td class="memItemLeft" align="right" valign="top"><a id="a2bb706b64332b00f5969fe328d7d2433" name="a2bb706b64332b00f5969fe328d7d2433"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setFunctionValue</b> (uint8_t index, bool value)</td></tr>
+<tr class="separator:a2bb706b64332b00f5969fe328d7d2433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classECoS_1_1Object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classECoS_1_1Object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classECoS_1_1Object.html">ECoS::Object</a></td></tr>
+<tr class="memitem:a5ef9b3132d715eabc1b225c18d22658f inherit pub_methods_classECoS_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a5ef9b3132d715eabc1b225c18d22658f" name="a5ef9b3132d715eabc1b225c18d22658f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Object</b> (const <a class="el" href="classECoS_1_1Object.html">Object</a> &amp;)=delete</td></tr>
+<tr class="separator:a5ef9b3132d715eabc1b225c18d22658f inherit pub_methods_classECoS_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae374fccf9de3f85897f9291e6f88ab89 inherit pub_methods_classECoS_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="ae374fccf9de3f85897f9291e6f88ab89" name="ae374fccf9de3f85897f9291e6f88ab89"></a>
+<a class="el" href="classECoS_1_1Object.html">Object</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classECoS_1_1Object.html">Object</a> &amp;)=delete</td></tr>
+<tr class="separator:ae374fccf9de3f85897f9291e6f88ab89 inherit pub_methods_classECoS_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5deaa8777f3c911ecf33670b1277c76c inherit pub_methods_classECoS_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a5deaa8777f3c911ecf33670b1277c76c" name="a5deaa8777f3c911ecf33670b1277c76c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Object</b> (<a class="el" href="classECoS_1_1Kernel.html">Kernel</a> &amp;kernel, uint16_t id)</td></tr>
+<tr class="separator:a5deaa8777f3c911ecf33670b1277c76c inherit pub_methods_classECoS_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d02fd94489b43df1f78187f6697b5b9 inherit pub_methods_classECoS_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a5d02fd94489b43df1f78187f6697b5b9" name="a5d02fd94489b43df1f78187f6697b5b9"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>receiveReply</b> (const <a class="el" href="structECoS_1_1Reply.html">Reply</a> &amp;reply)</td></tr>
+<tr class="separator:a5d02fd94489b43df1f78187f6697b5b9 inherit pub_methods_classECoS_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac48bd8c72e4841500a39ab27288ddecf inherit pub_methods_classECoS_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="ac48bd8c72e4841500a39ab27288ddecf" name="ac48bd8c72e4841500a39ab27288ddecf"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>receiveEvent</b> (const <a class="el" href="structECoS_1_1Event.html">Event</a> &amp;event)</td></tr>
+<tr class="separator:ac48bd8c72e4841500a39ab27288ddecf inherit pub_methods_classECoS_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7a509649a81b3aedb5771ca16d65799 inherit pub_methods_classECoS_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="af7a509649a81b3aedb5771ca16d65799" name="af7a509649a81b3aedb5771ca16d65799"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>id</b> () const</td></tr>
+<tr class="separator:af7a509649a81b3aedb5771ca16d65799 inherit pub_methods_classECoS_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87b8b2e12636d2d11f3c89fbf72aed69 inherit pub_methods_classECoS_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a87b8b2e12636d2d11f3c89fbf72aed69" name="a87b8b2e12636d2d11f3c89fbf72aed69"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isViewActive</b> () const</td></tr>
+<tr class="separator:a87b8b2e12636d2d11f3c89fbf72aed69 inherit pub_methods_classECoS_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a66c5b25b8dfb5ee27f16c6a468c431 inherit pub_methods_classECoS_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a1a66c5b25b8dfb5ee27f16c6a468c431" name="a1a66c5b25b8dfb5ee27f16c6a468c431"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>requestView</b> ()</td></tr>
+<tr class="separator:a1a66c5b25b8dfb5ee27f16c6a468c431 inherit pub_methods_classECoS_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a2f5982b5f557ab5746d0513f8355204e"><td class="memItemLeft" align="right" valign="top"><a id="a2f5982b5f557ab5746d0513f8355204e" name="a2f5982b5f557ab5746d0513f8355204e"></a>
+static constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>getSpeedSteps</b> (LocomotiveProtocol protocol)</td></tr>
+<tr class="separator:a2f5982b5f557ab5746d0513f8355204e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cc5a2a3baedc8250c2324211ec30046"><td class="memItemLeft" align="right" valign="top"><a id="a4cc5a2a3baedc8250c2324211ec30046" name="a4cc5a2a3baedc8250c2324211ec30046"></a>
+static constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>getFunctionCount</b> (LocomotiveProtocol protocol)</td></tr>
+<tr class="separator:a4cc5a2a3baedc8250c2324211ec30046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:ada6dd8c7e1c615c0d710a95e3f7f0a02"><td class="memItemLeft" align="right" valign="top"><a id="ada6dd8c7e1c615c0d710a95e3f7f0a02" name="ada6dd8c7e1c615c0d710a95e3f7f0a02"></a>
+static const std::initializer_list&lt; std::string_view &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>options</b> = {Option::addr, Option::protocol}</td></tr>
+<tr class="separator:ada6dd8c7e1c615c0d710a95e3f7f0a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a3eb1d48bda84d6dad15b0b2ea5f8ef3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECoS_1_1Locomotive.html#a3eb1d48bda84d6dad15b0b2ea5f8ef3f">update</a> (std::string_view option, std::string_view value) final</td></tr>
+<tr class="separator:a3eb1d48bda84d6dad15b0b2ea5f8ef3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classECoS_1_1Object"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classECoS_1_1Object')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classECoS_1_1Object.html">ECoS::Object</a></td></tr>
+<tr class="memitem:ab7299c2effd1e6445e3ffd605862fd4a inherit pro_methods_classECoS_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="ab7299c2effd1e6445e3ffd605862fd4a" name="ab7299c2effd1e6445e3ffd605862fd4a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>send</b> (std::string_view message)</td></tr>
+<tr class="separator:ab7299c2effd1e6445e3ffd605862fd4a inherit pro_methods_classECoS_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa29da689af910b722b1a7410b8eafb3e inherit pro_methods_classECoS_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="aa29da689af910b722b1a7410b8eafb3e" name="aa29da689af910b722b1a7410b8eafb3e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>objectExists</b> (uint16_t objectId) const</td></tr>
+<tr class="separator:aa29da689af910b722b1a7410b8eafb3e inherit pro_methods_classECoS_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa953f521ace2d258726299d9488d0e7 inherit pro_methods_classECoS_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="aaa953f521ace2d258726299d9488d0e7" name="aaa953f521ace2d258726299d9488d0e7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addObject</b> (std::unique_ptr&lt; <a class="el" href="classECoS_1_1Object.html">Object</a> &gt; object)</td></tr>
+<tr class="separator:aaa953f521ace2d258726299d9488d0e7 inherit pro_methods_classECoS_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae04950a58efb105e23aa7207f1dfce83 inherit pro_methods_classECoS_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="ae04950a58efb105e23aa7207f1dfce83" name="ae04950a58efb105e23aa7207f1dfce83"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>nameChanged</b> ()</td></tr>
+<tr class="separator:ae04950a58efb105e23aa7207f1dfce83 inherit pro_methods_classECoS_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ce3393a0db23fe8c9aea80b7ee4553f inherit pro_methods_classECoS_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a7ce3393a0db23fe8c9aea80b7ee4553f" name="a7ce3393a0db23fe8c9aea80b7ee4553f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>removeObject</b> (uint16_t objectId)</td></tr>
+<tr class="separator:a7ce3393a0db23fe8c9aea80b7ee4553f inherit pro_methods_classECoS_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85a200ea0b8b9721a4762b03b67a867c inherit pro_methods_classECoS_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a85a200ea0b8b9721a4762b03b67a867c" name="a85a200ea0b8b9721a4762b03b67a867c"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (std::string_view, std::string_view)</td></tr>
+<tr class="separator:a85a200ea0b8b9721a4762b03b67a867c inherit pro_methods_classECoS_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_classECoS_1_1Object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classECoS_1_1Object')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classECoS_1_1Object.html">ECoS::Object</a></td></tr>
+<tr class="memitem:a4f537d358d593b4853fe79c8b5ea0957 inherit pro_attribs_classECoS_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a4f537d358d593b4853fe79c8b5ea0957" name="a4f537d358d593b4853fe79c8b5ea0957"></a>
+<a class="el" href="classECoS_1_1Kernel.html">Kernel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>m_kernel</b></td></tr>
+<tr class="separator:a4f537d358d593b4853fe79c8b5ea0957 inherit pro_attribs_classECoS_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa146c7e5e3ad2bb7ab189d3265f07678 inherit pro_attribs_classECoS_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="aa146c7e5e3ad2bb7ab189d3265f07678" name="aa146c7e5e3ad2bb7ab189d3265f07678"></a>
+const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_id</b></td></tr>
+<tr class="separator:aa146c7e5e3ad2bb7ab189d3265f07678 inherit pro_attribs_classECoS_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1828afbbbd920309cf3ee467afe84b0 inherit pro_attribs_classECoS_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="af1828afbbbd920309cf3ee467afe84b0" name="af1828afbbbd920309cf3ee467afe84b0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isViewActive</b> = false</td></tr>
+<tr class="separator:af1828afbbbd920309cf3ee467afe84b0 inherit pro_attribs_classECoS_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a088001553a1ac1123b42d09de69da64b" name="a088001553a1ac1123b42d09de69da64b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a088001553a1ac1123b42d09de69da64b">&#9670;&nbsp;</a></span>receiveEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Locomotive::receiveEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structECoS_1_1Event.html">Event</a> &amp;&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classECoS_1_1Object.html">ECoS::Object</a>.</p>
+
+</div>
+</div>
+<a id="a137094d57fa9ad26b18da1b1e943afe3" name="a137094d57fa9ad26b18da1b1e943afe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a137094d57fa9ad26b18da1b1e943afe3">&#9670;&nbsp;</a></span>receiveReply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Locomotive::receiveReply </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structECoS_1_1Reply.html">Reply</a> &amp;&#160;</td>
+          <td class="paramname"><em>reply</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classECoS_1_1Object.html">ECoS::Object</a>.</p>
+
+</div>
+</div>
+<a id="a3eb1d48bda84d6dad15b0b2ea5f8ef3f" name="a3eb1d48bda84d6dad15b0b2ea5f8ef3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eb1d48bda84d6dad15b0b2ea5f8ef3f">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Locomotive::update </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>option</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classECoS_1_1Object.html">ECoS::Object</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/tom/projects/linux/traintastic/server/src/hardware/protocol/ecos/object/<a class="el" href="hardware_2protocol_2ecos_2object_2locomotive_8hpp_source.html">locomotive.hpp</a></li>
+<li>/home/tom/projects/linux/traintastic/server/src/hardware/protocol/ecos/object/locomotive.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>traintastic-server: Z21::UDPClientIOHandler Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+   DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="appicon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">traintastic-server
+   &#160;<span id="projectnumber">0.4.0</span>
+   </div>
+   <div id="projectbrief">Traintastic server</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceZ21.html">Z21</a></li><li class="navelem"><a class="el" href="classZ21_1_1UDPClientIOHandler.html">UDPClientIOHandler</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="classZ21_1_1UDPClientIOHandler-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">Z21::UDPClientIOHandler Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Inheritance diagram for Z21::UDPClientIOHandler:</div>
+<div class="dyncontent">
+<div class="center"><img src="classZ21_1_1UDPClientIOHandler__inherit__graph.png" border="0" usemap="#aZ21_1_1UDPClientIOHandler_inherit__map" alt="Inheritance graph"/></div>
+<map name="aZ21_1_1UDPClientIOHandler_inherit__map" id="aZ21_1_1UDPClientIOHandler_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,155,180,181"/>
+<area shape="rect" href="classZ21_1_1UDPIOHandler.html" title=" " alt="" coords="23,80,163,107"/>
+<area shape="rect" href="classZ21_1_1IOHandler.html" title=" " alt="" coords="37,5,148,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Z21::UDPClientIOHandler:</div>
+<div class="dyncontent">
+<div class="center"><img src="classZ21_1_1UDPClientIOHandler__coll__graph.png" border="0" usemap="#aZ21_1_1UDPClientIOHandler_coll__map" alt="Collaboration graph"/></div>
+<map name="aZ21_1_1UDPClientIOHandler_coll__map" id="aZ21_1_1UDPClientIOHandler_coll__map">
+<area shape="rect" title=" " alt="" coords="5,323,180,349"/>
+<area shape="rect" href="classZ21_1_1UDPIOHandler.html" title=" " alt="" coords="23,247,163,273"/>
+<area shape="rect" href="classZ21_1_1IOHandler.html" title=" " alt="" coords="37,171,148,197"/>
+<area shape="rect" href="classZ21_1_1Kernel.html" title=" " alt="" coords="48,81,137,108"/>
+<area shape="rect" href="classKernelBase.html" title=" " alt="" coords="48,5,137,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a714d526ae866eaf283f3c73c149a6790"><td class="memItemLeft" align="right" valign="top"><a id="a714d526ae866eaf283f3c73c149a6790" name="a714d526ae866eaf283f3c73c149a6790"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>UDPClientIOHandler</b> (<a class="el" href="classZ21_1_1ClientKernel.html">ClientKernel</a> &amp;kernel, const std::string &amp;hostname, uint16_t port)</td></tr>
+<tr class="separator:a714d526ae866eaf283f3c73c149a6790"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d29e5219449347358dc61db246f493d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZ21_1_1UDPClientIOHandler.html#a5d29e5219449347358dc61db246f493d">send</a> (const <a class="el" href="structZ21_1_1Message.html">Message</a> &amp;message) final</td></tr>
+<tr class="separator:a5d29e5219449347358dc61db246f493d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classZ21_1_1UDPIOHandler"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classZ21_1_1UDPIOHandler')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classZ21_1_1UDPIOHandler.html">Z21::UDPIOHandler</a></td></tr>
+<tr class="memitem:a0fb415e3629076a5a53027fff1ffa330 inherit pub_methods_classZ21_1_1UDPIOHandler"><td class="memItemLeft" align="right" valign="top"><a id="a0fb415e3629076a5a53027fff1ffa330" name="a0fb415e3629076a5a53027fff1ffa330"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>UDPIOHandler</b> (<a class="el" href="classZ21_1_1Kernel.html">Kernel</a> &amp;kernel)</td></tr>
+<tr class="separator:a0fb415e3629076a5a53027fff1ffa330 inherit pub_methods_classZ21_1_1UDPIOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4154266f1c104a2c5ec8a47c2d2d717 inherit pub_methods_classZ21_1_1UDPIOHandler"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZ21_1_1UDPIOHandler.html#aa4154266f1c104a2c5ec8a47c2d2d717">start</a> () override</td></tr>
+<tr class="separator:aa4154266f1c104a2c5ec8a47c2d2d717 inherit pub_methods_classZ21_1_1UDPIOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a983c6efa06272e0d402575b6468f5c4d inherit pub_methods_classZ21_1_1UDPIOHandler"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZ21_1_1UDPIOHandler.html#a983c6efa06272e0d402575b6468f5c4d">stop</a> () override</td></tr>
+<tr class="separator:a983c6efa06272e0d402575b6468f5c4d inherit pub_methods_classZ21_1_1UDPIOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classZ21_1_1IOHandler"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classZ21_1_1IOHandler')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classZ21_1_1IOHandler.html">Z21::IOHandler</a></td></tr>
+<tr class="memitem:a991387b23a895e899f38b024dfca36f6 inherit pub_methods_classZ21_1_1IOHandler"><td class="memItemLeft" align="right" valign="top"><a id="a991387b23a895e899f38b024dfca36f6" name="a991387b23a895e899f38b024dfca36f6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>IOHandler</b> (const <a class="el" href="classZ21_1_1IOHandler.html">IOHandler</a> &amp;)=delete</td></tr>
+<tr class="separator:a991387b23a895e899f38b024dfca36f6 inherit pub_methods_classZ21_1_1IOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49e6f9557dbd72cc0e3cfd7cd831875e inherit pub_methods_classZ21_1_1IOHandler"><td class="memItemLeft" align="right" valign="top"><a id="a49e6f9557dbd72cc0e3cfd7cd831875e" name="a49e6f9557dbd72cc0e3cfd7cd831875e"></a>
+<a class="el" href="classZ21_1_1IOHandler.html">IOHandler</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classZ21_1_1IOHandler.html">IOHandler</a> &amp;)=delete</td></tr>
+<tr class="separator:a49e6f9557dbd72cc0e3cfd7cd831875e inherit pub_methods_classZ21_1_1IOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c106e333aaccb074508f6d3c109cad1 inherit pub_methods_classZ21_1_1IOHandler"><td class="memItemLeft" align="right" valign="top"><a id="a9c106e333aaccb074508f6d3c109cad1" name="a9c106e333aaccb074508f6d3c109cad1"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> ()=0</td></tr>
+<tr class="separator:a9c106e333aaccb074508f6d3c109cad1 inherit pub_methods_classZ21_1_1IOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8796a64bc3f3351cd993d871acb07dd inherit pub_methods_classZ21_1_1IOHandler"><td class="memItemLeft" align="right" valign="top"><a id="aa8796a64bc3f3351cd993d871acb07dd" name="aa8796a64bc3f3351cd993d871acb07dd"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>stop</b> ()=0</td></tr>
+<tr class="separator:aa8796a64bc3f3351cd993d871acb07dd inherit pub_methods_classZ21_1_1IOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ae77f4d817644835e9c87b53850c227 inherit pub_methods_classZ21_1_1IOHandler"><td class="memItemLeft" align="right" valign="top"><a id="a1ae77f4d817644835e9c87b53850c227" name="a1ae77f4d817644835e9c87b53850c227"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>send</b> (const <a class="el" href="structZ21_1_1Message.html">Message</a> &amp;)</td></tr>
+<tr class="separator:a1ae77f4d817644835e9c87b53850c227 inherit pub_methods_classZ21_1_1IOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8800cfa4e0ff2d28889d7cc1aaed7635 inherit pub_methods_classZ21_1_1IOHandler"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZ21_1_1IOHandler.html#a8800cfa4e0ff2d28889d7cc1aaed7635">sendTo</a> (const <a class="el" href="structZ21_1_1Message.html">Message</a> &amp;, ClientId)</td></tr>
+<tr class="separator:a8800cfa4e0ff2d28889d7cc1aaed7635 inherit pub_methods_classZ21_1_1IOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4d7d94d1bee355dffe9469abbce7058 inherit pub_methods_classZ21_1_1IOHandler"><td class="memItemLeft" align="right" valign="top"><a id="af4d7d94d1bee355dffe9469abbce7058" name="af4d7d94d1bee355dffe9469abbce7058"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>purgeClient</b> (ClientId)</td></tr>
+<tr class="separator:af4d7d94d1bee355dffe9469abbce7058 inherit pub_methods_classZ21_1_1IOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:aae763fa715c2be9927a61547e9f0753a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZ21_1_1UDPClientIOHandler.html#aae763fa715c2be9927a61547e9f0753a">receive</a> (const <a class="el" href="structZ21_1_1Message.html">Message</a> &amp;message, const boost::asio::ip::udp::endpoint &amp;remoteEndpoint) final</td></tr>
+<tr class="separator:aae763fa715c2be9927a61547e9f0753a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7df9e1f0ea7e1b437ee4c50e310726d6"><td class="memItemLeft" align="right" valign="top"><a id="a7df9e1f0ea7e1b437ee4c50e310726d6" name="a7df9e1f0ea7e1b437ee4c50e310726d6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>receive</b> (const <a class="el" href="structZ21_1_1Message.html">Message</a> &amp;message, const boost::asio::ip::udp::endpoint &amp;remoteEndpoint)=0</td></tr>
+<tr class="separator:a7df9e1f0ea7e1b437ee4c50e310726d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classZ21_1_1IOHandler"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classZ21_1_1IOHandler')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classZ21_1_1IOHandler.html">Z21::IOHandler</a></td></tr>
+<tr class="memitem:a8bb0877028842a1a00c59b465ce8ad64 inherit pro_methods_classZ21_1_1IOHandler"><td class="memItemLeft" align="right" valign="top"><a id="a8bb0877028842a1a00c59b465ce8ad64" name="a8bb0877028842a1a00c59b465ce8ad64"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>IOHandler</b> (<a class="el" href="classZ21_1_1Kernel.html">Kernel</a> &amp;kernel)</td></tr>
+<tr class="separator:a8bb0877028842a1a00c59b465ce8ad64 inherit pro_methods_classZ21_1_1IOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classZ21_1_1IOHandler"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classZ21_1_1IOHandler')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classZ21_1_1IOHandler.html">Z21::IOHandler</a></td></tr>
+<tr class="memitem:acf59e2310fee1b5b58c9f80557319fdf inherit pub_types_classZ21_1_1IOHandler"><td class="memItemLeft" align="right" valign="top"><a id="acf59e2310fee1b5b58c9f80557319fdf" name="acf59e2310fee1b5b58c9f80557319fdf"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ClientId</b> = size_t</td></tr>
+<tr class="separator:acf59e2310fee1b5b58c9f80557319fdf inherit pub_types_classZ21_1_1IOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_classZ21_1_1UDPIOHandler"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classZ21_1_1UDPIOHandler')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classZ21_1_1UDPIOHandler.html">Z21::UDPIOHandler</a></td></tr>
+<tr class="memitem:ab2b9fdc5b2aae9fab4a01e530d38af56 inherit pub_static_attribs_classZ21_1_1UDPIOHandler"><td class="memItemLeft" align="right" valign="top"><a id="ab2b9fdc5b2aae9fab4a01e530d38af56" name="ab2b9fdc5b2aae9fab4a01e530d38af56"></a>
+static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><b>payloadSizeMax</b> = 1500 - 20 - 8</td></tr>
+<tr class="memdesc:ab2b9fdc5b2aae9fab4a01e530d38af56 inherit pub_static_attribs_classZ21_1_1UDPIOHandler"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ethernet MTU - IPv4 header - UDP header. <br /></td></tr>
+<tr class="separator:ab2b9fdc5b2aae9fab4a01e530d38af56 inherit pub_static_attribs_classZ21_1_1UDPIOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a176f2a218a08b0f7e1bfd35655672b inherit pub_static_attribs_classZ21_1_1UDPIOHandler"><td class="memItemLeft" align="right" valign="top"><a id="a1a176f2a218a08b0f7e1bfd35655672b" name="a1a176f2a218a08b0f7e1bfd35655672b"></a>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>defaultPort</b> = 21105</td></tr>
+<tr class="separator:a1a176f2a218a08b0f7e1bfd35655672b inherit pub_static_attribs_classZ21_1_1UDPIOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classZ21_1_1UDPIOHandler"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classZ21_1_1UDPIOHandler')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classZ21_1_1UDPIOHandler.html">Z21::UDPIOHandler</a></td></tr>
+<tr class="memitem:a6eb8c855b1cdbd47c97d020a48bf928c inherit pro_attribs_classZ21_1_1UDPIOHandler"><td class="memItemLeft" align="right" valign="top"><a id="a6eb8c855b1cdbd47c97d020a48bf928c" name="a6eb8c855b1cdbd47c97d020a48bf928c"></a>
+boost::asio::ip::udp::socket&#160;</td><td class="memItemRight" valign="bottom"><b>m_socket</b></td></tr>
+<tr class="separator:a6eb8c855b1cdbd47c97d020a48bf928c inherit pro_attribs_classZ21_1_1UDPIOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classZ21_1_1IOHandler"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classZ21_1_1IOHandler')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classZ21_1_1IOHandler.html">Z21::IOHandler</a></td></tr>
+<tr class="memitem:af208049cae47d834005fef23b47b3be6 inherit pro_attribs_classZ21_1_1IOHandler"><td class="memItemLeft" align="right" valign="top"><a id="af208049cae47d834005fef23b47b3be6" name="af208049cae47d834005fef23b47b3be6"></a>
+<a class="el" href="classZ21_1_1Kernel.html">Kernel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>m_kernel</b></td></tr>
+<tr class="separator:af208049cae47d834005fef23b47b3be6 inherit pro_attribs_classZ21_1_1IOHandler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aae763fa715c2be9927a61547e9f0753a" name="aae763fa715c2be9927a61547e9f0753a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae763fa715c2be9927a61547e9f0753a">&#9670;&nbsp;</a></span>receive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Z21::UDPClientIOHandler::receive </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structZ21_1_1Message.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const boost::asio::ip::udp::endpoint &amp;&#160;</td>
+          <td class="paramname"><em>remoteEndpoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classZ21_1_1UDPIOHandler.html">Z21::UDPIOHandler</a>.</p>
+
+</div>
+</div>
+<a id="a5d29e5219449347358dc61db246f493d" name="a5d29e5219449347358dc61db246f493d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d29e5219449347358dc61db246f493d">&#9670;&nbsp;</a></span>send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Z21::UDPClientIOHandler::send </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structZ21_1_1Message.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classZ21_1_1IOHandler.html">Z21::IOHandler</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/tom/projects/linux/traintastic/server/src/hardware/protocol/z21/iohandler/<a class="el" href="udpclientiohandler_8hpp_source.html">udpclientiohandler.hpp</a></li>
+<li>/home/tom/projects/linux/traintastic/server/src/hardware/protocol/z21/iohandler/udpclientiohandler.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<map id="AbstractMethod::MethodCallError" name="AbstractMethod::MethodCallError">
+<area shape="rect" id="node1" title=" " alt="" coords="177,71,365,112"/>
+<area shape="rect" id="node3" href="$classAbstractMethod_1_1ArgumentError.html" title=" " alt="" coords="427,37,606,79"/>
+<area shape="rect" id="node6" href="$classAbstractMethod_1_1InvalidNumberOfArgumentsError.html" title=" " alt="" coords="413,103,620,144"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,78,129,105"/>
+<area shape="rect" id="node4" href="$classAbstractMethod_1_1InvalidObjectArgumentError.html" title=" " alt="" coords="668,5,867,47"/>
+<area shape="rect" id="node5" href="$classAbstractMethod_1_1OutOfRangeArgumentError.html" title=" " alt="" coords="670,71,865,112"/>
+</map>

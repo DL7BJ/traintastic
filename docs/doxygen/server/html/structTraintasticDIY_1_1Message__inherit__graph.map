@@ -1,0 +1,16 @@
+<map id="TraintasticDIY::Message" name="TraintasticDIY::Message">
+<area shape="rect" id="node1" title=" " alt="" coords="5,260,172,287"/>
+<area shape="rect" id="node2" href="$structTraintasticDIY_1_1Features.html" title=" " alt="" coords="231,5,395,32"/>
+<area shape="rect" id="node3" href="$structTraintasticDIY_1_1GetFeatures.html" title=" " alt="" coords="220,56,405,83"/>
+<area shape="rect" id="node4" href="$structTraintasticDIY_1_1GetInfo.html" title=" " alt="" coords="235,107,391,133"/>
+<area shape="rect" id="node5" href="$structTraintasticDIY_1_1GetInputState.html" title=" " alt="" coords="231,158,394,199"/>
+<area shape="rect" id="node6" href="$structTraintasticDIY_1_1GetOutputState.html" title=" " alt="" coords="226,223,399,265"/>
+<area shape="rect" id="node7" href="$structTraintasticDIY_1_1Heartbeat.html" title=" " alt="" coords="227,289,398,316"/>
+<area shape="rect" id="node8" href="$structTraintasticDIY_1_1InfoBase.html" title=" " alt="" coords="230,340,395,367"/>
+<area shape="rect" id="node9" href="$structTraintasticDIY_1_1SetInputState.html" title=" " alt="" coords="231,391,394,433"/>
+<area shape="rect" id="node10" href="$structTraintasticDIY_1_1SetOutputState.html" title=" " alt="" coords="227,457,399,498"/>
+<area shape="rect" id="node11" href="$structTraintasticDIY_1_1ThrottleMessage.html" title=" " alt="" coords="234,522,391,563"/>
+<area shape="rect" id="node12" href="$structTraintasticDIY_1_1ThrottleSetFunction.html" title=" " alt="" coords="453,457,611,498"/>
+<area shape="rect" id="node13" href="$structTraintasticDIY_1_1ThrottleSetSpeedDirection.html" title=" " alt="" coords="453,522,611,563"/>
+<area shape="rect" id="node14" href="$structTraintasticDIY_1_1ThrottleSubUnsub.html" title=" " alt="" coords="453,587,611,629"/>
+</map>

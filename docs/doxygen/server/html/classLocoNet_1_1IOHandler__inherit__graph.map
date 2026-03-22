@@ -1,0 +1,9 @@
+<map id="LocoNet::IOHandler" name="LocoNet::IOHandler">
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,144,108"/>
+<area shape="rect" id="node2" href="$classLocoNet_1_1SerialIOHandler.html" title=" " alt="" coords="206,5,377,32"/>
+<area shape="rect" id="node3" href="$classLocoNet_1_1SimulationIOHandler.html" title=" " alt="" coords="192,56,391,83"/>
+<area shape="rect" id="node4" href="$classLocoNet_1_1TCPIOHandler.html" title=" " alt="" coords="209,107,374,133"/>
+<area shape="rect" id="node7" href="$classLocoNet_1_1Z21IOHandler.html" title=" " alt="" coords="211,157,371,184"/>
+<area shape="rect" id="node5" href="$classLocoNet_1_1LBServerIOHandler.html" title=" " alt="" coords="444,81,636,108"/>
+<area shape="rect" id="node6" href="$classLocoNet_1_1TCPBinaryIOHandler.html" title=" " alt="" coords="439,132,641,159"/>
+</map>

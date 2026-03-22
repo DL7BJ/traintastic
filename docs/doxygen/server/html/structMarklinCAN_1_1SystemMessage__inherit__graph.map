@@ -1,0 +1,14 @@
+<map id="MarklinCAN::SystemMessage" name="MarklinCAN::SystemMessage">
+<area shape="rect" id="node1" title=" " alt="" coords="431,157,629,184"/>
+<area shape="rect" id="node4" href="$structMarklinCAN_1_1AccessorySwitchTime.html" title=" " alt="" coords="692,5,924,32"/>
+<area shape="rect" id="node5" href="$structMarklinCAN_1_1LocomotiveEmergencyStop.html" title=" " alt="" coords="677,56,939,83"/>
+<area shape="rect" id="node6" href="$structMarklinCAN_1_1ModelClock.html" title=" " alt="" coords="723,107,893,133"/>
+<area shape="rect" id="node7" href="$structMarklinCAN_1_1SystemGo.html" title=" " alt="" coords="727,157,889,184"/>
+<area shape="rect" id="node8" href="$structMarklinCAN_1_1SystemHalt.html" title=" " alt="" coords="723,208,893,235"/>
+<area shape="rect" id="node9" href="$structMarklinCAN_1_1SystemStatus.html" title=" " alt="" coords="716,259,900,285"/>
+<area shape="rect" id="node12" href="$structMarklinCAN_1_1SystemStop.html" title=" " alt="" coords="721,309,895,336"/>
+<area shape="rect" id="node2" href="$structMarklinCAN_1_1UidMessage.html" title=" " alt="" coords="208,157,383,184"/>
+<area shape="rect" id="node3" href="$structMarklinCAN_1_1Message.html" title=" " alt="" coords="5,157,160,184"/>
+<area shape="rect" id="node10" href="$structMarklinCAN_1_1SystemStatusRequest.html" title=" " alt="" coords="987,219,1171,261"/>
+<area shape="rect" id="node11" href="$structMarklinCAN_1_1SystemStatusResponse.html" title=" " alt="" coords="987,285,1171,326"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="LEDWidget" name="LEDWidget">
+<area shape="rect" id="node1" title=" " alt="" coords="61,95,151,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,79,32"/>
+<area shape="rect" id="node3" href="$structLEDWidget_1_1Colors.html" title=" " alt="" coords="103,5,237,32"/>
+</map>

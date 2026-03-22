@@ -1,0 +1,775 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>traintastic-client: VectorProperty Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+   DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="appicon.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">traintastic-client
+   &#160;<span id="projectnumber">0.4.0</span>
+   </div>
+   <div id="projectbrief">Traintastic client</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
+<a href="classVectorProperty-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">VectorProperty Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Inheritance diagram for VectorProperty:</div>
+<div class="dyncontent">
+<div class="center"><img src="classVectorProperty__inherit__graph.png" border="0" usemap="#aVectorProperty_inherit__map" alt="Inheritance graph"/></div>
+<map name="aVectorProperty_inherit__map" id="aVectorProperty_inherit__map">
+<area shape="rect" title=" " alt="" coords="30,304,139,331"/>
+<area shape="rect" href="classAbstractVectorProperty.html" title=" " alt="" coords="5,229,164,256"/>
+<area shape="rect" href="classBaseProperty.html" title=" " alt="" coords="34,155,135,181"/>
+<area shape="rect" href="classInterfaceItem.html" title=" " alt="" coords="35,80,134,107"/>
+<area shape="rect" title=" " alt="" coords="49,5,120,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for VectorProperty:</div>
+<div class="dyncontent">
+<div class="center"><img src="classVectorProperty__coll__graph.png" border="0" usemap="#aVectorProperty_coll__map" alt="Collaboration graph"/></div>
+<map name="aVectorProperty_coll__map" id="aVectorProperty_coll__map">
+<area shape="rect" title=" " alt="" coords="30,304,139,331"/>
+<area shape="rect" href="classAbstractVectorProperty.html" title=" " alt="" coords="5,229,164,256"/>
+<area shape="rect" href="classBaseProperty.html" title=" " alt="" coords="34,155,135,181"/>
+<area shape="rect" href="classInterfaceItem.html" title=" " alt="" coords="35,80,134,107"/>
+<area shape="rect" title=" " alt="" coords="49,5,120,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ae3894c31334055d66e1404ac936f5114"><td class="memItemLeft" align="right" valign="top"><a id="ae3894c31334055d66e1404ac936f5114" name="ae3894c31334055d66e1404ac936f5114"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>VectorProperty</b> (<a class="el" href="classObject.html">Object</a> &amp;object, const QString &amp;name, ValueType type, PropertyFlags flags, QVariantList values)</td></tr>
+<tr class="separator:ae3894c31334055d66e1404ac936f5114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b797437621ab3b8f51c9f3bb0b340a6"><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorProperty.html#a6b797437621ab3b8f51c9f3bb0b340a6">enumName</a> () const final</td></tr>
+<tr class="separator:a6b797437621ab3b8f51c9f3bb0b340a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47f6050cb26a9b6b82ece3ea000ce1f5"><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorProperty.html#a47f6050cb26a9b6b82ece3ea000ce1f5">setName</a> () const final</td></tr>
+<tr class="separator:a47f6050cb26a9b6b82ece3ea000ce1f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee5440de730104294011fe0b9a8b66da"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorProperty.html#aee5440de730104294011fe0b9a8b66da">size</a> () const final</td></tr>
+<tr class="separator:aee5440de730104294011fe0b9a8b66da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbf786c7fffc5e2f1a3f18d6f20af1ec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorProperty.html#adbf786c7fffc5e2f1a3f18d6f20af1ec">getBool</a> (int index) const final</td></tr>
+<tr class="separator:adbf786c7fffc5e2f1a3f18d6f20af1ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a334f1b7ca4b540b5d0bc08b3351a5848"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorProperty.html#a334f1b7ca4b540b5d0bc08b3351a5848">getInt</a> (int index) const final</td></tr>
+<tr class="separator:a334f1b7ca4b540b5d0bc08b3351a5848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae038f9314e71a79601036bff9c374b3f"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorProperty.html#ae038f9314e71a79601036bff9c374b3f">getInt64</a> (int index) const final</td></tr>
+<tr class="separator:ae038f9314e71a79601036bff9c374b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd1768d12d0bf620f79524f5c536bd4c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorProperty.html#afd1768d12d0bf620f79524f5c536bd4c">getDouble</a> (int index) const final</td></tr>
+<tr class="separator:afd1768d12d0bf620f79524f5c536bd4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae76c510d1a82ffb2b624e325023e5717"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorProperty.html#ae76c510d1a82ffb2b624e325023e5717">getString</a> (int index) const final</td></tr>
+<tr class="separator:ae76c510d1a82ffb2b624e325023e5717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30068218c77849efd0b5b8d4948f71e9"><td class="memItemLeft" align="right" valign="top">QVariant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorProperty.html#a30068218c77849efd0b5b8d4948f71e9">getVariant</a> (int index) const final</td></tr>
+<tr class="separator:a30068218c77849efd0b5b8d4948f71e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a347fb9f7cc9b6fdb58a84b6f5f3fe10a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorProperty.html#a347fb9f7cc9b6fdb58a84b6f5f3fe10a">setBool</a> (int index, bool value) final</td></tr>
+<tr class="separator:a347fb9f7cc9b6fdb58a84b6f5f3fe10a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1751a69f028c66eb0ced251dc905fb2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorProperty.html#a1751a69f028c66eb0ced251dc905fb2d">setInt</a> (int index, int value) final</td></tr>
+<tr class="separator:a1751a69f028c66eb0ced251dc905fb2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cbad4f1fa051077ec96870bf19a2957"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorProperty.html#a5cbad4f1fa051077ec96870bf19a2957">setInt64</a> (int index, qint64 value) final</td></tr>
+<tr class="separator:a5cbad4f1fa051077ec96870bf19a2957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a217ad7ed8f181eab051e4ac8c99af7d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorProperty.html#a217ad7ed8f181eab051e4ac8c99af7d3">setDouble</a> (int index, double value) final</td></tr>
+<tr class="separator:a217ad7ed8f181eab051e4ac8c99af7d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb795ef3a1f0f6db268f122f08532e71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVectorProperty.html#afb795ef3a1f0f6db268f122f08532e71">setString</a> (int index, const QString &amp;value) final</td></tr>
+<tr class="separator:afb795ef3a1f0f6db268f122f08532e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classAbstractVectorProperty"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAbstractVectorProperty')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAbstractVectorProperty.html">AbstractVectorProperty</a></td></tr>
+<tr class="memitem:aff11e4d1746e4502a7564eecb9825abe inherit pub_methods_classAbstractVectorProperty"><td class="memItemLeft" align="right" valign="top"><a id="aff11e4d1746e4502a7564eecb9825abe" name="aff11e4d1746e4502a7564eecb9825abe"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>empty</b> () const</td></tr>
+<tr class="separator:aff11e4d1746e4502a7564eecb9825abe inherit pub_methods_classAbstractVectorProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a016744bab693fee600468d99cf6388dc inherit pub_methods_classAbstractVectorProperty"><td class="memItemLeft" align="right" valign="top"><a id="a016744bab693fee600468d99cf6388dc" name="a016744bab693fee600468d99cf6388dc"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const =0</td></tr>
+<tr class="separator:a016744bab693fee600468d99cf6388dc inherit pub_methods_classAbstractVectorProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3284dba5ab90725359c3db9b16ed1412 inherit pub_methods_classAbstractVectorProperty"><td class="memItemLeft" align="right" valign="top"><a id="a3284dba5ab90725359c3db9b16ed1412" name="a3284dba5ab90725359c3db9b16ed1412"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>getBool</b> (int) const</td></tr>
+<tr class="separator:a3284dba5ab90725359c3db9b16ed1412 inherit pub_methods_classAbstractVectorProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af694f18096cef529c0769ff15cd8e626 inherit pub_methods_classAbstractVectorProperty"><td class="memItemLeft" align="right" valign="top"><a id="af694f18096cef529c0769ff15cd8e626" name="af694f18096cef529c0769ff15cd8e626"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>getInt</b> (int) const</td></tr>
+<tr class="separator:af694f18096cef529c0769ff15cd8e626 inherit pub_methods_classAbstractVectorProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad80d38c81ef2f9e92a8c1aa2b4bc808b inherit pub_methods_classAbstractVectorProperty"><td class="memItemLeft" align="right" valign="top"><a id="ad80d38c81ef2f9e92a8c1aa2b4bc808b" name="ad80d38c81ef2f9e92a8c1aa2b4bc808b"></a>
+virtual int64_t&#160;</td><td class="memItemRight" valign="bottom"><b>getInt64</b> (int) const</td></tr>
+<tr class="separator:ad80d38c81ef2f9e92a8c1aa2b4bc808b inherit pub_methods_classAbstractVectorProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44e6e0b79da15f4ceccd542f3fe0e349 inherit pub_methods_classAbstractVectorProperty"><td class="memItemLeft" align="right" valign="top"><a id="a44e6e0b79da15f4ceccd542f3fe0e349" name="a44e6e0b79da15f4ceccd542f3fe0e349"></a>
+virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getDouble</b> (int) const</td></tr>
+<tr class="separator:a44e6e0b79da15f4ceccd542f3fe0e349 inherit pub_methods_classAbstractVectorProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a09a8aae77b5f569e535a2a5d1343a1 inherit pub_methods_classAbstractVectorProperty"><td class="memItemLeft" align="right" valign="top"><a id="a2a09a8aae77b5f569e535a2a5d1343a1" name="a2a09a8aae77b5f569e535a2a5d1343a1"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><b>getString</b> (int) const</td></tr>
+<tr class="separator:a2a09a8aae77b5f569e535a2a5d1343a1 inherit pub_methods_classAbstractVectorProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dd3087b51e08eee040c75bc7b2eff20 inherit pub_methods_classAbstractVectorProperty"><td class="memItemLeft" align="right" valign="top"><a id="a1dd3087b51e08eee040c75bc7b2eff20" name="a1dd3087b51e08eee040c75bc7b2eff20"></a>
+virtual QVariant&#160;</td><td class="memItemRight" valign="bottom"><b>getVariant</b> (int) const</td></tr>
+<tr class="separator:a1dd3087b51e08eee040c75bc7b2eff20 inherit pub_methods_classAbstractVectorProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35d25ba0f44b78882dd0b5ae6910ec56 inherit pub_methods_classAbstractVectorProperty"><td class="memTemplParams" colspan="2"><a id="a35d25ba0f44b78882dd0b5ae6910ec56" name="a35d25ba0f44b78882dd0b5ae6910ec56"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a35d25ba0f44b78882dd0b5ae6910ec56 inherit pub_methods_classAbstractVectorProperty"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getEnum</b> (int index) const</td></tr>
+<tr class="separator:a35d25ba0f44b78882dd0b5ae6910ec56 inherit pub_methods_classAbstractVectorProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1716de6cf397a5a1c0058a7d6b6ec17 inherit pub_methods_classAbstractVectorProperty"><td class="memTemplParams" colspan="2"><a id="aa1716de6cf397a5a1c0058a7d6b6ec17" name="aa1716de6cf397a5a1c0058a7d6b6ec17"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa1716de6cf397a5a1c0058a7d6b6ec17 inherit pub_methods_classAbstractVectorProperty"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getSet</b> (int index) const</td></tr>
+<tr class="separator:aa1716de6cf397a5a1c0058a7d6b6ec17 inherit pub_methods_classAbstractVectorProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ca38f29a83b0c64566c6a402bf03367 inherit pub_methods_classAbstractVectorProperty"><td class="memItemLeft" align="right" valign="top"><a id="a2ca38f29a83b0c64566c6a402bf03367" name="a2ca38f29a83b0c64566c6a402bf03367"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setBool</b> (int, bool)</td></tr>
+<tr class="separator:a2ca38f29a83b0c64566c6a402bf03367 inherit pub_methods_classAbstractVectorProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a671fb2ab3f9ca80de6a97258229c8928 inherit pub_methods_classAbstractVectorProperty"><td class="memItemLeft" align="right" valign="top"><a id="a671fb2ab3f9ca80de6a97258229c8928" name="a671fb2ab3f9ca80de6a97258229c8928"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setInt</b> (int, int)</td></tr>
+<tr class="separator:a671fb2ab3f9ca80de6a97258229c8928 inherit pub_methods_classAbstractVectorProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b78b56b65f4ce83d4608cf92fb88e72 inherit pub_methods_classAbstractVectorProperty"><td class="memItemLeft" align="right" valign="top"><a id="a9b78b56b65f4ce83d4608cf92fb88e72" name="a9b78b56b65f4ce83d4608cf92fb88e72"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setInt64</b> (int, qint64)</td></tr>
+<tr class="separator:a9b78b56b65f4ce83d4608cf92fb88e72 inherit pub_methods_classAbstractVectorProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64a4cc90a11d97b81e578e6817495669 inherit pub_methods_classAbstractVectorProperty"><td class="memItemLeft" align="right" valign="top"><a id="a64a4cc90a11d97b81e578e6817495669" name="a64a4cc90a11d97b81e578e6817495669"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setDouble</b> (int, double)</td></tr>
+<tr class="separator:a64a4cc90a11d97b81e578e6817495669 inherit pub_methods_classAbstractVectorProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad37ea531669c3fd0a512ab40eac2c35c inherit pub_methods_classAbstractVectorProperty"><td class="memItemLeft" align="right" valign="top"><a id="ad37ea531669c3fd0a512ab40eac2c35c" name="ad37ea531669c3fd0a512ab40eac2c35c"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setString</b> (int, const QString &amp;)</td></tr>
+<tr class="separator:ad37ea531669c3fd0a512ab40eac2c35c inherit pub_methods_classAbstractVectorProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classBaseProperty"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classBaseProperty')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classBaseProperty.html">BaseProperty</a></td></tr>
+<tr class="memitem:a3edd18212c4c0b9174dd843377775aa9 inherit pub_methods_classBaseProperty"><td class="memItemLeft" align="right" valign="top"><a id="a3edd18212c4c0b9174dd843377775aa9" name="a3edd18212c4c0b9174dd843377775aa9"></a>
+ValueType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> () const</td></tr>
+<tr class="separator:a3edd18212c4c0b9174dd843377775aa9 inherit pub_methods_classBaseProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5fd24ef9cf0d8ee36e453c0d6a80dfe inherit pub_methods_classBaseProperty"><td class="memItemLeft" align="right" valign="top"><a id="ae5fd24ef9cf0d8ee36e453c0d6a80dfe" name="ae5fd24ef9cf0d8ee36e453c0d6a80dfe"></a>
+PropertyFlags&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b> () const</td></tr>
+<tr class="separator:ae5fd24ef9cf0d8ee36e453c0d6a80dfe inherit pub_methods_classBaseProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a042a3146530883634862c001e56d62 inherit pub_methods_classBaseProperty"><td class="memItemLeft" align="right" valign="top"><a id="a9a042a3146530883634862c001e56d62" name="a9a042a3146530883634862c001e56d62"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isWritable</b> () const</td></tr>
+<tr class="separator:a9a042a3146530883634862c001e56d62 inherit pub_methods_classBaseProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20aa019cda5321d73b1021ab569dbc27 inherit pub_methods_classBaseProperty"><td class="memItemLeft" align="right" valign="top"><a id="a20aa019cda5321d73b1021ab569dbc27" name="a20aa019cda5321d73b1021ab569dbc27"></a>
+virtual const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>enumName</b> () const</td></tr>
+<tr class="separator:a20aa019cda5321d73b1021ab569dbc27 inherit pub_methods_classBaseProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc953e8799be8ae35fe1c476f3a29d63 inherit pub_methods_classBaseProperty"><td class="memItemLeft" align="right" valign="top"><a id="abc953e8799be8ae35fe1c476f3a29d63" name="abc953e8799be8ae35fe1c476f3a29d63"></a>
+virtual const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>setName</b> () const</td></tr>
+<tr class="separator:abc953e8799be8ae35fe1c476f3a29d63 inherit pub_methods_classBaseProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classInterfaceItem"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classInterfaceItem')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classInterfaceItem.html">InterfaceItem</a></td></tr>
+<tr class="memitem:ad8a1c5eb5a9d86108ec483fe2dd99fe6 inherit pub_methods_classInterfaceItem"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterfaceItem.html#ad8a1c5eb5a9d86108ec483fe2dd99fe6">InterfaceItem</a> (<a class="el" href="classObject.html">Object</a> &amp;object, const QString &amp;name)</td></tr>
+<tr class="separator:ad8a1c5eb5a9d86108ec483fe2dd99fe6 inherit pub_methods_classInterfaceItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f56eb97f604a6b619dd136c200d23a3 inherit pub_methods_classInterfaceItem"><td class="memItemLeft" align="right" valign="top"><a id="a1f56eb97f604a6b619dd136c200d23a3" name="a1f56eb97f604a6b619dd136c200d23a3"></a>
+const <a class="el" href="classObject.html">Object</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>object</b> () const</td></tr>
+<tr class="separator:a1f56eb97f604a6b619dd136c200d23a3 inherit pub_methods_classInterfaceItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e116e5809022118e36c3b4759c847b5 inherit pub_methods_classInterfaceItem"><td class="memItemLeft" align="right" valign="top"><a id="a0e116e5809022118e36c3b4759c847b5" name="a0e116e5809022118e36c3b4759c847b5"></a>
+<a class="el" href="classObject.html">Object</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>object</b> ()</td></tr>
+<tr class="separator:a0e116e5809022118e36c3b4759c847b5 inherit pub_methods_classInterfaceItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e8d489c8723e1b5414df6211e1bcd02 inherit pub_methods_classInterfaceItem"><td class="memItemLeft" align="right" valign="top"><a id="a6e8d489c8723e1b5414df6211e1bcd02" name="a6e8d489c8723e1b5414df6211e1bcd02"></a>
+const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> () const</td></tr>
+<tr class="separator:a6e8d489c8723e1b5414df6211e1bcd02 inherit pub_methods_classInterfaceItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2653897df5601371351bf91d2f6791f6 inherit pub_methods_classInterfaceItem"><td class="memItemLeft" align="right" valign="top"><a id="a2653897df5601371351bf91d2f6791f6" name="a2653897df5601371351bf91d2f6791f6"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>displayName</b> () const</td></tr>
+<tr class="separator:a2653897df5601371351bf91d2f6791f6 inherit pub_methods_classInterfaceItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d453c66ae16eaab62b3061b8bdf5b4a inherit pub_methods_classInterfaceItem"><td class="memItemLeft" align="right" valign="top"><a id="a0d453c66ae16eaab62b3061b8bdf5b4a" name="a0d453c66ae16eaab62b3061b8bdf5b4a"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>helpText</b> () const</td></tr>
+<tr class="separator:a0d453c66ae16eaab62b3061b8bdf5b4a inherit pub_methods_classInterfaceItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fdab53650f6bc113a7b9d80d5374313 inherit pub_methods_classInterfaceItem"><td class="memItemLeft" align="right" valign="top"><a id="a9fdab53650f6bc113a7b9d80d5374313" name="a9fdab53650f6bc113a7b9d80d5374313"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasAttribute</b> (AttributeName name) const</td></tr>
+<tr class="separator:a9fdab53650f6bc113a7b9d80d5374313 inherit pub_methods_classInterfaceItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c038ca354604809bcf74e5d6d412bce inherit pub_methods_classInterfaceItem"><td class="memItemLeft" align="right" valign="top"><a id="a6c038ca354604809bcf74e5d6d412bce" name="a6c038ca354604809bcf74e5d6d412bce"></a>
+QVariant&#160;</td><td class="memItemRight" valign="bottom"><b>getAttribute</b> (AttributeName name, const QVariant &amp;default_) const</td></tr>
+<tr class="separator:a6c038ca354604809bcf74e5d6d412bce inherit pub_methods_classInterfaceItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b731cf47a4b86611bdbdcc4b4ac412d inherit pub_methods_classInterfaceItem"><td class="memItemLeft" align="right" valign="top"><a id="a4b731cf47a4b86611bdbdcc4b4ac412d" name="a4b731cf47a4b86611bdbdcc4b4ac412d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>getAttributeBool</b> (AttributeName name, bool default_) const</td></tr>
+<tr class="separator:a4b731cf47a4b86611bdbdcc4b4ac412d inherit pub_methods_classInterfaceItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0d97f7a3b1093245246eb189ae0dbe2 inherit pub_methods_classInterfaceItem"><td class="memItemLeft" align="right" valign="top"><a id="ac0d97f7a3b1093245246eb189ae0dbe2" name="ac0d97f7a3b1093245246eb189ae0dbe2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getAttributeInt</b> (AttributeName name, int default_) const</td></tr>
+<tr class="separator:ac0d97f7a3b1093245246eb189ae0dbe2 inherit pub_methods_classInterfaceItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba14bdc3a0480797eab94ccffbb5cb64 inherit pub_methods_classInterfaceItem"><td class="memItemLeft" align="right" valign="top"><a id="aba14bdc3a0480797eab94ccffbb5cb64" name="aba14bdc3a0480797eab94ccffbb5cb64"></a>
+qint64&#160;</td><td class="memItemRight" valign="bottom"><b>getAttributeInt64</b> (AttributeName name, qint64 default_) const</td></tr>
+<tr class="separator:aba14bdc3a0480797eab94ccffbb5cb64 inherit pub_methods_classInterfaceItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae224a8473ee0dae7ac87dc49065a75d8 inherit pub_methods_classInterfaceItem"><td class="memItemLeft" align="right" valign="top"><a id="ae224a8473ee0dae7ac87dc49065a75d8" name="ae224a8473ee0dae7ac87dc49065a75d8"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>getAttributeDouble</b> (AttributeName name, double default_) const</td></tr>
+<tr class="separator:ae224a8473ee0dae7ac87dc49065a75d8 inherit pub_methods_classInterfaceItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bb0a54a89efe00139b9cf9a3b8f4ffc inherit pub_methods_classInterfaceItem"><td class="memItemLeft" align="right" valign="top"><a id="a6bb0a54a89efe00139b9cf9a3b8f4ffc" name="a6bb0a54a89efe00139b9cf9a3b8f4ffc"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>getAttributeString</b> (AttributeName name, const QString &amp;default_) const</td></tr>
+<tr class="separator:a6bb0a54a89efe00139b9cf9a3b8f4ffc inherit pub_methods_classInterfaceItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a258654d5fab996ceffa57eb253a24b25 inherit pub_methods_classInterfaceItem"><td class="memTemplParams" colspan="2"><a id="a258654d5fab996ceffa57eb253a24b25" name="a258654d5fab996ceffa57eb253a24b25"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a258654d5fab996ceffa57eb253a24b25 inherit pub_methods_classInterfaceItem"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getAttributeEnum</b> (AttributeName name, T default_) const</td></tr>
+<tr class="separator:a258654d5fab996ceffa57eb253a24b25 inherit pub_methods_classInterfaceItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a4d4436edff0b9febce5d19742a4aaf9b"><td class="memItemLeft" align="right" valign="top"><a id="a4d4436edff0b9febce5d19742a4aaf9b" name="a4d4436edff0b9febce5d19742a4aaf9b"></a>
+QVariantList&#160;</td><td class="memItemRight" valign="bottom"><b>m_values</b></td></tr>
+<tr class="separator:a4d4436edff0b9febce5d19742a4aaf9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9c38b68bb563991aae36f6b53bdb303"><td class="memItemLeft" align="right" valign="top"><a id="ae9c38b68bb563991aae36f6b53bdb303" name="ae9c38b68bb563991aae36f6b53bdb303"></a>
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>m_enumOrSetName</b></td></tr>
+<tr class="separator:ae9c38b68bb563991aae36f6b53bdb303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classBaseProperty"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classBaseProperty')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classBaseProperty.html">BaseProperty</a></td></tr>
+<tr class="memitem:a883d7e1d05de74c185b9d13be4b59e7e inherit pro_attribs_classBaseProperty"><td class="memItemLeft" align="right" valign="top"><a id="a883d7e1d05de74c185b9d13be4b59e7e" name="a883d7e1d05de74c185b9d13be4b59e7e"></a>
+const ValueType&#160;</td><td class="memItemRight" valign="bottom"><b>m_type</b></td></tr>
+<tr class="separator:a883d7e1d05de74c185b9d13be4b59e7e inherit pro_attribs_classBaseProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bea91876437a13c4c8c95e649784467 inherit pro_attribs_classBaseProperty"><td class="memItemLeft" align="right" valign="top"><a id="a6bea91876437a13c4c8c95e649784467" name="a6bea91876437a13c4c8c95e649784467"></a>
+const PropertyFlags&#160;</td><td class="memItemRight" valign="bottom"><b>m_flags</b></td></tr>
+<tr class="separator:a6bea91876437a13c4c8c95e649784467 inherit pro_attribs_classBaseProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classInterfaceItem"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classInterfaceItem')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classInterfaceItem.html">InterfaceItem</a></td></tr>
+<tr class="memitem:a88f6225672ced2bf33705ef986d27217 inherit pro_attribs_classInterfaceItem"><td class="memItemLeft" align="right" valign="top"><a id="a88f6225672ced2bf33705ef986d27217" name="a88f6225672ced2bf33705ef986d27217"></a>
+const QString&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td></tr>
+<tr class="separator:a88f6225672ced2bf33705ef986d27217 inherit pro_attribs_classInterfaceItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf4581a8400eab466f6e6c6962556857 inherit pro_attribs_classInterfaceItem"><td class="memItemLeft" align="right" valign="top"><a id="acf4581a8400eab466f6e6c6962556857" name="acf4581a8400eab466f6e6c6962556857"></a>
+QMap&lt; AttributeName, QVariant &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_attributes</b></td></tr>
+<tr class="separator:acf4581a8400eab466f6e6c6962556857 inherit pro_attribs_classInterfaceItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a54a11fdc71e1679a42fa0c0e3856673d"><td class="memItemLeft" align="right" valign="top"><a id="a54a11fdc71e1679a42fa0c0e3856673d" name="a54a11fdc71e1679a42fa0c0e3856673d"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>Connection</b></td></tr>
+<tr class="separator:a54a11fdc71e1679a42fa0c0e3856673d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header signals_classBaseProperty"><td colspan="2" onclick="javascript:toggleInherit('signals_classBaseProperty')"><img src="closed.png" alt="-"/>&#160;Signals inherited from <a class="el" href="classBaseProperty.html">BaseProperty</a></td></tr>
+<tr class="memitem:ab59f286ed3d8164883fe11e45fabf7cb inherit signals_classBaseProperty"><td class="memItemLeft" align="right" valign="top"><a id="ab59f286ed3d8164883fe11e45fabf7cb" name="ab59f286ed3d8164883fe11e45fabf7cb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>valueChanged</b> ()</td></tr>
+<tr class="separator:ab59f286ed3d8164883fe11e45fabf7cb inherit signals_classBaseProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header signals_classInterfaceItem"><td colspan="2" onclick="javascript:toggleInherit('signals_classInterfaceItem')"><img src="closed.png" alt="-"/>&#160;Signals inherited from <a class="el" href="classInterfaceItem.html">InterfaceItem</a></td></tr>
+<tr class="memitem:a7a1e10da180f0b0a4a1cb20b6b62bbf2 inherit signals_classInterfaceItem"><td class="memItemLeft" align="right" valign="top"><a id="a7a1e10da180f0b0a4a1cb20b6b62bbf2" name="a7a1e10da180f0b0a4a1cb20b6b62bbf2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>attributeChanged</b> (AttributeName name, const QVariant &amp;value)</td></tr>
+<tr class="separator:a7a1e10da180f0b0a4a1cb20b6b62bbf2 inherit signals_classInterfaceItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classAbstractVectorProperty"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classAbstractVectorProperty')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classAbstractVectorProperty.html">AbstractVectorProperty</a></td></tr>
+<tr class="memitem:ab0ee3506a3be666b655ad40a68ea7886 inherit pro_methods_classAbstractVectorProperty"><td class="memItemLeft" align="right" valign="top"><a id="ab0ee3506a3be666b655ad40a68ea7886" name="ab0ee3506a3be666b655ad40a68ea7886"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AbstractVectorProperty</b> (<a class="el" href="classObject.html">Object</a> &amp;object, const QString &amp;name, ValueType type, PropertyFlags flags)</td></tr>
+<tr class="separator:ab0ee3506a3be666b655ad40a68ea7886 inherit pro_methods_classAbstractVectorProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classBaseProperty"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classBaseProperty')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classBaseProperty.html">BaseProperty</a></td></tr>
+<tr class="memitem:a020da19786fcaa303867e9081734005b inherit pro_methods_classBaseProperty"><td class="memItemLeft" align="right" valign="top"><a id="a020da19786fcaa303867e9081734005b" name="a020da19786fcaa303867e9081734005b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BaseProperty</b> (<a class="el" href="classObject.html">Object</a> &amp;object, const QString &amp;name, ValueType type, PropertyFlags flags)</td></tr>
+<tr class="separator:a020da19786fcaa303867e9081734005b inherit pro_methods_classBaseProperty"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6b797437621ab3b8f51c9f3bb0b340a6" name="a6b797437621ab3b8f51c9f3bb0b340a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b797437621ab3b8f51c9f3bb0b340a6">&#9670;&nbsp;</a></span>enumName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QString &amp; VectorProperty::enumName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classBaseProperty.html">BaseProperty</a>.</p>
+
+</div>
+</div>
+<a id="adbf786c7fffc5e2f1a3f18d6f20af1ec" name="adbf786c7fffc5e2f1a3f18d6f20af1ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbf786c7fffc5e2f1a3f18d6f20af1ec">&#9670;&nbsp;</a></span>getBool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VectorProperty::getBool </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classAbstractVectorProperty.html">AbstractVectorProperty</a>.</p>
+
+</div>
+</div>
+<a id="afd1768d12d0bf620f79524f5c536bd4c" name="afd1768d12d0bf620f79524f5c536bd4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd1768d12d0bf620f79524f5c536bd4c">&#9670;&nbsp;</a></span>getDouble()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double VectorProperty::getDouble </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classAbstractVectorProperty.html">AbstractVectorProperty</a>.</p>
+
+</div>
+</div>
+<a id="a334f1b7ca4b540b5d0bc08b3351a5848" name="a334f1b7ca4b540b5d0bc08b3351a5848"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a334f1b7ca4b540b5d0bc08b3351a5848">&#9670;&nbsp;</a></span>getInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int VectorProperty::getInt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classAbstractVectorProperty.html">AbstractVectorProperty</a>.</p>
+
+</div>
+</div>
+<a id="ae038f9314e71a79601036bff9c374b3f" name="ae038f9314e71a79601036bff9c374b3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae038f9314e71a79601036bff9c374b3f">&#9670;&nbsp;</a></span>getInt64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t VectorProperty::getInt64 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classAbstractVectorProperty.html">AbstractVectorProperty</a>.</p>
+
+</div>
+</div>
+<a id="ae76c510d1a82ffb2b624e325023e5717" name="ae76c510d1a82ffb2b624e325023e5717"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae76c510d1a82ffb2b624e325023e5717">&#9670;&nbsp;</a></span>getString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString VectorProperty::getString </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classAbstractVectorProperty.html">AbstractVectorProperty</a>.</p>
+
+</div>
+</div>
+<a id="a30068218c77849efd0b5b8d4948f71e9" name="a30068218c77849efd0b5b8d4948f71e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30068218c77849efd0b5b8d4948f71e9">&#9670;&nbsp;</a></span>getVariant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVariant VectorProperty::getVariant </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classAbstractVectorProperty.html">AbstractVectorProperty</a>.</p>
+
+</div>
+</div>
+<a id="a347fb9f7cc9b6fdb58a84b6f5f3fe10a" name="a347fb9f7cc9b6fdb58a84b6f5f3fe10a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a347fb9f7cc9b6fdb58a84b6f5f3fe10a">&#9670;&nbsp;</a></span>setBool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VectorProperty::setBool </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classAbstractVectorProperty.html">AbstractVectorProperty</a>.</p>
+
+</div>
+</div>
+<a id="a217ad7ed8f181eab051e4ac8c99af7d3" name="a217ad7ed8f181eab051e4ac8c99af7d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a217ad7ed8f181eab051e4ac8c99af7d3">&#9670;&nbsp;</a></span>setDouble()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VectorProperty::setDouble </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classAbstractVectorProperty.html">AbstractVectorProperty</a>.</p>
+
+</div>
+</div>
+<a id="a1751a69f028c66eb0ced251dc905fb2d" name="a1751a69f028c66eb0ced251dc905fb2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1751a69f028c66eb0ced251dc905fb2d">&#9670;&nbsp;</a></span>setInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VectorProperty::setInt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classAbstractVectorProperty.html">AbstractVectorProperty</a>.</p>
+
+</div>
+</div>
+<a id="a5cbad4f1fa051077ec96870bf19a2957" name="a5cbad4f1fa051077ec96870bf19a2957"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cbad4f1fa051077ec96870bf19a2957">&#9670;&nbsp;</a></span>setInt64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VectorProperty::setInt64 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">qint64&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classAbstractVectorProperty.html">AbstractVectorProperty</a>.</p>
+
+</div>
+</div>
+<a id="a47f6050cb26a9b6b82ece3ea000ce1f5" name="a47f6050cb26a9b6b82ece3ea000ce1f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47f6050cb26a9b6b82ece3ea000ce1f5">&#9670;&nbsp;</a></span>setName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QString &amp; VectorProperty::setName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classBaseProperty.html">BaseProperty</a>.</p>
+
+</div>
+</div>
+<a id="afb795ef3a1f0f6db268f122f08532e71" name="afb795ef3a1f0f6db268f122f08532e71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb795ef3a1f0f6db268f122f08532e71">&#9670;&nbsp;</a></span>setString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VectorProperty::setString </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classAbstractVectorProperty.html">AbstractVectorProperty</a>.</p>
+
+</div>
+</div>
+<a id="aee5440de730104294011fe0b9a8b66da" name="aee5440de730104294011fe0b9a8b66da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee5440de730104294011fe0b9a8b66da">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int VectorProperty::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classAbstractVectorProperty.html">AbstractVectorProperty</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/tom/projects/linux/traintastic/client/src/network/<a class="el" href="vectorproperty_8hpp_source.html">vectorproperty.hpp</a></li>
+<li>/home/tom/projects/linux/traintastic/client/src/network/vectorproperty.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

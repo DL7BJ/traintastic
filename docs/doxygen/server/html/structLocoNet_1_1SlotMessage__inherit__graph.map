@@ -1,0 +1,8 @@
+<map id="LocoNet::SlotMessage" name="LocoNet::SlotMessage">
+<area shape="rect" id="node1" title=" " alt="" coords="237,80,391,107"/>
+<area shape="rect" id="node3" href="$structLocoNet_1_1LocoDirF.html" title=" " alt="" coords="5,155,137,181"/>
+<area shape="rect" id="node4" href="$structLocoNet_1_1LocoF9F12.html" title=" " alt="" coords="162,155,306,181"/>
+<area shape="rect" id="node5" href="$structLocoNet_1_1LocoSnd.html" title=" " alt="" coords="330,155,461,181"/>
+<area shape="rect" id="node6" href="$structLocoNet_1_1LocoSpd.html" title=" " alt="" coords="485,155,615,181"/>
+<area shape="rect" id="node2" href="$structLocoNet_1_1Message.html" title=" " alt="" coords="248,5,380,32"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="DCCEXInterface" name="DCCEXInterface">
+<area shape="rect" id="node1" title="DCC&#45;EX hardware interface." alt="" coords="212,319,333,345"/>
+<area shape="rect" id="node2" href="$classInterface.html" title="Base class for a hardware interface." alt="" coords="41,244,115,271"/>
+<area shape="rect" id="node3" href="$classIdObject.html" title=" " alt="" coords="43,169,113,196"/>
+<area shape="rect" id="node4" href="$classObject.html" title=" " alt="" coords="48,95,108,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,5,151,47"/>
+<area shape="rect" id="node6" href="$classDecoderController.html" title=" " alt="" coords="139,244,265,271"/>
+<area shape="rect" id="node7" href="$classInputController.html" title=" " alt="" coords="290,244,397,271"/>
+<area shape="rect" id="node8" href="$classOutputController.html" title=" " alt="" coords="421,244,538,271"/>
+</map>

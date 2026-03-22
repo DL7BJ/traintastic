@@ -1,0 +1,7 @@
+<map id="BlockInputMapItem" name="BlockInputMapItem">
+<area shape="rect" id="node1" title=" " alt="" coords="76,244,211,271"/>
+<area shape="rect" id="node2" href="$classInputMapItem.html" title=" " alt="" coords="27,169,129,196"/>
+<area shape="rect" id="node3" href="$classObject.html" title=" " alt="" coords="48,95,108,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,5,151,47"/>
+<area shape="rect" id="node5" href="$classInputConsumer.html" title=" " alt="" coords="153,169,264,196"/>
+</map>

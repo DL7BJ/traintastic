@@ -1,0 +1,7 @@
+<map id="TraintasticDIY::IOHandler" name="TraintasticDIY::IOHandler">
+<area shape="rect" id="node1" title=" " alt="" coords="233,5,405,32"/>
+<area shape="rect" id="node2" href="$classTraintasticDIY_1_1HardwareIOHandler.html" title=" " alt="" coords="137,80,306,121"/>
+<area shape="rect" id="node5" href="$classTraintasticDIY_1_1SimulationIOHandler.html" title=" " alt="" coords="330,80,505,121"/>
+<area shape="rect" id="node3" href="$classTraintasticDIY_1_1SerialIOHandler.html" title=" " alt="" coords="5,169,211,196"/>
+<area shape="rect" id="node4" href="$classTraintasticDIY_1_1TCPIOHandler.html" title=" " alt="" coords="235,169,434,196"/>
+</map>
