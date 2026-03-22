@@ -398,6 +398,11 @@ endif()
 find_package(Doxygen OPTIONAL_COMPONENTS dot mscgen dia)
 
 if(DOXYGEN_FOUND)
+  set(DOXYGEN_HTML_EXTRA_STYLESHEET "${CMAKE_SOURCE_DIR}/../doxygen-awesome-css/doxygen-awesome.css")
+  set(DOXYGEN_HTML_EXTRA_FILES "${CMAKE_SOURCE_DIR}/../doxygen-awesome-css/doxygen-awesome-darkmode-toggle.js")
+  set(DOXYGEN_HTML_HEADER "${CMAKE_SOURCE_DIR}/../shared/thirdparty/header.html")
+  set(DOXYGEN_HTML_COLORSTYLE = LIGHT)
+  set(DOXYGEN_PROJECT_LOGO "${CMAKE_SOURCE_DIR}/../client/gfx/appicon.png")
   doxygen_add_docs(doxygen
   ${SOURCES})
     #[filesOrDirs...]
