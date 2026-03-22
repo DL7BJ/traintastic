@@ -29,7 +29,18 @@ SimulationIOHandler::SimulationIOHandler(Kernel& kernel, Simulator& simulator)
   : IOHandler(kernel)
   , m_simulator{simulator}
 {
-  m_simulator.onSend = std::bind_front(&Kernel::receive, &kernel);
+  m_simulator.onSend =
+    [this](uint8_t canId, const Message& message)
+    {
+      // post the message, so it has some delay
+      auto buffer = std::make_shared<std::byte[]>(message.size());
+      std::memcpy(buffer.get(), &message, message.size());
+      m_kernel.ioContext().post(
+        [this, canId, data=std::move(buffer)]()
+        {
+          m_kernel.receive(canId, *reinterpret_cast<const Message*>(data.get()));
+        });
+    };
 }
 
 SimulationIOHandler::~SimulationIOHandler() = default;
