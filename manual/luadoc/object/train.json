@@ -2,6 +2,7 @@
   "acceleration_rate": {},
   "braking_rate": {},
   "name": {},
+  "speed": {},
   "speed_max": {},
   "speed_limit": {},
   "is_stopped": {},
