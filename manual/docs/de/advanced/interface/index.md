@@ -1,4 +1,4 @@
-# Interface configuration
+# Schnittstellenkonfiguration
 
 Traintastic supports a wide range of digital command stations, feedback sensors, and wireless throttle devices.
 This section provides detailed instructions on configuring each supported interface for advanced users who need more control or whose setup is not fully covered by the setup wizard.
@@ -12,6 +12,7 @@ The interfaces covered in this section include:
 ### Command Station interfaces
 These allow Traintastic to communicate with the layout's digital system and control locomotives, turnouts, signal and read feedback sensors:
 
+- CBUS/VLCB (MERG)
 - [DCC-EX](dcc-ex.md)
 - [ECoS](ecos.md)
 - [LocoNet](loconet.md) - Digitrax, Digikeijs, Uhlenbrock, YaMoRC

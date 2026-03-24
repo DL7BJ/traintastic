@@ -1,13 +1,13 @@
-# Quick start: Connect to your command station
+# Schnellstart: Verbindung zu Deiner Zentrale
 
-After creating your first world, the next step is to connect Traintastic to your **command station / digital system**.
-This is done by creating an **interface**, which acts as the bridge between Traintastic and your hardware.
+Nachdem Du Deine erste Welt erstellt hast, verbinde Traintastic mit Deiner **Zentrale/Ihrem digitalen System**.
+Dies geschieht durch die Erstellung einer **Schnittstelle**, die als Brücke zwischen Traintastic und Deiner Hardware dient.
 
-## Step 1: Open the interfaces list
+## Schritt 1: Öffne die Liste der Schnittstellen
 
-1. Make sure you are in **edit mode** (![pencil](../assets/images/icons/light/edit.png#only-light)![pencil](../assets/images/icons/dark/edit.png#only-dark) button in the top right).
-2. In the main menu, go to **Objects → Hardware → Interfaces**.
-3. An *Interfaces* dialog will appear. On a new installation, this list is empty.
+1. Stelle sicher, das Du im **Bearbeitungsmodus** bist (![pencil](../assets/images/icons/light/edit.png#only-light)![pencil](../assets/images/icons/dark/edit.png#only-dark) Button in der oberen rechten Ecke).
+2. Im Hauptmenü wähle **Objekte → Hardware → Schnittstellen**.
+3. Der Dialog zu den *Schnittstellen* erscheint. Bei einer Neuinstallation ist die Liste leer.
 
 ## Step 2: Start the setup wizard
 
@@ -33,7 +33,7 @@ Depending on your selection, Traintastic will ask additional questions, such as:
 - **Device or port**: for example a COM port (Windows), `/dev/ttyUSB0` (Linux), or an IP address.
 
 !!! tip "Using WiFi"
-    Wi-Fi is supported but not recommended for stability reasons.
+    Wi-Fi is supported but not recommended for stability reasons.:
 
 When you finish the wizard:
 

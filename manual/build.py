@@ -31,11 +31,11 @@ def detect_version():
 class TraintasticHelp:
 
     version = ''
-    language = 'en'
     _luadoc = None
 
-    def __init__(self, base_dir: str):
+    def __init__(self, base_dir: str, language: str = 'en'):
         self.base_dir = os.path.abspath(base_dir)
+        self.language = language
         self.output_dir = os.path.join(self.base_dir, 'output')
         self._luadoc = LuaDoc(os.path.join(self.base_dir, '..'))
 
@@ -49,11 +49,12 @@ class TraintasticHelp:
         self._write_mkdocs_yml()
 
         cfg = mkdocs.config.load_config(os.path.join(self.base_dir, 'config', self.language, 'mkdocs.yml'))
-        cfg.plugins.on_startup(command='build', dirty=False)
+        # cfg.plugins.on_startup(command='build', dirty=False)
         try:
             mkdocs.commands.build.build(cfg)
         finally:
-            cfg.plugins.on_shutdown()
+            # cfg.plugins.on_shutdown()
+            pass
 
         return True
 
@@ -107,132 +108,263 @@ class TraintasticHelp:
             {'Examples': os.path.join('appendix', 'lua', LuaDoc.FILENAME_EXAMPLES)},
             {'Index A-Z': os.path.join('appendix', 'lua', LuaDoc.FILENAME_INDEX_AZ)},
         ]
-
-        config = {
-            'site_name': 'Traintastic manual',
-            'docs_dir': os.path.join('../../docs', self.language),
-            'extra_css': ['assets/extra.css'],
-            'site_dir': os.path.join(self.output_dir, self.language),
-            'use_directory_urls': False,
-            'theme': {
-                'name': 'material',
-                'custom_dir': '../../overrides/',
-                'language': self.language,
-                'icon': {
-                    'logo': 'traintastic/logo'
+        # English       
+        if self.language == 'en':
+            config = {
+                'site_name': 'Traintastic manual',
+                'docs_dir': os.path.join('../../docs', self.language),
+                'extra_css': ['assets/extra.css'],
+                'site_dir': os.path.join(self.output_dir, self.language),
+                'use_directory_urls': False,
+                'theme': {
+                    'name': 'material',
+                    'custom_dir': '../../overrides/',
+                    'language': self.language,
+                    'icon': {
+                        'logo': 'traintastic/logo'
+                    },
+                    'palette': [
+                        {
+                            'scheme': 'default',
+                            'toggle': {
+                                'icon': 'material/brightness-7',
+                                'name': 'Switch to dark mode'
+                            }
+                        },
+                        {
+                            'scheme': 'slate',
+                            'toggle': {
+                                'icon': 'material/brightness-4',
+                                'name': 'Switch to light mode'
+                            }
+                        }
+                    ],
+                    'features': ['content.code.copy']
                 },
-                'palette': [
+                'markdown_extensions': [
+                    'attr_list',
+                    'admonition',
                     {
-                        'scheme': 'default',
-                        'toggle': {
-                            'icon': 'material/brightness-7',
-                            'name': 'Switch to dark mode'
+                        'pymdownx.highlight': {
+                            'anchor_linenums': True,
+                            'line_spans': '__span',
+                            'pygments_lang_class': True
                         }
                     },
+                    'pymdownx.inlinehilite',
+                    'pymdownx.keys',
+                    'pymdownx.snippets',
+                    'pymdownx.superfences',
                     {
-                        'scheme': 'slate',
-                        'toggle': {
-                            'icon': 'material/brightness-4',
-                            'name': 'Switch to light mode'
+                        'pymdownx.escapeall': {
+                            'hardbreak': True
                         }
                     }
                 ],
-                'features': ['content.code.copy']
-            },
-            'markdown_extensions': [
-                'attr_list',
-                'admonition',
-                {
-                    'pymdownx.highlight': {
-                        'anchor_linenums': True,
-                        'line_spans': '__span',
-                        'pygments_lang_class': True
+                'plugins': {
+                    'search': {
+                        'lang': self.language
                     }
                 },
-                'pymdownx.inlinehilite',
-                'pymdownx.keys',
-                'pymdownx.snippets',
-                'pymdownx.superfences',
-                {
-                    'pymdownx.escapeall': {
-                        'hardbreak': True
-                    }
-                }
-            ],
-            'plugins': {
-                'search': {
-                    'lang': self.language
-                }
-            },
-            'nav': [
-                {'Welcome': 'index.md'},
-                {'Getting started': [
-                    {'Installation': [
-                        { 'Windows': 'installation/windows.md' },
-                        { 'Linux': 'installation/linux.md' }
-                    ]},
-                    {'Quick start': [
-                        {'Introduction': 'quickstart/index.md'},
-                        {'Create your first world': 'quickstart/world.md'},
-                        {'Connect to your command station': 'quickstart/command-station.md'},
-                        {'Add and control a train': 'quickstart/trains.md'},
-                        {'Create a schematic layout': [
-                            {'Introduction': 'quickstart/layout/index.md'},
-                            {'Drawing basics': 'quickstart/layout/drawing-basics.md'},
-                            {'Turnout control': 'quickstart/layout/turnouts.md'},
-                            {'Blocks and sensors': 'quickstart/layout/blocks-sensors.md'},
-                            {'Signals': 'quickstart/layout/signals.md'}
-                        ]}
-                    ]}
-                ]},
-                {'User guide': [
-                    {'Board': [
-                        {'Tile reference': 'user-guide/board/tile-reference.md'}
-                    ]},
-                    {'Zones': 'user-guide/zones.md'}
-                ]},
-                {'Advanced topics': [
-                    {'Interface configuration': [
-                        {'Introduction': 'advanced/interface/index.md'},
-                        {'DCC-EX': 'advanced/interface/dcc-ex.md'},
-                        {'ECoS': 'advanced/interface/ecos.md'},
-                        {'HSI-88': 'advanced/interface/hsi-88.md'},
-                        {'LocoNet': 'advanced/interface/loconet.md'},
-                        {'Märklin CAN': 'advanced/interface/marklin-can.md'},
-                        {'Traintastic DIY': 'advanced/interface/traintastic-diy.md'},
-                        {'WiThrottle': 'advanced/interface/withrottle.md'},
-                        {'WLANmaus': 'advanced/interface/wlanmaus.md'},
-                        {'XpressNet': 'advanced/interface/xpressnet.md'},
-                        {'Z21': 'advanced/interface/z21.md'}
-                    ]},
-                    {'Scripting basics': 'advanced/scripting-basics.md'}
-                ]},
-                {'Troubleshooting': [
-                    {'Interface connection errors': 'troubleshooting/interface-connection-errors.md'}
-                ]},
-                {'Appendix': [
-                    {'Supported hardware': [
-                        {'Overview': 'appendix/supported-hardware/index.md'},
-                        {'Command Stations': 'appendix/supported-hardware/command-stations/index.md'},
-                        {'Boosters': [
-                            {'Overview': 'appendix/supported-hardware/boosters/index.md'},
-                            {'Digikeijs DR5033': 'appendix/supported-hardware/boosters/digikeijs-dr5033.md'},
-                            {'Uhlenblock Power 4/7/22/40/70': 'appendix/supported-hardware/boosters/uhlenbrock-power-4-7-22-40-70.md'}
+                'nav': [
+                    {'Welcome': 'index.md'},
+                    {'Getting started': [
+                        {'Installation': [
+                            { 'Windows': 'installation/windows.md' },
+                            { 'Linux': 'installation/linux.md' }
                         ]},
-                        {'Product index': 'appendix/supported-hardware/product-index.md'}
+                        {'Quick start': [
+                            {'Introduction': 'quickstart/index.md'},
+                            {'Create your first world': 'quickstart/world.md'},
+                            {'Connect to your command station': 'quickstart/command-station.md'},
+                            {'Add and control a train': 'quickstart/trains.md'},
+                            {'Create a schematic layout': [
+                                {'Introduction': 'quickstart/layout/index.md'},
+                                {'Drawing basics': 'quickstart/layout/drawing-basics.md'},
+                                {'Turnout control': 'quickstart/layout/turnouts.md'},
+                                {'Blocks and sensors': 'quickstart/layout/blocks-sensors.md'},
+                                {'Signals': 'quickstart/layout/signals.md'}
+                            ]}
+                        ]}
                     ]},
-                    {'LocoNet reference': 'appendix/loconet.md'},
-                    {'XpressNet reference': 'appendix/xpressnet.md'},
-                    {'Lua scripting reference': lua_ref},
-                    {'Traintastic DIY protocol': 'appendix/traintastic-diy-protocol.md'},
-                    {'Command line options': 'appendix/command-line-options.md'}
-                ]},
-                {'Uncategorized/WIP': [
-                    {'Decoder function': 'wip/decoder-function.md'},
-                    {'Input monitor': 'wip/input-monitor.md'},
-                    {'Log messages': 'wip/log-messages.md'},
-                    {'Trains': 'wip/trains.md'}
-                ]}
+                    {'User guide': [
+                        {'Board': [
+                            {'Tile reference': 'user-guide/board/tile-reference.md'}
+                        ]},
+                        {'Zones': 'user-guide/zones.md'}
+                    ]},
+                    {'Advanced topics': [
+                        {'Interface configuration': [
+                            {'Introduction': 'advanced/interface/index.md'},
+                            {'DCC-EX': 'advanced/interface/dcc-ex.md'},
+                            {'ECoS': 'advanced/interface/ecos.md'},
+                            {'HSI-88': 'advanced/interface/hsi-88.md'},
+                            {'LocoNet': 'advanced/interface/loconet.md'},
+                            {'Märklin CAN': 'advanced/interface/marklin-can.md'},
+                            {'Traintastic DIY': 'advanced/interface/traintastic-diy.md'},
+                            {'WiThrottle': 'advanced/interface/withrottle.md'},
+                            {'WLANmaus': 'advanced/interface/wlanmaus.md'},
+                            {'XpressNet': 'advanced/interface/xpressnet.md'},
+                            {'Z21': 'advanced/interface/z21.md'}
+                        ]},
+                        {'Scripting basics': 'advanced/scripting-basics.md'}
+                    ]},
+                    {'Troubleshooting': [
+                        {'Interface connection errors': 'troubleshooting/interface-connection-errors.md'}
+                    ]},
+                    {'Appendix': [
+                        {'Supported hardware': [
+                            {'Overview': 'appendix/supported-hardware/index.md'},
+                            {'Command Stations': 'appendix/supported-hardware/command-stations/index.md'},
+                            {'Boosters': [
+                                {'Overview': 'appendix/supported-hardware/boosters/index.md'},
+                                {'Digikeijs DR5033': 'appendix/supported-hardware/boosters/digikeijs-dr5033.md'},
+                                {'Uhlenblock Power 4/7/22/40/70': 'appendix/supported-hardware/boosters/uhlenbrock-power-4-7-22-40-70.md'}
+                            ]},
+                            {'Product index': 'appendix/supported-hardware/product-index.md'}
+                        ]},
+                        {'LocoNet reference': 'appendix/loconet.md'},
+                        {'XpressNet reference': 'appendix/xpressnet.md'},
+                        {'Lua scripting reference': lua_ref},
+                        {'Traintastic DIY protocol': 'appendix/traintastic-diy-protocol.md'},
+                        {'Command line options': 'appendix/command-line-options.md'}
+                    ]},
+                    {'Uncategorized/WIP': [
+                        {'Decoder function': 'wip/decoder-function.md'},
+                        {'Input monitor': 'wip/input-monitor.md'},
+                        {'Log messages': 'wip/log-messages.md'},
+                        {'Trains': 'wip/trains.md'}
+                    ]}
+            ]
+        }
+        # German       
+        if self.language == 'de':
+            config = {
+                'site_name': 'Traintastic Anleitung',
+                'docs_dir': os.path.join('../../docs', self.language),
+                'extra_css': ['assets/extra.css'],
+                'site_dir': os.path.join(self.output_dir, self.language),
+                'use_directory_urls': False,
+                'theme': {
+                    'name': 'material',
+                    'custom_dir': '../../overrides/',
+                    'language': self.language,
+                    'icon': {
+                        'logo': 'traintastic/logo'
+                    },
+                    'palette': [
+                        {
+                            'scheme': 'default',
+                            'toggle': {
+                                'icon': 'material/brightness-7',
+                                'name': 'Switch to dark mode'
+                            }
+                        },
+                        {
+                            'scheme': 'slate',
+                            'toggle': {
+                                'icon': 'material/brightness-4',
+                                'name': 'Switch to light mode'
+                            }
+                        }
+                    ],
+                    'features': ['content.code.copy']
+                },
+                'markdown_extensions': [
+                    'attr_list',
+                    'admonition',
+                    {
+                        'pymdownx.highlight': {
+                            'anchor_linenums': True,
+                            'line_spans': '__span',
+                            'pygments_lang_class': True
+                        }
+                    },
+                    'pymdownx.inlinehilite',
+                    'pymdownx.keys',
+                    'pymdownx.snippets',
+                    'pymdownx.superfences',
+                    {
+                        'pymdownx.escapeall': {
+                            'hardbreak': True
+                        }
+                    }
+                ],
+                'plugins': {
+                    'search': {
+                        'lang': self.language
+                    }
+                },
+                'nav': [
+                    {'Willkommen': 'index.md'},
+                    {'Erste Schritte': [
+                        {'Installation': [
+                            { 'Windows': 'installation/windows.md' },
+                            { 'Linux': 'installation/linux.md' }
+                        ]},
+                        {'Schnellstart': [
+                            {'Einleitung': 'quickstart/index.md'},
+                            {'Erstelle Deine erste Welt': 'quickstart/world.md'},
+                            {'Verbindung zu Deiner Zentrale': 'quickstart/command-station.md'},
+                            {'Füge einen Zug hinzu und steuere ihn': 'quickstart/trains.md'},
+                            {'Erstellen eines schematischen Layouts': [
+                                {'Einleitung': 'quickstart/layout/index.md'},
+                                {'Grundlagen des Zeichnens': 'quickstart/layout/drawing-basics.md'},
+                                {'Weichensteuerung': 'quickstart/layout/turnouts.md'},
+                                {'Blöcke und Sensoren': 'quickstart/layout/blocks-sensors.md'},
+                                {'Signale': 'quickstart/layout/signals.md'}
+                            ]}
+                        ]}
+                    ]},
+                    {'Benutzerhandbuch': [
+                        {'Board': [
+                            {'Kachel Referenz': 'user-guide/board/tile-reference.md'}
+                        ]},
+                        {'Zonen': 'user-guide/zones.md'}
+                    ]},
+                    {'Fortgeschrittene Themen': [
+                        {'Schnittstellen Konfiguration': [
+                            {'Einleitung': 'advanced/interface/index.md'},
+                            {'CBUS': 'advanced/interface/cbus.md'},
+                            {'DCC-EX': 'advanced/interface/dcc-ex.md'},
+                            {'ECoS': 'advanced/interface/ecos.md'},
+                            {'HSI-88': 'advanced/interface/hsi-88.md'},
+                            {'LocoNet': 'advanced/interface/loconet.md'},
+                            {'Märklin CAN': 'advanced/interface/marklin-can.md'},
+                            {'Traintastic DIY': 'advanced/interface/traintastic-diy.md'},
+                            {'WiThrottle': 'advanced/interface/withrottle.md'},
+                            {'WLANmaus': 'advanced/interface/wlanmaus.md'},
+                            {'XpressNet': 'advanced/interface/xpressnet.md'},
+                            {'Z21': 'advanced/interface/z21.md'}
+                        ]},
+                        {'Grundlagen der Scripterstellung': 'advanced/scripting-basics.md'}
+                    ]},
+                    {'Fehlerbehebung': [
+                        {'Schnittstellenfehler': 'troubleshooting/interface-connection-errors.md'}
+                    ]},
+                    {'Anhang': [
+                        {'Unterstützte Hardware': [
+                            {'Übersicht': 'appendix/supported-hardware/index.md'},
+                            {'Digitalzentralen': 'appendix/supported-hardware/command-stations/index.md'},
+                            {'Booster': [
+                                {'Übersicht': 'appendix/supported-hardware/boosters/index.md'},
+                                {'Digikeijs DR5033': 'appendix/supported-hardware/boosters/digikeijs-dr5033.md'},
+                                {'Uhlenblock Power 4/7/22/40/70': 'appendix/supported-hardware/boosters/uhlenbrock-power-4-7-22-40-70.md'}
+                            ]},
+                            {'Produkt Index': 'appendix/supported-hardware/product-index.md'}
+                        ]},
+                        {'LocoNet Referenz': 'appendix/loconet.md'},
+                        {'XpressNet Referenz': 'appendix/xpressnet.md'},
+                        {'Lua Script Referenz': lua_ref},
+                        {'Traintastic DIY Protokoll': 'appendix/traintastic-diy-protocol.md'},
+                        {'Befehlszeilenoptionen': 'appendix/command-line-options.md'}
+                    ]},
+                    {'Uncategorized/WIP': [
+                        {'Decoder function': 'wip/decoder-function.md'},
+                        {'Input monitor': 'wip/input-monitor.md'},
+                        {'Log messages': 'wip/log-messages.md'},
+                        {'Trains': 'wip/trains.md'}
+                    ]}
             ]
         }
         TraintasticHelp._write_file(os.path.join(self.base_dir, 'config', self.language, 'mkdocs.yml'), yaml.dump(config))
@@ -249,10 +381,12 @@ if __name__ == '__main__':
     # Standard options:
     parser = ArgumentParser()
     parser.add_argument('--version', default=detect_version())
+    parser.add_argument('--lang',default='en',choices=['de','en'], help='Language to build (default: en)')
 
     args = parser.parse_args(sys.argv[1:])
 
-    help = TraintasticHelp(os.path.abspath(os.path.dirname(__file__)))
+    help = TraintasticHelp(os.path.abspath(os.path.dirname(__file__)),language=args.lang)
     help.version = args.version
+    help.language = args.lang
 
     sys.exit(0 if help.build() else 1)
