@@ -24,6 +24,7 @@
 
 #include "../../../core/subobject.hpp"
 #include "../../../core/table.hpp"
+#include <optional>
 
 class CBUSNodeListTableModel;
 
@@ -41,6 +42,13 @@ public:
     uint8_t canId;
     uint8_t manufacturerId;
     uint8_t moduleId;
+
+    struct Parameters
+    {
+      std::optional<uint8_t> versionMajor;
+      std::optional<uint8_t> versionMinor;
+      std::optional<uint8_t> betaReleaseCode;
+    } parameters;
   };
 
   CBUSNodeList(Object& parent_, std::string_view parentPropertyName);
@@ -53,6 +61,8 @@ private:
 
   void add(Node&& node);
   void clear();
+
+  void rowChanged(uint32_t row);
 };
 
 #endif

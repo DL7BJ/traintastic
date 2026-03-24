@@ -415,7 +415,40 @@ bool CBUSInterface::setOnline(bool& value, bool simulation)
             .canId = canId,
             .manufacturerId = manufacturerId,
             .moduleId = moduleId,
+            .parameters = {},
           });
+        };
+      m_kernel->onNodeParameterResponse =
+        [this](uint8_t canId, uint16_t nodeNumber, CBUS::NodeParameter parameter, uint8_t parameterValue)
+        {
+          auto& nodes = cbusNodeList->m_nodes;
+          if(auto it = std::find_if(nodes.begin(), nodes.end(),
+              [canId, nodeNumber](const auto& item)
+              {
+                return item.canId == canId && item.nodeNumber == nodeNumber;
+              }); it != nodes.end())
+          {
+            switch(parameter)
+            {
+              using enum CBUS::NodeParameter;
+
+              case VersionMajor:
+                it->parameters.versionMajor = parameterValue;
+                break;
+
+              case VersionMinor:
+                it->parameters.versionMinor = parameterValue;
+                break;
+
+              case BetaReleaseCode:
+                it->parameters.betaReleaseCode = parameterValue;
+                break;
+
+              default:
+                return;
+            }
+            cbusNodeList->rowChanged(static_cast<uint32_t>(std::distance(nodes.begin(), it)));
+          }
         };
       m_kernel->onTrackOff =
         [this]()

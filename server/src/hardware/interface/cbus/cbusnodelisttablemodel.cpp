@@ -21,12 +21,14 @@
 
 #include "cbusnodelisttablemodel.hpp"
 #include "cbusnodelist.hpp"
+#include <format>
 #include "../../protocol/cbus/cbusmanufacturermodule.hpp"
 
 constexpr uint32_t columnCANID = 0;
 constexpr uint32_t columnNodeNumber = 1;
 constexpr uint32_t columnManufacturer = 2;
 constexpr uint32_t columnModule = 3;
+constexpr uint32_t columnFirmwareVersion = 4;
 
 CBUSNodeListTableModel::CBUSNodeListTableModel(CBUSNodeList& list)
   : m_list{list.shared_ptr<CBUSNodeList>()}
@@ -38,7 +40,8 @@ CBUSNodeListTableModel::CBUSNodeListTableModel(CBUSNodeList& list)
     std::string_view{"cbus_node_list:can_id"},
     std::string_view{"cbus_node_list:node_number"},
     std::string_view{"cbus_node_list:manufacturer"},
-    std::string_view{"cbus_node_list:module"}
+    std::string_view{"cbus_node_list:module"},
+    std::string_view{"cbus_node_list:firmware_version"}
   });
 
   setRowCount(m_list->m_nodes.size());
@@ -78,6 +81,19 @@ std::string CBUSNodeListTableModel::getText(uint32_t column, uint32_t row) const
           return std::string(sv);
         }
         return std::to_string(node.moduleId);
+
+      case columnFirmwareVersion:
+        if(node.parameters.versionMajor && node.parameters.versionMinor && node.parameters.betaReleaseCode)
+        {
+          auto s = std::to_string(*node.parameters.versionMajor);
+          s += static_cast<char>(*node.parameters.versionMinor);
+          if(*node.parameters.betaReleaseCode > 0)
+          {
+            s += std::format(" Beta {}", *node.parameters.betaReleaseCode);
+          }
+          return s;
+        }
+        break;
     }
   }
   return {};

@@ -71,6 +71,20 @@ void CANCMD::receive(const Message& message)
       handleGetEngineSession(gloc.address(), gloc.isLongAddress(), gloc.mode());
       break;
     }
+    case RQNPN:
+    {
+      const auto& rqnpn = static_cast<const ReadNodeParameter&>(message);
+      if(rqnpn.nodeNumber() == nodeNumber)
+      {
+        static constexpr std::array<uint8_t, 21> nodeParameters{{20, 165, 102, 83, 255, 10, 216, 4, 14, 3, 1, 0, 8, 0, 0, 196, 26, 0, 0, 1, 12}};
+        if(static_cast<uint8_t>(rqnpn.parameter) < nodeParameters.size())
+        {
+          send(NodeParameterResponse(nodeNumber, rqnpn.parameter, nodeParameters[static_cast<uint8_t>(rqnpn.parameter)]));
+        }
+        // else FIXME: send CMDERR(Invalid Parameter Index) and GRSP(Invalid Parameter Index)
+      }
+      break;
+    }
     default:
       break;
   }

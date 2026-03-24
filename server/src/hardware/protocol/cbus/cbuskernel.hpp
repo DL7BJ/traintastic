@@ -32,6 +32,7 @@
 #include <traintastic/enum/direction.hpp>
 #include "cbusconfig.hpp"
 #include "iohandler/cbusiohandler.hpp"
+#include "messages/cbusnodeparametermessages.hpp"
 #include "../dcc/messages.hpp"
 
 namespace CBUS {
@@ -40,6 +41,7 @@ class Kernel : public ::KernelBase
 {
 public:
   std::function<void(uint8_t canId, uint16_t nodeNumber, uint8_t manufacturerId, uint8_t moduleId)> onPresenceOfNode;
+  std::function<void(uint8_t canId, uint16_t nodeNumber, NodeParameter parameter, uint8_t value)> onNodeParameterResponse;
   std::function<void()> onTrackOff;
   std::function<void()> onTrackOn;
   std::function<void()> onEmergencyStop;
@@ -117,6 +119,7 @@ private:
   {
     Initial, // must be first
     QueryNodes,
+    ReadNodeParameters,
     GetCommandStationStatus,
     Started // must be last
   };
@@ -135,6 +138,7 @@ private:
   const bool m_simulation;
   State m_state = State::Initial;
   boost::asio::steady_timer m_initializationTimer;
+  std::queue<ReadNodeParameter> m_readNodeParameters;
   Config m_config;
   bool m_trackOn = false;
   uint8_t m_engineKeepAliveSession;
@@ -165,6 +169,8 @@ private:
   }
 
   void changeState(State value);
+
+  void readNodeParameter();
 
   void restartInitializationTimer(std::chrono::milliseconds timeout);
   void restartEngineKeepAliveTimer();

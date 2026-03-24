@@ -35,6 +35,7 @@ namespace {
 using namespace std::chrono_literals;
 
 static constexpr auto queryNodeNumberTimeout = 100ms;
+static constexpr auto readNodeParameterTimeout = 50ms;
 static constexpr auto requestCommandStationStatusTimeout = 100ms;
 
 constexpr uint16_t makeAddressKey(uint16_t address, bool longAddress)
@@ -282,6 +283,31 @@ void Kernel::receive(uint8_t canId, const Message& message)
         });
       break;
     }
+    case OpCode::PARAN:
+      if(m_state == State::ReadNodeParameters && !m_readNodeParameters.empty())
+      {
+        const auto& rqnpn = m_readNodeParameters.front();
+        const auto& paran = static_cast<const NodeParameterResponse&>(message);
+
+        if(rqnpn.nodeNumber() == paran.nodeNumber() && rqnpn.parameter == paran.parameter)
+        {
+          m_readNodeParameters.pop();
+          m_initializationTimer.cancel();
+
+          EventLoop::call(
+            [this, canId, paran]()
+            {
+              if(onNodeParameterResponse) [[likely]]
+              {
+                onNodeParameterResponse(canId, paran.nodeNumber(), paran.parameter, paran.value);
+              }
+            });
+
+          readNodeParameter();
+        }
+      }
+      break;
+
     case OpCode::PNN:
       if(m_state == State::QueryNodes)
       {
@@ -289,8 +315,9 @@ void Kernel::receive(uint8_t canId, const Message& message)
 
         const auto& pnn = static_cast<const PresenceOfNode&>(message);
 
-        send(ReadNodeParameter(pnn.nodeNumber(), NodeParameter::VersionMajor));
-        send(ReadNodeParameter(pnn.nodeNumber(), NodeParameter::VersionMinor));
+        m_readNodeParameters.emplace(ReadNodeParameter(pnn.nodeNumber(), NodeParameter::VersionMajor));
+        m_readNodeParameters.emplace(ReadNodeParameter(pnn.nodeNumber(), NodeParameter::VersionMinor));
+        m_readNodeParameters.emplace(ReadNodeParameter(pnn.nodeNumber(), NodeParameter::BetaReleaseCode));
 
         EventLoop::call(
           [this, canId, pnn]()
@@ -662,6 +689,10 @@ void Kernel::changeState(State value)
       restartInitializationTimer(queryNodeNumberTimeout);
       break;
 
+    case State::ReadNodeParameters:
+      readNodeParameter();
+      break;
+
     case State::GetCommandStationStatus:
       send(RequestCommandStationStatus());
       restartInitializationTimer(requestCommandStationStatusTimeout);
@@ -671,6 +702,18 @@ void Kernel::changeState(State value)
       KernelBase::started();
       break;
   }
+}
+
+void Kernel::readNodeParameter()
+{
+  assert(m_state == State::ReadNodeParameters);
+  if(m_readNodeParameters.empty())
+  {
+    nextState();
+    return;
+  }
+  send(m_readNodeParameters.front());
+  restartInitializationTimer(readNodeParameterTimeout);
 }
 
 void Kernel::restartInitializationTimer(std::chrono::milliseconds timeout)
@@ -692,6 +735,11 @@ void Kernel::restartInitializationTimer(std::chrono::milliseconds timeout)
       {
         case State::QueryNodes:
           nextState();
+          break;
+
+        case State::ReadNodeParameters:
+          m_readNodeParameters.pop();
+          readNodeParameter();
           break;
 
         case State::GetCommandStationStatus:

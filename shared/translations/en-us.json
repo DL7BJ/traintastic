@@ -288,6 +288,10 @@
         "definition": "Trains"
     },
     {
+        "term": "cbus_node_list:firmware_version",
+        "definition": "Firmware version"
+    },
+    {
         "term": "cbus_node_list:manufacturer",
         "definition": "Manufacturer"
     },

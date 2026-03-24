@@ -51,3 +51,11 @@ void CBUSNodeList::clear()
     model->setRowCount(0);
   }
 }
+
+void CBUSNodeList::rowChanged(uint32_t row)
+{
+  for(auto& model : m_models)
+  {
+    model->rowsChanged(row, row);
+  }
+}
