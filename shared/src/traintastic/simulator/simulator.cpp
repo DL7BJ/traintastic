@@ -1561,6 +1561,7 @@ Simulator::StaticData Simulator::load(const nlohmann::json& world, StateData& st
 
       train.protocol = stringToEnum<DecoderProtocol>(object.value<std::string_view>("protocol", {})).value_or(DecoderProtocol::None);
       train.address = object.value("address", train.address);
+      train.speedMax = object.value("speed_max", train.speedMax);
 
       for(const auto& vehicle : object["vehicles"])
       {
