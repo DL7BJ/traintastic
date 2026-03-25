@@ -1,9 +1,8 @@
 /**
- * server/src/hardware/protocol/loconet/iohandler/simulationiohandler.cpp
+ * This file is part of Traintastic,
+ * see <https://github.com/traintastic/traintastic>.
  *
- * This file is part of the traintastic source code.
- *
- * Copyright (C) 2022-2023,2025 Reinder Feenstra
+ * Copyright (C) 2022-2026 Reinder Feenstra
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -157,7 +156,7 @@ void SimulationIOHandler::start()
       {
         if(inRange(address, Kernel::accessoryOutputAddressMin, Kernel::accessoryOutputAddressMax))
         {
-          m_kernel.receive(SwitchRequest(address, state == 2, state != 0));
+          m_kernel.receive(SwitchRequest(address, state == 1, state != 0));
         }
       };
     m_simulator->onSensorChanged =
