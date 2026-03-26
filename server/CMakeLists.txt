@@ -322,6 +322,35 @@ else()
   endif()
 endif()
 
+if(LINUX)
+  include(CheckCXXSourceCompiles)
+
+  set(CMAKE_REQUIRED_FLAGS "-std=c++20")
+  check_cxx_source_compiles([[
+    #include <format>
+    int main()
+    {
+      auto s = std::format("{}", 1);
+      (void)s;
+      return 0;
+    }
+  ]] HAS_STD_FORMAT)
+  unset(CMAKE_REQUIRED_FLAGS)
+
+  if(NOT HAS_STD_FORMAT)
+    set(USE_FMT ON)
+  endif()
+
+  if(USE_FMT)
+    message(STATUS "std::format not available, using fmt::fmt instead")
+    find_package(fmt REQUIRED)
+    target_link_libraries(traintastic-server PRIVATE fmt::fmt)
+    target_compile_definitions(traintastic-server PRIVATE USE_FMT)
+    target_link_libraries(traintastic-server-test PRIVATE fmt::fmt)
+    target_compile_definitions(traintastic-server-test PRIVATE USE_FMT)
+  endif()
+endif()
+
 ### LIBRARIES ###
 
 if(WIN32 AND NOT MSVC)

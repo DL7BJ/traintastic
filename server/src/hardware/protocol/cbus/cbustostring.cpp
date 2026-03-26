@@ -20,8 +20,8 @@
  */
 
 #include "cbustostring.hpp"
-#include <format>
 #include "cbusmessages.hpp"
+#include "../../../compat/stdformat.hpp"
 #include "../../../utils/tohex.hpp"
 
 namespace CBUS {

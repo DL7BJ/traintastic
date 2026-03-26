@@ -21,7 +21,7 @@
 
 #include "cbusnodelisttablemodel.hpp"
 #include "cbusnodelist.hpp"
-#include <format>
+#include "../../../compat/stdformat.hpp"
 #include "../../protocol/cbus/cbusmanufacturermodule.hpp"
 
 constexpr uint32_t columnCANID = 0;
