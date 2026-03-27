@@ -288,6 +288,10 @@
         "definition": "Trains"
     },
     {
+        "term": "cbus_interface_type:socket_can",
+        "definition": "SocketCAN (Linux only)"
+    },
+    {
         "term": "cbus_node_list:firmware_version",
         "definition": "Firmware version"
     },

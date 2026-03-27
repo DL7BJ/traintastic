@@ -116,6 +116,10 @@
         "definition": "ECoS Detector"
     },
     {
+        "term": "interface.cbus:can_id",
+        "definition": "CAN ID"
+    },
+    {
         "term": "interface.cbus:cbus",
         "definition": "CBUS/VLCB"
     },

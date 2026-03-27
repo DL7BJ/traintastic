@@ -32,6 +32,7 @@
 #include "../protocol/cbus/iohandler/cbuscanusbiohandler.hpp"
 #include "../protocol/cbus/iohandler/cbuscanetheriohandler.hpp"
 #include "../protocol/cbus/iohandler/cbussimulationiohandler.hpp"
+#include "../protocol/cbus/iohandler/cbussocketcaniohandler.hpp"
 #include "../protocol/cbus/simulator/cbussimulator.hpp"
 #include "../protocol/cbus/simulator/module/cbuscancmd.hpp"
 #include "../../core/attributes.hpp"
@@ -66,6 +67,8 @@ CBUSInterface::CBUSInterface(World& world, std::string_view _id)
   , device{this, "device", "", PropertyFlags::ReadWrite | PropertyFlags::Store}
   , hostname{this, "hostname", "", PropertyFlags::ReadWrite | PropertyFlags::Store}
   , port{this, "port", 0, PropertyFlags::ReadWrite | PropertyFlags::Store}
+  , interface{this, "interface", "", PropertyFlags::ReadWrite | PropertyFlags::Store}
+  , canId{this, "can_id", 0x7D, PropertyFlags::ReadWrite | PropertyFlags::Store}
   , cbus{this, "cbus", nullptr, PropertyFlags::ReadOnly | PropertyFlags::Store | PropertyFlags::SubObject}
   , cbusNodeList{this, "cbus_node_list", nullptr, PropertyFlags::ReadOnly | PropertyFlags::NoStore | PropertyFlags::SubObject}
 {
@@ -91,6 +94,16 @@ CBUSInterface::CBUSInterface(World& world, std::string_view _id)
   Attributes::addEnabled(port, !online);
   Attributes::addVisible(port, false);
   m_interfaceItems.insertBefore(port, notes);
+
+  Attributes::addDisplayName(interface, DisplayName::Hardware::interface);
+  Attributes::addEnabled(interface, !online);
+  Attributes::addVisible(interface, false);
+  m_interfaceItems.insertBefore(interface, notes);
+
+  Attributes::addEnabled(canId, !online);
+  Attributes::addMinMax(canId, CBUS::canIdMin, CBUS::canIdMax);
+  Attributes::addVisible(canId, false);
+  m_interfaceItems.insertBefore(canId, notes);
 
   m_interfaceItems.insertBefore(cbus, notes);
 
@@ -391,6 +404,16 @@ bool CBUSInterface::setOnline(bool& value, bool simulation)
           case CBUSInterfaceType::CANEther:
             m_kernel = CBUS::Kernel::create<CBUS::CANEtherIOHandler>(id.value(), cbus->config(), hostname.value(), port.value());
             break;
+
+          case CBUSInterfaceType::SocketCAN:
+#ifdef __linux__
+            m_kernel = CBUS::Kernel::create<CBUS::SocketCANIOHandler>(id.value(), cbus->config(), interface.value(), canId.value());
+            break;
+#else
+            setState(InterfaceState::Error);
+            Log::log(*this, LogMessage::C2005_SOCKETCAN_IS_ONLY_AVAILABLE_ON_LINUX);
+            return false;
+#endif
         }
       }
 
@@ -408,24 +431,24 @@ bool CBUSInterface::setOnline(bool& value, bool simulation)
           online = false; // communication no longer possible
         });
       m_kernel->onPresenceOfNode =
-        [this](uint8_t canId, uint16_t nodeNumber, uint8_t manufacturerId, uint8_t moduleId)
+        [this](uint8_t canId_, uint16_t nodeNumber, uint8_t manufacturerId, uint8_t moduleId)
         {
           cbusNodeList->add(CBUSNodeList::Node{
             .nodeNumber = nodeNumber,
-            .canId = canId,
+            .canId = canId_,
             .manufacturerId = manufacturerId,
             .moduleId = moduleId,
             .parameters = {},
           });
         };
       m_kernel->onNodeParameterResponse =
-        [this](uint8_t canId, uint16_t nodeNumber, CBUS::NodeParameter parameter, uint8_t parameterValue)
+        [this](uint8_t canId_, uint16_t nodeNumber, CBUS::NodeParameter parameter, uint8_t parameterValue)
         {
           auto& nodes = cbusNodeList->m_nodes;
           if(auto it = std::find_if(nodes.begin(), nodes.end(),
-              [canId, nodeNumber](const auto& item)
+              [canId_, nodeNumber](const auto& item)
               {
-                return item.canId == canId && item.nodeNumber == nodeNumber;
+                return item.canId == canId_ && item.nodeNumber == nodeNumber;
               }); it != nodes.end())
           {
             switch(parameter)
@@ -488,6 +511,8 @@ bool CBUSInterface::setOnline(bool& value, bool simulation)
         };
 
       m_kernel->start();
+
+      Attributes::setEnabled({type, device, hostname, port, interface, canId}, false);
     }
     catch(const LogMessageException& e)
     {
@@ -498,6 +523,8 @@ bool CBUSInterface::setOnline(bool& value, bool simulation)
   }
   else if(m_kernel && !value)
   {
+    Attributes::setEnabled({type, device, hostname, port, interface, canId}, true);
+
     m_kernel->stop();
     EventLoop::deleteLater(m_kernel.release());
     EventLoop::deleteLater(m_simulator.release());
@@ -514,10 +541,7 @@ bool CBUSInterface::setOnline(bool& value, bool simulation)
 
 void CBUSInterface::updateVisible()
 {
-  const bool isSerial = (type == CBUSInterfaceType::CANUSB);
-  Attributes::setVisible(device, isSerial);
-
-  const bool isNetwork = (type == CBUSInterfaceType::CANEther);
-  Attributes::setVisible(hostname, isNetwork);
-  Attributes::setVisible(port, isNetwork);
+  Attributes::setVisible(device, (type == CBUSInterfaceType::CANUSB));
+  Attributes::setVisible({hostname, port}, (type == CBUSInterfaceType::CANEther));
+  Attributes::setVisible({interface, canId}, (type == CBUSInterfaceType::SocketCAN));
 }

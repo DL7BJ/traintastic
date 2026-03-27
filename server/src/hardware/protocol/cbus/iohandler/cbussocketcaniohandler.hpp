@@ -19,17 +19,28 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef TRAINTASTIC_SERVER_HARDWARE_PROTOCOL_CBUS_CBUSCONST_HPP
-#define TRAINTASTIC_SERVER_HARDWARE_PROTOCOL_CBUS_CBUSCONST_HPP
+#ifndef TRAINTASTIC_SERVER_HARDWARE_PROTOCOL_CBUS_IOHANDLER_CBUSSOCKETCANIOHANDLER_HPP
+#define TRAINTASTIC_SERVER_HARDWARE_PROTOCOL_CBUS_IOHANDLER_CBUSSOCKETCANIOHANDLER_HPP
 
-#include <cstdint>
+#include "cbusiohandler.hpp"
+#include "../../can/iohandler/socketcaniohandler.hpp"
 
 namespace CBUS {
 
-constexpr uint8_t canIdMin = 1;
-constexpr uint8_t canIdMax = 127;
+class SocketCANIOHandler : public IOHandler
+{
+public:
+  SocketCANIOHandler(Kernel& kernel, const std::string& interface, uint8_t canId);
 
-constexpr uint8_t engineFunctionMax = 28;
+  void start() final;
+  void stop() final;
+
+  [[nodiscard]] std::error_code send(const Message& message) final;
+
+private:
+  const uint8_t m_canId;
+  CAN::SocketCANIOHandler m_socketCAN;
+};
 
 }
 

@@ -55,6 +55,8 @@ public:
   SerialDeviceProperty device;
   Property<std::string> hostname;
   Property<uint16_t> port;
+  Property<std::string> interface;
+  Property<uint8_t> canId;
   ObjectProperty<CBUSSettings> cbus;
   ObjectProperty<CBUSNodeList> cbusNodeList;
 

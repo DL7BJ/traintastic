@@ -30,17 +30,20 @@ enum class CBUSInterfaceType : uint8_t
 {
   CANUSB = 0,
   CANEther = 1,
+  SocketCAN = 2,
 };
 
-TRAINTASTIC_ENUM(CBUSInterfaceType, "cbus_interface_type", 2,
+TRAINTASTIC_ENUM(CBUSInterfaceType, "cbus_interface_type", 3,
 {
   {CBUSInterfaceType::CANUSB, "canusb"},
   {CBUSInterfaceType::CANEther, "canether"},
+  {CBUSInterfaceType::SocketCAN, "socket_can"},
 });
 
-inline constexpr std::array<CBUSInterfaceType, 2> CBUSInterfaceTypeValues{{
+inline constexpr std::array<CBUSInterfaceType, 3> CBUSInterfaceTypeValues{{
   CBUSInterfaceType::CANUSB,
   CBUSInterfaceType::CANEther,
+  CBUSInterfaceType::SocketCAN,
 }};
 
 #endif
