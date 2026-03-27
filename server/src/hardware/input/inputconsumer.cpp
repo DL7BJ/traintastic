@@ -200,9 +200,12 @@ void InputConsumer::setInput(std::shared_ptr<Input> value)
     m_inputValueChanged = m_input->onValueChanged.connect(
       [this](bool inputValue, const std::shared_ptr<Input>& /*input*/)
       {
+        try
         {
-          boost::system::error_code ec;
-          m_inputFilterTimer.cancel(ec);
+          m_inputFilterTimer.cancel();
+        }
+        catch(...)
+        {
         }
         m_inputFilterTimer.expires_after(std::chrono::milliseconds(inputValue ? onDelay.value() : offDelay.value()));
         m_inputFilterTimer.async_wait(
@@ -226,8 +229,13 @@ void InputConsumer::releaseInput()
 {
   if(m_input)
   {
-    boost::system::error_code ec;
-    m_inputFilterTimer.cancel(ec);
+    try
+    {
+      m_inputFilterTimer.cancel();
+    }
+    catch(...)
+    {
+    }
     m_inputDestroying.disconnect();
     m_inputValueChanged.disconnect();
     if(m_input->interface)
