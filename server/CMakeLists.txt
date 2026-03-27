@@ -120,6 +120,7 @@ file(GLOB SOURCES
   "src/hardware/programming/lncv/*.cpp"
   "src/hardware/protocol/*.hpp"
   "src/hardware/protocol/*.cpp"
+  "src/hardware/protocol/can/iohandler/*.cpp"
   "src/hardware/protocol/cbus/*.cpp"
   "src/hardware/protocol/cbus/iohandler/*.cpp"
   "src/hardware/protocol/cbus/simulator/*.cpp"
@@ -280,7 +281,10 @@ if(LINUX)
   endif()
 else()
   # socket CAN is only available on linux:
-  file(GLOB SOCKET_CAN_SOURCES "src/hardware/protocol/marklincan/iohandler/socketcaniohandler.*")
+  file(GLOB SOCKET_CAN_SOURCES
+    "src/hardware/protocol/can/iohandler/socketcaniohandler.*"
+    "src/hardware/protocol/marklincan/iohandler/socketcaniohandler.*"
+  )
   list(REMOVE_ITEM SOURCES ${SOCKET_CAN_SOURCES})
 endif()
 
