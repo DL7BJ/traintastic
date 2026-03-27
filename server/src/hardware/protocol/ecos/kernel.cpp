@@ -85,7 +85,7 @@ Kernel::Kernel(std::string logId_, const Config& config, bool simulation)
 
 void Kernel::setConfig(const Config& config)
 {
-  m_ioContext.post(
+  boost::asio::post(m_ioContext,
     [this, newConfig=config]()
     {
       m_config = newConfig;
@@ -143,11 +143,11 @@ void Kernel::start()
     [this]()
     {
       setThreadName("ecos");
-      auto work = std::make_shared<boost::asio::io_context::work>(m_ioContext);
+      boost::asio::executor_work_guard<decltype(m_ioContext.get_executor())> work{m_ioContext.get_executor()};
       m_ioContext.run();
     });
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext,
     [this]()
     {
       try
@@ -173,7 +173,7 @@ void Kernel::start()
 
 void Kernel::stop(Simulation* simulation)
 {
-  m_ioContext.post(
+  boost::asio::post(m_ioContext,
     [this]()
     {
       m_ioHandler->stop();
@@ -338,19 +338,19 @@ SwitchManager& Kernel::switchManager()
 
 void Kernel::emergencyStop()
 {
-  m_ioContext.post([this]() { ecos().stop(); });
+  boost::asio::post(m_ioContext, [this]() { ecos().stop(); });
 }
 
 void Kernel::go()
 {
-  m_ioContext.post([this]() { ecos().go(); });
+  boost::asio::post(m_ioContext, [this]() { ecos().go(); });
 }
 
 void Kernel::decoderChanged(const Decoder& decoder, DecoderChangeFlags changes, uint32_t functionNumber)
 {
   if(has(changes, DecoderChangeFlags::Direction))
   {
-    m_ioContext.post(
+    boost::asio::post(m_ioContext,
       [this,
         protocol=decoder.protocol.value(),
         address=decoder.address.value(),
@@ -363,7 +363,7 @@ void Kernel::decoderChanged(const Decoder& decoder, DecoderChangeFlags changes, 
   }
   else if(has(changes, DecoderChangeFlags::EmergencyStop | DecoderChangeFlags::Throttle))
   {
-    m_ioContext.post(
+    boost::asio::post(m_ioContext,
       [this,
         protocol=decoder.protocol.value(),
         address=decoder.address.value(),
@@ -382,7 +382,7 @@ void Kernel::decoderChanged(const Decoder& decoder, DecoderChangeFlags changes, 
   }
   else if(has(changes, DecoderChangeFlags::FunctionValue) && functionNumber <= std::numeric_limits<uint8_t>::max())
   {
-    m_ioContext.post(
+    boost::asio::post(m_ioContext,
       [this,
         protocol=decoder.protocol.value(),
         address=decoder.address.value(),
@@ -406,7 +406,7 @@ bool Kernel::setOutput(OutputChannel channel, const OutputLocation& location, Ou
     case OutputChannel::AccessoryMotorola:
     {
       const auto switchProtocol = (channel == OutputChannel::AccessoryDCC) ? SwitchProtocol::DCC : SwitchProtocol::Motorola;
-      m_ioContext.post(
+      boost::asio::post(m_ioContext,
         [this, switchProtocol, address=std::get<OutputAddress>(location).address, port=(std::get<OutputPairValue>(value) == OutputPairValue::Second)]()
         {
           switchManager().setSwitch(switchProtocol, address, port);
@@ -415,7 +415,7 @@ bool Kernel::setOutput(OutputChannel channel, const OutputLocation& location, Ou
     }
     case OutputChannel::ECoSObject:
     {
-      m_ioContext.post(
+      boost::asio::post(m_ioContext,
         [this, object=std::get<OutputECoSObject>(location).object, state=std::get<uint8_t>(value)]()
         {
           if(auto it = m_objects.find(object); it != m_objects.end())
@@ -441,7 +441,7 @@ void Kernel::simulateInputChange(InputChannel channel, uint32_t address, Simulat
   if(!m_simulation)
     return;
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext,
     [this, channel, address, action]()
     {
       switch(channel)

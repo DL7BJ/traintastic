@@ -25,6 +25,7 @@
 #include "../kernelbase.hpp"
 #include <array>
 #include <unordered_map>
+#include <boost/asio/post.hpp>
 #include <boost/asio/steady_timer.hpp>
 #include <traintastic/enum/outputchannel.hpp>
 #include "config.hpp"
@@ -72,7 +73,7 @@ class Kernel : public ::KernelBase
 
     void postSend(const std::string& message)
     {
-      m_ioContext.post(
+      boost::asio::post(m_ioContext, 
         [this, message]()
         {
           send(message);

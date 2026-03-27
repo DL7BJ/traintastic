@@ -26,6 +26,7 @@
 #include <optional>
 
 #include "kernel.hpp"
+#include <boost/asio/post.hpp>
 #include <boost/asio/steady_timer.hpp>
 #include <traintastic/enum/inputchannel.hpp>
 #include <traintastic/enum/outputchannel.hpp>
@@ -162,7 +163,7 @@ class ClientKernel final : public Kernel
     template<class T>
     void postSend(const T& message, bool wantReply = true, uint8_t customRetryCount = 0)
     {
-      m_ioContext.post(
+      boost::asio::post(m_ioContext, 
         [this, message, wantReply, customRetryCount]()
         {
           send(message, wantReply, customRetryCount);

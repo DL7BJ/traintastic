@@ -2780,12 +2780,20 @@
         "definition": "Throttle"
     },
     {
+        "term": "train:acceleration_rate",
+        "definition": "Acceleration rate"
+    },
+    {
         "term": "train:active",
         "definition": "Active"
     },
     {
         "term": "train:block",
         "definition": "Block"
+    },
+    {
+        "term": "train:braking_rate",
+        "definition": "Braking rate"
     },
     {
         "term": "train:length",

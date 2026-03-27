@@ -79,7 +79,7 @@ void Kernel::setConfig(const Config& config)
 {
   assert(isEventLoopThread());
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext,
     [this, newConfig=config]()
     {
       m_config = newConfig;
@@ -99,7 +99,7 @@ void Kernel::start()
       m_ioContext.run();
     });
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext,
     [this]()
     {
       try
@@ -123,7 +123,7 @@ void Kernel::stop()
 {
   assert(isEventLoopThread());
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext,
     [this]()
     {
       m_ioHandler->stop();
@@ -382,7 +382,7 @@ void Kernel::trackOff()
 {
   assert(isEventLoopThread());
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext,
     [this]()
     {
       if(m_trackOn)
@@ -396,7 +396,7 @@ void Kernel::trackOn()
 {
   assert(isEventLoopThread());
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext,
     [this]()
     {
       if(!m_trackOn)
@@ -410,7 +410,7 @@ void Kernel::requestEmergencyStop()
 {
   assert(isEventLoopThread());
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext,
     [this]()
     {
       send(RequestEmergencyStop());
@@ -423,7 +423,7 @@ void Kernel::setEngineSpeedDirection(uint16_t address, bool longAddress, uint8_t
 
   const uint8_t speed = eStop ? 1 : (speedStep > 0 ? speedStep + 1 : 0);
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext,
     [this, address, longAddress, speed, speedSteps, directionForward]()
     {
       auto& engine = m_engines[makeAddressKey(address, longAddress)];
@@ -458,7 +458,7 @@ void Kernel::setEngineFunction(uint16_t address, bool longAddress, uint8_t numbe
 {
   assert(isEventLoopThread());
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext,
     [this, address, longAddress, number, value]()
     {
       auto& engine = m_engines[makeAddressKey(address, longAddress)];
@@ -485,7 +485,7 @@ void Kernel::setAccessoryShort(uint16_t deviceNumber, bool on)
 {
   assert(isEventLoopThread());
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext,
     [this, deviceNumber, on]()
     {
       if(on)
@@ -503,7 +503,7 @@ void Kernel::setAccessory(uint16_t nodeNumber, uint16_t eventNumber, bool on)
 {
   assert(isEventLoopThread());
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext,
     [this, nodeNumber, eventNumber, on]()
     {
       if(on)
@@ -521,7 +521,7 @@ void Kernel::setDccAccessory(uint16_t address, bool secondOutput)
 {
   assert(isEventLoopThread());
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext,
     [this, address, secondOutput]()
     {
       send(RequestDCCPacket<sizeof(DCC::SetSimpleAccessory) + 1>(DCC::SetSimpleAccessory(address, secondOutput, true), Config::dccAccessoryRepeat));
@@ -541,7 +541,7 @@ void Kernel::setDccAdvancedAccessoryValue(uint16_t address, uint8_t aspect)
 {
   assert(isEventLoopThread());
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext,
     [this, address, aspect]()
     {
       send(RequestDCCPacket<sizeof(DCC::SetAdvancedAccessoryValue) + 1>(DCC::SetAdvancedAccessoryValue(address, aspect), Config::dccExtRepeat));
@@ -557,7 +557,7 @@ bool Kernel::send(std::vector<uint8_t> message)
     return false;
   }
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext,
     [this, msg=std::move(message)]()
     {
       send(*reinterpret_cast<const Message*>(msg.data()));
@@ -577,7 +577,7 @@ bool Kernel::sendDCC(std::vector<uint8_t> dccPacket, uint8_t repeat)
 
   dccPacket.emplace_back(DCC::calcChecksum(dccPacket));
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext,
     [this, packet=std::move(dccPacket), repeat]()
     {
       switch(packet.size())

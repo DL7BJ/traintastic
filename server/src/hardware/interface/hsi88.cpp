@@ -179,12 +179,12 @@ bool HSI88Interface::setOnline(bool& value, bool simulation)
         [this]()
         {
           setThreadName("hsi88");
-          auto work = std::make_shared<boost::asio::io_context::work>(m_ioContext);
+          boost::asio::executor_work_guard<decltype(m_ioContext.get_executor())> work{m_ioContext.get_executor()};
           m_ioContext.restart();
           m_ioContext.run();
         });
 
-      m_ioContext.post(
+      boost::asio::post(m_ioContext, 
         [this, dev=device.value(), ml=modulesLeft.value(), mm=modulesMiddle.value(), mr=modulesRight.value()]()
         {
           try

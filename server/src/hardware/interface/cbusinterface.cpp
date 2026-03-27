@@ -196,7 +196,7 @@ void CBUSInterface::inputSimulateChange(InputChannel channel, const InputLocatio
 {
   if(m_simulator)
   {
-    m_kernel->ioContext().post(
+    boost::asio::post(m_kernel->ioContext(),
       [this, channel, location, action]
       {
         switch(channel)
