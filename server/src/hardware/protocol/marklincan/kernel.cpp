@@ -139,7 +139,7 @@ void Kernel::start()
     [this]()
     {
       setThreadName("marklin_can");
-      auto work = std::make_shared<boost::asio::io_context::work>(m_ioContext);
+      boost::asio::executor_work_guard<decltype(m_ioContext.get_executor())> work{m_ioContext.get_executor()};
       m_ioContext.run();
     });
 
