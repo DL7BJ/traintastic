@@ -44,7 +44,7 @@ Kernel::Kernel(std::string logId_, const Config& config, bool simulation)
 
 void Kernel::setConfig(const Config& config)
 {
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this, newConfig=config]()
     {
       m_config = newConfig;
@@ -69,7 +69,7 @@ void Kernel::start()
       m_ioContext.run();
     });
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this]()
     {
       try
@@ -95,7 +95,7 @@ void Kernel::start()
 
 void Kernel::stop()
 {
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this]()
     {
       m_ioHandler->stop();
@@ -240,7 +240,7 @@ void Kernel::resumeOperations()
 
   if(m_trackPowerOn != TriState::True || m_emergencyStop != TriState::False)
   {
-    m_ioContext.post(
+    boost::asio::post(m_ioContext, 
       [this]()
       {
         send(ResumeOperationsRequest());
@@ -254,7 +254,7 @@ void Kernel::stopOperations()
 
   if(m_trackPowerOn != TriState::False || m_emergencyStop != TriState::False)
   {
-    m_ioContext.post(
+    boost::asio::post(m_ioContext, 
       [this]()
       {
         send(StopOperationsRequest());
@@ -268,7 +268,7 @@ void Kernel::stopAllLocomotives()
 
   if(m_trackPowerOn != TriState::True || m_emergencyStop != TriState::True)
   {
-    m_ioContext.post(
+    boost::asio::post(m_ioContext, 
       [this]()
       {
         send(StopAllLocomotivesRequest());
@@ -404,7 +404,7 @@ bool Kernel::setOutput(uint16_t address, OutputPairValue value)
   assert(isEventLoopThread());
   assert(address >= accessoryOutputAddressMin && address <= accessoryOutputAddressMax);
   assert(value == OutputPairValue::First || value == OutputPairValue::Second);
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this, address, value]()
     {
       send(
@@ -419,7 +419,7 @@ bool Kernel::setOutput(uint16_t address, OutputPairValue value)
 void Kernel::simulateInputChange(uint16_t address, SimulateInputAction action)
 {
   if(m_simulation)
-    m_ioContext.post(
+    boost::asio::post(m_ioContext, 
       [this, address, action]()
       {
         if((action == SimulateInputAction::SetFalse && m_inputValues[address - 1] == TriState::False) ||

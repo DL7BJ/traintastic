@@ -51,7 +51,7 @@ void Kernel::start()
       m_ioContext.run();
     });
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this]()
     {
       try
@@ -81,7 +81,7 @@ void Kernel::start()
 
 void Kernel::stop()
 {
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this]()
     {
       onStop();

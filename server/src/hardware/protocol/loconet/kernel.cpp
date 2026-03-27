@@ -104,7 +104,7 @@ void Kernel::setConfig(const Config& config)
       break;
   }
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this, newConfig=config]()
     {
       if(newConfig.pcap != m_config.pcap)
@@ -235,7 +235,7 @@ void Kernel::start()
   if(m_config.fastClock == LocoNetFastClock::Master)
     enableClockEvents();
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this]()
     {
       if(m_config.pcap)
@@ -268,7 +268,7 @@ void Kernel::stop()
 
   disableClockEvents();
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this]()
     {
       m_waitingForEchoTimer.cancel();
@@ -945,7 +945,7 @@ void Kernel::receive(const Message& message)
 void Kernel::setState(bool powerOn, bool run)
 {
   assert(isEventLoopThread());
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this, powerOn, run]()
     {
       if(!powerOn) // disable power
@@ -1039,7 +1039,7 @@ bool Kernel::send(std::span<uint8_t> packet)
   if(!isValid(*reinterpret_cast<Message*>(data.data())))
     return false;
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this, message=std::move(data)]()
     {
       send(*reinterpret_cast<const Message*>(message.data()));
@@ -1063,7 +1063,7 @@ void Kernel::readLNCV(uint16_t moduleId, uint16_t address, uint16_t lncv, std::f
 {
   assert(isEventLoopThread());
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this, moduleId, address, lncv, callback]()
     {
       m_lncvReads.emplace(LNCVRead{moduleId, address, lncv, std::move(callback)});
@@ -1265,7 +1265,7 @@ bool Kernel::setOutput(OutputChannel channel, uint16_t address, OutputValue valu
       if(!inRange(address, accessoryOutputAddressMin, accessoryOutputAddressMax))
         return false;
 
-      m_ioContext.post(
+      boost::asio::post(m_ioContext, 
         [this, address, dir=std::get<OutputPairValue>(value) == OutputPairValue::Second]()
         {
           send(SwitchRequest(address, dir, true));
@@ -1290,7 +1290,7 @@ void Kernel::simulateInputChange(uint16_t address, SimulateInputAction action)
   assert(isEventLoopThread());
   assert(inRange(address, inputAddressMin, inputAddressMax));
   if(m_simulation)
-    m_ioContext.post(
+    boost::asio::post(m_ioContext, 
       [this, fullAddress=address - 1, action]()
       {
         switch(action)
@@ -1315,7 +1315,7 @@ void Kernel::simulateInputChange(uint16_t address, SimulateInputAction action)
 void Kernel::lncvStart(uint16_t moduleId, uint16_t moduleAddress)
 {
   assert(isEventLoopThread());
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this, moduleId, moduleAddress]()
     {
       if(m_lncvActive)
@@ -1331,7 +1331,7 @@ void Kernel::lncvStart(uint16_t moduleId, uint16_t moduleAddress)
 void Kernel::lncvRead(uint16_t lncv)
 {
   assert(isEventLoopThread());
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this, lncv]()
     {
       if(m_lncvActive)
@@ -1342,7 +1342,7 @@ void Kernel::lncvRead(uint16_t lncv)
 void Kernel::lncvWrite(uint16_t lncv, uint16_t value)
 {
   assert(isEventLoopThread());
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this, lncv, value]()
     {
       if(m_lncvActive)
@@ -1353,7 +1353,7 @@ void Kernel::lncvWrite(uint16_t lncv, uint16_t value)
 void Kernel::lncvStop()
 {
   assert(isEventLoopThread());
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this]()
     {
       if(!m_lncvActive)
@@ -1624,7 +1624,7 @@ void Kernel::enableClockEvents()
       m_fastClock.store(FastClock{event == Clock::ClockEvent::Freeze ? multiplierFreeze : multiplier, time.hour(), time.minute()});
       if(event == Clock::ClockEvent::Freeze || event == Clock::ClockEvent::Resume)
       {
-        m_ioContext.post(
+        boost::asio::post(m_ioContext, 
           [this]()
           {
             setFastClockMaster(true);

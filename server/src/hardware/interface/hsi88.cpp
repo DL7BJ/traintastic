@@ -185,7 +185,7 @@ bool HSI88Interface::setOnline(bool& value, bool simulation)
           m_ioContext.run();
         });
 
-      m_ioContext.post(
+      boost::asio::post(m_ioContext, 
         [this, dev=device.value(), ml=modulesLeft.value(), mm=modulesMiddle.value(), mr=modulesRight.value()]()
         {
           try

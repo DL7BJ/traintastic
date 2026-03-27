@@ -101,7 +101,7 @@ Kernel::Kernel(std::string logId_, const Config& config)
 
 void Kernel::setConfig(const Config& config)
 {
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this, newConfig=config]()
     {
       m_config = newConfig;
@@ -141,7 +141,7 @@ void Kernel::start()
         postSendToAll(fastClock((time.hour() * 60U + time.minute()) * 60U, (event == Clock::ClockEvent::Freeze) ? 0 : multiplier));
       });
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this]()
     {
       try
@@ -187,7 +187,7 @@ void Kernel::stop()
   }
 
   // stop iohandler and kernel thread:
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this]()
     {
       m_ioHandler->stop();
@@ -201,7 +201,7 @@ void Kernel::setPowerOn(bool on)
 {
   assert(isEventLoopThread());
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this, on]()
     {
       if(m_powerOn != toTriState(on))
@@ -422,7 +422,7 @@ void Kernel::receiveFrom(std::string_view message, IOHandler::ClientId clientId)
   else if(message == quit())
   {
     // post disconnect to finish current callback
-    m_ioContext.post(
+    boost::asio::post(m_ioContext, 
       [this, clientId]()
       {
         m_ioHandler->disconnect(clientId);

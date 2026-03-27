@@ -28,6 +28,7 @@
 #include <unordered_map>
 #include <filesystem>
 #include <queue>
+#include <boost/asio/post.hpp>
 #include <boost/asio/steady_timer.hpp>
 #include <boost/signals2/connection.hpp>
 #include <span>
@@ -230,7 +231,7 @@ class Kernel : public ::KernelBase
     void postSend(const T& message)
     {
       assert(sizeof(message) == message.size());
-      m_ioContext.post(
+      boost::asio::post(m_ioContext, 
         [this, message]()
         {
           send(message);
@@ -240,7 +241,7 @@ class Kernel : public ::KernelBase
     void postSend(const T& message, Priority priority)
     {
       assert(sizeof(message) == message.size());
-      m_ioContext.post(
+      boost::asio::post(m_ioContext, 
         [this, message, priority]()
         {
           send(message, priority);
@@ -255,7 +256,7 @@ class Kernel : public ::KernelBase
     template<class T>
     void postSend(uint16_t address, const T& message)
     {
-      m_ioContext.post(
+      boost::asio::post(m_ioContext, 
         [this, address, message]()
         {
           T msg(message);

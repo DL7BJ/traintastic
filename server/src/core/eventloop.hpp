@@ -24,6 +24,7 @@
 
 #include <thread>
 #include <boost/asio/io_context.hpp>
+#include <boost/asio/post.hpp>
 
 class EventLoop
 {
@@ -73,13 +74,13 @@ class EventLoop
     template<typename _Callable, typename... _Args>
     inline static void call(_Callable&& __f, _Args&&... __args)
     {
-      ioContext().post(std::bind(__f, __args...));
+      boost::asio::post(ioContext(), std::bind(__f, __args...));
     }
 
     template<typename T>
     inline static void deleteLater(T* object)
     {
-      ioContext().post(
+      boost::asio::post(ioContext(),
         [object]()
         {
           delete object;
