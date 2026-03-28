@@ -24,6 +24,18 @@
 #include "../cbuskernel.hpp"
 #include "../messages/cbusmessage.hpp"
 
+namespace {
+
+std::array<CAN::SocketCANIOHandler::Filter, 1> filter{{
+  // only standard non RTR frames
+  {
+	  .can_id = 0,
+	  .can_mask = (CAN_EFF_FLAG | CAN_RTR_FLAG),
+  }
+}};
+
+}
+
 namespace CBUS {
 
 SocketCANIOHandler::SocketCANIOHandler(Kernel& kernel, const std::string& interface, uint8_t canId)
@@ -32,14 +44,14 @@ SocketCANIOHandler::SocketCANIOHandler(Kernel& kernel, const std::string& interf
   , m_socketCAN{kernel.ioContext(), interface, m_kernel.logId,
       [this](const CAN::SocketCANIOHandler::Frame& frame)
       {
-        if((frame.can_id & CAN_EFF_FLAG) == 0 && frame.can_dlc >= 1) // only standard frames with minimal 1 data byte
+        if(frame.can_dlc >= 1) // only with minimal 1 data byte
         {
           m_kernel.receive(static_cast<uint8_t>(frame.can_id & 0x7F), *reinterpret_cast<const Message*>(frame.data));
         }
       },
-      std::bind(&Kernel::error, &m_kernel)}
+      std::bind(&Kernel::error, &m_kernel),
+      filter}
 {
-  // FIXME: set SocketCAN filter, then kernel can filter
 }
 
 void SocketCANIOHandler::start()
