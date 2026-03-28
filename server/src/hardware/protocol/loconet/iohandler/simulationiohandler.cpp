@@ -36,7 +36,7 @@ static std::shared_ptr<std::byte[]> copy(const Message& message)
 static void updateActive(SlotReadData& locoSlot)
 {
   locoSlot.setActive(
-    (locoSlot.spd != SPEED_STOP && locoSlot.spd != SPEED_ESTOP) ||
+    (locoSlot.spd != speedStop && locoSlot.spd != speedEStop) ||
     (locoSlot.dirf & (SL_F0 | SL_F4 | SL_F3 | SL_F2 | SL_F1)) != 0 ||
     (locoSlot.snd & (SL_F8 | SL_F7 | SL_F6 | SL_F5)) != 0);
 }
