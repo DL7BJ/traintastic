@@ -195,27 +195,20 @@ struct SetEngineSpeedDirection : EngineSessionMessage
 
 // SetEngineFlags
 
-struct SetEngineFunctionOn : EngineSessionMessage
+struct SetEngineFunction : EngineSessionMessage
 {
   uint8_t number;
 
-  SetEngineFunctionOn(uint8_t session_, uint8_t number_)
-    : EngineSessionMessage(OpCode::DFNON, session_)
+  SetEngineFunction(uint8_t session_, uint8_t number_, bool on)
+    : EngineSessionMessage(on ? OpCode::DFNON : OpCode::DFNOF, session_)
     , number{number_}
   {
     assert(number <= engineFunctionMax);
   }
-};
 
-struct SetEngineFunctionOff : EngineSessionMessage
-{
-  uint8_t number;
-
-  SetEngineFunctionOff(uint8_t session_, uint8_t number_)
-    : EngineSessionMessage(OpCode::DFNOF, session_)
-    , number{number_}
+  bool on() const
   {
-    assert(number <= engineFunctionMax);
+    return opCode == OpCode::DFNON;
   }
 };
 

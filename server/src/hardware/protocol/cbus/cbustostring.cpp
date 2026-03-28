@@ -153,14 +153,9 @@ std::string toString(const Message& message)
       break;
 
     case DFNON:
-    {
-      const auto& m = static_cast<const SetEngineFunctionOn&>(message);
-      s.append(std::format(" session={} number={}", m.session, m.number));
-      break;
-    }
     case DFNOF:
     {
-      const auto& m = static_cast<const SetEngineFunctionOff&>(message);
+      const auto& m = static_cast<const SetEngineFunction&>(message);
       s.append(std::format(" session={} number={}", m.session, m.number));
       break;
     }

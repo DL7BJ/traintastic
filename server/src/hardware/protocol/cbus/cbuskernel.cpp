@@ -661,14 +661,7 @@ void Kernel::sendSetEngineSpeedDirection(uint8_t session, uint8_t speed, bool di
 void Kernel::sendSetEngineFunction(uint8_t session, uint8_t number, bool value)
 {
   assert(isKernelThread());
-  if(value)
-  {
-    send(SetEngineFunctionOn(session, number));
-  }
-  else
-  {
-    send(SetEngineFunctionOff(session, number));
-  }
+  send(SetEngineFunction(session, number, value));
 }
 
 void Kernel::changeState(State value)
