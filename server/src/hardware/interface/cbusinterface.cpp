@@ -32,7 +32,9 @@
 #include "../protocol/cbus/iohandler/cbuscanusbiohandler.hpp"
 #include "../protocol/cbus/iohandler/cbuscanetheriohandler.hpp"
 #include "../protocol/cbus/iohandler/cbussimulationiohandler.hpp"
-#include "../protocol/cbus/iohandler/cbussocketcaniohandler.hpp"
+#ifdef __linux__
+  #include "../protocol/cbus/iohandler/cbussocketcaniohandler.hpp"
+#endif
 #include "../protocol/cbus/simulator/cbussimulator.hpp"
 #include "../protocol/cbus/simulator/module/cbuscancmd.hpp"
 #include "../../core/attributes.hpp"
