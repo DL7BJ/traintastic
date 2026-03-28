@@ -324,7 +324,7 @@ void Kernel::receive(uint8_t canId, const Message& message)
           {
             if(onPresenceOfNode) [[likely]]
             {
-              onPresenceOfNode(canId, pnn.nodeNumber(), pnn.manufacturerId, pnn.moduleId);
+              onPresenceOfNode(canId, pnn.nodeNumber(), pnn.manufacturerId, pnn.moduleId, pnn.flimMode(), pnn.supportsServiceDiscovery());
             }
           });
       }

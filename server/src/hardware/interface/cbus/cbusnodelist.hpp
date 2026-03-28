@@ -42,6 +42,8 @@ public:
     uint8_t canId;
     uint8_t manufacturerId;
     uint8_t moduleId;
+    bool flim;
+    bool vlcb;
 
     struct Parameters
     {

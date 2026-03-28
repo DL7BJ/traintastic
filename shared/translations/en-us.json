@@ -292,12 +292,12 @@
         "definition": "SocketCAN (Linux only)"
     },
     {
-        "term": "cbus_node_list:firmware_version",
-        "definition": "Firmware version"
-    },
-    {
         "term": "cbus_node_list:manufacturer",
         "definition": "Manufacturer"
+    },
+    {
+        "term": "cbus_node_list:mode",
+        "definition": "Mode"
     },
     {
         "term": "cbus_node_list:module",
@@ -306,6 +306,14 @@
     {
         "term": "cbus_node_list:node_number",
         "definition": "Node number"
+    },
+    {
+        "term": "cbus_node_list:type",
+        "definition": "Type"
+    },
+    {
+        "term": "cbus_node_list:version",
+        "definition": "Version"
     },
     {
         "term": "cbus_settings:dcc_accessory_switch_time",

@@ -433,13 +433,15 @@ bool CBUSInterface::setOnline(bool& value, bool simulation)
           online = false; // communication no longer possible
         });
       m_kernel->onPresenceOfNode =
-        [this](uint8_t canId_, uint16_t nodeNumber, uint8_t manufacturerId, uint8_t moduleId)
+        [this](uint8_t canId_, uint16_t nodeNumber, uint8_t manufacturerId, uint8_t moduleId, bool flimMode, bool supportsServiceDiscovery)
         {
           cbusNodeList->add(CBUSNodeList::Node{
             .nodeNumber = nodeNumber,
             .canId = canId_,
             .manufacturerId = manufacturerId,
             .moduleId = moduleId,
+            .flim = flimMode,
+            .vlcb = supportsServiceDiscovery,
             .parameters = {},
           });
         };
