@@ -1628,6 +1628,10 @@
         "definition": "Reading booster '%1' load failed: %2"
     },
     {
+        "term": "message:E2028",
+        "definition": "Socket setsockopt failed (%1)"
+    },
+    {
         "term": "message:E3001",
         "definition": "Can't delete rail vehicle when in active train"
     },

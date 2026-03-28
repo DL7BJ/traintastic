@@ -34,10 +34,11 @@ class SocketCANIOHandler
 {
 public:
   using Frame = struct can_frame;
+  using Filter = struct can_filter;
   using OnReceive = std::function<void(const Frame& frame)>;
   using OnError = std::function<void()>;
 
-  SocketCANIOHandler(boost::asio::io_context& ioContext, const std::string& interface, std::string logId, OnReceive onReceive, OnError onError);
+  SocketCANIOHandler(boost::asio::io_context& ioContext, const std::string& interface, std::string logId, OnReceive onReceive, OnError onError, std::span<Filter> filter = {});
 
   void start();
   void stop();
