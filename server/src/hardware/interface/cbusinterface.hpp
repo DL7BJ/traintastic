@@ -31,6 +31,7 @@
 
 class CBUSSettings;
 class CBUSNodeList;
+class CBUSSessionList;
 
 namespace CBUS {
 class Kernel;
@@ -59,6 +60,7 @@ public:
   Property<uint8_t> canId;
   ObjectProperty<CBUSSettings> cbus;
   ObjectProperty<CBUSNodeList> cbusNodeList;
+  ObjectProperty<CBUSSessionList> cbusSessionList;
 
   CBUSInterface(World& world, std::string_view _id);
   ~CBUSInterface() final;

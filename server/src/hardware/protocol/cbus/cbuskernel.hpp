@@ -37,6 +37,11 @@
 
 namespace CBUS {
 
+struct SetEngineFunction;
+struct SetEngineFunctions;
+struct SetEngineSpeedDirection;
+struct ReleaseEngine;
+
 class Kernel : public ::KernelBase
 {
 public:
@@ -45,6 +50,10 @@ public:
   std::function<void()> onTrackOff;
   std::function<void()> onTrackOn;
   std::function<void()> onEmergencyStop;
+  std::function<void(uint8_t session, uint16_t address, bool isLongAddress)> onEngineSessionAcquire;
+  std::function<void(uint8_t session, uint8_t speed, bool forward)> onEngineSpeedDirectionChanged;
+  std::function<void(uint8_t session, uint8_t number, bool on)> onEngineFunctionChanged;
+  std::function<void(uint8_t session)> onEngineSessionReleased;
   std::function<void(uint16_t address, bool isLongAddress)> onEngineSessionCancelled;
   std::function<void(uint16_t eventNumber, bool on)> onShortEvent;
   std::function<void(uint16_t nodeNumber, uint16_t eventNumber, bool on)> onLongEvent;
@@ -161,6 +170,11 @@ private:
   void sendSetEngineSessionMode(uint8_t session, uint8_t speedSteps);
   void sendSetEngineSpeedDirection(uint8_t session, uint8_t speed, bool directionForward);
   void sendSetEngineFunction(uint8_t session, uint8_t number, bool value);
+
+  void receiveDFUN(const SetEngineFunctions& message);
+  void receiveDFNOx(const SetEngineFunction& message);
+  void receiveDSPD(const SetEngineSpeedDirection& message);
+  void receiveKLOC(const ReleaseEngine& message);
 
   inline void nextState()
   {

@@ -21,6 +21,7 @@
 
 #include "cbusinterface.hpp"
 #include "cbus/cbusnodelist.hpp"
+#include "cbus/cbussessionlist.hpp"
 #include "cbus/cbussettings.hpp"
 #include "../decoder/decoderchangeflags.hpp"
 #include "../decoder/list/decoderlist.hpp"
@@ -73,10 +74,12 @@ CBUSInterface::CBUSInterface(World& world, std::string_view _id)
   , canId{this, "can_id", 0x7D, PropertyFlags::ReadWrite | PropertyFlags::Store}
   , cbus{this, "cbus", nullptr, PropertyFlags::ReadOnly | PropertyFlags::Store | PropertyFlags::SubObject}
   , cbusNodeList{this, "cbus_node_list", nullptr, PropertyFlags::ReadOnly | PropertyFlags::NoStore | PropertyFlags::SubObject}
+  , cbusSessionList{this, "cbus_session_list", nullptr, PropertyFlags::ReadOnly | PropertyFlags::NoStore | PropertyFlags::SubObject}
 {
   name = "CBUS/VLCB";
   cbus.setValueInternal(std::make_shared<CBUSSettings>(*this, cbus.name()));
   cbusNodeList.setValueInternal(std::make_shared<CBUSNodeList>(*this, cbusNodeList.name()));
+  cbusSessionList.setValueInternal(std::make_shared<CBUSSessionList>(*this, cbusSessionList.name()));
 
   Attributes::addDisplayName(type, DisplayName::Interface::type);
   Attributes::addEnabled(type, !online);
@@ -110,6 +113,8 @@ CBUSInterface::CBUSInterface(World& world, std::string_view _id)
   m_interfaceItems.insertBefore(cbus, notes);
 
   m_interfaceItems.insertBefore(cbusNodeList, notes);
+
+  m_interfaceItems.insertBefore(cbusSessionList, notes);
 
   m_interfaceItems.insertBefore(decoders, notes);
 
@@ -499,6 +504,57 @@ bool CBUSInterface::setOnline(bool& value, bool simulation)
           if(contains(m_world.state, WorldState::Run))
           {
             m_world.stop();
+          }
+        };
+      m_kernel->onEngineSessionAcquire =
+        [this](uint8_t session, uint16_t address, bool isLongAddress)
+        {
+          if(auto it = cbusSessionList->findEngine(address, isLongAddress); it != cbusSessionList->end())
+          {
+            it->session = session;
+            cbusSessionList->rowChanged(static_cast<uint32_t>(std::distance(cbusSessionList->begin(), it)));
+          }
+          else
+          {
+            cbusSessionList->add({session, address, isLongAddress});
+          }
+        };
+      m_kernel->onEngineSpeedDirectionChanged =
+        [this](uint8_t session, uint8_t speed, bool forward)
+        {
+          if(auto it = cbusSessionList->findSession(session); it != cbusSessionList->end())
+          {
+            it->speed = speed;
+            it->direction = forward ? Direction::Forward : Direction::Reverse;
+            cbusSessionList->rowChanged(static_cast<uint32_t>(std::distance(cbusSessionList->begin(), it)));
+          }
+        };
+      m_kernel->onEngineFunctionChanged =
+        [this](uint8_t session, uint8_t number, bool on)
+        {
+          if(auto it = cbusSessionList->findSession(session); it != cbusSessionList->end())
+          {
+            assert(number < it->functions.size());
+            it->functions[number] = toTriState(on);
+            cbusSessionList->rowChanged(static_cast<uint32_t>(std::distance(cbusSessionList->begin(), it)));
+          }
+        };
+      m_kernel->onEngineSessionReleased =
+        [this](uint8_t session)
+        {
+          if(auto it = cbusSessionList->findSession(session); it != cbusSessionList->end())
+          {
+            it->session = std::nullopt;
+            cbusSessionList->rowChanged(static_cast<uint32_t>(std::distance(cbusSessionList->begin(), it)));
+          }
+        };
+      m_kernel->onEngineSessionCancelled =
+        [this](uint16_t address, bool isLongAddress)
+        {
+          if(auto it = cbusSessionList->findEngine(address, isLongAddress); it != cbusSessionList->end())
+          {
+            it->session = std::nullopt;
+            cbusSessionList->rowChanged(static_cast<uint32_t>(std::distance(cbusSessionList->begin(), it)));
           }
         };
       m_kernel->onShortEvent =

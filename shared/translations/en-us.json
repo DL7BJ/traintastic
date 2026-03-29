@@ -316,6 +316,22 @@
         "definition": "Version"
     },
     {
+        "term": "cbus_session_list:direction",
+        "definition": "Direction"
+    },
+    {
+        "term": "cbus_session_list:long",
+        "definition": "Long"
+    },
+    {
+        "term": "cbus_session_list:session",
+        "definition": "Session"
+    },
+    {
+        "term": "cbus_session_list:speed",
+        "definition": "Speed"
+    },
+    {
         "term": "cbus_settings:dcc_accessory_switch_time",
         "definition": "DCC accessory switch time"
     },
@@ -776,6 +792,14 @@
         "definition": "Power off world"
     },
     {
+        "term": "function:off",
+        "definition": "Off"
+    },
+    {
+        "term": "function:on",
+        "definition": "On"
+    },
+    {
         "term": "hardware:address",
         "definition": "Address"
     },
@@ -901,7 +925,11 @@
     },
     {
         "term": "interface.cbus:cbus_node_list",
-        "definition": "CBUS/VLCB: Node list"
+        "definition": "Nodes"
+    },
+    {
+        "term": "interface.cbus:cbus_session_list",
+        "definition": "Sessions"
     },
     {
         "term": "interface.ecos:ecos_detector",
@@ -2790,6 +2818,10 @@
     {
         "term": "throttle.steal",
         "definition": "Steal"
+    },
+    {
+        "term": "throttle.stop",
+        "definition": "Stop"
     },
     {
         "term": "throttle_object_list:throttle",

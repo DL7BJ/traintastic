@@ -179,6 +179,23 @@ void Kernel::receive(uint8_t canId, const Message& message)
       }
       break;
 
+    case OpCode::KLOC:
+      receiveKLOC(static_cast<const ReleaseEngine&>(message));
+      break;
+
+    case OpCode::DSPD:
+      receiveDSPD(static_cast<const SetEngineSpeedDirection&>(message));
+      break;
+
+    case OpCode::DFNON:
+    case OpCode::DFNOF:
+      receiveDFNOx(static_cast<const SetEngineFunction&>(message));
+      break;
+
+    case OpCode::DFUN:
+      receiveDFUN(static_cast<const SetEngineFunctions&>(message));
+      break;
+
     case OpCode::ASON:
     {
       const auto& ason = static_cast<const AccessoryShortOn&>(message);
@@ -333,6 +350,16 @@ void Kernel::receive(uint8_t canId, const Message& message)
     case OpCode::PLOC:
     {
       const auto& ploc = static_cast<const EngineReport&>(message);
+
+      EventLoop::call(
+        [this, ploc]()
+        {
+          if(onEngineSessionAcquire) [[likely]]
+          {
+            onEngineSessionAcquire(ploc.session, ploc.address(), ploc.isLongAddress());
+          }
+        });
+
       const auto key = makeAddressKey(ploc.address(), ploc.isLongAddress());
       if(m_engineGLOCs.contains(key))
       {
@@ -655,13 +682,123 @@ void Kernel::sendSetEngineSessionMode(uint8_t session, uint8_t speedSteps)
 void Kernel::sendSetEngineSpeedDirection(uint8_t session, uint8_t speed, bool directionForward)
 {
   assert(isKernelThread());
+
   send(SetEngineSpeedDirection(session, speed, directionForward));
+
+  EventLoop::call(
+    [this, session, speed, directionForward]()
+    {
+      if(onEngineSpeedDirectionChanged) [[likely]]
+      {
+        onEngineSpeedDirectionChanged(session, speed, directionForward);
+      }
+    });
 }
 
 void Kernel::sendSetEngineFunction(uint8_t session, uint8_t number, bool value)
 {
   assert(isKernelThread());
+
   send(SetEngineFunction(session, number, value));
+
+  EventLoop::call(
+    [this, session, number, value]()
+    {
+      if(onEngineFunctionChanged) [[likely]]
+      {
+        onEngineFunctionChanged(session, number, value);
+      }
+    });
+}
+
+void Kernel::receiveDFNOx(const SetEngineFunction& message)
+{
+  assert(isKernelThread());
+  EventLoop::call(
+    [this, message]()
+    {
+      if(onEngineFunctionChanged) [[likely]]
+      {
+        onEngineFunctionChanged(message.session, message.number, message.on());
+      }
+    });
+}
+
+void Kernel::receiveDFUN(const CBUS::SetEngineFunctions& message)
+{
+  assert(isKernelThread());
+  EventLoop::call(
+    [this, message]()
+    {
+      if(onEngineFunctionChanged) [[likely]]
+      {
+        switch(message.range)
+        {
+          using enum SetEngineFunctions::Range;
+
+          case F0F4:
+            for(auto fn : message.numbers())
+            {
+              onEngineFunctionChanged(message.session, fn, static_cast<const SetEngineFunctionsF0F4&>(message).f(fn));
+            }
+            break;
+
+          case F5F8:
+            for(auto fn : message.numbers())
+            {
+              onEngineFunctionChanged(message.session, fn, static_cast<const SetEngineFunctionsF5F8&>(message).f(fn));
+            }
+            break;
+
+          case F9F12:
+            for(auto fn : message.numbers())
+            {
+              onEngineFunctionChanged(message.session, fn, static_cast<const SetEngineFunctionsF9F12&>(message).f(fn));
+            }
+            break;
+
+          case F13F20:
+            for(auto fn : message.numbers())
+            {
+              onEngineFunctionChanged(message.session, fn, static_cast<const SetEngineFunctionsF13F20&>(message).f(fn));
+            }
+            break;
+
+          case F21F28:
+            for(auto fn : message.numbers())
+            {
+              onEngineFunctionChanged(message.session, fn, static_cast<const SetEngineFunctionsF21F28&>(message).f(fn));
+            }
+            break;
+        }
+      }
+    });
+}
+
+void Kernel::receiveDSPD(const SetEngineSpeedDirection& message)
+{
+  assert(isKernelThread());
+  EventLoop::call(
+    [this, message]()
+    {
+      if(onEngineSpeedDirectionChanged) [[likely]]
+      {
+        onEngineSpeedDirectionChanged(message.session, message.speed(), message.directionForward());
+      }
+    });
+}
+
+void Kernel::receiveKLOC(const ReleaseEngine& message)
+{
+  assert(isKernelThread());
+  EventLoop::call(
+    [this, session=message.session]()
+    {
+      if(onEngineSessionReleased) [[likely]]
+      {
+        onEngineSessionReleased(session);
+      }
+    });
 }
 
 void Kernel::changeState(State value)
