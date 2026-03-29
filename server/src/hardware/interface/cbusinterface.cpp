@@ -37,6 +37,7 @@
   #include "../protocol/cbus/iohandler/cbussocketcaniohandler.hpp"
 #endif
 #include "../protocol/cbus/simulator/cbussimulator.hpp"
+#include "../protocol/cbus/simulator/module/cbuscancab.hpp"
 #include "../protocol/cbus/simulator/module/cbuscancmd.hpp"
 #include "../../core/attributes.hpp"
 #include "../../core/eventloop.hpp"
@@ -398,6 +399,7 @@ bool CBUSInterface::setOnline(bool& value, bool simulation)
       {
         m_simulator = std::make_unique<CBUS::Simulator>();
         m_simulator->addModule(std::make_unique<CBUS::Module::CANCMD>(*m_simulator));
+        m_simulator->addModule(std::make_unique<CBUS::Module::CANCAB>(*m_simulator));
         m_kernel = CBUS::Kernel::create<CBUS::SimulationIOHandler>(id.value(), cbus->config(), std::ref(*m_simulator));
       }
       else
