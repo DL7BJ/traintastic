@@ -58,7 +58,11 @@ void CANEtherIOHandler::start()
         m_connected = true;
 
         read();
-        write();
+
+        if(!m_writeQueue.empty())
+        {
+          write();
+        }
 
         m_kernel.started();
       }
@@ -107,6 +111,11 @@ void CANEtherIOHandler::read()
 
 void CANEtherIOHandler::write()
 {
+  if(!m_connected)
+  {
+    return;
+  }
+
   assert(!m_writeQueue.empty());
   const auto& message = m_writeQueue.front();
   boost::asio::async_write(m_socket, boost::asio::buffer(message.data(), message.size()),
