@@ -85,7 +85,7 @@ Kernel::Kernel(std::string logId_, World& world, const Config& config, bool simu
 
 void Kernel::setConfig(const Config& config)
 {
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this, newConfig=config]()
     {
       m_config = newConfig;
@@ -111,11 +111,11 @@ void Kernel::start()
     [this]()
     {
       setThreadName("traintasticdiy");
-      auto work = std::make_shared<boost::asio::io_context::work>(m_ioContext);
+      boost::asio::executor_work_guard<decltype(m_ioContext.get_executor())> work{m_ioContext.get_executor()};
       m_ioContext.run();
     });
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this]()
     {
       try
@@ -144,7 +144,7 @@ void Kernel::stop()
   for(auto& it : m_decoderSubscriptions)
     it.second.connection.disconnect();
 
-  m_ioContext.post(
+  boost::asio::post(m_ioContext, 
     [this]()
     {
       m_heartbeatTimeout.cancel();
@@ -410,7 +410,7 @@ bool Kernel::setOutput(uint16_t address, bool value)
 void Kernel::simulateInputChange(uint16_t address, SimulateInputAction action)
 {
   if(m_simulation)
-    m_ioContext.post(
+    boost::asio::post(m_ioContext, 
       [this, address, action]()
       {
         TraintasticDIY::InputState state;
@@ -561,7 +561,7 @@ void Kernel::throttleDecoderChanged(const Decoder& decoder, DecoderChangeFlags c
         speedMax = std::numeric_limits<uint8_t>::max();
     }
 
-    m_ioContext.post(
+    boost::asio::post(m_ioContext, 
       [this,
         key,
         direction=decoder.direction.value(),
@@ -578,7 +578,7 @@ void Kernel::throttleDecoderChanged(const Decoder& decoder, DecoderChangeFlags c
   {
     assert(functionNumber <= std::numeric_limits<uint8_t>::max());
 
-    m_ioContext.post(
+    boost::asio::post(m_ioContext, 
       [this,
         key,
         number=static_cast<uint8_t>(functionNumber),

@@ -25,6 +25,7 @@
 
 #include "../kernelbase.hpp"
 #include <unordered_map>
+#include <boost/asio/post.hpp>
 #include <traintastic/enum/tristate.hpp>
 #include <traintastic/enum/decoderprotocol.hpp>
 #include <traintastic/enum/inputchannel.hpp>
@@ -112,7 +113,7 @@ class Kernel : public ::KernelBase
   public:// REMOVE!! just for testing
     void postSend(const std::string& message)
     {
-      m_ioContext.post(
+      boost::asio::post(m_ioContext, 
         [this, message]()
         {
           send(message);
