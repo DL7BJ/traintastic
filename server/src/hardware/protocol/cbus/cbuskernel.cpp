@@ -36,6 +36,8 @@ using namespace std::chrono_literals;
 
 static constexpr auto queryNodeNumberTimeout = 100ms;
 static constexpr auto readNodeParameterTimeout = 50ms;
+static constexpr auto requestShortEventTimeout = 50ms;
+static constexpr auto requestLongEventTimeout = 50ms;
 static constexpr auto requestCommandStationStatusTimeout = 100ms;
 
 constexpr uint16_t makeAddressKey(uint16_t address, bool longAddress)
@@ -84,6 +86,17 @@ void Kernel::setConfig(const Config& config)
     {
       m_config = newConfig;
     });
+}
+
+void Kernel::setRequestEventsDuringInitialize(std::vector<uint16_t> shortEvents, std::vector<std::pair<uint16_t,uint16_t>> longEvents)
+{
+  assert(isEventLoopThread());
+
+  std::reverse(shortEvents.begin(), shortEvents.end());
+  std::reverse(longEvents.begin(), longEvents.end());
+
+  m_initializationRequestShortEvents = std::move(shortEvents);
+  m_initializationRequestLongEvents = std::move(longEvents);
 }
 
 void Kernel::start()
@@ -197,29 +210,35 @@ void Kernel::receive(uint8_t canId, const Message& message)
       break;
 
     case OpCode::ASON:
+      receiveShortEvent(static_cast<const AccessoryShortOn&>(message).deviceNumber(), true);
+      break;
+
+    case OpCode::ASOF:
+      receiveShortEvent(static_cast<const AccessoryShortOff&>(message).deviceNumber(), false);
+      break;
+
+    case OpCode::ARSON:
     {
-      const auto& ason = static_cast<const AccessoryShortOn&>(message);
-      EventLoop::call(
-        [this, eventNumber=ason.deviceNumber()]()
-        {
-          if(onShortEvent) [[likely]]
-          {
-            onShortEvent(eventNumber, true);
-          }
-        });
+      const auto eventNumber = static_cast<const AccessoryShortResponseEventOff&>(message).deviceNumber();
+      receiveShortEvent(eventNumber, true);
+      if(m_state == State::RequestShortEvents &&
+          m_initializationRequestShortEvents.back() == eventNumber)
+      {
+        m_initializationRequestShortEvents.pop_back();
+        requestShortEvent();
+      }
       break;
     }
-    case OpCode::ASOF:
+    case OpCode::ARSOF:
     {
-      const auto& asof = static_cast<const AccessoryShortOff&>(message);
-      EventLoop::call(
-        [this, eventNumber=asof.deviceNumber()]()
-        {
-          if(onShortEvent) [[likely]]
-          {
-            onShortEvent(eventNumber, false);
-          }
-        });
+      const auto eventNumber = static_cast<const AccessoryShortResponseEventOff&>(message).deviceNumber();
+      receiveShortEvent(eventNumber, false);
+      if(m_state == State::RequestShortEvents &&
+          m_initializationRequestShortEvents.back() == eventNumber)
+      {
+        m_initializationRequestShortEvents.pop_back();
+        requestShortEvent();
+      }
       break;
     }
     case OpCode::ERR:
@@ -277,27 +296,39 @@ void Kernel::receive(uint8_t canId, const Message& message)
     case OpCode::ACON:
     {
       const auto& acon = static_cast<const AccessoryOn&>(message);
-      EventLoop::call(
-        [this, nodeNumber=acon.nodeNumber(), eventNumber=acon.eventNumber()]()
-        {
-          if(onLongEvent) [[likely]]
-          {
-            onLongEvent(nodeNumber, eventNumber, true);
-          }
-        });
+      receiveLongEvent(acon.nodeNumber(), acon.eventNumber(), true);
       break;
     }
     case OpCode::ACOF:
     {
       const auto& acof = static_cast<const AccessoryOff&>(message);
-      EventLoop::call(
-        [this, nodeNumber=acof.nodeNumber(), eventNumber=acof.eventNumber()]()
-        {
-          if(onLongEvent) [[likely]]
-          {
-            onLongEvent(nodeNumber, eventNumber, false);
-          }
-        });
+      receiveLongEvent(acof.nodeNumber(), acof.eventNumber(), false);
+      break;
+    }
+    case OpCode::ARON:
+    {
+      const auto& aron = static_cast<const AccessoryResponseEventOn&>(message);
+      receiveLongEvent(aron.nodeNumber(), aron.eventNumber(), true);
+      if(m_state == State::RequestShortEvents &&
+          m_initializationRequestLongEvents.back().first == aron.nodeNumber() &&
+          m_initializationRequestLongEvents.back().second == aron.eventNumber())
+      {
+        m_initializationRequestLongEvents.pop_back();
+        requestLongEvent();
+      }
+      break;
+    }
+    case OpCode::AROF:
+    {
+      const auto& arof = static_cast<const AccessoryResponseEventOff&>(message);
+      receiveLongEvent(arof.nodeNumber(), arof.eventNumber(), false);
+      if(m_state == State::RequestShortEvents &&
+          m_initializationRequestLongEvents.back().first == arof.nodeNumber() &&
+          m_initializationRequestLongEvents.back().second == arof.eventNumber())
+      {
+        m_initializationRequestLongEvents.pop_back();
+        requestLongEvent();
+      }
       break;
     }
     case OpCode::PARAN:
@@ -801,6 +832,32 @@ void Kernel::receiveKLOC(const ReleaseEngine& message)
     });
 }
 
+void Kernel::receiveShortEvent(uint16_t eventNumber, bool on)
+{
+  assert(isKernelThread());
+  EventLoop::call(
+    [this, eventNumber, on]()
+    {
+      if(onShortEvent) [[likely]]
+      {
+        onShortEvent(eventNumber, on);
+      }
+    });
+}
+
+void Kernel::receiveLongEvent(uint16_t nodeNumber, uint16_t eventNumber, bool on)
+{
+  assert(isKernelThread());
+  EventLoop::call(
+    [this, nodeNumber, eventNumber, on]()
+    {
+      if(onLongEvent) [[likely]]
+      {
+        onLongEvent(nodeNumber, eventNumber, on);
+      }
+    });
+}
+
 void Kernel::changeState(State value)
 {
   assert(isKernelThread());
@@ -828,6 +885,14 @@ void Kernel::changeState(State value)
       restartInitializationTimer(requestCommandStationStatusTimeout);
       break;
 
+    case State::RequestShortEvents:
+      requestShortEvent();
+      break;
+
+    case State::RequestLongEvents:
+      requestLongEvent();
+      break;
+
     case State::Started:
       KernelBase::started();
       break;
@@ -844,6 +909,30 @@ void Kernel::readNodeParameter()
   }
   send(m_readNodeParameters.front());
   restartInitializationTimer(readNodeParameterTimeout);
+}
+
+void Kernel::requestShortEvent()
+{
+  assert(m_state == State::RequestShortEvents);
+  if(m_initializationRequestShortEvents.empty())
+  {
+    nextState();
+    return;
+  }
+  send(AccessoryShortRequestEvent(Config::nodeId, m_initializationRequestShortEvents.back()));
+  restartInitializationTimer(requestShortEventTimeout);
+}
+
+void Kernel::requestLongEvent()
+{
+  assert(m_state == State::RequestLongEvents);
+  if(m_initializationRequestLongEvents.empty())
+  {
+    nextState();
+    return;
+  }
+  send(AccessoryRequestEvent(m_initializationRequestLongEvents.back().first, m_initializationRequestLongEvents.back().second));
+  restartInitializationTimer(requestLongEventTimeout);
 }
 
 void Kernel::restartInitializationTimer(std::chrono::milliseconds timeout)
@@ -874,6 +963,16 @@ void Kernel::restartInitializationTimer(std::chrono::milliseconds timeout)
 
         case State::GetCommandStationStatus:
           nextState();
+          break;
+
+        case State::RequestShortEvents:
+          m_initializationRequestShortEvents.pop_back();
+          requestShortEvent();
+          break;
+
+        case State::RequestLongEvents:
+          m_initializationRequestLongEvents.pop_back();
+          requestLongEvent();
           break;
 
         case State::Initial: [[unlikely]]

@@ -88,6 +88,8 @@ public:
    */
   void setConfig(const Config& config);
 
+  void setRequestEventsDuringInitialize(std::vector<uint16_t> shortEvents, std::vector<std::pair<uint16_t,uint16_t>> longEvents);
+
   /**
    * @brief Start the kernel and IO handler
    */
@@ -130,6 +132,8 @@ private:
     QueryNodes,
     ReadNodeParameters,
     GetCommandStationStatus,
+    RequestShortEvents,
+    RequestLongEvents,
     Started // must be last
   };
 
@@ -148,6 +152,8 @@ private:
   State m_state = State::Initial;
   boost::asio::steady_timer m_initializationTimer;
   std::queue<ReadNodeParameter> m_readNodeParameters;
+  std::vector<uint16_t> m_initializationRequestShortEvents;
+  std::vector<std::pair<uint16_t,uint16_t>> m_initializationRequestLongEvents;
   Config m_config;
   bool m_trackOn = false;
   uint8_t m_engineKeepAliveSession;
@@ -175,6 +181,8 @@ private:
   void receiveDFNOx(const SetEngineFunction& message);
   void receiveDSPD(const SetEngineSpeedDirection& message);
   void receiveKLOC(const ReleaseEngine& message);
+  void receiveShortEvent(uint16_t eventNumber, bool on);
+  void receiveLongEvent(uint16_t nodeNumber, uint16_t eventNumber, bool on);
 
   inline void nextState()
   {
@@ -185,6 +193,8 @@ private:
   void changeState(State value);
 
   void readNodeParameter();
+  void requestShortEvent();
+  void requestLongEvent();
 
   void restartInitializationTimer(std::chrono::milliseconds timeout);
   void restartEngineKeepAliveTimer();

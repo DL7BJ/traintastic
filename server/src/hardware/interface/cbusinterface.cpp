@@ -26,7 +26,9 @@
 #include "../decoder/decoderchangeflags.hpp"
 #include "../decoder/list/decoderlist.hpp"
 #include "../decoder/list/decoderlisttablemodel.hpp"
+#include "../input/input.hpp"
 #include "../input/list/inputlist.hpp"
+#include "../output/addressoutput.hpp"
 #include "../output/list/outputlist.hpp"
 #include "../protocol/cbus/cbusconst.hpp"
 #include "../protocol/cbus/cbuskernel.hpp"
@@ -49,12 +51,23 @@
 #include "../../utils/inrange.hpp"
 #include "../../world/world.hpp"
 
+namespace {
+
 constexpr auto decoderListColumns = DecoderListColumn::Id | DecoderListColumn::Name | DecoderListColumn::Address;
 constexpr auto inputListColumns = InputListColumn::Channel | InputListColumn::Node | InputListColumn::Address;
 constexpr auto outputListColumns = OutputListColumn::Channel | OutputListColumn::Node | OutputListColumn::Address;
 
 constexpr auto nodeNumberRange = std::make_pair(std::numeric_limits<uint16_t>::min(), std::numeric_limits<uint16_t>::max());
 constexpr auto eventNumberRange = std::make_pair(std::numeric_limits<uint16_t>::min(), std::numeric_limits<uint16_t>::max());
+
+template<typename T>
+void deduplicate(std::vector<T>& v)
+{
+  std::sort(v.begin(), v.end());
+  v.erase(std::unique(v.begin(), v.end()), v.end());
+}
+
+}
 
 CREATE_IMPL(CBUSInterface)
 
@@ -571,6 +584,40 @@ bool CBUSInterface::setOnline(bool& value, bool simulation)
           updateInputValue(InputChannel::LongEvent, InputNodeAddress(nodeNumber, eventNumber), toTriState(on));
           updateOutputValue(OutputChannel::LongEvent, OutputNodeAddress(nodeNumber, eventNumber), toTriState(on));
         };
+
+      {
+        std::vector<uint16_t> shortEvents;
+        std::vector<std::pair<uint16_t, uint16_t>> longEvents;
+
+        for(const auto& [key, input] : m_inputs)
+        {
+          if(input->channel == InputChannel::ShortEvent)
+          {
+            shortEvents.emplace_back(input->address);
+          }
+          else if(input->channel == InputChannel::LongEvent)
+          {
+            longEvents.emplace_back(input->node, input->address);
+          }
+        }
+
+        for(const auto& [key, output] : m_outputs)
+        {
+          if(output->channel == OutputChannel::ShortEvent)
+          {
+            shortEvents.emplace_back(static_cast<const AddressOutput&>(*output).address);
+          }
+          else if(output->channel == OutputChannel::LongEvent)
+          {
+            longEvents.emplace_back(static_cast<const AddressOutput&>(*output).node, static_cast<const AddressOutput&>(*output).address);
+          }
+        }
+
+        deduplicate(shortEvents);
+        deduplicate(longEvents);
+
+        m_kernel->setRequestEventsDuringInitialize(std::move(shortEvents), std::move(longEvents));
+      }
 
       m_kernel->start();
 
