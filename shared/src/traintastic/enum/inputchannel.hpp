@@ -67,4 +67,9 @@ inline constexpr std::array<InputChannel, 10> inputChannelValues{{
   InputChannel::ShortEvent,
 }};
 
+constexpr bool addressIsEvent(InputChannel channel)
+{
+  return (channel == InputChannel::LongEvent) || (channel == InputChannel::ShortEvent);
+}
+
 #endif

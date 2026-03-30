@@ -783,7 +783,7 @@ void OutputMap::updateAddressDisplayName()
 
     case LongEvent:
     case ShortEvent:
-      Attributes::setDisplayName(addresses, addresses.size() == 1 ? DisplayName::OutputMap::event : DisplayName::OutputMap::events);
+      Attributes::setDisplayName(addresses, addresses.size() == 1 ? DisplayName::Hardware::event : DisplayName::Hardware::events);
       Attributes::setDisplayName(addAddress, DisplayName::OutputMap::addEvent);
       Attributes::setDisplayName(removeAddress, DisplayName::OutputMap::removeEvent);
       break;

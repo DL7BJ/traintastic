@@ -50,6 +50,8 @@ namespace DisplayName
     constexpr std::string_view debugLogOutput = "hardware:debug_log_output";
     constexpr std::string_view debugLogRXTX = "hardware:debug_log_rx_tx";
     constexpr std::string_view decoders = "hardware:decoders";
+    constexpr std::string_view event = "hardware:event";
+    constexpr std::string_view events = "hardware:events";
     constexpr std::string_view ecos = "hardware:ecos";
     constexpr std::string_view identificationMonitor = "hardware:identification_monitor";
     constexpr std::string_view identifications = "hardware:identifications";
@@ -96,8 +98,6 @@ namespace DisplayName
   {
     constexpr std::string_view addAddress = "output_map:add_address";
     constexpr std::string_view addEvent = "output_map:add_event";
-    constexpr std::string_view event = "output_map:event";
-    constexpr std::string_view events = "output_map:events";
     constexpr std::string_view removeAddress = "output_map:remove_address";
     constexpr std::string_view removeEvent = "output_map:remove_event";
   }

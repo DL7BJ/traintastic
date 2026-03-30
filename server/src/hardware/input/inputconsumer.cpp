@@ -185,8 +185,8 @@ void InputConsumer::worldEvent(WorldState worldState, WorldEvent /*worldEvent*/)
 
   Attributes::setEnabled(interface, editableAndStopped);
   Attributes::setEnabled(channel, editableAndStopped);
-  Attributes::setEnabled(address, editableAndStopped);
   Attributes::setEnabled(node, editableAndStopped);
+  Attributes::setEnabled(address, editableAndStopped);
   Attributes::setEnabled(onDelay, editable);
   Attributes::setEnabled(offDelay, editable);
 }
@@ -195,8 +195,8 @@ void InputConsumer::addInterfaceItems(InterfaceItems& items)
 {
   items.add(interface);
   items.add(channel);
-  items.add(address);
   items.add(node);
+  items.add(address);
   items.add(onDelay);
   items.add(offDelay);
 }
@@ -279,6 +279,7 @@ void InputConsumer::channelChanged()
   {
     Attributes::setVisible(node, hasNodeAddressLocation(channel));
     const auto limits = interface->inputAddressMinMax(channel);
+    Attributes::setDisplayName(address, addressIsEvent(channel) ? DisplayName::Hardware::event : DisplayName::Hardware::address);
     Attributes::setMinMax(address, limits.first, limits.second);
   }
   else
