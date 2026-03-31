@@ -37,7 +37,7 @@ public:
 protected:
   const uint8_t m_canId;
   std::array<char, 1024> m_readBuffer;
-  size_t m_readBufferOffset;
+  size_t m_readBufferOffset = 0;
   std::queue<std::string> m_writeQueue;
 
   ASCIIIOHandler(Kernel& kernel, uint8_t canId);
