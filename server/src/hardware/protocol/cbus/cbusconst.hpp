@@ -31,6 +31,12 @@ constexpr uint8_t canIdMax = 127;
 
 constexpr uint8_t engineFunctionMax = 28;
 
+struct NodeNumber
+{
+  static constexpr uint16_t CANCMD = 0xFFFE;
+  static constexpr uint16_t CANCAB = 0xFFFF;
+};
+
 }
 
 #endif

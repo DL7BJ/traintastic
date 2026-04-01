@@ -31,7 +31,7 @@ namespace CBUS::Module {
 class CANCMD : public CANModule
 {
 public:
-  CANCMD(Simulator& simulator, uint16_t nodeNumber_ = 0xFFFE, uint8_t canId_ = 0x72);
+  CANCMD(Simulator& simulator, uint16_t nodeNumber_ = NodeNumber::CANCMD, uint8_t canId_ = 0x72);
 
   void receive(const Message& message) override;
 

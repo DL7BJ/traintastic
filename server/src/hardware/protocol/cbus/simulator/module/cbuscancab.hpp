@@ -31,7 +31,7 @@ namespace CBUS::Module {
 class CANCAB : public CANModule
 {
 public:
-  CANCAB(Simulator& simulator, uint16_t nodeNumber_ = 0xFFFF, uint8_t canId_ = 1);
+  CANCAB(Simulator& simulator, uint16_t nodeNumber_ = NodeNumber::CANCAB, uint8_t canId_ = 1);
 
   void receive(const Message& message) override;
 };
