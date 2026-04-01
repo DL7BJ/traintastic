@@ -400,21 +400,18 @@ std::string toString(const Message& message)
       break;
 
     case ACON2:
-      break;
-
     case ACOF2:
+    case ARON2:
+    case AROF2:
+    {
+      const auto& m = static_cast<const Accessory2On&>(message); // same memory layout, only opcode is different
+      s.append(std::format(" node={} event={} data={} {} ({})", m.nodeNumber(), m.eventNumber(), m.data1, m.data2, m.data()));
       break;
-
+    }
     case EVLRN:
       break;
 
     case EVANS:
-      break;
-
-    case ARON2:
-      break;
-
-    case AROF2:
       break;
 
     case ASON2:

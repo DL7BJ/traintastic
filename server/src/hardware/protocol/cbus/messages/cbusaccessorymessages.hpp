@@ -57,6 +57,40 @@ static_assert(sizeof(AccessoryRequestEvent) == 5);
 static_assert(sizeof(AccessoryResponseEventOn) == 5);
 static_assert(sizeof(AccessoryResponseEventOff) == 5);
 
+template<OpCode opc>
+struct Accessory2Message : AccessoryMessage<opc>
+{
+  uint8_t data1;
+  uint8_t data2;
+
+  Accessory2Message(uint16_t nodeNumber_, uint16_t eventNumber_, uint8_t data1_, uint8_t data2_)
+    : AccessoryMessage<opc>(nodeNumber_, eventNumber_)
+    , data1{data1_}
+    , data2{data2_}
+  {
+  }
+
+  Accessory2Message(uint16_t nodeNumber_, uint16_t eventNumber_, uint16_t data_)
+    : Accessory2Message(opc, nodeNumber_, eventNumber_, high8(data_), low8(data_))
+  {
+  }
+
+  uint16_t data() const
+  {
+    return to16(data2, data1);
+  }
+};
+
+using Accessory2On = Accessory2Message<OpCode::ACON2>;
+using Accessory2Off = Accessory2Message<OpCode::ACOF2>;
+using Accessory2ResponseEventOn = Accessory2Message<OpCode::ARON2>;
+using Accessory2ResponseEventOff = Accessory2Message<OpCode::AROF2>;
+
+static_assert(sizeof(Accessory2On) == 7);
+static_assert(sizeof(Accessory2Off) == 7);
+static_assert(sizeof(Accessory2ResponseEventOn) == 7);
+static_assert(sizeof(Accessory2ResponseEventOff) == 7);
+
 }
 
 #endif
