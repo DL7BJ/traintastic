@@ -34,6 +34,8 @@ class CBUSNodeList;
 class CBUSSessionList;
 
 namespace CBUS {
+enum class OpCode : uint8_t;
+struct Message;
 class Kernel;
 class Simulator;
 }
@@ -75,6 +77,9 @@ public:
   //! \param[in] repeat DCC packet repeat count 0..7
   //! \return \c true if send, \c false otherwise.
   bool sendDCC(std::vector<uint8_t> dccPacket, uint8_t repeat);
+
+  size_t registerOnReceive(CBUS::OpCode opCode, std::function<void(uint8_t, const CBUS::Message&)> callback);
+  void unregisterOnReceive(size_t handle);
 
   // DecoderController:
   std::span<const DecoderProtocol> decoderProtocols() const final;

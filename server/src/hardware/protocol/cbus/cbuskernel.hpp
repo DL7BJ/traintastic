@@ -108,6 +108,9 @@ public:
 
   void receive(uint8_t canId, const Message& message);
 
+  size_t registerOnReceive(OpCode opCode, std::function<void(uint8_t, const Message&)> callback);
+  void unregisterOnReceive(size_t handle);
+
   void trackOff();
   void trackOn();
   void requestEmergencyStop();
@@ -155,6 +158,11 @@ private:
   std::vector<uint16_t> m_initializationRequestShortEvents;
   std::vector<std::pair<uint16_t,uint16_t>> m_initializationRequestLongEvents;
   Config m_config;
+
+  size_t m_onReceiveHandle = 0; // owned by eventloop thread
+  std::unordered_map<size_t, std::function<void(uint8_t, const Message&)>> m_onReceiveCallbacks; // owned by eventloop thread
+  std::unordered_map<size_t, OpCode> m_onReceiveFilters; // owned by kernel thread
+
   bool m_trackOn = false;
   uint8_t m_engineKeepAliveSession;
   bool m_engineKeepAliveTimerActive = false;

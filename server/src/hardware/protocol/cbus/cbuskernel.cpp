@@ -434,6 +434,55 @@ void Kernel::receive(uint8_t canId, const Message& message)
     default:
       break;
   }
+
+  // external listeners:
+  for(const auto& [handle, opCode] : m_onReceiveFilters)
+  {
+    if(message.opCode == opCode)
+    {
+      auto buffer = std::make_shared<std::byte[]>(message.size());
+      std::memcpy(buffer.get(), &message, message.size());
+      EventLoop::call(
+        [this, handle, canId, data=std::move(buffer)]()
+        {
+          // check if still registered, could theoretically be unregister after filtering and before callback:
+          if(auto it = m_onReceiveCallbacks.find(handle); it != m_onReceiveCallbacks.end())
+          {
+            it->second(canId, *reinterpret_cast<const Message*>(data.get()));
+          }
+        });
+    }
+  }
+}
+
+size_t Kernel::registerOnReceive(OpCode opCode, std::function<void(uint8_t, const Message&)> callback)
+{
+  assert(isEventLoopThread());
+
+  while(++m_onReceiveHandle == 0);
+
+  m_onReceiveCallbacks.emplace(m_onReceiveHandle, std::move(callback));
+
+  m_ioContext.post(
+    [this, handle=m_onReceiveHandle, opCode]()
+    {
+      m_onReceiveFilters.emplace(handle, opCode);
+    });
+
+  return m_onReceiveHandle;
+}
+
+void Kernel::unregisterOnReceive(size_t handle)
+{
+  assert(isEventLoopThread());
+
+  m_onReceiveCallbacks.erase(handle);
+
+  m_ioContext.post(
+    [this, handle]()
+    {
+      m_onReceiveFilters.erase(handle);
+    });
 }
 
 void Kernel::trackOff()

@@ -42,6 +42,7 @@
 #include "../protocol/cbus/simulator/module/cbuscancab.hpp"
 #include "../protocol/cbus/simulator/module/cbuscancmd.hpp"
 #include "../../core/attributes.hpp"
+#include "../../core/controllerlist.hpp"
 #include "../../core/eventloop.hpp"
 #include "../../core/method.tpp"
 #include "../../core/objectproperty.tpp"
@@ -166,6 +167,23 @@ bool CBUSInterface::sendDCC(std::vector<uint8_t> dccPacket, uint8_t repeat)
     return m_kernel->sendDCC(std::move(dccPacket), repeat);
   }
   return false;
+}
+
+size_t CBUSInterface::registerOnReceive(CBUS::OpCode opCode, std::function<void(uint8_t, const CBUS::Message&)> callback)
+{
+  if(m_kernel)
+  {
+    return m_kernel->registerOnReceive(opCode, std::move(callback));
+  }
+  return 0;
+}
+
+void CBUSInterface::unregisterOnReceive(size_t handle)
+{
+  if(m_kernel)
+  {
+    m_kernel->unregisterOnReceive(handle);
+  }
 }
 
 std::span<const DecoderProtocol> CBUSInterface::decoderProtocols() const
@@ -345,6 +363,7 @@ void CBUSInterface::addToWorld()
   DecoderController::addToWorld();
   InputController::addToWorld(inputListColumns);
   OutputController::addToWorld(outputListColumns);
+  m_world.cbusInterfaces->add(Object::shared_ptr<CBUSInterface>());
 }
 
 void CBUSInterface::loaded()
@@ -356,6 +375,7 @@ void CBUSInterface::loaded()
 
 void CBUSInterface::destroying()
 {
+  m_world.cbusInterfaces->add(Object::shared_ptr<CBUSInterface>());
   m_cbusPropertyChanged.disconnect();
   OutputController::destroying();
   InputController::destroying();
