@@ -149,6 +149,17 @@ constexpr std::string_view toString(OpCode opCode)
     case WCVOA: return "WCVOA";
     case CABDAT: return "CABDAT";
     case FCLK: return "FCLK";
+    case ACON2: return "ACON2";
+    case ACOF2: return "ACOF2";
+    case EVLRN: return "EVLRN";
+    case EVANS: return "EVANS";
+    case ARON2: return "ARON2";
+    case AROF2: return "AROF2";
+    case ASON2: return "ASON2";
+    case ASOF2: return "ASOF2";
+    case ARSON2: return "ARSON2";
+    case ARSOF2: return "ARSOF2";
+    case EXTC5: return "EXTC5";
 
     // E0-FF - 7 data byte packets:
     case RDCC6: return "RDCC6";

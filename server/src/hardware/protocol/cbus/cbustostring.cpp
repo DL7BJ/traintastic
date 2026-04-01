@@ -399,6 +399,39 @@ std::string toString(const Message& message)
     case FCLK:
       break;
 
+    case ACON2:
+      break;
+
+    case ACOF2:
+      break;
+
+    case EVLRN:
+      break;
+
+    case EVANS:
+      break;
+
+    case ARON2:
+      break;
+
+    case AROF2:
+      break;
+
+    case ASON2:
+      break;
+
+    case ASOF2:
+      break;
+
+    case ARSON2:
+      break;
+
+    case ARSOF2:
+      break;
+
+    case EXTC5:
+      break;
+
     // E0-FF - 7 data byte packets:
     case RDCC6:
       break;

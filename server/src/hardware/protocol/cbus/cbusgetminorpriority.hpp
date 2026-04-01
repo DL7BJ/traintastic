@@ -141,6 +141,17 @@ constexpr MinorPriority getMinorPriority(OpCode opCode)
     case ARSON1:
     case ARSOF1:
     case EXTC4:
+    case ACON2:
+    case ACOF2:
+    case EVLRN:
+    case EVANS:
+    case ARON2:
+    case AROF2:
+    case ASON2:
+    case ASOF2:
+    case ARSON2:
+    case ARSOF2:
+    case EXTC5:
     case NAME:
     case PARAMS:
     case ACON3:

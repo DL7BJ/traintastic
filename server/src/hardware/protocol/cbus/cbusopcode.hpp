@@ -143,6 +143,17 @@ enum class OpCode : uint8_t
   WCVOA  = 0xC1, //!< Write CV (byte) in OPS mode by address
   CABDAT = 0xC2, //!< Cab Data
   FCLK   = 0xCF, //!< Fast Clock
+  ACON2  = 0xD0, //!< Accessory ON
+  ACOF2  = 0xD1, //!< Accessory OFF
+  EVLRN  = 0xD2, //!< Teach an event in learn mode
+  EVANS  = 0xD3, //!< Response to a request for an EV value in a node in learn mode
+  ARON2  = 0xD4, //!< Accessory Response Event
+  AROF2  = 0xD5, //!< Accessory Response Event
+  ASON2  = 0xD8, //!< Accessory Short ON
+  ASOF2  = 0xD9, //!< Accessory Short OFF
+  ARSON2 = 0xDD, //!< Accessory Short Response Event with two data bytes
+  ARSOF2 = 0xDE, //!< Accessory Short Response Event with two data bytes
+  EXTC5  = 0xDF, //!< Extended op-code with 5 data bytes
 
   // E0-FF - 7 data byte packets:
   RDCC6  = 0xE0, //!< Request 6-byte DCC Packet
