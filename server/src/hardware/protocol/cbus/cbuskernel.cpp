@@ -34,7 +34,7 @@ namespace {
 
 using namespace std::chrono_literals;
 
-static constexpr auto queryNodeNumberTimeout = 100ms;
+static constexpr auto queryNodeNumberTimeout = 250ms;
 static constexpr auto readNodeParameterTimeout = 50ms;
 static constexpr auto requestShortEventTimeout = 50ms;
 static constexpr auto requestLongEventTimeout = 50ms;
