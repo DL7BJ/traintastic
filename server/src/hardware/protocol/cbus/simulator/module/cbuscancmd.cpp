@@ -92,7 +92,7 @@ void CANCMD::receive(const Message& message)
 
 EngineReport* CANCMD::newEngineSession(const EngineReport& init)
 {
-  for(uint8_t session = 0;; ++session)
+  for(uint8_t session = 1;; ++session)
   {
     if(!m_sessions.contains(session))
     {
