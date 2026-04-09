@@ -121,6 +121,7 @@ file(GLOB SOURCES
   "src/hardware/protocol/*.hpp"
   "src/hardware/protocol/*.cpp"
   "src/hardware/protocol/can/iohandler/*.cpp"
+  "src/hardware/protocol/can/iohub/*.cpp"
   "src/hardware/protocol/cbus/*.cpp"
   "src/hardware/protocol/cbus/iohandler/*.cpp"
   "src/hardware/protocol/cbus/simulator/*.cpp"
