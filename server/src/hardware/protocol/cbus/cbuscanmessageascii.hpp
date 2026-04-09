@@ -19,30 +19,27 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef TRAINTASTIC_SERVER_HARDWARE_PROTOCOL_CBUS_IOHANDLER_CBUSCANUSBIOHANDLER_HPP
-#define TRAINTASTIC_SERVER_HARDWARE_PROTOCOL_CBUS_IOHANDLER_CBUSCANUSBIOHANDLER_HPP
+#ifndef TRAINTASTIC_SERVER_HARDWARE_PROTOCOL_CBUS_CBUSCANMESSAGEASCII_HPP
+#define TRAINTASTIC_SERVER_HARDWARE_PROTOCOL_CBUS_CBUSCANMESSAGEASCII_HPP
 
-#include "cbusasciiiohandler.hpp"
-#include <boost/asio/serial_port.hpp>
+#include <span>
+#include <string_view>
+#include "../can/canmessage.hpp"
 
 namespace CBUS {
 
-class CANUSBIOHandler final : public ASCIIIOHandler
-{
-public:
-  CANUSBIOHandler(Kernel& kernel, const std::string& device);
-  ~CANUSBIOHandler() final;
+/**
+ * \brief Serialize CAN::Message to CBUS's GridConnect flavored ASCII format.
+ * \return Number of chars written to buffer, \c 0 on error.
+ */
+std::size_t toAscii(const CAN::Message& canMessage, std::span<char> buffer);
 
-  void start() final;
-  void stop() final;
-
-protected:
-  void read() final;
-  void write() final;
-
-private:
-  boost::asio::serial_port m_serialPort;
-};
+/**
+ * \brief Deserialize CAN::Message from CBUS's GridConnect flavored ASCII format.
+ *
+ * \return Number of chars consumed from the buffer.
+ */
+std::size_t fromAscii(std::string_view buffer, CAN::Message& canMessage, std::size_t& dropped);
 
 }
 

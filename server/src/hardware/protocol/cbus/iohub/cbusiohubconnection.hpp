@@ -19,29 +19,24 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef TRAINTASTIC_SERVER_HARDWARE_PROTOCOL_CBUS_IOHANDLER_CBUSCANUSBIOHANDLER_HPP
-#define TRAINTASTIC_SERVER_HARDWARE_PROTOCOL_CBUS_IOHANDLER_CBUSCANUSBIOHANDLER_HPP
+#ifndef TRAINTASTIC_SERVER_HARDWARE_PROTOCOL_CBUS_IOHUB_CBUSIOHUBCONNECTION_HPP
+#define TRAINTASTIC_SERVER_HARDWARE_PROTOCOL_CBUS_IOHUB_CBUSIOHUBCONNECTION_HPP
 
-#include "cbusasciiiohandler.hpp"
-#include <boost/asio/serial_port.hpp>
+#include "../../can/iohub/caniohubconnection.hpp"
 
 namespace CBUS {
 
-class CANUSBIOHandler final : public ASCIIIOHandler
+class IOHubConnection final : public CAN::IOHubConnection
 {
 public:
-  CANUSBIOHandler(Kernel& kernel, const std::string& device);
-  ~CANUSBIOHandler() final;
+  IOHubConnection(std::shared_ptr<CAN::IOHub> hub, boost::asio::ip::tcp::socket socket);
 
-  void start() final;
-  void stop() final;
+  IOHubConnection(const IOHubConnection&) = delete;
+  IOHubConnection& operator =(const IOHubConnection&) = delete;
 
 protected:
-  void read() final;
-  void write() final;
-
-private:
-  boost::asio::serial_port m_serialPort;
+  size_t deserialize(std::span<const std::byte> buffer, CAN::Message& message, bool& haveMessage) final;
+  size_t serialize(const CAN::Message& message, std::span<std::byte> buffer) final;
 };
 
 }

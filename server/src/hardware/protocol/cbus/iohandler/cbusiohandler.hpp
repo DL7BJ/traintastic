@@ -23,16 +23,21 @@
 #define TRAINTASTIC_SERVER_HARDWARE_PROTOCOL_CBUS_IOHANDLER_CBUSIOHANDLER_HPP
 
 #include <cstdint>
+#include <functional>
 #include <system_error>
+#include "../../can/canmessage.hpp"
 
 namespace CBUS {
 
 class Kernel;
-struct Message;
 
 class IOHandler
 {
 public:
+  using OnReceive = std::function<void(const CAN::Message& canMessage)>;
+
+  OnReceive onReceive;
+
   IOHandler(const IOHandler&) = delete;
   IOHandler& operator =(const IOHandler&) = delete;
 
@@ -41,7 +46,7 @@ public:
   virtual void start() = 0;
   virtual void stop() = 0;
 
-  [[nodiscard]] virtual std::error_code send(const Message& message) = 0;
+  [[nodiscard]] virtual std::error_code send(const CAN::Message& message) = 0;
 
 protected:
   Kernel& m_kernel;

@@ -38,15 +38,20 @@ std::array<CAN::SocketCANIOHandler::Filter, 1> filter{{
 
 namespace CBUS {
 
-SocketCANIOHandler::SocketCANIOHandler(Kernel& kernel, const std::string& interface, uint8_t canId)
+SocketCANIOHandler::SocketCANIOHandler(Kernel& kernel, const std::string& interface)
   : IOHandler(kernel)
-  , m_canId{canId}
   , m_socketCAN{kernel.ioContext(), interface, m_kernel.logId,
       [this](const CAN::SocketCANIOHandler::Frame& frame)
       {
         if(frame.can_dlc >= 1) // only with minimal 1 data byte
         {
-          m_kernel.receive(static_cast<uint8_t>(frame.can_id & 0x7F), *reinterpret_cast<const Message*>(frame.data));
+          CAN::Message canMessage;
+          canMessage.id = frame.can_id & CAN_EFF_MASK;
+          canMessage.rtr = (frame.can_id & CAN_RTR_FLAG) != 0;
+          canMessage.extended = (frame.can_id & CAN_EFF_FLAG) != 0;
+          std::memcpy(canMessage.data, frame.data, frame.can_dlc);
+          assert(onReceive);
+          onReceive(canMessage);
         }
       },
       std::bind(&Kernel::error, &m_kernel),
@@ -65,15 +70,20 @@ void SocketCANIOHandler::stop()
   m_socketCAN.stop();
 }
 
-std::error_code SocketCANIOHandler::send(const Message& message)
+std::error_code SocketCANIOHandler::send(const CAN::Message& canMessage)
 {
   CAN::SocketCANIOHandler::Frame frame;
-  frame.can_id =
-    (static_cast<canid_t>(MajorPriority::Lowest) << 9) |
-    (static_cast<canid_t>(getMinorPriority(message.opCode)) << 7) |
-    m_canId;
-  frame.can_dlc = message.size();
-  std::memcpy(frame.data, &message, message.size());
+  frame.can_id = canMessage.id;
+  if(canMessage.rtr)
+  {
+    frame.can_id |= CAN_RTR_FLAG;
+  }
+  if(canMessage.extended)
+  {
+    frame.can_id |= CAN_RTR_FLAG;
+  }
+  frame.can_dlc = canMessage.dlc;
+  std::memcpy(frame.data, &canMessage.data, canMessage.dlc);
   if(!m_socketCAN.send(frame))
   {
     return std::make_error_code(std::errc::no_buffer_space);

@@ -40,8 +40,6 @@ protected:
   void write() final;
 
 private:
-  static constexpr uint8_t canId = 0x7D; //!< CANEther fixed CAN_ID
-
   const std::string m_hostname;
   const uint16_t m_port;
   boost::asio::ip::tcp::socket m_socket;

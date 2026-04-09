@@ -29,8 +29,9 @@ CANCAB::CANCAB(Simulator& simulator, uint16_t nodeNumber_, uint8_t canId_)
 {
 }
 
-void CANCAB::receive(const Message& message)
+void CANCAB::receive(const CAN::Message& canMessage)
 {
+  const Message& message = *reinterpret_cast<const Message*>(canMessage.data);
   switch(message.opCode)
   {
     using enum OpCode;

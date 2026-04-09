@@ -40,12 +40,10 @@ public:
   void start() final;
   void stop() final;
 
-  [[nodiscard]] std::error_code send(const Message& message) final;
+  [[nodiscard]] std::error_code send(const CAN::Message& canMessage) final;
 
 private:
   Simulator& m_simulator;
-
-  void reply(uint8_t canId, const Message& message);
 };
 
 template<>

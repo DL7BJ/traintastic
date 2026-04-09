@@ -27,18 +27,18 @@
 
 namespace CBUS {
 
+// FIXME: merge this into CAN::SocketCANIOHandler so we have more generic CAN support
 class SocketCANIOHandler : public IOHandler
 {
 public:
-  SocketCANIOHandler(Kernel& kernel, const std::string& interface, uint8_t canId);
+  SocketCANIOHandler(Kernel& kernel, const std::string& interface);
 
   void start() final;
   void stop() final;
 
-  [[nodiscard]] std::error_code send(const Message& message) final;
+  [[nodiscard]] std::error_code send(const CAN::Message& canMessage) final;
 
 private:
-  const uint8_t m_canId;
   CAN::SocketCANIOHandler m_socketCAN;
 };
 

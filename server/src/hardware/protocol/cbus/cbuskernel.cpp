@@ -21,7 +21,9 @@
 
 #include "cbuskernel.hpp"
 #include "cbusmessages.hpp"
+#include "cbuscanmessageutils.hpp"
 #include "cbustostring.hpp"
+#include "iohub/cbusiohub.hpp"
 #include "simulator/cbussimulator.hpp"
 #include "../dcc/dcc.hpp"
 #include "../../../core/eventloop.hpp"
@@ -66,8 +68,9 @@ constexpr CBUS::SetEngineSessionMode::SpeedMode toSpeedMode(uint8_t speedSteps)
 
 namespace CBUS {
 
-Kernel::Kernel(std::string logId_, const Config& config, bool simulation)
+Kernel::Kernel(std::string logId_, const Config& config, uint8_t canId, bool simulation)
   : KernelBase(std::move(logId_))
+  , m_canId{canId}
   , m_simulation{simulation}
   , m_initializationTimer{ioContext()}
   , m_config{config}
@@ -117,7 +120,28 @@ void Kernel::start()
     {
       try
       {
+        m_ioHandler->onReceive =
+          [this](const CAN::Message& canMessage)
+          {
+            receive(canMessage);
+            if(m_hub)
+            {
+              m_hub->send(canMessage);
+            }
+          };
+
         m_ioHandler->start();
+
+        if(m_config.hubEnabled)
+        {
+          m_hub = std::make_shared<IOHub>(m_ioContext, logId, m_config.hubPort);
+          m_hub->start(
+            [this](const CAN::Message& message)
+            {
+              receive(message);
+              m_ioHandler->send(message);
+            });
+        }
       }
       catch(const LogMessageException& e)
       {
@@ -139,10 +163,14 @@ void Kernel::stop()
   boost::asio::post(m_ioContext,
     [this]()
     {
+      if(m_hub)
+      {
+        m_hub->stop();
+      }
       m_ioHandler->stop();
-    });
 
-  m_ioContext.stop();
+      m_ioContext.stop();
+    });
 
   m_thread.join();
 }
@@ -154,9 +182,12 @@ void Kernel::started()
   nextState();
 }
 
-void Kernel::receive(uint8_t canId, const Message& message)
+void Kernel::receive(const CAN::Message& canMessage)
 {
   assert(isKernelThread());
+
+  const auto canId = getCanId(canMessage);
+  const auto& message = asMessage(canMessage);
 
   if(m_config.debugLogRXTX)
   {
@@ -735,9 +766,16 @@ void Kernel::send(const Message& message)
       });
   }
 
-  if(auto ec = m_ioHandler->send(message); ec)
+  const auto canMessage = toCANMessage(message, m_canId);
+
+  if(auto ec = m_ioHandler->send(canMessage); ec)
   {
     (void)ec; // FIXME: handle error
+  }
+
+  if(m_hub)
+  {
+    m_hub->send(canMessage);
   }
 }
 

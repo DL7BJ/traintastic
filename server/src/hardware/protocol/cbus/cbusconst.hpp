@@ -26,10 +26,18 @@
 
 namespace CBUS {
 
+constexpr uint16_t defaultTCPPort = 5550;
+
 constexpr uint8_t canIdMin = 1;
 constexpr uint8_t canIdMax = 127;
 
 constexpr uint8_t engineFunctionMax = 28;
+
+struct CanId
+{
+  static constexpr uint8_t CANUSB = 0x7C;
+  static constexpr uint8_t CANEther = 0x7D;
+};
 
 struct NodeNumber
 {

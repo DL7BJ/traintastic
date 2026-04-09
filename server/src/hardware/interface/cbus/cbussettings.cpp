@@ -20,6 +20,7 @@
  */
 
 #include "cbussettings.hpp"
+#include "../../protocol/cbus/cbusconst.hpp"
 #include "../../../core/attributes.hpp"
 #include "../../../utils/displayname.hpp"
 #include "../../../utils/unit.hpp"
@@ -28,6 +29,8 @@ CBUSSettings::CBUSSettings(Object& _parent, std::string_view parentPropertyName)
   : SubObject(_parent, parentPropertyName)
   , engineKeepAlive{this, "engine_keep_alive", engineKeepAliveDefault, PropertyFlags::ReadWrite | PropertyFlags::Store}
   , dccAccessorySwitchTime{this, "dcc_accessory_switch_time", dccAccessorySwitchTimeDefault, PropertyFlags::ReadWrite | PropertyFlags::Store}
+  , hubEnabled{this, "hub_enabled", false, PropertyFlags::ReadWrite | PropertyFlags::Store}
+  , hubPort{this, "hub_port", CBUS::defaultTCPPort, PropertyFlags::ReadWrite | PropertyFlags::Store}
   , debugLogRXTX{this, "debug_log_rx_tx", false, PropertyFlags::ReadWrite | PropertyFlags::Store}
 {
   Attributes::addMinMax(engineKeepAlive, engineKeepAliveMin, engineKeepAliveMax);
@@ -39,6 +42,10 @@ CBUSSettings::CBUSSettings(Object& _parent, std::string_view parentPropertyName)
   Attributes::addUnit(dccAccessorySwitchTime, Unit::milliSeconds);
   m_interfaceItems.add(dccAccessorySwitchTime);
 
+  m_interfaceItems.add(hubEnabled);
+
+  m_interfaceItems.add(hubPort);
+
   Attributes::addDisplayName(debugLogRXTX, DisplayName::Hardware::debugLogRXTX);
   //Attributes::addGroup(debugLogRXTX, Group::debug);
   m_interfaceItems.add(debugLogRXTX);
@@ -49,6 +56,8 @@ CBUS::Config CBUSSettings::config() const
   return CBUS::Config{
     .engineKeepAlive = std::chrono::seconds(engineKeepAlive),
     .dccAccessorySwitchTime = std::chrono::milliseconds(dccAccessorySwitchTime),
+    .hubEnabled = hubEnabled,
+    .hubPort = hubPort,
     .debugLogRXTX = debugLogRXTX,
   };
 }

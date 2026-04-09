@@ -29,7 +29,7 @@
 namespace CBUS {
 
 CANUSBIOHandler::CANUSBIOHandler(Kernel& kernel, const std::string& device)
-  : ASCIIIOHandler(kernel, canId)
+  : ASCIIIOHandler(kernel)
   , m_serialPort{m_kernel.ioContext()}
 {
   // FIXME: check serial settings, just a guess, if more settings are needed add them to the interface

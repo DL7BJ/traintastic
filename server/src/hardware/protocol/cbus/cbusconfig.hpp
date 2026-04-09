@@ -34,6 +34,8 @@ struct Config
 
   std::chrono::seconds engineKeepAlive;
   std::chrono::milliseconds dccAccessorySwitchTime;
+  bool hubEnabled;
+  uint16_t hubPort;
   bool debugLogRXTX;
 };
 

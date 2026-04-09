@@ -32,17 +32,15 @@ namespace CBUS {
 class ASCIIIOHandler : public IOHandler
 {
 public:
-  [[nodiscard]] std::error_code send(const Message& message) override;
+  [[nodiscard]] std::error_code send(const CAN::Message& canMessage) override;
 
 protected:
-  const uint8_t m_canId;
   std::array<char, 1024> m_readBuffer;
   size_t m_readBufferOffset = 0;
   std::queue<std::string> m_writeQueue;
 
-  ASCIIIOHandler(Kernel& kernel, uint8_t canId);
+  ASCIIIOHandler(Kernel& kernel);
 
-  void logDropIfNonZeroAndReset(size_t& drop);
   void processRead(std::size_t bytesTransferred);
 
   virtual void read() = 0;

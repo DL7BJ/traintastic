@@ -27,6 +27,7 @@
 #include <vector>
 #include "module/cbuscanmodule.hpp"
 #include "../messages/cbusmessage.hpp"
+#include "../../can/canmessage.hpp"
 #include "../../../../enum/simulateinputaction.hpp"
 
 namespace CBUS
@@ -37,13 +38,13 @@ class Simulator
   friend class Module::CANModule;
 
 public:
-  std::function<void(uint8_t, const Message&)> onSend;
+  std::function<void(const CAN::Message&)> onSend;
 
   Simulator();
 
   bool addModule(std::unique_ptr<Module::CANModule> module);
 
-  void receive(const Message& message);
+  void receive(const CAN::Message& canMessage);
 
   void shortEvent(uint16_t eventNumber, SimulateInputAction action);
   void longEvent(uint16_t nodeNumber, uint16_t eventNumber, SimulateInputAction action);
@@ -53,7 +54,7 @@ private:
   std::map<uint16_t, bool> m_shortEvents;
   std::map<std::pair<uint16_t, uint16_t>, bool> m_longEvents;
 
-  void send(uint8_t canId, const Message& message);
+  void send(const CAN::Message& message);
 };
 
 }

@@ -33,6 +33,8 @@ class CBUSSettings final : public SubObject
 public:
   Property<uint8_t> engineKeepAlive;
   Property<uint16_t> dccAccessorySwitchTime;
+  Property<bool> hubEnabled;
+  Property<uint16_t> hubPort;
   Property<bool> debugLogRXTX;
 
   CBUSSettings(Object& _parent, std::string_view parentPropertyName);

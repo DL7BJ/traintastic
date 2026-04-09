@@ -21,6 +21,7 @@
 
 #include "cbussimulationiohandler.hpp"
 #include <boost/asio/post.hpp>
+#include "../cbusconst.hpp"
 #include "../cbuskernel.hpp"
 #include "../simulator/cbussimulator.hpp"
 
@@ -31,15 +32,14 @@ SimulationIOHandler::SimulationIOHandler(Kernel& kernel, Simulator& simulator)
   , m_simulator{simulator}
 {
   m_simulator.onSend =
-    [this](uint8_t canId, const Message& message)
+    [this](const CAN::Message& canMessage)
     {
       // post the message, so it has some delay
-      auto buffer = std::make_shared<std::byte[]>(message.size());
-      std::memcpy(buffer.get(), &message, message.size());
       boost::asio::post(m_kernel.ioContext(),
-        [this, canId, data=std::move(buffer)]()
+        [this, canMessage]()
         {
-          m_kernel.receive(canId, *reinterpret_cast<const Message*>(data.get()));
+          assert(onReceive);
+          onReceive(canMessage);
         });
     };
 }
@@ -55,9 +55,9 @@ void SimulationIOHandler::stop()
 {
 }
 
-std::error_code SimulationIOHandler::send(const Message& message)
+std::error_code SimulationIOHandler::send(const CAN::Message& canMessage)
 {
-  m_simulator.receive(message);
+  m_simulator.receive(canMessage);
   return {};
 }
 

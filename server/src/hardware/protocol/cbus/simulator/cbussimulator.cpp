@@ -21,6 +21,7 @@
 
 #include "cbussimulator.hpp"
 #include <algorithm>
+#include "../cbuscanmessageutils.hpp"
 #include "../messages/cbusaccessorymessages.hpp"
 #include "../messages/cbusaccessoryshortmessages.hpp"
 
@@ -52,11 +53,11 @@ bool Simulator::addModule(std::unique_ptr<Module::CANModule> module)
   return true;
 }
 
-void Simulator::receive(const Message& message)
+void Simulator::receive(const CAN::Message& canMessage)
 {
   for(const auto& module : m_modules)
   {
-    module->receive(message);
+    module->receive(canMessage);
   }
 }
 
@@ -90,11 +91,11 @@ void Simulator::shortEvent(uint16_t eventNumber, SimulateInputAction action)
 
   if(value)
   {
-    send(simCanId, AccessoryShortOn(simNodeNumber, eventNumber));
+    send(toCANMessage(AccessoryShortOn(simNodeNumber, eventNumber), simCanId));
   }
   else
   {
-    send(simCanId, AccessoryShortOff(simNodeNumber, eventNumber));
+    send(toCANMessage(AccessoryShortOff(simNodeNumber, eventNumber), simCanId));
   }
 }
 
@@ -138,16 +139,17 @@ void Simulator::longEvent(uint16_t nodeNumber, uint16_t eventNumber, SimulateInp
 
   if(value)
   {
-    send(canId, AccessoryOn(nodeNumber, eventNumber));
+    send(toCANMessage(AccessoryOn(nodeNumber, eventNumber), canId));
   }
   else
   {
-    send(canId, AccessoryOff(nodeNumber, eventNumber));
+    send(toCANMessage(AccessoryOff(nodeNumber, eventNumber), canId));
   }
 }
 
-void Simulator::send(uint8_t canId, const Message& message)
+void Simulator::send(const CAN::Message& canMessage)
 {
+  const auto& message = asMessage(canMessage);
   switch(message.opCode)
   {
     using enum OpCode;
@@ -179,7 +181,7 @@ void Simulator::send(uint8_t canId, const Message& message)
     default:
       break;
   }
-  onSend(canId, message);
+  onSend(canMessage);
 }
 
 }

@@ -33,7 +33,7 @@ class CANCMD : public CANModule
 public:
   CANCMD(Simulator& simulator, uint16_t nodeNumber_ = NodeNumber::CANCMD, uint8_t canId_ = 0x72);
 
-  void receive(const Message& message) override;
+  void receive(const CAN::Message& canMessage) override;
 
 private:
   bool m_busOn = true;

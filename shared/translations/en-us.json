@@ -340,6 +340,14 @@
         "definition": "Engine keep alive"
     },
     {
+        "term": "cbus_settings:hub_enabled",
+        "definition": "Hub enabled"
+    },
+    {
+        "term": "cbus_settings:hub_port",
+        "definition": "Hub port"
+    },
+    {
         "term": "class_id:board_tile.misc.label",
         "definition": "Label"
     },

@@ -433,23 +433,23 @@ bool CBUSInterface::setOnline(bool& value, bool simulation)
         m_simulator = std::make_unique<CBUS::Simulator>();
         m_simulator->addModule(std::make_unique<CBUS::Module::CANCMD>(*m_simulator));
         m_simulator->addModule(std::make_unique<CBUS::Module::CANCAB>(*m_simulator));
-        m_kernel = CBUS::Kernel::create<CBUS::SimulationIOHandler>(id.value(), cbus->config(), std::ref(*m_simulator));
+        m_kernel = CBUS::Kernel::create<CBUS::SimulationIOHandler>(id.value(), cbus->config(), CBUS::CanId::CANUSB, std::ref(*m_simulator));
       }
       else
       {
         switch(type)
         {
           case CBUSInterfaceType::CANUSB:
-            m_kernel = CBUS::Kernel::create<CBUS::CANUSBIOHandler>(id.value(), cbus->config(), device.value());
+            m_kernel = CBUS::Kernel::create<CBUS::CANUSBIOHandler>(id.value(), cbus->config(), CBUS::CanId::CANUSB, device.value());
             break;
 
           case CBUSInterfaceType::CANEther:
-            m_kernel = CBUS::Kernel::create<CBUS::CANEtherIOHandler>(id.value(), cbus->config(), hostname.value(), port.value());
+            m_kernel = CBUS::Kernel::create<CBUS::CANEtherIOHandler>(id.value(), cbus->config(), CBUS::CanId::CANEther, hostname.value(), port.value());
             break;
 
           case CBUSInterfaceType::SocketCAN:
 #ifdef __linux__
-            m_kernel = CBUS::Kernel::create<CBUS::SocketCANIOHandler>(id.value(), cbus->config(), interface.value(), canId.value());
+            m_kernel = CBUS::Kernel::create<CBUS::SocketCANIOHandler>(id.value(), cbus->config(), canId.value(), interface.value());
             break;
 #else
             setState(InterfaceState::Error);

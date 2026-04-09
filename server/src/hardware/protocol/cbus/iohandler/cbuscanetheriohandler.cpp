@@ -29,7 +29,7 @@
 namespace CBUS {
 
 CANEtherIOHandler::CANEtherIOHandler(Kernel& kernel, std::string hostname, uint16_t port)
-  : ASCIIIOHandler(kernel, canId)
+  : ASCIIIOHandler(kernel)
   , m_hostname{std::move(hostname)}
   , m_port{port}
   , m_socket{m_kernel.ioContext()}

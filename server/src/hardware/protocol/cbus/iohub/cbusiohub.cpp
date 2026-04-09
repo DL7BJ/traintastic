@@ -19,31 +19,19 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef TRAINTASTIC_SERVER_HARDWARE_PROTOCOL_CBUS_IOHANDLER_CBUSCANUSBIOHANDLER_HPP
-#define TRAINTASTIC_SERVER_HARDWARE_PROTOCOL_CBUS_IOHANDLER_CBUSCANUSBIOHANDLER_HPP
-
-#include "cbusasciiiohandler.hpp"
-#include <boost/asio/serial_port.hpp>
+#include "cbusiohub.hpp"
+#include "cbusiohubconnection.hpp"
 
 namespace CBUS {
 
-class CANUSBIOHandler final : public ASCIIIOHandler
+IOHub::IOHub(boost::asio::io_context& ioContext, std::string logId, uint16_t port)
+  : CAN::IOHub(ioContext, std::move(logId), port)
 {
-public:
-  CANUSBIOHandler(Kernel& kernel, const std::string& device);
-  ~CANUSBIOHandler() final;
-
-  void start() final;
-  void stop() final;
-
-protected:
-  void read() final;
-  void write() final;
-
-private:
-  boost::asio::serial_port m_serialPort;
-};
-
 }
 
-#endif
+std::shared_ptr<CAN::IOHubConnection> IOHub::newConnection(boost::asio::ip::tcp::socket socket)
+{
+  return std::make_shared<IOHubConnection>(shared_from_this(), std::move(socket));
+}
+
+}

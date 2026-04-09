@@ -19,31 +19,27 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef TRAINTASTIC_SERVER_HARDWARE_PROTOCOL_CBUS_IOHANDLER_CBUSCANUSBIOHANDLER_HPP
-#define TRAINTASTIC_SERVER_HARDWARE_PROTOCOL_CBUS_IOHANDLER_CBUSCANUSBIOHANDLER_HPP
-
-#include "cbusasciiiohandler.hpp"
-#include <boost/asio/serial_port.hpp>
+#include "cbusiohubconnection.hpp"
+#include "../cbuscanmessageascii.hpp"
 
 namespace CBUS {
 
-class CANUSBIOHandler final : public ASCIIIOHandler
+IOHubConnection::IOHubConnection(std::shared_ptr<CAN::IOHub> hub, boost::asio::ip::tcp::socket socket)
+  : CAN::IOHubConnection(std::move(hub), std::move(socket))
 {
-public:
-  CANUSBIOHandler(Kernel& kernel, const std::string& device);
-  ~CANUSBIOHandler() final;
-
-  void start() final;
-  void stop() final;
-
-protected:
-  void read() final;
-  void write() final;
-
-private:
-  boost::asio::serial_port m_serialPort;
-};
-
 }
 
-#endif
+size_t IOHubConnection::deserialize(std::span<const std::byte> buffer, CAN::Message& message, bool& haveMessage)
+{
+  size_t dropped = 0;
+  const auto consumed = fromAscii(std::string_view{reinterpret_cast<const char*>(buffer.data()), buffer.size()}, message, dropped);
+  haveMessage = (consumed > dropped);
+  return consumed;
+}
+
+size_t IOHubConnection::serialize(const CAN::Message& message, std::span<std::byte> buffer)
+{
+  return toAscii(message, std::span(reinterpret_cast<char*>(buffer.data()), buffer.size()));
+}
+
+}

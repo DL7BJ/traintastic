@@ -24,6 +24,7 @@
 
 #include "../../messages/cbusmessage.hpp"
 #include <functional>
+#include "../../../can/canmessage.hpp"
 
 namespace CBUS
 {
@@ -41,9 +42,10 @@ public:
   CANModule(Simulator& simulator, uint16_t nodeNumber_, uint8_t canId_);
   virtual ~CANModule() = default;
 
-  virtual void receive(const Message& message) = 0;
+  virtual void receive(const CAN::Message& canMessage) = 0;
 
 protected:
+  void send(const CAN::Message& canMessage);
   void send(const Message& message);
 
 private:

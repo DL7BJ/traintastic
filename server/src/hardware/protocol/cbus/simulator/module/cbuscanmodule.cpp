@@ -21,6 +21,7 @@
 
 #include "cbuscanmodule.hpp"
 #include "../cbussimulator.hpp"
+#include "../../cbuscanmessageutils.hpp"
 
 namespace CBUS::Module {
 
@@ -31,9 +32,14 @@ CANModule::CANModule(Simulator& simulator, uint16_t nodeNumber_, uint8_t canId_)
 {
 }
 
+void CANModule::send(const CAN::Message& canMessage)
+{
+  m_simulator.send(canMessage);
+}
+
 void CANModule::send(const Message& message)
 {
-  m_simulator.send(canId, message);
+  send(toCANMessage(message, canId));
 }
 
 }

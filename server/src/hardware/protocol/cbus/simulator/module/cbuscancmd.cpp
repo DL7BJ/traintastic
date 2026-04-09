@@ -21,6 +21,7 @@
 
 #include "cbuscancmd.hpp"
 #include <algorithm>
+#include "../../cbuscanmessageutils.hpp"
 #include "../../cbusmessages.hpp"
 
 namespace CBUS::Module {
@@ -30,8 +31,9 @@ CANCMD::CANCMD(Simulator& simulator, uint16_t nodeNumber_, uint8_t canId_)
 {
 }
 
-void CANCMD::receive(const Message& message)
+void CANCMD::receive(const CAN::Message& canMessage)
 {
+  const auto& message = asMessage(canMessage);
   switch(message.opCode)
   {
     using enum OpCode;

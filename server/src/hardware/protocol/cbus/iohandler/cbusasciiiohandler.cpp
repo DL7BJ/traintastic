@@ -20,48 +20,32 @@
  */
 
 #include "cbusasciiiohandler.hpp"
-#include "../cbusgetminorpriority.hpp"
+#include "../cbuscanmessageascii.hpp"
 #include "../cbuskernel.hpp"
 #include "../messages/cbusmessage.hpp"
 #include "../../../../core/eventloop.hpp"
 #include "../../../../log/log.hpp"
-#include "../../../../utils/tohex.hpp"
-#include "../../../../utils/fromchars.hpp"
-
-namespace {
-
-std::string buildFrame(CBUS::MajorPriority majorPriority, CBUS::MinorPriority minorPriority, uint8_t canId, const CBUS::Message& message)
-{
-  const uint16_t sid =
-    (static_cast<uint16_t>(majorPriority) << 14) |
-    (static_cast<uint16_t>(minorPriority) << 12) |
-    (static_cast<uint16_t>(canId) << 5);
-
-  std::string frame(":S");
-  frame.append(toHex(sid));
-  frame.append("N");
-  frame.append(toHex(&message, message.size()));
-  frame.append(";");
-  return frame;
-}
-
-}
 
 namespace CBUS {
 
-ASCIIIOHandler::ASCIIIOHandler(Kernel& kernel, uint8_t canId)
+ASCIIIOHandler::ASCIIIOHandler(Kernel& kernel)
   : IOHandler(kernel)
-  , m_canId{canId}
 {
 }
 
-std::error_code ASCIIIOHandler::send(const Message& message)
+std::error_code ASCIIIOHandler::send(const CAN::Message& canMessage)
 {
   const bool wasEmpty = m_writeQueue.empty();
 
-  // FIXME: handle priority queueing
-  // FIXME: what to do with MajorPriority?
-  m_writeQueue.emplace(buildFrame(MajorPriority::Lowest, getMinorPriority(message.opCode), m_canId, message));
+  std::string frame;
+  frame.resize(32);
+  frame.resize(toAscii(canMessage, frame));
+  if(frame.empty()) [[unlikely]]
+  {
+    return std::make_error_code(std::errc::bad_message);
+  }
+
+  m_writeQueue.emplace(std::move(frame));
 
   if(wasEmpty)
   {
@@ -71,90 +55,32 @@ std::error_code ASCIIIOHandler::send(const Message& message)
   return {};
 }
 
-void ASCIIIOHandler::logDropIfNonZeroAndReset(size_t& drop)
-{
-  if(drop != 0)
-  {
-    EventLoop::call(
-      [this, drop]()
-      {
-        Log::log(m_kernel.logId, LogMessage::W2001_RECEIVED_MALFORMED_DATA_DROPPED_X_BYTES, drop);
-      });
-    drop = 0;
-  }
-}
-
 void ASCIIIOHandler::processRead(std::size_t bytesTransferred)
 {
-  constexpr size_t maxFrameSize = 24; // :SXXXXNXXXXXXXXXXXXXXXX;
-
   std::string_view buffer{m_readBuffer.data(), m_readBufferOffset + bytesTransferred};
-
-  size_t drop = 0;
 
   while(!buffer.empty())
   {
-    logDropIfNonZeroAndReset(drop);
+    CAN::Message canMessage;
+    size_t drop = 0;
 
-    if(auto pos = buffer.find(':'); pos != 0)
+    const auto consumed = fromAscii(buffer, canMessage, drop);
+    if(drop < consumed)
     {
-      if(pos == std::string_view::npos)
-      {
-        // no start marker drop all bytes:
-        drop += buffer.size();
-        buffer = {};
-        break;
-      }
-
-      // drop bytes before start marker:
-      drop += pos;
-      buffer.remove_prefix(pos);
+      assert(onReceive);
+      onReceive(canMessage);
     }
+    buffer.remove_prefix(consumed);
 
-    auto end = buffer.find(';');
-    if(end == std::string_view::npos)
+    if(drop != 0)
     {
-      // no end marker yet, wait for more data
-      break;
-    }
-
-    std::string_view frame{buffer.data(), end + 1};
-
-    buffer.remove_prefix(frame.size()); // consume frame
-
-    if(frame.size() > maxFrameSize)
-    {
-      drop += frame.size();
-    }
-    else if(frame[1] == 'S' && frame[6] == 'N') // CBUS only uses standard non RTR CAN frames
-    {
-      uint16_t sid;
-      if(fromChars(frame.substr(2, sizeof(sid) * 2), sid, 16).ec != std::errc())
-      {
-        continue; // error reading, ignore frame
-      }
-
-      const auto dataLength = (frame.size() - 7) / 2;
-      std::array<uint8_t, 8> data;
-      std::errc ec = std::errc();
-      for(size_t i = 0; i < dataLength; ++i)
-      {
-        ec = fromChars(frame.substr(7 + i * 2, 2), data[i], 16).ec;
-        if(ec != std::errc())
+      EventLoop::call(
+        [this, drop]()
         {
-          break;
-        }
-      }
-      if(ec != std::errc())
-      {
-        continue; // error reading, ignore frame
-      }
-
-      m_kernel.receive((sid >> 5) & 0x7F, *reinterpret_cast<const Message*>(data.data()));
+          Log::log(m_kernel.logId, LogMessage::W2001_RECEIVED_MALFORMED_DATA_DROPPED_X_BYTES, drop);
+        });
     }
   }
-
-  logDropIfNonZeroAndReset(drop);
 
   if(buffer.size() != 0)
   {
