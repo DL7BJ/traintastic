@@ -30,7 +30,7 @@
 
 namespace CBUS {
 
-constexpr CAN::Message toCANMessage(const Message& message, uint8_t canId, MajorPriority majorPriority = MajorPriority::Lowest)
+inline CAN::Message toCANMessage(const Message& message, uint8_t canId, MajorPriority majorPriority = MajorPriority::Lowest)
 {
   CAN::Message canMessage;
   canMessage.id =

@@ -139,7 +139,7 @@ void Kernel::start()
             [this](const CAN::Message& message)
             {
               receive(message);
-              m_ioHandler->send(message);
+              (void)m_ioHandler->send(message); // FICME: add error handling
             });
         }
       }
