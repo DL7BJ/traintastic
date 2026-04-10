@@ -65,13 +65,6 @@ void ASCIIIOHandler::processRead(std::size_t bytesTransferred)
     size_t drop = 0;
 
     const auto consumed = fromAscii(buffer, canMessage, drop);
-    if(drop < consumed)
-    {
-      assert(onReceive);
-      onReceive(canMessage);
-    }
-    buffer.remove_prefix(consumed);
-
     if(drop != 0)
     {
       EventLoop::call(
@@ -80,6 +73,16 @@ void ASCIIIOHandler::processRead(std::size_t bytesTransferred)
           Log::log(m_kernel.logId, LogMessage::W2001_RECEIVED_MALFORMED_DATA_DROPPED_X_BYTES, drop);
         });
     }
+    if(consumed == 0)
+    {
+      break; // wait for more data
+    }
+    if(drop < consumed)
+    {
+      assert(onReceive);
+      onReceive(canMessage);
+    }
+    buffer.remove_prefix(consumed);
   }
 
   if(buffer.size() != 0)
