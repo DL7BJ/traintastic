@@ -50,16 +50,16 @@ static constexpr uint8_t multiplierFreeze = 0;
 
 static void updateDecoderSpeed(const std::shared_ptr<Decoder>& decoder, uint8_t speed)
 {
-  decoder->emergencyStop.setValueInternal(speed == SPEED_ESTOP);
+  decoder->emergencyStop.setValueInternal(speed == speedEStop);
 
-  if(speed == SPEED_STOP || speed == SPEED_ESTOP)
+  if(speed == speedStop || speed == speedEStop)
     decoder->throttle.setValueInternal(Decoder::throttleStop);
   else
   {
     speed--; // decrement one for ESTOP: 2..127 -> 1..126
-    const auto currentStep = Decoder::throttleToSpeedStep<uint8_t>(decoder->throttle.value(), SPEED_MAX - 1);
+    const auto currentStep = Decoder::throttleToSpeedStep<uint8_t>(decoder->throttle.value(), speedMax - 1);
     if(currentStep != speed) // only update trottle if it is a different step
-      decoder->throttle.setValueInternal(Decoder::speedStepToThrottle<uint8_t>(speed, SPEED_MAX - 1));
+      decoder->throttle.setValueInternal(Decoder::speedStepToThrottle<uint8_t>(speed, speedMax - 1));
   }
 }
 
@@ -1076,11 +1076,11 @@ void Kernel::decoderChanged(const Decoder& decoder, DecoderChangeFlags changes, 
 
   if(has(changes, DecoderChangeFlags::EmergencyStop | DecoderChangeFlags::Throttle))
   {
-    const auto speedStep = Decoder::throttleToSpeedStep<uint8_t>(decoder.throttle, SPEED_MAX - 1);
-    if(m_emergencyStop == TriState::False || decoder.emergencyStop || speedStep == SPEED_STOP)
+    const auto speedStep = Decoder::throttleToSpeedStep<uint8_t>(decoder.throttle, speedMax - 1);
+    if(m_emergencyStop == TriState::False || decoder.emergencyStop || speedStep == speedStop)
     {
       // only send speed updates if bus estop isn't active, except for speed STOP and ESTOP
-      LocoSpd message{static_cast<uint8_t>(decoder.emergencyStop ? SPEED_ESTOP : (speedStep > 0 ? 1 + speedStep : SPEED_STOP))};
+      LocoSpd message{static_cast<uint8_t>(decoder.emergencyStop ? speedEStop : (speedStep > 0 ? 1 + speedStep : speedStop))};
       postSend(decoder.address, message);
     }
   }
@@ -1453,7 +1453,7 @@ void Kernel::send(uint16_t address, Message& message, uint8_t& slot)
     slot = addressToSlot->second;
 
     if(message.opCode == OPC_LOCO_SPD &&
-        static_cast<LocoSpd&>(message).speed >= SPEED_MIN &&
+        static_cast<LocoSpd&>(message).speed >= speedMin &&
         static_cast<LocoSpd&>(message).speed == m_slots[slot].speed)
       return; // same speed, don't send it (always send ESTOP and STOP)
 
