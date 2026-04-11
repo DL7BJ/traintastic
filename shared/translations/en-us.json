@@ -288,6 +288,66 @@
         "definition": "Trains"
     },
     {
+        "term": "cbus_interface_type:socket_can",
+        "definition": "SocketCAN (Linux only)"
+    },
+    {
+        "term": "cbus_node_list:manufacturer",
+        "definition": "Manufacturer"
+    },
+    {
+        "term": "cbus_node_list:mode",
+        "definition": "Mode"
+    },
+    {
+        "term": "cbus_node_list:module",
+        "definition": "Module"
+    },
+    {
+        "term": "cbus_node_list:node_number",
+        "definition": "Node number"
+    },
+    {
+        "term": "cbus_node_list:type",
+        "definition": "Type"
+    },
+    {
+        "term": "cbus_node_list:version",
+        "definition": "Version"
+    },
+    {
+        "term": "cbus_session_list:direction",
+        "definition": "Direction"
+    },
+    {
+        "term": "cbus_session_list:long",
+        "definition": "Long"
+    },
+    {
+        "term": "cbus_session_list:session",
+        "definition": "Session"
+    },
+    {
+        "term": "cbus_session_list:speed",
+        "definition": "Speed"
+    },
+    {
+        "term": "cbus_settings:dcc_accessory_switch_time",
+        "definition": "DCC accessory switch time"
+    },
+    {
+        "term": "cbus_settings:engine_keep_alive",
+        "definition": "Engine keep alive"
+    },
+    {
+        "term": "cbus_settings:hub_enabled",
+        "definition": "Hub enabled"
+    },
+    {
+        "term": "cbus_settings:hub_port",
+        "definition": "Hub port"
+    },
+    {
         "term": "class_id:board_tile.misc.label",
         "definition": "Label"
     },
@@ -740,6 +800,14 @@
         "definition": "Power off world"
     },
     {
+        "term": "function:off",
+        "definition": "Off"
+    },
+    {
+        "term": "function:on",
+        "definition": "On"
+    },
+    {
         "term": "hardware:address",
         "definition": "Address"
     },
@@ -776,6 +844,14 @@
         "definition": "Decoders"
     },
     {
+        "term": "hardware:event",
+        "definition": "Event"
+    },
+    {
+        "term": "hardware:events",
+        "definition": "Events"
+    },
+    {
         "term": "hardware:identifications",
         "definition": "Identifications"
     },
@@ -790,6 +866,10 @@
     {
         "term": "hardware:interface",
         "definition": "Interface"
+    },
+    {
+        "term": "hardware:node",
+        "definition": "Node"
     },
     {
         "term": "hardware:output_keyboard",
@@ -820,6 +900,10 @@
         "definition": "On delay"
     },
     {
+        "term": "input_channel:long_event",
+        "definition": "Long event"
+    },
+    {
         "term": "input_channel:s88_left",
         "definition": "S88 left"
     },
@@ -830,6 +914,10 @@
     {
         "term": "input_channel:s88_right",
         "definition": "S88 right"
+    },
+    {
+        "term": "input_channel:short_event",
+        "definition": "Short event"
     },
     {
         "term": "input_list:bus",
@@ -850,6 +938,14 @@
     {
         "term": "input_map_item.block:type",
         "definition": "Type"
+    },
+    {
+        "term": "interface.cbus:cbus_node_list",
+        "definition": "Nodes"
+    },
+    {
+        "term": "interface.cbus:cbus_session_list",
+        "definition": "Sessions"
     },
     {
         "term": "interface.ecos:ecos_detector",
@@ -1584,6 +1680,18 @@
         "definition": "Reading booster '%1' load failed: %2"
     },
     {
+        "term": "message:E2028",
+        "definition": "Socket setsockopt failed (%1)"
+    },
+    {
+        "term": "message:E2029",
+        "definition": "TCP accept error (%1)"
+    },
+    {
+        "term": "message:E2030",
+        "definition": "TCP socket listen failed (%1)"
+    },
+    {
         "term": "message:E3001",
         "definition": "Can't delete rail vehicle when in active train"
     },
@@ -1702,6 +1810,10 @@
     {
         "term": "message:I2006",
         "definition": "Booster '%1' software version: %2"
+    },
+    {
+        "term": "message:I2007",
+        "definition": "New hub connection (%1:%2)"
     },
     {
         "term": "message:I3001",
@@ -1858,6 +1970,10 @@
     {
         "term": "message:N2007",
         "definition": "Listen only mode: deactivated"
+    },
+    {
+        "term": "message:N2008",
+        "definition": "Hub listening at %1:%2"
     },
     {
         "term": "message:N3001",
@@ -2032,8 +2148,16 @@
         "definition": "ECoS object"
     },
     {
+        "term": "output_channel:long_event",
+        "definition": "Long event"
+    },
+    {
         "term": "output_channel:output",
         "definition": "Output"
+    },
+    {
+        "term": "output_channel:short_event",
+        "definition": "Short event"
     },
     {
         "term": "output_channel:turnout",
@@ -2064,6 +2188,10 @@
         "definition": "Add address"
     },
     {
+        "term": "output_map:add_event",
+        "definition": "Add event"
+    },
+    {
         "term": "output_map:address_x",
         "definition": "Address %1"
     },
@@ -2074,6 +2202,10 @@
     {
         "term": "output_map:remove_address",
         "definition": "Remove address"
+    },
+    {
+        "term": "output_map:remove_event",
+        "definition": "Remove event"
     },
     {
         "term": "output_map:swap_outputs",
@@ -2710,6 +2842,10 @@
     {
         "term": "throttle.steal",
         "definition": "Steal"
+    },
+    {
+        "term": "throttle.stop",
+        "definition": "Stop"
     },
     {
         "term": "throttle_object_list:throttle",

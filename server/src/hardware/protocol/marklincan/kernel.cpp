@@ -386,7 +386,7 @@ void Kernel::receive(const Message& message)
         EventLoop::call(
           [this, channel, address, value]()
           {
-            m_outputController->updateOutputValue(channel, address, value);
+            m_outputController->updateOutputValue(channel, OutputAddress(address), value);
           });
       }
       break;
@@ -413,7 +413,7 @@ void Kernel::receive(const Message& message)
               EventLoop::call(
                 [this, address=feedbackState.contactId(), value]()
                 {
-                  m_inputController->updateInputValue(InputChannel::Input, address, value);
+                  m_inputController->updateInputValue(InputChannel::Input, InputAddress(address), value);
                 });
             }
           }

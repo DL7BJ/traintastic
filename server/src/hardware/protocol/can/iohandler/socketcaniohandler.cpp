@@ -32,14 +32,14 @@
 
 namespace CAN {
 
-SocketCANIOHandler::SocketCANIOHandler(boost::asio::io_context& ioContext, const std::string& interface, std::string logId, OnReceive onReceive, OnError onError)
+SocketCANIOHandler::SocketCANIOHandler(boost::asio::io_context& ioContext, const std::string& interface, std::string logId, OnReceive onReceive, OnError onError, std::span<Filter> filter)
   : m_stream{ioContext}
   , m_logId{std::move(logId)}
   , m_onReceive{std::move(onReceive)}
   , m_onError{std::move(onError)}
 {
-  assert(onReceive);
-  assert(onError);
+  assert(m_onReceive);
+  assert(m_onError);
 
   int fd = socket(PF_CAN, SOCK_RAW, CAN_RAW);
   if(fd < 0)
@@ -63,6 +63,12 @@ SocketCANIOHandler::SocketCANIOHandler(boost::asio::io_context& ioContext, const
   {
     close(fd);
     throw LogMessageException(LogMessage::E2006_SOCKET_BIND_FAILED_X, std::string_view(strerror(errno)));
+  }
+
+  if(!filter.empty() && setsockopt(fd, SOL_CAN_RAW, CAN_RAW_FILTER, filter.data(), sizeof(Filter) * filter.size()) < 0)
+  {
+    close(fd);
+    throw LogMessageException(LogMessage::E2028_SOCKET_SETSOCKOPT_FAILED_X, std::string_view(strerror(errno)));
   }
 
   m_stream.assign(fd);

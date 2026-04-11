@@ -24,6 +24,7 @@
 
 #include <string>
 #include <functional>
+#include <span>
 #include <linux/can.h>
 #include <boost/asio/io_context.hpp>
 #include <boost/asio/posix/stream_descriptor.hpp>
@@ -34,10 +35,11 @@ class SocketCANIOHandler
 {
 public:
   using Frame = struct can_frame;
+  using Filter = struct can_filter;
   using OnReceive = std::function<void(const Frame& frame)>;
   using OnError = std::function<void()>;
 
-  SocketCANIOHandler(boost::asio::io_context& ioContext, const std::string& interface, std::string logId, OnReceive onReceive, OnError onError);
+  SocketCANIOHandler(boost::asio::io_context& ioContext, const std::string& interface, std::string logId, OnReceive onReceive, OnError onError, std::span<Filter> filter = {});
 
   void start();
   void stop();
