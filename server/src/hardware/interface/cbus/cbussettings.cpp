@@ -29,6 +29,7 @@ CBUSSettings::CBUSSettings(Object& _parent, std::string_view parentPropertyName)
   : SubObject(_parent, parentPropertyName)
   , engineKeepAlive{this, "engine_keep_alive", engineKeepAliveDefault, PropertyFlags::ReadWrite | PropertyFlags::Store}
   , dccAccessorySwitchTime{this, "dcc_accessory_switch_time", dccAccessorySwitchTimeDefault, PropertyFlags::ReadWrite | PropertyFlags::Store}
+  , shortEventNodeNumber{this, "short_event_node_number", 0, PropertyFlags::ReadWrite | PropertyFlags::Store}
   , hubEnabled{this, "hub_enabled", false, PropertyFlags::ReadWrite | PropertyFlags::Store}
   , hubLocalhostOnly{this, "hub_localhost_only", true, PropertyFlags::ReadWrite | PropertyFlags::Store}
   , hubPort{this, "hub_port", CBUS::defaultTCPPort, PropertyFlags::ReadWrite | PropertyFlags::Store}
@@ -42,6 +43,8 @@ CBUSSettings::CBUSSettings(Object& _parent, std::string_view parentPropertyName)
   Attributes::addStep(dccAccessorySwitchTime, dccAccessorySwitchTimeStep);
   Attributes::addUnit(dccAccessorySwitchTime, Unit::milliSeconds);
   m_interfaceItems.add(dccAccessorySwitchTime);
+
+  m_interfaceItems.add(shortEventNodeNumber);
 
   m_interfaceItems.add(hubEnabled);
 
@@ -59,6 +62,7 @@ CBUS::Config CBUSSettings::config() const
   return CBUS::Config{
     .engineKeepAlive = std::chrono::seconds(engineKeepAlive),
     .dccAccessorySwitchTime = std::chrono::milliseconds(dccAccessorySwitchTime),
+    .shortEventNodeNumber = shortEventNodeNumber,
     .hubEnabled = hubEnabled,
     .hubLocalhostOnly = hubLocalhostOnly,
     .hubPort = hubPort,

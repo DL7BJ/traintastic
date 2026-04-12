@@ -628,11 +628,11 @@ void Kernel::setAccessoryShort(uint16_t deviceNumber, bool on)
     {
       if(on)
       {
-        send(AccessoryShortOn(Config::nodeId, deviceNumber));
+        send(AccessoryShortOn(m_config.shortEventNodeNumber, deviceNumber));
       }
       else
       {
-        send(AccessoryShortOff(Config::nodeId, deviceNumber));
+        send(AccessoryShortOff(m_config.shortEventNodeNumber, deviceNumber));
       }
     });
 }
@@ -1006,7 +1006,7 @@ void Kernel::requestShortEvent()
     nextState();
     return;
   }
-  send(AccessoryShortRequestEvent(Config::nodeId, m_initializationRequestShortEvents.back()));
+  send(AccessoryShortRequestEvent(m_config.shortEventNodeNumber, m_initializationRequestShortEvents.back()));
   restartInitializationTimer(requestShortEventTimeout);
 }
 

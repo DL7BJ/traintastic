@@ -352,6 +352,10 @@
         "definition": "Hub port"
     },
     {
+        "term": "cbus_settings:short_event_node_number",
+        "definition": "Node number for short events"
+    },
+    {
         "term": "class_id:board_tile.misc.label",
         "definition": "Label"
     },
