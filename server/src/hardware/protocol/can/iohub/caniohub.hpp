@@ -46,13 +46,14 @@ public:
   void send(const Message& message);
 
 protected:
-  IOHub(boost::asio::io_context& ioContext, std::string logId, uint16_t port);
+  IOHub(boost::asio::io_context& ioContext, std::string logId, bool localhostOnly, uint16_t port);
 
   virtual std::shared_ptr<IOHubConnection> newConnection(boost::asio::ip::tcp::socket socket) = 0;
 
 private:
   boost::asio::ip::tcp::acceptor m_acceptor;
   const std::string m_logId;
+  const bool m_localhostOnly;
   const uint16_t m_port;
   OnReceive m_onReceive;
   std::list<std::shared_ptr<IOHubConnection>> m_connections;

@@ -134,7 +134,7 @@ void Kernel::start()
 
         if(m_config.hubEnabled)
         {
-          m_hub = std::make_shared<IOHub>(m_ioContext, logId, m_config.hubPort);
+          m_hub = std::make_shared<IOHub>(m_ioContext, logId, m_config.hubLocalhostOnly, m_config.hubPort);
           m_hub->start(
             [this](const CAN::Message& message)
             {

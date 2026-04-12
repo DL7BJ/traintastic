@@ -29,7 +29,7 @@ namespace CBUS {
 class IOHub final : public CAN::IOHub
 {
 public:
-  IOHub(boost::asio::io_context& ioContext, std::string logId, uint16_t port);
+  IOHub(boost::asio::io_context& ioContext, std::string logId, bool localhostOnly, uint16_t port);
 
   IOHub(const IOHub&) = delete;
   IOHub& operator =(const IOHub&) = delete;

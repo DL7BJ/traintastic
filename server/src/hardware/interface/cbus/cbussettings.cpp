@@ -30,6 +30,7 @@ CBUSSettings::CBUSSettings(Object& _parent, std::string_view parentPropertyName)
   , engineKeepAlive{this, "engine_keep_alive", engineKeepAliveDefault, PropertyFlags::ReadWrite | PropertyFlags::Store}
   , dccAccessorySwitchTime{this, "dcc_accessory_switch_time", dccAccessorySwitchTimeDefault, PropertyFlags::ReadWrite | PropertyFlags::Store}
   , hubEnabled{this, "hub_enabled", false, PropertyFlags::ReadWrite | PropertyFlags::Store}
+  , hubLocalhostOnly{this, "hub_localhost_only", true, PropertyFlags::ReadWrite | PropertyFlags::Store}
   , hubPort{this, "hub_port", CBUS::defaultTCPPort, PropertyFlags::ReadWrite | PropertyFlags::Store}
   , debugLogRXTX{this, "debug_log_rx_tx", false, PropertyFlags::ReadWrite | PropertyFlags::Store}
 {
@@ -44,6 +45,8 @@ CBUSSettings::CBUSSettings(Object& _parent, std::string_view parentPropertyName)
 
   m_interfaceItems.add(hubEnabled);
 
+  m_interfaceItems.add(hubLocalhostOnly);
+
   m_interfaceItems.add(hubPort);
 
   Attributes::addDisplayName(debugLogRXTX, DisplayName::Hardware::debugLogRXTX);
@@ -57,6 +60,7 @@ CBUS::Config CBUSSettings::config() const
     .engineKeepAlive = std::chrono::seconds(engineKeepAlive),
     .dccAccessorySwitchTime = std::chrono::milliseconds(dccAccessorySwitchTime),
     .hubEnabled = hubEnabled,
+    .hubLocalhostOnly = hubLocalhostOnly,
     .hubPort = hubPort,
     .debugLogRXTX = debugLogRXTX,
   };

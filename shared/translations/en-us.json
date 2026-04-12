@@ -344,6 +344,10 @@
         "definition": "Hub enabled"
     },
     {
+        "term": "cbus_settings:hub_localhost_only",
+        "definition": "Hub localhost only"
+    },
+    {
         "term": "cbus_settings:hub_port",
         "definition": "Hub port"
     },

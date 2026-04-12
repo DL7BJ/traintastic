@@ -24,8 +24,8 @@
 
 namespace CBUS {
 
-IOHub::IOHub(boost::asio::io_context& ioContext, std::string logId, uint16_t port)
-  : CAN::IOHub(ioContext, std::move(logId), port)
+IOHub::IOHub(boost::asio::io_context& ioContext, std::string logId, bool localhostOnly, uint16_t port)
+  : CAN::IOHub(ioContext, std::move(logId), localhostOnly, port)
 {
 }
 

@@ -27,9 +27,10 @@
 
 namespace CAN {
 
-IOHub::IOHub(boost::asio::io_context& ioContext, std::string logId, uint16_t port)
+IOHub::IOHub(boost::asio::io_context& ioContext, std::string logId, bool localhostOnly, uint16_t port)
   : m_acceptor{ioContext}
   , m_logId{logId}
+  , m_localhostOnly{localhostOnly}
   , m_port{port}
 {
 }
@@ -44,7 +45,7 @@ void IOHub::start(OnReceive onReceive)
   assert(onReceive);
   m_onReceive = std::move(onReceive);
 
-  boost::asio::ip::tcp::endpoint endpoint(boost::asio::ip::address_v4::loopback(), m_port);
+  boost::asio::ip::tcp::endpoint endpoint(m_localhostOnly ? boost::asio::ip::address_v4::loopback() : boost::asio::ip::address_v4::any(), m_port);
 
   boost::system::error_code ec;
   m_acceptor.open(endpoint.protocol(), ec);
