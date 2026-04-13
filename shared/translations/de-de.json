@@ -121,7 +121,7 @@
     },
     {
         "term": "board_tile.rail.block:flip_train",
-        "definition": "Zug Wenden"
+        "definition": "Zug wenden"
     },
     {
         "term": "board_tile.rail.block:input_map",
@@ -164,8 +164,8 @@
         "definition": "Verkn\u00fcpfung"
     },
     {
-        "term": "board_tile.rail.sensor:input",
-        "definition": "Eingang"
+        "term": "board_tile.rail.nx_button:block",
+        "definition": "Blockabschnitt"
     },
     {
         "term": "board_tile.rail.sensor:invert",
@@ -200,8 +200,48 @@
         "definition": "Ausg\u00e4nge"
     },
     {
+        "term": "booster:current",
+        "definition": "Strom"
+    },
+    {
+        "term": "booster:input_voltage",
+        "definition": "Eingangsspannung"
+    },
+    {
+        "term": "booster:load",
+        "definition": "Last"
+    },
+    {
+        "term": "booster:temperature",
+        "definition": "Temperatur"
+    },
+    {
+        "term": "booster:type",
+        "definition": "Typ"
+    },
+    {
+        "term": "booster:voltage",
+        "definition": "Spannung"
+    },
+    {
+        "term": "booster_driver:poll_interval",
+        "definition": "Abfrage Intervall"
+    },
+    {
+        "term": "category:block",
+        "definition": "Blockabschnitt"
+    },
+    {
         "term": "category:cargo",
         "definition": "G\u00fcter"
+    },
+    {
+        "term": "category:colors",
+        "definition": "Farben"
+    },
+    {
+        "term": "category:colors_and_alignment",
+        "definition": "Farben und Ausrichtung"
     },
     {
         "term": "category:debug",
@@ -212,12 +252,20 @@
         "definition": "Entwickler"
     },
     {
+        "term": "category:features",
+        "definition": "Features"
+    },
+    {
         "term": "category:general",
         "definition": "Allgemein"
     },
     {
         "term": "category:info",
         "definition": "Infos"
+    },
+    {
+        "term": "category:input",
+        "definition": "Eingang"
     },
     {
         "term": "category:log",
@@ -232,8 +280,80 @@
         "definition": "Optionen"
     },
     {
+        "term": "category:status",
+        "definition": "Status"
+    },
+    {
         "term": "category:trains",
         "definition": "Z\u00fcge"
+    },
+    {
+        "term": "cbus_interface_type:socket_can",
+        "definition": "SocketCAN (nur Linux)"
+    },
+    {
+        "term": "cbus_node_list:manufacturer",
+        "definition": "Hersteller"
+    },
+    {
+        "term": "cbus_node_list:mode",
+        "definition": "Modus"
+    },
+    {
+        "term": "cbus_node_list:module",
+        "definition": "Modul"
+    },
+    {
+        "term": "cbus_node_list:node_number",
+        "definition": "Node Nummer"
+    },
+    {
+        "term": "cbus_node_list:type",
+        "definition": "Typ"
+    },
+    {
+        "term": "cbus_node_list:version",
+        "definition": "Version"
+    },
+    {
+        "term": "cbus_session_list:direction",
+        "definition": "Richtung"
+    },
+    {
+        "term": "cbus_session_list:long",
+        "definition": "Lang"
+    },
+    {
+        "term": "cbus_session_list:session",
+        "definition": "Sitzung"
+    },
+    {
+        "term": "cbus_session_list:speed",
+        "definition": "Geschwindigkeit"
+    },
+    {
+        "term": "cbus_settings:dcc_accessory_switch_time",
+        "definition": ""
+    },
+    {
+        "term": "cbus_settings:engine_keep_alive",
+        "definition": ""
+    },
+    {
+        "term": "cbus_settings:hub_enabled",
+        "definition": "Hub aktiviert"
+    },
+    {
+        "term": "cbus_settings:hub_localhost_only",
+        "definition": "Hub nur f\u00fcr localhost"
+    },
+    {
+        "term": "cbus_settings:hub_port",
+        "definition": "Hub port"
+    },
+    {
+        "term": "cbus_settings:short_event_node_number",
+        "definition": "Node Nummer f\u00fcr kurze Ereignisse "
     },
     {
         "term": "class_id:board_tile.misc.label",
@@ -285,7 +405,7 @@
     },
     {
         "term": "class_id:board_tile.rail.decoupler",
-        "definition": "Entkoppler"
+        "definition": "Entkuppler"
     },
     {
         "term": "class_id:board_tile.rail.direction_control",
@@ -298,14 +418,6 @@
     {
         "term": "class_id:board_tile.rail.nx_button",
         "definition": "NX-Taste"
-    },
-    {
-        "term": "class_id:board_tile.rail.nx_button:block",
-        "definition": "Block"
-    },
-    {
-        "term": "class_id:board_tile.rail.nx_button:input",
-        "definition": "Eingang"
     },
     {
         "term": "class_id:board_tile.rail.one_way",
@@ -517,7 +629,7 @@
     },
     {
         "term": "decoder:long_address",
-        "definition": "DCC-Langadresse"
+        "definition": "lange DCC-Adresse"
     },
     {
         "term": "decoder:protocol",
@@ -609,7 +721,7 @@
     },
     {
         "term": "default_name:block",
-        "definition": "Blockabschnitt"
+        "definition": "Block"
     },
     {
         "term": "default_name:board",
@@ -696,6 +808,14 @@
         "definition": "Welt ausschalten"
     },
     {
+        "term": "function:off",
+        "definition": "Aus"
+    },
+    {
+        "term": "function:on",
+        "definition": "Ein"
+    },
+    {
         "term": "hardware:address",
         "definition": "Adresse"
     },
@@ -704,12 +824,16 @@
         "definition": "Adressen"
     },
     {
+        "term": "hardware:boosters",
+        "definition": "Booster"
+    },
+    {
         "term": "hardware:channel",
         "definition": "Kanal"
     },
     {
         "term": "hardware:command_station",
-        "definition": "Befehls Zentrale"
+        "definition": "Zentrale"
     },
     {
         "term": "hardware:debug_log_input",
@@ -728,6 +852,14 @@
         "definition": "Dekoder"
     },
     {
+        "term": "hardware:event",
+        "definition": "Ereignis"
+    },
+    {
+        "term": "hardware:events",
+        "definition": "Ereignisse"
+    },
+    {
         "term": "hardware:identifications",
         "definition": "Kennzeichnungen"
     },
@@ -744,8 +876,12 @@
         "definition": "Schnittstelle"
     },
     {
+        "term": "hardware:node",
+        "definition": "Node"
+    },
+    {
         "term": "hardware:output_keyboard",
-        "definition": "Ausgang Tastatur"
+        "definition": "Ausg\u00e4nge Tastatur"
     },
     {
         "term": "hardware:outputs",
@@ -757,19 +893,7 @@
     },
     {
         "term": "hardware:throttles",
-        "definition": "Drosseln"
-    },
-    {
-        "term": "hsi88:s88_left",
-        "definition": "S88 Links"
-    },
-    {
-        "term": "hsi88:s88_middle",
-        "definition": "S88 Mitte"
-    },
-    {
-        "term": "hsi88:s88_right",
-        "definition": "S88 Rechts"
+        "definition": "Fahrregler"
     },
     {
         "term": "identification:opc_multi_sense_direction",
@@ -777,11 +901,31 @@
     },
     {
         "term": "input:off_delay",
-        "definition": "Aus Verz\u00fcgerung"
+        "definition": "Ausschaltverz\u00f6gerung"
     },
     {
         "term": "input:on_delay",
-        "definition": "An Verz\u00fcgerung"
+        "definition": "Einschaltverz\u00f6gerung"
+    },
+    {
+        "term": "input_channel:long_event",
+        "definition": "langes Ereignis"
+    },
+    {
+        "term": "input_channel:s88_left",
+        "definition": "S88 Links"
+    },
+    {
+        "term": "input_channel:s88_middle",
+        "definition": "S88 Mitte"
+    },
+    {
+        "term": "input_channel:s88_right",
+        "definition": "S88 Rechts"
+    },
+    {
+        "term": "input_channel:short_event",
+        "definition": "kurzes Ereignis"
     },
     {
         "term": "input_list:bus",
@@ -793,7 +937,7 @@
     },
     {
         "term": "input_map_item.block:input",
-        "definition": "Eing\u00e4ng"
+        "definition": "Eingang"
     },
     {
         "term": "input_map_item.block:invert",
@@ -802,6 +946,14 @@
     {
         "term": "input_map_item.block:type",
         "definition": "Typ"
+    },
+    {
+        "term": "interface.cbus:cbus_node_list",
+        "definition": "Nodes"
+    },
+    {
+        "term": "interface.cbus:cbus_session_list",
+        "definition": "Sitzungen"
     },
     {
         "term": "interface.ecos:ecos_detector",
@@ -929,7 +1081,7 @@
     },
     {
         "term": "language:pl-pl",
-        "definition": "Polnische"
+        "definition": "Polnisch"
     },
     {
         "term": "language:sv-se",
@@ -1073,7 +1225,7 @@
     },
     {
         "term": "loconet_settings:command_station",
-        "definition": "Befehlszentrale"
+        "definition": "Zentrale"
     },
     {
         "term": "loconet_settings:echo_timeout",
@@ -1097,7 +1249,7 @@
     },
     {
         "term": "loconet_settings:locomotive_slots",
-        "definition": "Lokomotiv-Stellen"
+        "definition": "Lokomotiv Slot"
     },
     {
         "term": "loconet_settings:pcap_output",
@@ -1289,7 +1441,7 @@
     },
     {
         "term": "message:C2004",
-        "definition": "Kann keine freie Stelle bekommen"
+        "definition": "Kann keinen freien Slot bekommen"
     },
     {
         "term": "message:C2005",
@@ -1389,11 +1541,11 @@
     },
     {
         "term": "message:D3024",
-        "definition": "Zug \"%1\" verlies Bereich \"%2\""
+        "definition": "Zug '%1' hat Bereich '%2' verlassen"
     },
     {
         "term": "message:D3025",
-        "definition": "Zug \"%1\" aus Bereich \"%2\" entfernt"
+        "definition": "Zug '%1' aus Bereich '%2' entfernt"
     },
     {
         "term": "message:E1001",
@@ -1524,6 +1676,30 @@
         "definition": "Unbekannte Lokomotive MFX UID: %1"
     },
     {
+        "term": "message:E2025",
+        "definition": "Lesen der Softwareversion von Booster '%1' fehlgeschlagen: %2"
+    },
+    {
+        "term": "message:E2026",
+        "definition": "Lesen der Temperatur von Booster '%1' fehlgeschlagen: %2"
+    },
+    {
+        "term": "message:E2027",
+        "definition": "Lesen der Last von Booster '%1' fehlgeschlagen: %2"
+    },
+    {
+        "term": "message:E2028",
+        "definition": "Socket setsockopt failed (%1)"
+    },
+    {
+        "term": "message:E2029",
+        "definition": "TCP accept error (%1)"
+    },
+    {
+        "term": "message:E2030",
+        "definition": "TCP socket listen fehlgeschlagen (%1)"
+    },
+    {
         "term": "message:E3001",
         "definition": "Schienenfahrzeug kann nicht gel\u00f6scht werden, w\u00e4hrend es sich in einem aktiven Zug befindet"
     },
@@ -1638,6 +1814,14 @@
     {
         "term": "message:I2003",
         "definition": "Firmware-Version: %1"
+    },
+    {
+        "term": "message:I2006",
+        "definition": "Booster '%1' Software Version: %2"
+    },
+    {
+        "term": "message:I2007",
+        "definition": "Neue Hub Verbindung (%1:%2)"
     },
     {
         "term": "message:I3001",
@@ -1796,6 +1980,10 @@
         "definition": "Nur-Mith\u00f6ren-Modus: Deaktiviert"
     },
     {
+        "term": "message:N2008",
+        "definition": "Hub h\u00f6rt auf IP %1 und Port %2"
+    },
+    {
         "term": "message:N3001",
         "definition": "Zug %1 wurde dem Block %2 zugewiesen"
     },
@@ -1880,6 +2068,14 @@
         "definition": "DCCext (RCN-213) wird nicht unterst\u00fctzt"
     },
     {
+        "term": "message:W2026",
+        "definition": "Lesen der Temperatur von Booster '%1' fehlgeschlagen: %2"
+    },
+    {
+        "term": "message:W2027",
+        "definition": "Lesen der Last von Booster '%1' fehlgeschlagen: %2"
+    },
+    {
         "term": "message:W3001",
         "definition": "NX-Taste mit zwei Bl\u00f6cken verbunden"
     },
@@ -1960,8 +2156,16 @@
         "definition": "ECoS-Objekt"
     },
     {
+        "term": "output_channel:long_event",
+        "definition": "langes Ereignis"
+    },
+    {
         "term": "output_channel:output",
         "definition": "Ausgang"
+    },
+    {
+        "term": "output_channel:short_event",
+        "definition": "kurzes Ereignis"
     },
     {
         "term": "output_channel:turnout",
@@ -1992,6 +2196,10 @@
         "definition": "Adresse hinzuf\u00fcgen"
     },
     {
+        "term": "output_map:add_event",
+        "definition": "Ereignis hinzuf\u00fcgen"
+    },
+    {
         "term": "output_map:address_x",
         "definition": "Adresse %1"
     },
@@ -2002,6 +2210,10 @@
     {
         "term": "output_map:remove_address",
         "definition": "Adresse entfernen"
+    },
+    {
+        "term": "output_map:remove_event",
+        "definition": "Ereignis entfernen"
     },
     {
         "term": "output_map:swap_outputs",
@@ -2640,8 +2852,16 @@
         "definition": "Stehlen"
     },
     {
+        "term": "throttle.stop",
+        "definition": "Stopp"
+    },
+    {
         "term": "throttle_object_list:throttle",
         "definition": "Drossel"
+    },
+    {
+        "term": "train:acceleration_rate",
+        "definition": "Beschleunigungszeit"
     },
     {
         "term": "train:active",
@@ -2650,6 +2870,10 @@
     {
         "term": "train:block",
         "definition": "Block"
+    },
+    {
+        "term": "train:braking_rate",
+        "definition": "Bremsverz\u00f6gerung"
     },
     {
         "term": "train:length",
@@ -3145,7 +3369,11 @@
     },
     {
         "term": "world:ext_output_change_action",
-        "definition": " Aktion bei externer Ausgangs\u00e4nderung"
+        "definition": "Aktion bei externer Ausgangs\u00e4nderung"
+    },
+    {
+        "term": "world:feature_scripting",
+        "definition": "Scripting"
     },
     {
         "term": "world:inputs",
