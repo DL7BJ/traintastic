@@ -201,6 +201,7 @@ file(GLOB SOURCES
   "src/zone/*.hpp"
   "src/zone/*.cpp"
   "../shared/src/traintastic/locale/locale.cpp"
+  "../shared/src/traintastic/os/systeminfo.cpp"
   "../shared/src/traintastic/utils/standardpaths.cpp")
 
 file(GLOB TEST_SOURCES

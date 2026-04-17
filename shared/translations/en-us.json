@@ -2304,6 +2304,30 @@
         "definition": "Username"
     },
     {
+        "term": "qtapp.dialog:cancel",
+        "definition": "Cancel"
+    },
+    {
+        "term": "qtapp.diagnostic_report_dialog:create_report",
+        "definition": "Create report"
+    },
+    {
+        "term": "qtapp.diagnostic_report_dialog:explanation",
+        "definition": "This will generate a diagnostic report to help troubleshoot issues with Traintastic.\n\nThe report will include:\n\u2022 Basic client and server information (app version and operating system)\n\u2022 A screenshot of the client application window\n\u2022 The server log\n\u2022 An export of your world\n\nAll data will be saved into a Zip file on your computer. You can review its contents before sharing it with others (for example on the Traintastic forum).\n\nNo data is sent automatically."
+    },
+    {
+        "term": "qtapp.diagnostic_report_dialog:window_title",
+        "definition": "Create diagnostic report"
+    },
+    {
+        "term": "qtapp.diagnostic_report_dialog:save_diagnostic_report",
+        "definition": "Save diagnostic report"
+    },
+    {
+        "term": "qtapp.diagnostic_report_dialog:zip_file",
+        "definition": "Zip file"
+    },
+    {
         "term": "qtapp.error:cant_read_from_file_x",
         "definition": "Can't read from file: %1"
     },
@@ -2338,6 +2362,10 @@
     {
         "term": "qtapp.mainmenu:connection",
         "definition": "Connection"
+    },
+    {
+        "term": "qtapp.mainmenu:diagnostic_report",
+        "definition": "Diagnostic report"
     },
     {
         "term": "qtapp.mainmenu:disconnect_from_server",

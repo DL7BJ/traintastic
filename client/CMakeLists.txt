@@ -88,6 +88,7 @@ file(GLOB SOURCES
   "src/wizard/page/*.hpp"
   "src/wizard/page/*.cpp"
   "../shared/src/traintastic/locale/locale.cpp"
+  "../shared/src/traintastic/os/systeminfo.cpp"
   "../shared/src/traintastic/utils/standardpaths.cpp"
   "thirdparty/QtWaitingSpinner/*.hpp"
   "thirdparty/QtWaitingSpinner/*.cpp")
@@ -106,6 +107,10 @@ target_link_libraries(traintastic-client PRIVATE Qt${QT_VERSION_MAJOR}::Core Qt$
 if(QT_VERSION_MAJOR GREATER 5)
   target_link_libraries(traintastic-client PRIVATE Qt${QT_VERSION_MAJOR}::SvgWidgets)
 endif()
+
+# libarchive
+find_package(LibArchive REQUIRED)
+target_link_libraries(traintastic-client PRIVATE LibArchive::LibArchive)
 
 ### PLATFORM ###
 
