@@ -13,7 +13,7 @@
     },
     {
         "term": "block_state:free",
-        "definition": "Fri"
+        "definition": "Ledig"
     },
     {
         "term": "block_state:occupied",
@@ -293,7 +293,7 @@
     },
     {
         "term": "cbus_node_list:manufacturer",
-        "definition": "Producent"
+        "definition": "Fabrikant"
     },
     {
         "term": "cbus_node_list:mode",
@@ -337,7 +337,7 @@
     },
     {
         "term": "cbus_settings:engine_keep_alive",
-        "definition": ""
+        "definition": "Engine keep alive"
     },
     {
         "term": "cbus_settings:hub_enabled",
@@ -345,7 +345,7 @@
     },
     {
         "term": "cbus_settings:hub_localhost_only",
-        "definition": "Hub kun localhost"
+        "definition": "Hub p\u00e5 kun localhost"
     },
     {
         "term": "cbus_settings:hub_port",
@@ -409,7 +409,7 @@
     },
     {
         "term": "class_id:board_tile.rail.direction_control",
-        "definition": "Direkte styring"
+        "definition": "Retningsstyring"
     },
     {
         "term": "class_id:board_tile.rail.link",
@@ -417,7 +417,7 @@
     },
     {
         "term": "class_id:board_tile.rail.nx_button",
-        "definition": "NX knap"
+        "definition": "NX-knap"
     },
     {
         "term": "class_id:board_tile.rail.one_way",
@@ -429,11 +429,11 @@
     },
     {
         "term": "class_id:board_tile.rail.signal_2_aspect",
-        "definition": ""
+        "definition": "Signal (2 stillinger)"
     },
     {
         "term": "class_id:board_tile.rail.signal_3_aspect",
-        "definition": ""
+        "definition": "Signal (3 stillinger)"
     },
     {
         "term": "class_id:board_tile.rail.straight",
@@ -477,11 +477,11 @@
     },
     {
         "term": "class_id:board_tile.rail.turnout_singleslip",
-        "definition": ""
+        "definition": "Kryds"
     },
     {
         "term": "class_id:board_tile.rail.turnout_wye",
-        "definition": ""
+        "definition": "Y-sporskifte"
     },
     {
         "term": "class_id:vehicle.rail.freight_wagon",
@@ -493,7 +493,7 @@
     },
     {
         "term": "class_id:vehicle.rail.multiple_unit",
-        "definition": ""
+        "definition": "Togs\u00e6t"
     },
     {
         "term": "class_id:vehicle.rail.tank_wagon",
@@ -725,7 +725,7 @@
     },
     {
         "term": "default_name:board",
-        "definition": "Anl\u00e6g"
+        "definition": "Sporplan"
     },
     {
         "term": "default_name:decoupler",
@@ -741,7 +741,7 @@
     },
     {
         "term": "default_name:nx_button",
-        "definition": "NX knap"
+        "definition": "NX-knap"
     },
     {
         "term": "default_name:push_button",
@@ -749,7 +749,7 @@
     },
     {
         "term": "default_name:script",
-        "definition": ""
+        "definition": "Script"
     },
     {
         "term": "default_name:sensor",
@@ -949,7 +949,7 @@
     },
     {
         "term": "interface.cbus:cbus_node_list",
-        "definition": "Noder"
+        "definition": "Enheder"
     },
     {
         "term": "interface.cbus:cbus_session_list",
@@ -1050,6 +1050,10 @@
     {
         "term": "ip:port",
         "definition": "Port"
+    },
+    {
+        "term": "language:da-dk",
+        "definition": "Dansk"
     },
     {
         "term": "language:de-de",
@@ -1249,7 +1253,7 @@
     },
     {
         "term": "loconet_settings:locomotive_slots",
-        "definition": ""
+        "definition": "Lomotivpladser"
     },
     {
         "term": "loconet_settings:pcap_output",
@@ -1309,7 +1313,7 @@
     },
     {
         "term": "luadoc:index:title",
-        "definition": ""
+        "definition": "Traintastic Lua scripting"
     },
     {
         "term": "marklin_can_interface_type:network_tcp",
@@ -1329,7 +1333,7 @@
     },
     {
         "term": "marklin_can_locomotive_list:import_or_sync_all",
-        "definition": "Import/Synkronisere alle"
+        "definition": "Import/Synkronisere alt"
     },
     {
         "term": "marklin_can_locomotive_list:reload",
@@ -1337,15 +1341,15 @@
     },
     {
         "term": "marklincan_settings:debug_config_stream",
-        "definition": ""
+        "definition": "Debug: Config stream"
     },
     {
         "term": "marklincan_settings:debug_status_data_config",
-        "definition": ""
+        "definition": "Debug: Status data config"
     },
     {
         "term": "marklincan_settings:default_switch_time",
-        "definition": ""
+        "definition": "Skiftetid"
     },
     {
         "term": "marklincan_settings:node_serial_number",
@@ -1357,7 +1361,7 @@
     },
     {
         "term": "message:C1001",
-        "definition": ""
+        "definition": "Indl\u00e6sning af anl\u00e6gget fejlede (%1)"
     },
     {
         "term": "message:C1002",
@@ -1369,43 +1373,43 @@
     },
     {
         "term": "message:C1004",
-        "definition": ""
+        "definition": "Fejl i indl\u00e6sning af anl\u00e6g  (%1) (%2)"
     },
     {
         "term": "message:C1005",
-        "definition": ""
+        "definition": "Kunne ikke gemme anl\u00e6gget (%1)"
     },
     {
         "term": "message:C1006",
-        "definition": ""
+        "definition": "Sikkerhedskopiering af anl\u00e6gget fejlede (%1)"
     },
     {
         "term": "message:C1007",
-        "definition": ""
+        "definition": "Oprettelse af bibliotek til sikkerhedskopi af anl\u00e6gget fejlede (%1)"
     },
     {
         "term": "message:C1008",
-        "definition": ""
+        "definition": "Oprettelse af bibliotek til sikkerhedskopi fejlede (%1)"
     },
     {
         "term": "message:C1009",
-        "definition": ""
+        "definition": "Backup af indstillinger fejlede (%1)"
     },
     {
         "term": "message:C1010",
-        "definition": ""
+        "definition": "Eksport af anl\u00e6gget fejlede (%1)"
     },
     {
         "term": "message:C1011",
-        "definition": ""
+        "definition": "Import af anl\u00e6gget fejlede (%1)"
     },
     {
         "term": "message:C1012",
-        "definition": ""
+        "definition": "Ukendt klasse '%1', kan ikke genskabe objekt '%2'"
     },
     {
         "term": "message:C1013",
-        "definition": ""
+        "definition": "Kan ikke indl\u00e6se anl\u00e6g gemt med nyere versioner, det kr\u00e6ver minimum: %1"
     },
     {
         "term": "message:C1014",
@@ -1425,7 +1429,7 @@
     },
     {
         "term": "message:C1018",
-        "definition": ""
+        "definition": "Undtagelse: %1"
     },
     {
         "term": "message:C1019",
@@ -1441,7 +1445,7 @@
     },
     {
         "term": "message:C2004",
-        "definition": "Ingen frie pladser"
+        "definition": "Ingen ledige pladser"
     },
     {
         "term": "message:C2005",
@@ -1453,7 +1457,7 @@
     },
     {
         "term": "message:D1002",
-        "definition": ""
+        "definition": "Tick %1 (fejl: %2us)"
     },
     {
         "term": "message:D1003",
@@ -1493,15 +1497,15 @@
     },
     {
         "term": "message:D2009",
-        "definition": ""
+        "definition": "Plads %1 = %2"
     },
     {
         "term": "message:D2010",
-        "definition": ""
+        "definition": "Plads %1 = Ledig"
     },
     {
         "term": "message:D3001",
-        "definition": ""
+        "definition": "Erhvervelse af tog %1 fejlede: %2"
     },
     {
         "term": "message:D3010",
@@ -1509,7 +1513,7 @@
     },
     {
         "term": "message:D3011",
-        "definition": ""
+        "definition": "Tog '%1' reserverede afsnit '%2'"
     },
     {
         "term": "message:D3012",
@@ -1529,31 +1533,31 @@
     },
     {
         "term": "message:D3021",
-        "definition": ""
+        "definition": "Tog '%1' ankommer i zone '%2'"
     },
     {
         "term": "message:D3022",
-        "definition": ""
+        "definition": "Tog '%1' ankom i zone '%2'"
     },
     {
         "term": "message:D3023",
-        "definition": ""
+        "definition": "Tog '%1' forlader zone '%2'"
     },
     {
         "term": "message:D3024",
-        "definition": ""
+        "definition": "Tog '%1' forlod zone '%2'"
     },
     {
         "term": "message:D3025",
-        "definition": ""
+        "definition": "Tog '%1' fjernet fra zone '%2'"
     },
     {
         "term": "message:E1001",
-        "definition": ""
+        "definition": "Ugyldigt anl\u00e6gs-UUID: %1"
     },
     {
         "term": "message:E1002",
-        "definition": ""
+        "definition": "Anl\u00e6gget %1 eksisterer ikke"
     },
     {
         "term": "message:E1003",
@@ -1565,19 +1569,19 @@
     },
     {
         "term": "message:E1005",
-        "definition": ""
+        "definition": "Socket nedlukning fejlede (%1)"
     },
     {
         "term": "message:E1006",
-        "definition": ""
+        "definition": "Socket skrivefejl (%1)"
     },
     {
         "term": "message:E1007",
-        "definition": ""
+        "definition": "Socket l\u00e6sefejl (%1)"
     },
     {
         "term": "message:E1008",
-        "definition": ""
+        "definition": "Socket acceptor cancel fejlede (%1)"
     },
     {
         "term": "message:E2001",
@@ -1593,35 +1597,35 @@
     },
     {
         "term": "message:E2004",
-        "definition": ""
+        "definition": "Socket \u00e5bning fejlede (%1)"
     },
     {
         "term": "message:E2005",
-        "definition": ""
+        "definition": "Socket-forbindelse fejlede (%1)"
     },
     {
         "term": "message:E2006",
-        "definition": ""
+        "definition": "Socket bindingsfejl (%1)"
     },
     {
         "term": "message:E2007",
-        "definition": ""
+        "definition": "Socket skrivefejl (%1)"
     },
     {
         "term": "message:E2008",
-        "definition": ""
+        "definition": "Socket l\u00e6sefejl (%1)"
     },
     {
         "term": "message:E2009",
-        "definition": ""
+        "definition": "Socket modtagelsesfejl (%1)"
     },
     {
         "term": "message:E2010",
-        "definition": ""
+        "definition": "\u00c5bning af serielport fejlede (%1)"
     },
     {
         "term": "message:E2011",
-        "definition": ""
+        "definition": "Socket afsendingsfejl (%1)"
     },
     {
         "term": "message:E2012",
@@ -1629,23 +1633,23 @@
     },
     {
         "term": "message:E2013",
-        "definition": ""
+        "definition": "Serielport baudratefejl (%1)"
     },
     {
         "term": "message:E2014",
-        "definition": ""
+        "definition": "Serielport databitsfejl (%1)"
     },
     {
         "term": "message:E2015",
-        "definition": ""
+        "definition": "Serielport stopbitsfejl (%1)"
     },
     {
         "term": "message:E2016",
-        "definition": ""
+        "definition": "Serielport paritetsfejl (%1)"
     },
     {
         "term": "message:E2017",
-        "definition": ""
+        "definition": "Serielport flow control-fejl (%1)"
     },
     {
         "term": "message:E2018",
@@ -1665,11 +1669,11 @@
     },
     {
         "term": "message:E2022",
-        "definition": "Oprettelse af socket fejlede (%1)"
+        "definition": "Socket oprettelsesfejl (%1)"
     },
     {
         "term": "message:E2023",
-        "definition": "Socket ioctl fejlede (%1)"
+        "definition": "Socket ioctl-fejl (%1)"
     },
     {
         "term": "message:E2024",
@@ -1677,27 +1681,27 @@
     },
     {
         "term": "message:E2025",
-        "definition": "Indl\u00e6sning af booster '%1' softwareversion fejlede: %2"
+        "definition": "Fejl i afl\u00e6sning af booster '%1's softwareversion: %2"
     },
     {
         "term": "message:E2026",
-        "definition": ""
+        "definition": "Fejl i afl\u00e6sning af booster '%1's temperatur: %2"
     },
     {
         "term": "message:E2027",
-        "definition": ""
+        "definition": "Fejl i afl\u00e6sning af booster %1's belastning: %2"
     },
     {
         "term": "message:E2028",
-        "definition": ""
+        "definition": "Socket setsockopt-fejl (%1)"
     },
     {
         "term": "message:E2029",
-        "definition": ""
+        "definition": "Fejl i TCP accept (%1)"
     },
     {
         "term": "message:E2030",
-        "definition": ""
+        "definition": "TCP socket lyttefejl (%1)"
     },
     {
         "term": "message:E3001",
@@ -1729,71 +1733,71 @@
     },
     {
         "term": "message:E3008",
-        "definition": ""
+        "definition": "N\u00f8dstop blev aktiveret fordi signal %1s stilling blev \u00e6ndret udefra"
     },
     {
         "term": "message:E3009",
-        "definition": ""
+        "definition": "N\u00f8dstop blev aktiveret fordi sporskiftet %1s stilling blev \u00e6ndret udefra"
     },
     {
         "term": "message:E3010",
-        "definition": ""
+        "definition": "N\u00f8dstop blev aktiveret fordi signal %1s stilling blev \u00e6ndret udefra"
     },
     {
         "term": "message:E9001",
-        "definition": ""
+        "definition": "%1 (Under k\u00f8rsel af %2 h\u00e6ndelsen)"
     },
     {
         "term": "message:F1001",
-        "definition": ""
+        "definition": "TCP socket \u00e5bningsfejl (%1)"
     },
     {
         "term": "message:F1002",
-        "definition": ""
+        "definition": "TCP socket adressegenbrug fejlede (%1)"
     },
     {
         "term": "message:F1003",
-        "definition": ""
+        "definition": "TCP socket bindingsfejl (%1)"
     },
     {
         "term": "message:F1004",
-        "definition": ""
+        "definition": "TCP socket lyttefejl (%1)"
     },
     {
         "term": "message:F1005",
-        "definition": ""
+        "definition": "UDP socket \u00e5bningsfejl (%1)"
     },
     {
         "term": "message:F1006",
-        "definition": ""
+        "definition": "UDP socket adressegenbrug fejlede (%1)"
     },
     {
         "term": "message:F1007",
-        "definition": ""
+        "definition": "UDP socket bindingsfejl (%1)"
     },
     {
         "term": "message:F1008",
-        "definition": ""
+        "definition": "H\u00e6ndelsescyklus br\u00f8d sammen (%1)"
     },
     {
         "term": "message:F9001",
-        "definition": ""
+        "definition": "Lua-tilstand fejlede"
     },
     {
         "term": "message:F9002",
-        "definition": ""
+        "definition": "Scriptk\u00f8rsel fejlede (%1)"
     },
     {
         "term": "message:F9003",
-        "definition": ""
+        "definition": "Funktionskald fejlede (%1)"
     },
     {
         "term": "message:I1002",
-        "definition": ""
+        "definition": "Indstillingsfil ikke fundet, anvender standardv\u00e6rdier"
     },
     {
         "term": "message:I1003",
-        "definition": ""
+        "definition": "Ny forbindelse"
     },
     {
         "term": "message:I1004",
@@ -1801,7 +1805,7 @@
     },
     {
         "term": "message:I1005",
-        "definition": ""
+        "definition": "Opbygger anl\u00e6ggets indeks"
     },
     {
         "term": "message:I2001",
@@ -1841,11 +1845,11 @@
     },
     {
         "term": "message:N1001",
-        "definition": ""
+        "definition": "Signal modtaget: %1"
     },
     {
         "term": "message:N1002",
-        "definition": ""
+        "definition": "Nyt anl\u00e6g oprettet"
     },
     {
         "term": "message:N1003",
@@ -1857,11 +1861,11 @@
     },
     {
         "term": "message:N1005",
-        "definition": ""
+        "definition": "Synlig"
     },
     {
         "term": "message:N1006",
-        "definition": ""
+        "definition": "Usynlig"
     },
     {
         "term": "message:N1007",
@@ -1925,7 +1929,7 @@
     },
     {
         "term": "message:N1022",
-        "definition": ""
+        "definition": "Anl\u00e6g gemt: %1"
     },
     {
         "term": "message:N1023",
@@ -1937,19 +1941,19 @@
     },
     {
         "term": "message:N1025",
-        "definition": ""
+        "definition": "Anl\u00e6g eksporteret"
     },
     {
         "term": "message:N1026",
-        "definition": ""
+        "definition": "Anl\u00e6g importeret"
     },
     {
         "term": "message:N1027",
-        "definition": ""
+        "definition": "Anl\u00e6g indl\u00e6st: %1"
     },
     {
         "term": "message:N1028",
-        "definition": ""
+        "definition": "Anl\u00e6g lukket"
     },
     {
         "term": "message:N2001",
@@ -1969,7 +1973,7 @@
     },
     {
         "term": "message:N2005",
-        "definition": ""
+        "definition": "Starter PCAP log: %1"
     },
     {
         "term": "message:N2006",
@@ -2013,7 +2017,7 @@
     },
     {
         "term": "message:W1001",
-        "definition": ""
+        "definition": "Synlighed deaktiveret, kun tilladt p\u00e5 port %1"
     },
     {
         "term": "message:W1002",
@@ -2049,7 +2053,7 @@
     },
     {
         "term": "message:W2006",
-        "definition": ""
+        "definition": "Centralen underst\u00f8tter ikke lokomotivplads %1"
     },
     {
         "term": "message:W2007",
@@ -2069,19 +2073,19 @@
     },
     {
         "term": "message:W2026",
-        "definition": "Afl\u00e6sning af booster '%1's temperatur fejlede: %2"
+        "definition": "Fejl i afl\u00e6sning af booster '%1's temperatur: %2"
     },
     {
         "term": "message:W2027",
-        "definition": "Afl\u00e6sning af booster '%1's belastning fejlede: %2"
+        "definition": "Fejl i afl\u00e6sning af booster %1's belastning: %2"
     },
     {
         "term": "message:W3001",
-        "definition": "NX knap forbundet til to afsnit"
+        "definition": "NX-knap forbundet til to afsnit"
     },
     {
         "term": "message:W3002",
-        "definition": "NX knap ikke forbundet til et afsnit"
+        "definition": "NX-knap ikke forbundet til et afsnit"
     },
     {
         "term": "message:W3003",
@@ -2093,7 +2097,7 @@
     },
     {
         "term": "message:W9001",
-        "definition": ""
+        "definition": "K\u00f8rslen tog %1 us"
     },
     {
         "term": "object:id",
@@ -2113,7 +2117,7 @@
     },
     {
         "term": "opc_multi_sense_direction:in_transponder_address",
-        "definition": ""
+        "definition": "I transponderadresse (Bl\u00fccher GBM16XN)"
     },
     {
         "term": "opc_multi_sense_direction:none",
@@ -2181,7 +2185,7 @@
     },
     {
         "term": "output_map.signal:key",
-        "definition": ""
+        "definition": "Stilling"
     },
     {
         "term": "output_map.switch:key",
@@ -2285,7 +2289,7 @@
     },
     {
         "term": "qtapp.connect_dialog:fetching_world",
-        "definition": ""
+        "definition": "Henter anl\u00e6g"
     },
     {
         "term": "qtapp.connect_dialog:password",
@@ -2301,15 +2305,15 @@
     },
     {
         "term": "qtapp.error:cant_read_from_file_x",
-        "definition": ""
+        "definition": "Kan ikke indl\u00e6se filen: %1"
     },
     {
         "term": "qtapp.error:cant_write_to_file_x",
-        "definition": ""
+        "definition": "Kan ikke skrive til filen: %1"
     },
     {
         "term": "qtapp.error:server_error_x",
-        "definition": ""
+        "definition": "Serverfejl %1"
     },
     {
         "term": "qtapp.mainmenu:about",
@@ -2321,11 +2325,11 @@
     },
     {
         "term": "qtapp.mainmenu:close_world",
-        "definition": ""
+        "definition": "Luk anl\u00e6gget"
     },
     {
         "term": "qtapp.mainmenu:community_forum",
-        "definition": ""
+        "definition": "F\u00e6llesskabsforum"
     },
     {
         "term": "qtapp.mainmenu:connect_to_server",
@@ -2341,7 +2345,7 @@
     },
     {
         "term": "qtapp.mainmenu:export_world",
-        "definition": ""
+        "definition": "Eksport\u00e9r anl\u00e6g"
     },
     {
         "term": "qtapp.mainmenu:file",
@@ -2361,15 +2365,15 @@
     },
     {
         "term": "qtapp.mainmenu:import_world",
-        "definition": ""
+        "definition": "Import\u00e9r anl\u00e6g"
     },
     {
         "term": "qtapp.mainmenu:load_world",
-        "definition": ""
+        "definition": "Indl\u00e6s anl\u00e6g"
     },
     {
         "term": "qtapp.mainmenu:new_world",
-        "definition": ""
+        "definition": "Nyt anl\u00e6g"
     },
     {
         "term": "qtapp.mainmenu:objects",
@@ -2397,7 +2401,7 @@
     },
     {
         "term": "qtapp.mainmenu:save_world",
-        "definition": ""
+        "definition": "Gem anl\u00e6g"
     },
     {
         "term": "qtapp.mainmenu:server",
@@ -2441,11 +2445,11 @@
     },
     {
         "term": "qtapp.mainmenu:world",
-        "definition": ""
+        "definition": "Anl\u00e6g"
     },
     {
         "term": "qtapp.mainmenu:world_properties",
-        "definition": ""
+        "definition": "Anl\u00e6ggets egenskaber"
     },
     {
         "term": "qtapp.message_box:no",
@@ -2489,7 +2493,7 @@
     },
     {
         "term": "qtapp.settings.developer:dont_load_fallback_language",
-        "definition": ""
+        "definition": "anvend ikke standardsproget"
     },
     {
         "term": "qtapp.settings.developer:log_missing_strings",
@@ -2501,7 +2505,7 @@
     },
     {
         "term": "qtapp.settings.general:connect_automatically_to_discovered_server",
-        "definition": ""
+        "definition": "Forbind automatisk til synlig server"
     },
     {
         "term": "qtapp.settings.general:language",
@@ -2521,7 +2525,7 @@
     },
     {
         "term": "qtapp.settings:board",
-        "definition": "Anl\u00e6g"
+        "definition": "Sporplan"
     },
     {
         "term": "qtapp.settings:developer",
@@ -2553,15 +2557,15 @@
     },
     {
         "term": "qtapp.world_list_dialog:world_list",
-        "definition": ""
+        "definition": "Anl\u00e6gsliste"
     },
     {
         "term": "qtapp:board_properties",
-        "definition": "Anl\u00e6gsegenskaber"
+        "definition": "Sporplansegenskaber"
     },
     {
         "term": "qtapp:export_world_failed",
-        "definition": ""
+        "definition": "Eksport af anl\u00e6gget fejlede"
     },
     {
         "term": "qtapp:grid",
@@ -2569,7 +2573,7 @@
     },
     {
         "term": "qtapp:import_world_failed",
-        "definition": ""
+        "definition": "Import af anl\u00e6gget fejlede"
     },
     {
         "term": "qtapp:next",
@@ -2581,23 +2585,23 @@
     },
     {
         "term": "qtapp:toggle_mute",
-        "definition": ""
+        "definition": "Skift lydl\u00f8stilstand"
     },
     {
         "term": "qtapp:toggle_offline_online",
-        "definition": ""
+        "definition": "Skift forbindelsestilstand"
     },
     {
         "term": "qtapp:toggle_power",
-        "definition": ""
+        "definition": "Skift str\u00f8mtilstand"
     },
     {
         "term": "qtapp:toggle_smoke",
-        "definition": ""
+        "definition": "Skiftr\u00f8gtilstand"
     },
     {
         "term": "qtapp:traintastic_world",
-        "definition": ""
+        "definition": "Traintastic anl\u00e6g"
     },
     {
         "term": "qtapp:zoom_in",
@@ -2613,7 +2617,7 @@
     },
     {
         "term": "sensor_state:free",
-        "definition": "Fri"
+        "definition": "Ledig"
     },
     {
         "term": "sensor_state:occupied",
@@ -2641,7 +2645,7 @@
     },
     {
         "term": "serial:flow_control",
-        "definition": ""
+        "definition": "Flow control"
     },
     {
         "term": "serial:port",
@@ -2657,7 +2661,7 @@
     },
     {
         "term": "server_log:code",
-        "definition": ""
+        "definition": "Kode"
     },
     {
         "term": "server_log:message",
@@ -2685,15 +2689,15 @@
     },
     {
         "term": "settings:discoverable",
-        "definition": ""
+        "definition": "Synlig"
     },
     {
         "term": "settings:enable_file_logger",
-        "definition": ""
+        "definition": "Aktiver fillog"
     },
     {
         "term": "settings:load_last_world_on_startup",
-        "definition": ""
+        "definition": "Indl\u00e6s sidste anl\u00e6g ved opstart"
     },
     {
         "term": "settings:localhost_only",
@@ -2701,7 +2705,7 @@
     },
     {
         "term": "settings:memory_logger_size",
-        "definition": ""
+        "definition": "Loghukommelse"
     },
     {
         "term": "settings:port",
@@ -2709,7 +2713,7 @@
     },
     {
         "term": "settings:save_world_uncompressed",
-        "definition": ""
+        "definition": "Gem anl\u00e6gget ukomprimeret"
     },
     {
         "term": "settings:select_folder",
@@ -2761,7 +2765,7 @@
     },
     {
         "term": "status.lua:x_in_error",
-        "definition": ""
+        "definition": "%1 fejlede"
     },
     {
         "term": "status.lua:x_running",
@@ -2925,7 +2929,7 @@
     },
     {
         "term": "traintastic_diy_settings:debug_log_heartbeat",
-        "definition": ""
+        "definition": "Log af heartbeat-kommunikation"
     },
     {
         "term": "traintastic_diy_settings:heartbeat_timeout",
@@ -2961,7 +2965,7 @@
     },
     {
         "term": "tray_icon.menu:open_data_directory",
-        "definition": ""
+        "definition": "\u00c5bn databibliotek"
     },
     {
         "term": "tray_icon.menu:restart",
@@ -3145,19 +3149,19 @@
     },
     {
         "term": "wizard.add_interface.interface_xpressnet:text",
-        "definition": ""
+        "definition": "V\u00e6lg venligst den XpressNet snitflade der er forbundet til %command_station%:"
     },
     {
         "term": "wizard.add_interface.interface_xpressnet:title",
-        "definition": ""
+        "definition": "XpressNet snitflade"
     },
     {
         "term": "wizard.add_interface.name:text",
-        "definition": ""
+        "definition": "Indtast forbindelsens navn:"
     },
     {
         "term": "wizard.add_interface.name:title",
-        "definition": ""
+        "definition": "Navn"
     },
     {
         "term": "wizard.add_interface.protocol:text",
@@ -3185,7 +3189,7 @@
     },
     {
         "term": "wizard.add_interface.welcome:text",
-        "definition": ""
+        "definition": "Denne assistent vil guide dig igennem snitflade-ops\u00e6tningen.\n\nHvis du k\u00f8rer Traintastic-server og klient p\u00e5 hver sin maskine s\u00e5 s\u00f8rg for at din central er forbundet til den PC hvor serveren k\u00f8rer."
     },
     {
         "term": "wizard.add_interface.welcome:title",
@@ -3213,7 +3217,7 @@
     },
     {
         "term": "wizard.introduction.edit_mode:text",
-        "definition": ""
+        "definition": "Traintastic opererer med to tilstande:\n\u2022 Redigeringstilstand\n\u2022 K\u00f8retilstand\n\nI k\u00f8retilstand er det kun muligt at k\u00f8re med anl\u00e6gget for at forhindre \u00e6ndringer ved et uheld, s\u00e5 f. eks. at \u00e6ndre en sporskifteadresse eller p\u00e5 anden vis modificere anl\u00e6gget, s\u00e5 skal det i redigeringstilstand.\n\nSkift mellem to tilstande kan g\u00f8res med blyantikonet p\u00e5 hovedv\u00e6rkt\u00f8jslinien eller via menuen: Anl\u00e6g \u2192 Redig\u00e9r anl\u00e6gget."
     },
     {
         "term": "wizard.introduction.edit_mode:title",
@@ -3221,7 +3225,7 @@
     },
     {
         "term": "wizard.introduction.forum:text",
-        "definition": ""
+        "definition": "Hvis du har sp\u00f8rgsm\u00e5l eller forslag, s\u00e5 kom venligst ind p\u00e5 <a href=\"https://forum.traintastic.org\">Traintastic forummet</a>."
     },
     {
         "term": "wizard.introduction.forum:title",
@@ -3229,7 +3233,7 @@
     },
     {
         "term": "wizard.introduction.welcome:text",
-        "definition": ""
+        "definition": "Denne assistent vil forklare de grundl\u00e6ggende ting om Traintastic og de n\u00e6ste sider vil hj\u00e6lpe dig med at komme i gang. \u00d8nsker du at se denne assistent igen, kan du finde den i hovedmenuen under: Hj\u00e6lp \u2192 Assistenter \u2192 Traintastic-introduktion."
     },
     {
         "term": "wizard.introduction.welcome:title",
@@ -3241,7 +3245,7 @@
     },
     {
         "term": "wizard.introduction.world:title",
-        "definition": ""
+        "definition": "Anl\u00e6gget"
     },
     {
         "term": "wizard.introduction:title",
@@ -3253,11 +3257,11 @@
     },
     {
         "term": "wizard.new_board.adding:title",
-        "definition": ""
+        "definition": "Tilf\u00f8jelse af elementer"
     },
     {
         "term": "wizard.new_board.editing:text",
-        "definition": ""
+        "definition": "Sporplanen kan kun \u00e6ndres n\u00e5r anl\u00e6gget er i redigeringstilstand og st\u00e5r stille. V\u00e6rkst\u00f8jlinien med mulighederne dukker automatisk op n\u00e5r redigeringstilstand er mulig."
     },
     {
         "term": "wizard.new_board.editing:title",
@@ -3265,7 +3269,7 @@
     },
     {
         "term": "wizard.new_board.finalization:text",
-        "definition": ""
+        "definition": "Lad os bygge en sporplan!"
     },
     {
         "term": "wizard.new_board.finalization:title",
@@ -3273,63 +3277,63 @@
     },
     {
         "term": "wizard.new_board.introduction.long:text",
-        "definition": ""
+        "definition": "Denne assistent vil forklare de grundl\u00e6ggende ting om sporplanen."
     },
     {
         "term": "wizard.new_board.introduction.short:text",
-        "definition": ""
+        "definition": "Denne assistent vil hj\u00e6lpe med at s\u00e6tte grundl\u00e6ggende ting ved sporplanen."
     },
     {
         "term": "wizard.new_board.introduction:title",
-        "definition": "Nyt anl\u00e6g"
+        "definition": "Ny sporplan"
     },
     {
         "term": "wizard.new_board.name:text",
-        "definition": ""
+        "definition": "Giv din sporplan et navn f. eks. Traintastic, Station Kanon eller skyggebaneg\u00e5rd:"
     },
     {
         "term": "wizard.new_board.name:title",
-        "definition": ""
+        "definition": "Sporplansnavn"
     },
     {
         "term": "wizard.new_board:title",
-        "definition": "Nyt anl\u00e6g"
+        "definition": "Ny sporplan"
     },
     {
         "term": "wizard.new_world.finalization:text",
-        "definition": ""
+        "definition": "Anl\u00e6ggets grundl\u00e6ggende ting er nu fastlagt, men du kan altid \u00e6ndre dem i menuen: Anl\u00e6g -> Egenskaber."
     },
     {
         "term": "wizard.new_world.finalization:title",
-        "definition": ""
+        "definition": "Anl\u00e6g klar"
     },
     {
         "term": "wizard.new_world.introduction:text",
-        "definition": ""
+        "definition": "Denne assistent hj\u00e6lper dig med anl\u00e6ggets grundl\u00e6ggende egenskaber."
     },
     {
         "term": "wizard.new_world.introduction:title",
-        "definition": ""
+        "definition": "Nyt anl\u00e6g"
     },
     {
         "term": "wizard.new_world.name:text",
-        "definition": ""
+        "definition": "Giv anl\u00e6gget et navn, det vil v\u00e6re synligt n\u00e5r anl\u00e6gget indl\u00e6ses."
     },
     {
         "term": "wizard.new_world.name:title",
-        "definition": ""
+        "definition": "Anl\u00e6gsnavn"
     },
     {
         "term": "wizard.new_world.scale:text",
-        "definition": ""
+        "definition": "V\u00e6lg den skala Traintastic skal bruge til at beregne afstande og hastigheder p\u00e5 anl\u00e6gget."
     },
     {
         "term": "wizard.new_world.scale:title",
-        "definition": ""
+        "definition": "Anl\u00e6gsskala"
     },
     {
         "term": "wizard.new_world:title",
-        "definition": ""
+        "definition": "Konfigur\u00e9r nyt anl\u00e6g"
     },
     {
         "term": "wizard.page.list:search",
@@ -3337,7 +3341,7 @@
     },
     {
         "term": "world:boards",
-        "definition": ""
+        "definition": "Sporplaner"
     },
     {
         "term": "world:clock",
@@ -3365,7 +3369,7 @@
     },
     {
         "term": "world:edit",
-        "definition": ""
+        "definition": "Rediger anl\u00e6g"
     },
     {
         "term": "world:ext_output_change_action",
@@ -3405,7 +3409,7 @@
     },
     {
         "term": "world:online_when_loaded",
-        "definition": ""
+        "definition": "T\u00e6nd efter indl\u00e6sning"
     },
     {
         "term": "world:outputs",
