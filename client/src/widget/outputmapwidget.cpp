@@ -36,7 +36,6 @@
 #include "propertyspinbox.hpp"
 #include "objectpropertycombobox.hpp"
 #include "propertyaddresses.hpp"
-#include "outputmapoutputactionwidget.hpp"
 #include "methodicon.hpp"
 #include "../board/tilepainter.hpp"
 #include "../board/getboardcolorscheme.hpp"
