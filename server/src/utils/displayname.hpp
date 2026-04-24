@@ -28,6 +28,7 @@ namespace DisplayName
 {
   namespace BoardTile
   {
+    constexpr std::string_view feedbackMap = "board_tile:feedback_map";
     constexpr std::string_view outputMap = "board_tile:output_map";
     namespace Turnout
     {

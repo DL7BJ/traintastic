@@ -244,11 +244,17 @@ void OutputMapWidget::updateItems(const std::vector<ObjectPtr>& items)
         });
     }
 
-    if(auto* outputActions = dynamic_cast<ObjectVectorProperty*>(items[i]->getVectorProperty("output_actions")))
+    auto* subItems = dynamic_cast<ObjectVectorProperty*>(items[i]->getVectorProperty("output_actions")); // OutputMap
+    if(!subItems)
     {
-      updateTableOutputActions(*outputActions, static_cast<int>(i));
+      subItems = dynamic_cast<ObjectVectorProperty*>(items[i]->getVectorProperty("input_conditions")); // FeedbackMap
+    }
 
-      connect(outputActions, &ObjectVectorProperty::valueChanged, this,
+    if(subItems)
+    {
+      updateTableOutputActions(*subItems, static_cast<int>(i));
+
+      connect(subItems, &ObjectVectorProperty::valueChanged, this,
         [this, row=static_cast<int>(i)]()
         {
           updateTableOutputActions(*dynamic_cast<ObjectVectorProperty*>(sender()), row);
@@ -383,6 +389,10 @@ void OutputMapWidget::updateTableOutputActions(ObjectVectorProperty& property, i
             else if(auto* state = dynamic_cast<Property*>(object->getProperty("state")))
             {
               m_table->setCellWidget(row, column, new PropertySpinBox(*state, this));
+            }
+            else if(auto* condition = dynamic_cast<Property*>(object->getProperty("condition")))
+            {
+              m_table->setCellWidget(row, column, createWidget(*condition, this));
             }
           }
           column++;

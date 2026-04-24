@@ -196,6 +196,10 @@
         "definition": "Position"
     },
     {
+        "term": "board_tile:feedback_map",
+        "definition": "Feedback"
+    },
+    {
         "term": "board_tile:output_map",
         "definition": "Outputs"
     },
@@ -808,6 +812,10 @@
         "definition": "Power off world"
     },
     {
+        "term": "feedback_map.turnout:key",
+        "definition": "Position"
+    },
+    {
         "term": "function:off",
         "definition": "Off"
     },
@@ -906,6 +914,18 @@
     {
         "term": "input:on_delay",
         "definition": "On delay"
+    },
+    {
+        "term": "input_condition:dont_care",
+        "definition": "Don't care"
+    },
+    {
+        "term": "input_condition:off",
+        "definition": "Off"
+    },
+    {
+        "term": "input_condition:on",
+        "definition": "On"
     },
     {
         "term": "input_channel:long_event",
@@ -1742,6 +1762,10 @@
     {
         "term": "message:E3010",
         "definition": "World was emergency powered off due to signal %1 aspect externally changed"
+    },
+    {
+        "term": "message:E3011",
+        "definition": "Feedback conflict: multiple options are valid"
     },
     {
         "term": "message:E9001",

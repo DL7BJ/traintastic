@@ -82,8 +82,10 @@ QWidget* createWidgetIfCustom(const ObjectPtr& object, QWidget* parent)
     return new ObjectListWidget(object, parent);
   else if(classId == "lua.script")
     return new LuaScriptEditWidget(object, parent);
-  else if(classId.startsWith("output_map."))
+  else if(classId.startsWith("output_map.") || classId.startsWith("feedback_map."))
+  {
     return new OutputMapWidget(object, parent);
+  }
   else if(classId == "input_map.block" || classId == "decoder_functions")
     return new ItemsEditWidget(object, parent);
   else if(classId == "marklin_can_node_list" || classId == "cbus_node_list" || classId == "cbus_session_list")

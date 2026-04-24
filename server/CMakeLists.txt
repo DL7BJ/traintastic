@@ -97,6 +97,7 @@ file(GLOB SOURCES
   "src/hardware/identification/list/*.cpp"
   "src/hardware/input/*.hpp"
   "src/hardware/input/*.cpp"
+  "src/hardware/input/feedback/*.cpp"
   "src/hardware/input/list/*.hpp"
   "src/hardware/input/list/*.cpp"
   "src/hardware/input/map/*.hpp"
