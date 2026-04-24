@@ -32,7 +32,7 @@
 #include "tile/tilewidget.hpp"
 #include "inputmonitorwidget.hpp"
 #include "outputkeyboardwidget.hpp"
-#include "outputmapwidget.hpp"
+#include "iomapwidget.hpp"
 #include "propertycheckbox.hpp"
 #include "propertycombobox.hpp"
 #include "propertydoublespinbox.hpp"
@@ -84,7 +84,7 @@ QWidget* createWidgetIfCustom(const ObjectPtr& object, QWidget* parent)
     return new LuaScriptEditWidget(object, parent);
   else if(classId.startsWith("output_map.") || classId.startsWith("feedback_map."))
   {
-    return new OutputMapWidget(object, parent);
+    return new IOMapWidget(object, parent);
   }
   else if(classId == "input_map.block" || classId == "decoder_functions")
     return new ItemsEditWidget(object, parent);
