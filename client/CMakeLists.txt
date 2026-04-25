@@ -88,6 +88,7 @@ file(GLOB SOURCES
   "src/wizard/page/*.hpp"
   "src/wizard/page/*.cpp"
   "../shared/src/traintastic/locale/locale.cpp"
+  "../shared/src/traintastic/os/systeminfo.cpp"
   "../shared/src/traintastic/utils/standardpaths.cpp"
   "thirdparty/QtWaitingSpinner/*.hpp"
   "thirdparty/QtWaitingSpinner/*.cpp")
@@ -106,6 +107,19 @@ target_link_libraries(traintastic-client PRIVATE Qt${QT_VERSION_MAJOR}::Core Qt$
 if(QT_VERSION_MAJOR GREATER 5)
   target_link_libraries(traintastic-client PRIVATE Qt${QT_VERSION_MAJOR}::SvgWidgets)
 endif()
+
+### VCPKG
+if(DEFINED ENV{VCPKG_ROOT})
+  message(STATUS "Using VCPKG (VCPKG_ROOT=$ENV{VCPKG_ROOT})")
+  if(WIN32)
+    set(VCPKG_TARGET_TRIPLET "x64-windows-static-md")
+  endif()
+  include($ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake)
+endif()
+
+# libarchive
+find_package(LibArchive REQUIRED)
+target_link_libraries(traintastic-client PRIVATE LibArchive::LibArchive)
 
 ### PLATFORM ###
 
