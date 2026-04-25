@@ -505,7 +505,7 @@ int Connection::getServerDiagnosticReport(std::function<void(const QString&, con
 {
   std::unique_ptr<Message> request{Message::newRequest(Message::Command::GetDiagnosticReport)};
   send(request,
-    [this, cb=std::move(callback)](const std::shared_ptr<Message> message)
+    [cb=std::move(callback)](const std::shared_ptr<Message> message)
     {
       if(!message->isError())
       {
