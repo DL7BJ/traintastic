@@ -23,6 +23,12 @@
 #include <cstdlib>
 #include <thread>
 
+#ifdef _WIN32
+  #include <windows.h>
+  #include <psapi.h>
+  #include <array>
+#endif
+
 #if defined(__linux__)
   #include <fstream>
   #include <unistd.h>
@@ -36,7 +42,71 @@ void appendSystemInfoWindows(std::string& info)
 {
   info.append("OS: Windows\n");
 
-  // FIXME: get system info
+  // Windows version
+  if (HMODULE ntdll = GetModuleHandleW(L"ntdll.dll"))
+  {
+    using RtlGetVersionPtr = LONG (WINAPI* )(PRTL_OSVERSIONINFOW);
+    if(auto RtlGetVersion = reinterpret_cast<RtlGetVersionPtr>(reinterpret_cast<void*>(GetProcAddress(ntdll, "RtlGetVersion"))))
+    {
+      RTL_OSVERSIONINFOW version;
+      ZeroMemory(&version, sizeof(version));
+      version.dwOSVersionInfoSize = sizeof(version);
+      if(RtlGetVersion(&version) == 0)
+      {
+        info.append("Version: ")
+          .append(std::to_string(version.dwMajorVersion))
+          .append(".")
+          .append(std::to_string(version.dwMinorVersion))
+          .append(" (build: ")
+          .append(std::to_string(version.dwBuildNumber))
+          .append(")\n");
+      }
+    }
+  }
+
+  // Windows friendly name
+  {
+    HKEY localMachine;
+    if(RegOpenKeyExA(HKEY_LOCAL_MACHINE, "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion", 0, KEY_READ, &localMachine) == ERROR_SUCCESS)
+    {
+      std::array<char, 128> value;
+      DWORD length = value.size();
+
+      if(RegGetValueA(localMachine, nullptr, "DisplayVersion", RRF_RT_REG_SZ, nullptr, value.data(), &length) == ERROR_SUCCESS)
+      {
+        info.append("DisplayVersion: ").append(value.data(), length).append("\n");
+      }
+      else // fallback (older Windows 10)
+      {
+        length = value.size();
+        if(RegGetValueA(localMachine, nullptr, "ReleaseId", RRF_RT_REG_SZ, nullptr, value.data(), &length) == ERROR_SUCCESS)
+        {
+          info.append("ReleaseId: ").append(value.data(), length).append("\n");
+        }
+      }
+      RegCloseKey(localMachine);
+    }
+  }
+
+  // System memory
+  {
+    MEMORYSTATUSEX mem;
+    mem.dwLength = sizeof(mem);
+    if(GlobalMemoryStatusEx(&mem))
+    {
+      info.append("Memory total: ").append(std::to_string(mem.ullTotalPhys / (1024 * 1024))).append(" MB\n");
+      info.append("Memory available: ").append(std::to_string(mem.ullAvailPhys / (1024 * 1024))).append(" MB\n");
+    }
+  }
+  
+  // Process memory
+  {
+    PROCESS_MEMORY_COUNTERS pmc;
+    if(GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
+    {
+      info.append("Process memory: ").append(std::to_string(pmc.WorkingSetSize / (1024 * 1024))).append(" MB\n");
+    }
+  }
 }
 #endif
 
@@ -191,7 +261,7 @@ std::string getSystemInfo()
   std::string info("### System info ###\n");
 
 #if defined(_WIN32)
-  appendWindowsSystemInfo(info);
+  appendSystemInfoWindows(info);
 #elif defined(__linux__)
   appendSystemInfoLinux(info);
 #elif defined(__APPLE__)
