@@ -256,6 +256,10 @@ void appendCompilerInfo(std::string& info)
   #define environ _environ
 #endif
 
+#ifdef __APPLE__
+  extern char** environ;
+#endif
+
 std::string getSystemInfo()
 {
   std::string info("### System info ###\n");
