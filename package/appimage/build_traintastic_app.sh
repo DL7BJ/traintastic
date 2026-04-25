@@ -240,7 +240,7 @@ export ARCH
 "./${LINUXDEPLOY}" --appdir "$APP_DIR" --output appimage
 
 # Copy generated appimage
-APPIMAGE_FILE=$(find . -maxdepth 1 -name "*.AppImage" | head -n 1)
+APPIMAGE_FILE=$(find . -maxdepth 1 -name "$APP_NAME*.AppImage" | head -n 1)
 if [ -n "$APPIMAGE_FILE" ]; then
     cp "$APPIMAGE_FILE" "$OUTDIR/$APPNAME"
 else
