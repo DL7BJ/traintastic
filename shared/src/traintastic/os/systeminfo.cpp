@@ -29,10 +29,13 @@
   #include <array>
 #endif
 
+#if defined(__unix__) || defined(__APPLE__)
+  #include <sys/utsname.h>
+#endif
+
 #if defined(__linux__)
   #include <fstream>
   #include <unistd.h>
-  #include <sys/utsname.h>
 #endif
 
 namespace {
@@ -110,7 +113,7 @@ void appendSystemInfoWindows(std::string& info)
 }
 #endif
 
-#ifdef __unix__
+#if defined(__unix__) || defined(__APPLE__)
 void appendSystemInfoUname(std::string& info)
 {
   struct utsname buf;
