@@ -30,7 +30,7 @@
 *.exe
 *.out
 *.app
-packages/Apps/*
+package/Apps/*
 
 *.pro.user*
 *.pro*.user*
