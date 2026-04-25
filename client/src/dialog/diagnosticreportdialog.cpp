@@ -32,6 +32,7 @@
 #include <QMainWindow>
 #include <QScreen>
 #include <QTimer>
+#include <QDateTime>
 
 #include <archive.h> // for: archive_version_details()
 
