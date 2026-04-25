@@ -33,6 +33,8 @@
 #include <QScreen>
 #include <QTimer>
 
+#include <archive.h> // for: archive_version_details()
+
 #include <version.hpp>
 #include <traintastic/locale/locale.hpp>
 #include <traintastic/os/systeminfo.hpp>
@@ -101,7 +103,7 @@ void DiagnosticReportDialog::nextState()
     {
       m_clientInfo = "### Traintastic Client ###\nVersion: " TRAINTASTIC_VERSION_FULL "\n\n";
       m_clientInfo.append(QString::fromStdString(getSystemInfo()));
-      m_clientInfo.append(QString("\n### Libraries ###\nQt: %1 (compiled: " QT_VERSION_STR ")\n").arg(qVersion()));
+      m_clientInfo.append(QString("\n### Libraries ###\nQt: %1 (compiled: " QT_VERSION_STR ")\nlibarchive: %2\n").arg(qVersion()).arg(archive_version_details()));
       nextState();
       break;
     }
