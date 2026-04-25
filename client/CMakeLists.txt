@@ -108,6 +108,15 @@ if(QT_VERSION_MAJOR GREATER 5)
   target_link_libraries(traintastic-client PRIVATE Qt${QT_VERSION_MAJOR}::SvgWidgets)
 endif()
 
+### VCPKG
+if(DEFINED ENV{VCPKG_ROOT})
+  message(STATUS "Using VCPKG (VCPKG_ROOT=$ENV{VCPKG_ROOT})")
+  if(WIN32)
+    set(VCPKG_TARGET_TRIPLET "x64-windows-static-md")
+  endif()
+  include($ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake)
+endif()
+
 # libarchive
 find_package(LibArchive REQUIRED)
 target_link_libraries(traintastic-client PRIVATE LibArchive::LibArchive)
