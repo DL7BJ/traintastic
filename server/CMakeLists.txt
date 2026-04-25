@@ -3,6 +3,7 @@ include(../shared/traintastic.cmake)
 project(traintastic-server VERSION ${TRAINTASTIC_VERSION} DESCRIPTION "Traintastic server")
 include(GNUInstallDirs)
 include(CTest)
+include(CheckCXXSourceCompiles)
 include(../shared/translations/traintastic-lang.cmake)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
@@ -308,6 +309,23 @@ endif()
 
 ### COMPILER ###
 
+# test C++20 timezone support
+set(CMAKE_REQUIRED_FLAGS "-std=c++20")
+check_cxx_source_compiles([[
+#include <chrono>
+int main()
+{
+  auto tz = std::chrono::current_zone();
+  (void)tz;
+  return 0;
+}
+]] HAS_CXX20_TIMEZONES)
+unset(CMAKE_REQUIRED_FLAGS)
+if(HAS_CXX20_TIMEZONES)
+  target_compile_definitions(traintastic-server PRIVATE HAS_CXX20_TIMEZONES)
+  target_compile_definitions(traintastic-server-test PRIVATE HAS_CXX20_TIMEZONES)
+endif()
+
 if(MSVC)
 
 else()
@@ -331,8 +349,6 @@ else()
 endif()
 
 if(LINUX)
-  include(CheckCXXSourceCompiles)
-
   set(CMAKE_REQUIRED_FLAGS "-std=c++20")
   check_cxx_source_compiles([[
     #include <format>
