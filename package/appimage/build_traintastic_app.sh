@@ -160,7 +160,7 @@ if [ "$MODE" = "both" ]; then
 cat << 'EOF' > "$APP_DIR/AppRun"
 #!/bin/bash
 HERE="$(dirname "$(readlink -f "${0}")")"
-export TRAINTASTIC_LOCATE_PATH="$APPDIR/traintastic/translations"
+export TRAINTASTIC_LOCALE_PATH="$APPDIR/traintastic/translations"
 export TRAINTASTIC_MANUAL_PATH="$APPDIR/traintastic/manual"
 LOGDIR="$HOME/.config/traintastic-server/log"
 mkdir -p "$LOGDIR"
@@ -178,7 +178,7 @@ elif [ "$MODE" = "server" ]; then
 cat << 'EOF' > "$APP_DIR/AppRun"
 #!/bin/bash
 HERE="$(dirname "$(readlink -f "${0}")")"
-export TRAINTASTIC_LOCATE_PATH="$APPDIR/traintastic/translations"
+export TRAINTASTIC_LOCALE_PATH="$APPDIR/traintastic/translations"
 export TRAINTASTIC_MANUAL_PATH="$APPDIR/traintastic/manual"
 LOGDIR="$HOME/.traintastic"
 mkdir -p "$LOGDIR"
@@ -190,7 +190,7 @@ elif [ "$MODE" = "client" ]; then
 cat << 'EOF' > "$APP_DIR/AppRun"
 #!/bin/bash
 HERE="$(dirname "$(readlink -f "${0}")")"
-export TRAINTASTIC_LOCATE_PATH="$APPDIR/traintastic/translations"
+export TRAINTASTIC_LOCALE_PATH="$APPDIR/traintastic/translations"
 export TRAINTASTIC_MANUAL_PATH="$APPDIR/traintastic/manual"
 # run client
 exec "$HERE/usr/bin/traintastic-client" "$@"
