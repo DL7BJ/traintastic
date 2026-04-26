@@ -653,7 +653,7 @@ jobs:
     name: Deploy to website
     if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-latest
-    needs: [package-innosetup, build-server, build-client, build-data, build-manual, package-appimages-x86_64]
+    needs: [package-innosetup, build-server, build-client, build-data, build-manual, package-appimages]
 
     steps:
     - uses: FranzDiebold/github-env-vars-action@v2
