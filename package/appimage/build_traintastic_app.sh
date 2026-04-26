@@ -160,8 +160,8 @@ if [ "$MODE" = "both" ]; then
 cat << 'EOF' > "$APP_DIR/AppRun"
 #!/bin/bash
 HERE="$(dirname "$(readlink -f "${0}")")"
-export TRAINTASTIC_LOCATE_PATH="$APP_DIR/traintastic/translations"
-export TRAINTASTIC_MANUAL_PATH="$APP_DIR/traintastic/manual"
+export TRAINTASTIC_LOCATE_PATH="$APPDIR/traintastic/translations"
+export TRAINTASTIC_MANUAL_PATH="$APPDIR/traintastic/manual"
 LOGDIR="$HOME/.config/traintastic-server/log"
 mkdir -p "$LOGDIR"
 # start server (background)
@@ -178,8 +178,8 @@ elif [ "$MODE" = "server" ]; then
 cat << 'EOF' > "$APP_DIR/AppRun"
 #!/bin/bash
 HERE="$(dirname "$(readlink -f "${0}")")"
-export TRAINTASTIC_LOCATE_PATH="$APP_DIR/traintastic/translations"
-export TRAINTASTIC_MANUAL_PATH="$APP_DIR/traintastic/manual"
+export TRAINTASTIC_LOCATE_PATH="$APPDIR/traintastic/translations"
+export TRAINTASTIC_MANUAL_PATH="$APPDIR/traintastic/manual"
 LOGDIR="$HOME/.traintastic"
 mkdir -p "$LOGDIR"
 # run server in foreground
@@ -190,8 +190,8 @@ elif [ "$MODE" = "client" ]; then
 cat << 'EOF' > "$APP_DIR/AppRun"
 #!/bin/bash
 HERE="$(dirname "$(readlink -f "${0}")")"
-export TRAINTASTIC_LOCATE_PATH="$APP_DIR/traintastic/translations"
-export TRAINTASTIC_MANUAL_PATH="$APP_DIR/traintastic/manual"
+export TRAINTASTIC_LOCATE_PATH="$APPDIR/traintastic/translations"
+export TRAINTASTIC_MANUAL_PATH="$APPDIR/traintastic/manual"
 # run client
 exec "$HERE/usr/bin/traintastic-client" "$@"
 EOF
@@ -229,9 +229,7 @@ else
     echo "[INFO] no language files found"
 fi
 # copy manual
-cp -a ${SOURCE_MANUAL}/docs/. "$APP_DIR/traintastic/manual/docs"
-cp -a ${SOURCE_MANUAL}/luadoc/. "$APP_DIR/traintastic/manual/luadoc"
-cp -a ${SOURCE_MANUAL}/overrides/. "$APP_DIR/opt/traintastic/manual/overrides"
+cp -a ${SOURCE_MANUAL}/output/. "$APP_DIR/traintastic/manual/"
 
 # load linuxdeploy, if not exists
 LINUXDEPLOY="linuxdeploy-${ARCH}.AppImage"
