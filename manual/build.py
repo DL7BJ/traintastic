@@ -31,7 +31,7 @@ def detect_version():
 class TraintasticHelp:
 
     version = ''
-    language = 'en'
+    language = 'de'
     _luadoc = None
 
     def __init__(self, base_dir: str):
@@ -49,11 +49,10 @@ class TraintasticHelp:
         self._write_mkdocs_yml()
 
         cfg = mkdocs.config.load_config(os.path.join(self.base_dir, 'config', self.language, 'mkdocs.yml'))
-        cfg.plugins.on_startup(command='build', dirty=False)
         try:
             mkdocs.commands.build.build(cfg)
         finally:
-            cfg.plugins.on_shutdown()
+            pass
 
         return True
 
