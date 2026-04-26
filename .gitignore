@@ -39,7 +39,7 @@ package/Apps/*
 
 .directory
 .build*
-build/
+build*
 CMakeLists.txt.*
 *~*
 .vscode
@@ -50,4 +50,4 @@ CMakeLists.txt.*
 shared/translations/*.lang
 CMakeSettings.json
 .venv
-
+!package/appimage/build_traintastic_app.sh
