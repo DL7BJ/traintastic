@@ -574,6 +574,11 @@ jobs:
     steps:
     - uses: FranzDiebold/github-env-vars-action@v2
 
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        submodules: recursive
+
     - name: "Download: traintastic-client"
       uses: actions/download-artifact@v4
       with:
