@@ -140,13 +140,17 @@ mkdir -p "$APP_DIR/traintastic/lncv"
 if [[ -f "$SOURCE_SERVER" && -f "$SOURCE_CLIENT" ]]; then
     if [ "$MODE" = "client" ];then
         cp "$SOURCE_CLIENT" "$APP_DIR/usr/bin/traintastic-client"
+        chmod +x "$APP_DIR/usr/bin/traintastic-client"
         cp "$SOURCE_CLIENT" $OUTDIR
     elif [ "$MODE" = "server" ];then
         cp "$SOURCE_SERVER" "$APP_DIR/usr/bin/traintastic-server"
+        chmod +x "$APP_DIR/usr/bin/traintastic-server"
         cp "$SOURCE_SERVER" $OUTDIR
     else
         cp "$SOURCE_CLIENT" "$APP_DIR/usr/bin/traintastic-client"
+        chmod +x "$APP_DIR/usr/bin/traintastic-client"
         cp "$SOURCE_SERVER" "$APP_DIR/usr/bin/traintastic-server"
+        chmod +x "$APP_DIR/usr/bin/traintastic-server"
         cp "$SOURCE_CLIENT" $OUTDIR
         cp "$SOURCE_SERVER" $OUTDIR
     fi
