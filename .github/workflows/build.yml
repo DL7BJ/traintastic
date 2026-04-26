@@ -579,6 +579,16 @@ jobs:
       with:
         submodules: recursive
 
+    # Ubuntu only:
+    - name: apt update
+      if: startswith(matrix.config.os, 'ubuntu')
+      run: sudo apt update
+
+    # Ubuntu only:
+    - name: Install packages
+      if: startswith(matrix.config.os, 'ubuntu')
+      run: sudo apt install appstream qt6-base-dev qt6-svg-dev qt6-websockets-dev libboost-program-options-dev libboost-url-dev liblua5.4-dev lcov libarchive-dev libsystemd-dev
+
     - name: "Download: traintastic-client"
       uses: actions/download-artifact@v4
       with:
