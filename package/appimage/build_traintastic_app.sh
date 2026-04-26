@@ -134,9 +134,6 @@ mkdir -p "$APP_DIR/usr/share/icons/hicolor/256x256/apps"
 mkdir -p "$APP_DIR/usr/share/applications"
 mkdir -p "$APP_DIR/traintastic/translations"
 mkdir -p "$APP_DIR/traintastic/manual"
-mkdir -p "$APP_DIR/traintastic/manual/docs"
-mkdir -p "$APP_DIR/traintastic/manual/luadoc"
-mkdir -p "$APP_DIR/traintastic/manual/overrides"
 mkdir -p "$APP_DIR/traintastic/lncv"
 
 # copy binary files
