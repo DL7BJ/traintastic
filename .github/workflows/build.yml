@@ -566,10 +566,23 @@ jobs:
         name: package-innosetup
         path: ${{github.workspace}}/package/innosetup/output
 
-  package-appimages-x86_64:
-    name: "package appimages (x86_64)"
-    runs-on: ubuntu-24.04
+  package-appimages:
+    name: "package appimages"
+    runs-on: ${{matrix.config.os}}
     needs: [build-client, build-server, build-lang, build-manual]
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+        - name: "package appimages (x86_64)"
+          os: ubuntu-24.04
+          arch: x86_64
+          run_apt: true
+
+        - name: "package appimages (arm64)"
+          os: [self-hosted, ARM64, RaspberryPi]
+          arch: arm64
+          run_apt: false
 
     steps:
     - uses: FranzDiebold/github-env-vars-action@v2
@@ -579,14 +592,12 @@ jobs:
       with:
         submodules: recursive
 
-    # Ubuntu only:
     - name: apt update
-      if: startswith(matrix.config.os, 'ubuntu')
+      if: matrix.config.run_apt
       run: sudo apt update
 
-    # Ubuntu only:
     - name: Install packages
-      if: startswith(matrix.config.os, 'ubuntu')
+      if: matrix.config.run_apt
       run: sudo apt install appstream qt6-base-dev qt6-svg-dev qt6-websockets-dev libboost-program-options-dev libboost-url-dev liblua5.4-dev lcov libarchive-dev libsystemd-dev
 
     - name: "Download: traintastic-client"
@@ -628,7 +639,7 @@ jobs:
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: package-appimages-x86_64
+        name: package-appimages-${{matrix.config.arch}}
         path: ${{github.workspace}}/package/Apps/*.AppImage
 
   deploy:
@@ -679,10 +690,11 @@ jobs:
         merge-multiple: true
         path: ${{github.workspace}}/dist/${{env.CI_REF_NAME_SLUG}}/${{github.run_number}}
 
-    - name: "Download: AppImage's (x86_64)"
+    - name: "Download: AppImage's"
       uses: actions/download-artifact@v4
       with:
-        name: package-appimages-x86_64
+        pattern: package-appimages-*
+        merge-multiple: true
         path: ${{github.workspace}}/dist/${{env.CI_REF_NAME_SLUG}}/${{github.run_number}}
 
     - uses: easingthemes/ssh-deploy@v2.2.11
