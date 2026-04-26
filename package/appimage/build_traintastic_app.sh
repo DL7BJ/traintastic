@@ -24,11 +24,12 @@
 #                               info from website
 #    2026-04-26  Tom (DL7BJ)    Set environment for language and manual files
 #                               Rename Client&Server AppImage
+#    2026-04-26  Reinder        Added LNCV XML files
 #
 #  Usage:
 #
 #  ./build_traintastic_app.sh <mode>
-#       where mode is: 
+#       where mode is:
 #           server     - build an appimage for traintastic-server
 #           client     - build an appimage for traintastic-client
 #           both       - build one appimage for server and client
@@ -52,12 +53,13 @@ esac
 APP_DIR="traintastic.app"
 APP_NAME="Traintastic"
 OUTDIR="../Apps"
-# Path to binary files 
-SOURCE_SERVER="../../server/build/traintastic-server" 
+# Path to binary files
+SOURCE_SERVER="../../server/build/traintastic-server"
 SOURCE_CLIENT="../../client/build/traintastic-client"
 SOURCE_ICON="../../client/debian/traintastic_256.png"
 SOURCE_LANG="../../shared/translations"
 SOURCE_MANUAL="../../manual"
+SOURCE_LNCVXML="../../shared/data/lncv/xml"
 
 # Copy the build files also to TraintasticApp
 if [ ! -d $OUTDIR ];then
@@ -135,8 +137,9 @@ mkdir -p "$APP_DIR/traintastic/manual"
 mkdir -p "$APP_DIR/traintastic/manual/docs"
 mkdir -p "$APP_DIR/traintastic/manual/luadoc"
 mkdir -p "$APP_DIR/traintastic/manual/overrides"
+mkdir -p "$APP_DIR/traintastic/lncv"
 
-# copy binary files 
+# copy binary files
 if [[ -f "$SOURCE_SERVER" && -f "$SOURCE_CLIENT" ]]; then
     if [ "$MODE" = "client" ];then
         cp "$SOURCE_CLIENT" "$APP_DIR/usr/bin/traintastic-client"
@@ -162,6 +165,7 @@ cat << 'EOF' > "$APP_DIR/AppRun"
 HERE="$(dirname "$(readlink -f "${0}")")"
 export TRAINTASTIC_LOCALE_PATH="$APPDIR/traintastic/translations"
 export TRAINTASTIC_MANUAL_PATH="$APPDIR/traintastic/manual"
+export TRAINTASTIC_LNCVXML_PATH="$APPDIR/traintastic/lncv"
 LOGDIR="$HOME/.config/traintastic-server/log"
 mkdir -p "$LOGDIR"
 # start server (background)
@@ -192,6 +196,7 @@ cat << 'EOF' > "$APP_DIR/AppRun"
 HERE="$(dirname "$(readlink -f "${0}")")"
 export TRAINTASTIC_LOCALE_PATH="$APPDIR/traintastic/translations"
 export TRAINTASTIC_MANUAL_PATH="$APPDIR/traintastic/manual"
+export TRAINTASTIC_LNCVXML_PATH="$APPDIR/traintastic/lncv"
 # run client
 exec "$HERE/usr/bin/traintastic-client" "$@"
 EOF
@@ -230,6 +235,8 @@ else
 fi
 # copy manual
 cp -a ${SOURCE_MANUAL}/output/. "$APP_DIR/traintastic/manual/"
+# copy lncv
+cp -a ${SOURCE_LNCVXML}/. "$APP_DIR/traintastic/lncv/"
 
 # load linuxdeploy, if not exists
 LINUXDEPLOY="linuxdeploy-${ARCH}.AppImage"
