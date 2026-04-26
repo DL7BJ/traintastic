@@ -108,6 +108,13 @@ jobs:
         modules: qtwebsockets
         version: 6.5.*
 
+    - name: Set VCPKG_ROOT
+      if: startswith(matrix.config.os, 'windows') || startswith(matrix.config.os, 'macos')
+      uses: actions/github-script@v7
+      with:
+        script: |
+          core.exportVariable('VCPKG_ROOT', process.env.VCPKG_INSTALLATION_ROOT || '');
+
     - name: Set CMAKE_OSX_ARCHITECTURES
       if: startswith(matrix.config.os, 'macos')
       uses: actions/github-script@v7
@@ -123,7 +130,7 @@ jobs:
     # Ubuntu only:
     - name: Install packages
       if: startswith(matrix.config.os, 'ubuntu')
-      run: sudo apt install qt6-base-dev qt6-svg-dev qt6-websockets-dev
+      run: sudo apt install qt6-base-dev qt6-svg-dev qt6-websockets-dev libarchive-dev
 
     # All:
     - name: Create Build Environment
