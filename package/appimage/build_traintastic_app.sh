@@ -22,6 +22,8 @@
 #    2026-04-21  Tom (DL7BJ)    Initial version
 #    2026-04-25  Tom (DL7BJ)    Change the output directory and read version
 #                               info from website
+#    2026-04-26  Tom (DL7BJ)    Set environment for language and manual files
+#                               Rename Client&Server AppImage
 #
 #  Usage:
 #
@@ -67,17 +69,17 @@ case "$MODE" in
     server)
         DESKTOP_NAME="Traintastic Server"
         DESKTOP_COMMENT="Model railroad control server"
-        EXT="server"
+        EXT="-server-"
         ;;
     client)
         DESKTOP_NAME="Traintastic Client"
         DESKTOP_COMMENT="Model railroad control client"
-        EXT="client"
+        EXT="-client-"
         ;;
     both)
         DESKTOP_NAME="Traintastic"
         DESKTOP_COMMENT="Model railroad control and automation software"
-        EXT="cs"
+        EXT="-"
         ;;
 esac
 
@@ -109,10 +111,10 @@ esac
 
 if [ -n "$GITHUB_ACTIONS" ]; then
     echo "Running in GitHub Actions"
-    APPNAME="traintastic-${EXT}-${VERSION}-${GITHUB_RUN_NUMBER}-${ARCHN}.AppImage"
+    APPNAME="traintastic${EXT}${VERSION}-${GITHUB_RUN_NUMBER}-${ARCHN}.AppImage"
 else
     echo "Running locally"
-    APPNAME="traintastic-${EXT}-${VERSION}-${BUILD}-${ARCHN}-dev.AppImage"
+    APPNAME="traintastic${EXT}${VERSION}-${BUILD}-${ARCHN}-dev.AppImage"
 fi
 
 echo "--- Building AppImage for ---"
@@ -128,11 +130,11 @@ echo "--- Start build process for $APP_NAME ---"
 mkdir -p "$APP_DIR/usr/bin"
 mkdir -p "$APP_DIR/usr/share/icons/hicolor/256x256/apps"
 mkdir -p "$APP_DIR/usr/share/applications"
-mkdir -p "$APP_DIR/opt/traintastic"
-mkdir -p "$APP_DIR/opt/traintastic/lncv"
-mkdir -p "$APP_DIR/opt/traintastic/log"
-mkdir -p "$APP_DIR/opt/traintastic/manual"
-mkdir -p "$APP_DIR/opt/traintastic/translations"
+mkdir -p "$APP_DIR/traintastic/translations"
+mkdir -p "$APP_DIR/traintastic/manual"
+mkdir -p "$APP_DIR/traintastic/manual/docs"
+mkdir -p "$APP_DIR/traintastic/manual/luadoc"
+mkdir -p "$APP_DIR/traintastic/manual/overrides"
 
 # copy binary files 
 if [[ -f "$SOURCE_SERVER" && -f "$SOURCE_CLIENT" ]]; then
@@ -158,7 +160,9 @@ if [ "$MODE" = "both" ]; then
 cat << 'EOF' > "$APP_DIR/AppRun"
 #!/bin/bash
 HERE="$(dirname "$(readlink -f "${0}")")"
-LOGDIR="$HOME/.traintastic"
+export TRAINTASTIC_LOCATE_PATH="$APP_DIR/traintastic/translations"
+export TRAINTASTIC_MANUAL_PATH="$APP_DIR/traintastic/manual"
+LOGDIR="$HOME/.config/traintastic-server/log"
 mkdir -p "$LOGDIR"
 # start server (background)
 "$HERE/usr/bin/traintastic-server" > "$LOGDIR/server.log" 2>&1 &
@@ -174,6 +178,8 @@ elif [ "$MODE" = "server" ]; then
 cat << 'EOF' > "$APP_DIR/AppRun"
 #!/bin/bash
 HERE="$(dirname "$(readlink -f "${0}")")"
+export TRAINTASTIC_LOCATE_PATH="$APP_DIR/traintastic/translations"
+export TRAINTASTIC_MANUAL_PATH="$APP_DIR/traintastic/manual"
 LOGDIR="$HOME/.traintastic"
 mkdir -p "$LOGDIR"
 # run server in foreground
@@ -184,6 +190,8 @@ elif [ "$MODE" = "client" ]; then
 cat << 'EOF' > "$APP_DIR/AppRun"
 #!/bin/bash
 HERE="$(dirname "$(readlink -f "${0}")")"
+export TRAINTASTIC_LOCATE_PATH="$APP_DIR/traintastic/translations"
+export TRAINTASTIC_MANUAL_PATH="$APP_DIR/traintastic/manual"
 # run client
 exec "$HERE/usr/bin/traintastic-client" "$@"
 EOF
@@ -215,15 +223,15 @@ else
 fi
 # copy translations
 if [[ -f "$SOURCE_LANG/en-us.lang" ]]; then
-    cp -a ${SOURCE_LANG}/*.lang "$APP_DIR/opt/traintastic/translations"
+    cp -a ${SOURCE_LANG}/*.lang "$APP_DIR/traintastic/translations"
 else
     # no language files?
     echo "[INFO] no language files found"
 fi
 # copy manual
-cp -a ${SOURCE_MANUAL}/docs/. "$APP_DIR/opt/traintastic/manual"
-cp -a ${SOURCE_MANUAL}/luadoc/. "$APP_DIR/opt/traintastic/manual"
-cp -a ${SOURCE_MANUAL}/overrides/. "$APP_DIR/opt/traintastic/manual"
+cp -a ${SOURCE_MANUAL}/docs/. "$APP_DIR/traintastic/manual/docs"
+cp -a ${SOURCE_MANUAL}/luadoc/. "$APP_DIR/traintastic/manual/luadoc"
+cp -a ${SOURCE_MANUAL}/overrides/. "$APP_DIR/opt/traintastic/manual/overrides"
 
 # load linuxdeploy, if not exists
 LINUXDEPLOY="linuxdeploy-${ARCH}.AppImage"
