@@ -131,3 +131,18 @@ std::filesystem::path getLNCVXMLPath()
   return std::filesystem::current_path() / "lncv";
 #endif
 }
+//! Get the path for decoder description files
+std::filesystem::path getDecoderPath()
+{
+  if(auto path = getEnvironmentVariableAsPath("TRAINTASTIC_DECODER_PATH"))
+  {
+    return *path;
+  }
+#ifdef WIN32
+  return getProgramDataPath() / "traintastic" / "decoder";
+#elif defined(__linux__)
+  return "/opt/traintastic/decoder/";
+#else
+  return std::filesystem::current_path() / "decoder";
+#endif
+}

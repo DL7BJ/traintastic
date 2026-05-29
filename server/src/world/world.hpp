@@ -39,11 +39,13 @@
 
 class WorldLoader;
 class LNCVProgrammer;
+class DecoderProgrammer;
 class DecoderController;
 class InputController;
 class OutputController;
 class IdentificationController;
 class LNCVProgrammingController;
+class DecoderProgrammingController;
 class CBUSInterface;
 class LocoNetInterface;
 class InterfaceList;
@@ -135,6 +137,7 @@ class World : public Object
     ObjectProperty<ControllerList<OutputController>> outputControllers;
     ObjectProperty<ControllerList<IdentificationController>> identificationControllers;
     ObjectProperty<ControllerList<LNCVProgrammingController>> lncvProgrammingControllers;
+    ObjectProperty<ControllerList<DecoderProgrammingController>> DecoderProgrammingControllers;
     ObjectProperty<ControllerList<CBUSInterface>> cbusInterfaces;
     ObjectProperty<ControllerList<LocoNetInterface>> loconetInterfaces;
 
@@ -178,6 +181,7 @@ class World : public Object
     Method<ObjectPtr(const std::string&)> getObject_;
 
     Method<std::shared_ptr<LNCVProgrammer>(const ObjectPtr&)> getLNCVProgrammer;
+    Method<std::shared_ptr<DecoderProgrammer>(const ObjectPtr&)> getDecoderProgrammer;
 
     Event<WorldState, WorldEvent> onEvent;
 

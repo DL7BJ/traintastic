@@ -59,6 +59,8 @@ file(GLOB SOURCES
   "src/network/object/*.cpp"
   "src/programming/lncv/*.hpp"
   "src/programming/lncv/*.cpp"
+  "src/programming/decoder/*.hpp"
+  "src/programming/decoder/*.cpp"
   "src/settings/*.hpp"
   "src/settings/*.cpp"
   "src/style/*.hpp"
@@ -120,6 +122,9 @@ endif()
 # libarchive
 find_package(LibArchive REQUIRED)
 target_link_libraries(traintastic-client PRIVATE LibArchive::LibArchive)
+# Xml
+find_package(Qt6 REQUIRED COMPONENTS Widgets Xml)
+target_link_libraries(traintastic-client PRIVATE Qt6::Widgets Qt6::Xml)
 
 ### PLATFORM ###
 

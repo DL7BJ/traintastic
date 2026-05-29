@@ -120,6 +120,8 @@ file(GLOB SOURCES
   "src/hardware/output/map/*.cpp"
   "src/hardware/programming/lncv/*.hpp"
   "src/hardware/programming/lncv/*.cpp"
+  "src/hardware/programming/decoder/*.hpp"
+  "src/hardware/programming/decoder/*.cpp"
   "src/hardware/protocol/*.hpp"
   "src/hardware/protocol/*.cpp"
   "src/hardware/protocol/can/iohandler/*.cpp"

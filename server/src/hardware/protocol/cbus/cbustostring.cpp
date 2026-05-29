@@ -344,7 +344,10 @@ std::string toString(const Message& message)
     case RDCC4:
       break;
 
+    //! Write CV in service mode (Programming Track)
+    //! <0xA2><Session><HighCV#><LowCV#><Mode><CVVal>
     case WCVS:
+
       break;
 
     case ACON1:

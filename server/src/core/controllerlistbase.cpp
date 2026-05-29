@@ -42,7 +42,7 @@ ObjectPtr ControllerListBase::getObject(uint32_t index)
 
 void ControllerListBase::add(ObjectPtr controller)
 {
-  assert(controller);
+  assert(controller); 
   m_propertyChanged.emplace(controller.get(), controller->propertyChanged.connect(
     [this](BaseProperty& property)
     {

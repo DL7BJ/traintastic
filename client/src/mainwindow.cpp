@@ -52,6 +52,7 @@
 #include "network/error.hpp"
 #include "network/callmethod.hpp"
 #include "programming/lncv/lncvprogrammer.hpp"
+#include "programming/decoder/decoderprogrammer.hpp"
 #include "subwindow/objectsubwindow.hpp"
 #include "subwindow/boardsubwindow.hpp"
 #include "subwindow/throttlesubwindow.hpp"
@@ -514,6 +515,16 @@ MainWindow::MainWindow(QWidget* parent) :
         m_mdiArea->addSubWindow(window);
         window->show();
       });
+    m_menuProgramming->addAction(Locale::tr("decoder_programmer:decoder_programmer") + "...",
+      [this]()
+      {
+        auto* window = new QMdiSubWindow();
+        window->setWidget(new DecoderProgrammer(m_connection));
+        window->setAttribute(Qt::WA_DeleteOnClose);
+        m_mdiArea->addSubWindow(window);
+        window->show();
+      });
+
 
     menu = menuBar()->addMenu(Locale::tr("qtapp.mainmenu:help"));
     menu->addAction(Theme::getIcon("help"), Locale::tr("qtapp.mainmenu:help"),

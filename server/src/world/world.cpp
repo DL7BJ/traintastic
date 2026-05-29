@@ -55,6 +55,8 @@
 #include "../hardware/decoder/list/decoderlist.hpp"
 #include "../hardware/programming/lncv/lncvprogrammer.hpp"
 #include "../hardware/programming/lncv/lncvprogrammingcontroller.hpp"
+#include "../hardware/programming/decoder/decoderprogrammer.hpp"
+#include "../hardware/programming/decoder/decoderprogrammingcontroller.hpp"
 
 #include "../clock/clock.hpp"
 
@@ -125,6 +127,7 @@ void World::init(World& world)
   world.outputControllers.setValueInternal(std::make_shared<ControllerList<OutputController>>(world, world.outputControllers.name()));
   world.identificationControllers.setValueInternal(std::make_shared<ControllerList<IdentificationController>>(world, world.identificationControllers.name()));
   world.lncvProgrammingControllers.setValueInternal(std::make_shared<ControllerList<LNCVProgrammingController>>(world, world.lncvProgrammingControllers.name()));
+  world.DecoderProgrammingControllers.setValueInternal(std::make_shared<ControllerList<DecoderProgrammingController>>(world, world.DecoderProgrammingControllers.name()));
   world.cbusInterfaces.setValueInternal(std::make_shared<ControllerList<CBUSInterface>>(world, world.cbusInterfaces.name()));
   world.loconetInterfaces.setValueInternal(std::make_shared<ControllerList<LocoNetInterface>>(world, world.loconetInterfaces.name()));
 
@@ -188,6 +191,7 @@ World::World(Private /*unused*/) :
   outputControllers{this, "output_controllers", nullptr, PropertyFlags::ReadOnly | PropertyFlags::SubObject | PropertyFlags::NoStore},
   identificationControllers{this, "identification_controllers", nullptr, PropertyFlags::ReadOnly | PropertyFlags::SubObject | PropertyFlags::NoStore},
   lncvProgrammingControllers{this, "lncv_programming_controllers", nullptr, PropertyFlags::ReadOnly | PropertyFlags::SubObject | PropertyFlags::NoStore},
+  DecoderProgrammingControllers{this, "decoder_programming_controllers", nullptr, PropertyFlags::ReadOnly | PropertyFlags::SubObject | PropertyFlags::NoStore},
   cbusInterfaces{this, "cbus_interfaces", nullptr, PropertyFlags::ReadOnly | PropertyFlags::SubObject | PropertyFlags::NoStore},
   loconetInterfaces{this, "loconet_interfaces", nullptr, PropertyFlags::ReadOnly | PropertyFlags::SubObject | PropertyFlags::NoStore},
   interfaces{this, "interfaces", nullptr, PropertyFlags::ReadOnly | PropertyFlags::SubObject | PropertyFlags::NoStore},
@@ -302,6 +306,13 @@ World::World(Private /*unused*/) :
           return std::make_shared<LNCVProgrammer>(*controller);
         return {};
       }}
+  , getDecoderProgrammer{*this, "get_decoder_programmer", MethodFlags::NoScript,
+      [](const ObjectPtr& interface) -> std::shared_ptr<DecoderProgrammer>
+      {
+          if(auto controller = std::dynamic_pointer_cast<DecoderProgrammingController>(interface))
+            return std::make_shared<DecoderProgrammer>(*controller);
+          return {};
+      }}
   , onEvent{*this, "on_event", EventFlags::Scriptable}
 {
   Attributes::addDisplayName(uuid, DisplayName::World::uuid);
@@ -356,6 +367,8 @@ World::World(Private /*unused*/) :
   m_interfaceItems.add(identificationControllers);
   Attributes::addObjectEditor(lncvProgrammingControllers, false);
   m_interfaceItems.add(lncvProgrammingControllers);
+  Attributes::addObjectEditor(DecoderProgrammingControllers, false);
+  m_interfaceItems.add(DecoderProgrammingControllers);
   Attributes::addObjectEditor(cbusInterfaces, false);
   m_interfaceItems.add(cbusInterfaces);
   Attributes::addObjectEditor(loconetInterfaces, false);
@@ -440,6 +453,10 @@ World::World(Private /*unused*/) :
 
   Attributes::addObjectEditor(getLNCVProgrammer, false);
   m_interfaceItems.add(getLNCVProgrammer);
+
+  Attributes::addObjectEditor(getDecoderProgrammer, false);
+  m_interfaceItems.add(getDecoderProgrammer);
+
 
   m_interfaceItems.add(onEvent);
 

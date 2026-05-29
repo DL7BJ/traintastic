@@ -1,9 +1,9 @@
 /**
- * shared/src/traintastic/utils/standardpaths.hpp
+ * server/src/hardware/programming/lncv/lncvprogrammer.cpp
  *
  * This file is part of the traintastic source code.
  *
- * Copyright (C) 2019-2022,2024 Reinder Feenstra
+ * Copyright (C) 2022 Reinder Feenstra
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -20,19 +20,25 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef TRAINTASTIC_SHARED_TRAINTASTIC_UTILS_STANDARDPATHS_HPP
-#define TRAINTASTIC_SHARED_TRAINTASTIC_UTILS_STANDARDPATHS_HPP
+#include "decoderprogrammer.hpp"
+#include "decoderprogrammingcontroller.hpp"
+#include "../../../core/method.tpp"
 
-#include "stdfilesystem.hpp"
+DecoderProgrammer::DecoderProgrammer(DecoderProgrammingController& controller)
+  : m_controller{controller}
+  , onReadResponse{*this, "on_read_response", EventFlags::Public}
+{
+  if(!m_controller.attachDecoderProgrammer(*this))
+    throw std::runtime_error("decoder_programmer:programmer_not_available");
+  m_interfaceItems.add(onReadResponse);
+}
 
-#ifdef WIN32
-std::filesystem::path getProgramDataPath();
-std::filesystem::path getLocalAppDataPath();
-#endif
+DecoderProgrammer::~DecoderProgrammer()
+{
+  m_controller.detachDecoderProgrammer(*this);
+}
 
-std::filesystem::path getLocalePath();
-std::filesystem::path getManualPath();
-std::filesystem::path getLNCVXMLPath();
-std::filesystem::path getDecoderPath();
-
-#endif
+void DecoderProgrammer::readResponse(bool success, uint16_t cv, uint16_t value)
+{
+  fireEvent(onReadResponse, success, cv, value);
+}

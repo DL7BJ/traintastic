@@ -364,6 +364,7 @@ void CBUSInterface::addToWorld()
   InputController::addToWorld(inputListColumns);
   OutputController::addToWorld(outputListColumns);
   m_world.cbusInterfaces->add(Object::shared_ptr<CBUSInterface>());
+  DecoderProgrammingController::addToWorld();
 }
 
 void CBUSInterface::loaded()

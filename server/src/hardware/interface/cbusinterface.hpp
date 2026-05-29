@@ -23,6 +23,7 @@
 #define TRAINTASTIC_SERVER_HARDWARE_INTERFACE_CBUSINTERFACE_HPP
 
 #include "interface.hpp"
+#include "../programming/decoder/decoderprogrammingcontroller.hpp"
 #include "../decoder/decodercontroller.hpp"
 #include "../input/inputcontroller.hpp"
 #include "../output/outputcontroller.hpp"
@@ -48,6 +49,7 @@ class CBUSInterface final
   , public DecoderController
   , public InputController
   , public OutputController
+  , public DecoderProgrammingController
 {
   CLASS_ID("interface.cbus")
   DEFAULT_ID("cbus")
